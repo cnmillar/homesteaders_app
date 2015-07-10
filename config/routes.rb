@@ -3,7 +3,23 @@ HeApp::Application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  # root 'welcome#index'
+  root to: 'home#index'
+
+  get "/categories", to: 'categories#index'
+  get "/projects", to: 'projects#index'
+  get "/projects/:id", to: 'projects#show'
+  get "/users/:id", to: 'users#show'
+  get "/users/new", to:'users#new'
+  post "/session/login", to: 'users#login'
+  get "/session/logout", to: 'users#logout'
+
+  # resources :home, only: [:index]
+  # resources :categories, only: [:index]
+  # resources :projects, only: [:index, :show]
+  # resources :users, only: [:new, :show]
+
+
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
