@@ -4,7 +4,7 @@ class CreateUserProjects < ActiveRecord::Migration
     	t.belongs_to :users, index: true
     	t.belongs_to :projects, index: true
     	t.boolean :favourited
-    	t.boolean :commented
+    	t.boolean :completed
     	t.integer :rating
       t.timestamps
     end
