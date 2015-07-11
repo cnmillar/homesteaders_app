@@ -96,7 +96,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=Usx_0kY6wno",
 		difficulty: 2,
 		batch_size: 2,
-		batch_unit: "cups",
+		batch_unit: "cups"
 		# kit_id: 
 	},
 	{
@@ -105,7 +105,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=EgdOjyYjjEc",
 		difficulty: 4,
 		batch_size: 250,
-		batch_unit: "grams",
+		batch_unit: "grams"
 		# kit_id: 	
 	},
 	{
@@ -114,7 +114,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=KoL-lmWzzDs",
 		difficulty: 2,
 		batch_size: 4,
-		batch_unit: "cups",
+		batch_unit: "cups"
 		# kit_id: 	
 	},
 	{
@@ -123,7 +123,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=K_gQJu2I1QE",
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound",
+		batch_unit: "pound"
 		# kit_id: 	
 	},
 	{
@@ -132,7 +132,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=1-y9X56ZlUU",
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound",
+		batch_unit: "pound"
 		# kit_id: 	
 	},
 	# Super foods
@@ -142,7 +142,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=OSt0DmAPDm4",
 		difficulty: 2,
 		batch_size: 1,
-		batch_unit: "quart",
+		batch_unit: "quart"
 		# kit_id: 	
 	},
 	{
@@ -151,16 +151,16 @@ projects = [
 		video: "https://www.youtube.com/watch?v=WeZCMNB2YO0",
 		difficulty: 2,
 		batch_size: 5,
-		batch_unit: "cups",
+		batch_unit: "cups"
 		# kit_id: 	
 	},
 	{
 		title: "Wheatgrass", 
-		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a "shot" of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.",  
+		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a 'shot' of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.",  
 		video: "https://www.youtube.com/watch?v=Mw57kmVdx5Q",
 		difficulty: 2,
 		batch_size: 500,
-		batch_unit: "grams",
+		batch_unit: "grams"
 		# kit_id: 	
 	},
 	# Whole Animal
@@ -170,7 +170,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=X36ZlEs9GIU",
 		difficulty: 3,
 		batch_size: 5,
-		batch_unit: "pounds",
+		batch_unit: "pounds"
 		# kit_id: 	
 	},
 	{
@@ -179,7 +179,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=9mxFqfgzonM",
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "kilogram",
+		batch_unit: "kg"
 		# kit_id: 	
 	}
 ]
@@ -191,7 +191,7 @@ ingredients = [
 	[
 		{
 			name: "Instant-read thermometer",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
 			# unit_measure: ""
@@ -199,7 +199,7 @@ ingredients = [
 		},
 		{
 			name: "Thermometer clip",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
 			# unit_measure: ""
@@ -207,15 +207,15 @@ ingredients = [
 		},
 		{
 			name: "CFH Muslin",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2137582657,
 			# unit_size: ,
-			unit_measure: "sq yd"
+			unit_measure: "sq yd",
 			availability: true	
 		},
 		{
 			name: "Colander",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 3824391809,
 			unit_size: 1,
 			# unit_measure: ""
@@ -223,7 +223,7 @@ ingredients = [
 		},
 		{
 			name: "Stainless steel pot",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
 			# unit_measure: ""
@@ -231,216 +231,211 @@ ingredients = [
 		},
 		{
 			name: "Citric acid",
-			type: "",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 0.5,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: true	
 		},
 		{
 			name: "Milk",
-			type: "",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
-			unit_measure: "L"
+			unit_measure: "L",
 			availability: false	
 		}
 	],
 	[
 		{
 			name: "Nigari Flakes",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 4461196737,
 			unit_size: 10,
-			unit_measure: "grams"
+			unit_measure: "grams",
 			availability: true	
 		},
 		{
 			name: "8x10 Hemp Bag",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136870465,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Reblochon Cheese Mold",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2134881985,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Reblochon Follower",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2134896641,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Kitchen Scale",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2137938945,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Dry Soybeans",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 6,
-			unit_measure: "oz"
+			unit_measure: "oz",
 			availability: false	
 		},
 		{
 			name: "Blender",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: false	
 		}
 	],
 	[
 		{
 			name: "Milk",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 3.75,
-			unit_measure: "cups"
+			unit_measure: "cups",
 			availability: false	
 		},
 		{
 			name: "Yogourmet",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2135044289,
 			unit_size: 5,
-			unit_measure: "g"
+			unit_measure: "g",
 			availability: true	
 		},
 		{
 			name: "Instant-read thermometer",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Thermometer clip",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "2L Yogotherm incubator",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 3780636545,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		}
 	],
 	[
 		{
 			name: "Mesophilic starter",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2137702657,
 			unit_size: 0.125,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: true	
 		},
 		{
 			name: "Rennet tablet",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 3523484097,
 			unit_size: 0.125,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Calcium Chloride",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2136450625,
 			unit_size: 0.125,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: true	
 		},
 		{
 			name: "CHM Muslin",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2137582657,
 			unit_size: 0.25,
-			unit_measure: "sq yd"
+			unit_measure: "sq yd",
 			availability: true	
 		},
 		{
 			name: "Colander",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 3824391809,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Instant-read thermometer",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Thermometer clip",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
 			name: "Milk",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
-			unit_measure: "L"
+			unit_measure: "L",
 			availability: false	
 		},
 		{
 			name: "Salt",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 0.5,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: false	
 		},
 		{
 			name: "Long knife",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: false	
 		},
 		{
 			name: "Curd skimmer",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2134508417,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		}
-	],
-	[],
-	[],
-	[],
-	[],
-	[]	
+	]
 ]
 
 steps = [
@@ -527,12 +522,7 @@ steps = [
 			ordinal: 5,
 			content: "Press under weight for a firm-textured cheese."
 		}
-	],
-	[],
-	[],
-	[],
-	[],
-	[]
+	]
 ]
 
 projects.each_with_index do |pro, index|
@@ -541,38 +531,154 @@ projects.each_with_index do |pro, index|
 	}
 
 	unless project.persisted?
-		puts "Could not create project #{project.errors.full_messages}"
+		puts "Could not create project: #{project.errors.full_messages}"
 	end
 
-	ingredients[index].each do |ing|
-		ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
-			ingredient.update_attributes(ing)
-			unless ingredient.persisted?
-				puts "Could not create ingredient for project #{project.name}: #{ingredient.errors.full_messages}"
-			end
-		}
-	end
-
-	steps[index].each do |st|
-		step = Step.create(ordinal: st[:ordinal], content: st[:content])
-		unless step.persisted?
-			puts "Could not create step for project #{project.name}: #{step.errors.full_messages}"
+	if ingredients[index]
+		ingredients[index].each do |ing|
+			ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
+				ingredient.update_attributes(name: ing[:name], ing_type: ing[:ing_type], shopify_id: ing[:shopify_id], unit_size: ing[:unit_size], unit_measure: ing[:unit_measure], availability: ing[:availability], project_id: project.id)
+				unless ingredient.persisted?
+					puts "Could not create ingredient for project #{project.name}: #{ingredient.errors.full_messages}"
+				end
+			}
 		end
 	end
 
-	unless project.persisted?
-		puts "Could not create project #{project.errors.full_messages}"
+	if steps[index]
+		steps[index].each do |st|
+			step = Step.create(ordinal: st[:ordinal], content: st[:content], project_id: project.id)
+			unless step.persisted?
+				puts "Could not create step for project #{project.name}: #{step.errors.full_messages}"
+			end
+		end
 	end
 
 end
 
 ##### Seed comments
 
-# comments = 
-# [
-# 	{
-		
-# 	}
-# ]
+comments_on_video = 
+[
+	{
+		content: "Wow, loved this!",
+		commentable_type: "Project",
+		commentable_id: 1,
+		video_time: 50
+	},
+	{
+		content: "I would add more salt here!",
+		commentable_type: "Project",
+		commentable_id: 3,
+		video_time: 50
+	},
+	{
+		content: "You can also use vinegar instead of lemon juice.",
+		commentable_type: "Project",
+		commentable_id: 8,
+		video_time: 100
+	}
+]
+
+comments_on_video.each do |com|
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	unless comment.persisted?
+		puts "Could not create comment: #{comment.errors.full_messages}"
+	end
+end
+
+comments_on_ingredient = 
+[
+	{
+		content: "Wow, good idea!",
+		commentable_type: "Ingredient",
+		commentable_id: 1,
+	},
+	{
+		content: "Add a bit extra of this ingredient.",
+		commentable_type: "Ingredient",
+		commentable_id: 3,
+	},
+	{
+		content: "You can also use vinegar instead of lemon juice.",
+		commentable_type: "Ingredient",
+		commentable_id: 20,
+	}
+]
+
+comments_on_ingredient.each do |com|
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	unless comment.persisted?
+		puts "Could not create comment: #{comment.errors.full_messages}"
+	end
+end
+
+comments_on_step = 
+[
+	{
+		content: "Wow, good idea!",
+		commentable_type: "Step",
+		commentable_id: 5,
+	},
+	{
+		content: "I find that a Vitamix works best.",
+		commentable_type: "Step",
+		commentable_id: 10,
+	},
+	{
+		content: "This is the best part!",
+		commentable_type: "Step",
+		commentable_id: 15,
+	}
+]
+
+comments_on_step.each do |com|
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	unless comment.persisted?
+		puts "Could not create comment: #{comment.errors.full_messages}"
+	end
+end
 
 
+#### Seed users
+
+users = [
+	{
+		admin: true,
+		email: "cnmillar@gmail.com",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Caitlin",
+		last_name: "Millar",
+		facebook_id: 123456789
+	},
+	{
+		admin: true,
+		email: "test@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "David",
+		last_name: "Good",
+		facebook_id: 223456789
+	},
+	{
+		admin: true,
+		email: "beth@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Beth",
+		last_name: "Hammett",
+		facebook_id: 223456799
+	},
+	{
+		email: "sam@smith.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Sam",
+		last_name: "Smith",
+		facebook_id: 11335544
+	}
+]
+
+users.each do |u|
+	user = User.create(email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
+	unless user.persisted?
+		puts "Could not create user: #{u.errors.full_messages}"
+	end
+end

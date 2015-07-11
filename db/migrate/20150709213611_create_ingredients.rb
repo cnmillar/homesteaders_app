@@ -1,6 +1,7 @@
 class CreateIngredients < ActiveRecord::Migration
   def change
     create_table :ingredients do |t|
+      t.belongs_to :project, index: true
     	t.string :name
       t.string :type
     	t.integer :shopify_id
