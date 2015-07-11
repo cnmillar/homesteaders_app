@@ -11,7 +11,3 @@
  *= require_self
  *= require_tree .
  */
- 
-@import "bourbon";
-@import "home";
-@import "users";

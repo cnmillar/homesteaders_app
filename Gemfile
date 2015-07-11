@@ -46,5 +46,3 @@ end
 # gem 'debugger', group: [:development, :test]
 
 # User added gems
-
-gem 'bourbon'

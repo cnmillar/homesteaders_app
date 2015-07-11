@@ -1,7 +1,7 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
 
-# Seed categories
+##### Seed categories
 
 [
 	{
@@ -19,7 +19,7 @@
 	{
 		name: "Composting", 
 		description: "Projects for composting and building composters for small spaces."
-	},
+	}, 
 	{
 		name: "Fermentation", 
 		description: "Composting and composters for small spaces."
@@ -86,7 +86,7 @@
 	end
 end
 
-# Seed projects
+##### Seed projects
 
 projects = [
 	# Dairy and Curd
@@ -183,15 +183,6 @@ projects = [
 		# kit_id: 	
 	}
 ]
-
-projects.each do |pro|
-	project = Project.where(:title => pro[:title]).first_or_create { |project|
-		project.update_attributes(pro)
-	}
-	unless project.persisted?
-		puts "Could not create project #{project.errors.full_messages}"
-	end
-end
 
 # Seed projects
 
@@ -548,6 +539,11 @@ projects.each_with_index do |pro, index|
 	project = Project.where(title: pro[:title]).first_or_create { |project|
 		project.update_attributes(pro)
 	}
+
+	unless project.persisted?
+		puts "Could not create project #{project.errors.full_messages}"
+	end
+
 	ingredients[index].each do |ing|
 		ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
 			ingredient.update_attributes(ing)
@@ -569,3 +565,14 @@ projects.each_with_index do |pro, index|
 	end
 
 end
+
+##### Seed comments
+
+# comments = 
+# [
+# 	{
+		
+# 	}
+# ]
+
+
