@@ -531,7 +531,7 @@ projects.each_with_index do |pro, index|
 	}
 
 	unless project.persisted?
-		puts "Could not create project #{project.errors.full_messages}"
+		puts "Could not create project: #{project.errors.full_messages}"
 	end
 
 	if ingredients[index]
@@ -552,21 +552,92 @@ projects.each_with_index do |pro, index|
 				puts "Could not create step for project #{project.name}: #{step.errors.full_messages}"
 			end
 		end
-
-		unless project.persisted?
-			puts "Could not create project #{project.errors.full_messages}"
-		end
 	end
 
 end
 
 ##### Seed comments
 
-# comments = 
-# [
-# 	{
-		
-# 	}
-# ]
+comments_on_video = 
+[
+	{
+		content: "Wow, loved this!",
+		commentable_type: "Project",
+		commentable_id: 1,
+		video_time: 50
+	},
+	{
+		content: "I would add more salt here!",
+		commentable_type: "Project",
+		commentable_id: 3,
+		video_time: 50
+	},
+	{
+		content: "You can also use vinegar instead of lemon juice.",
+		commentable_type: "Project",
+		commentable_id: 8,
+		video_time: 100
+	}
+]
+
+comments_on_video.each do |com|
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	unless comment.persisted?
+		puts "Could not create comment: #{comment.errors.full_messages}"
+	end
+end
+
+comments_on_ingredient = 
+[
+	{
+		content: "Wow, good idea!",
+		commentable_type: "Ingredient",
+		commentable_id: 1,
+	},
+	{
+		content: "Add a bit extra of this ingredient.",
+		commentable_type: "Ingredient",
+		commentable_id: 3,
+	},
+	{
+		content: "You can also use vinegar instead of lemon juice.",
+		commentable_type: "Ingredient",
+		commentable_id: 20,
+	}
+]
+
+comments_on_ingredient.each do |com|
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	unless comment.persisted?
+		puts "Could not create comment: #{comment.errors.full_messages}"
+	end
+end
+
+comments_on_step = 
+[
+	{
+		content: "Wow, good idea!",
+		commentable_type: "Step",
+		commentable_id: 5,
+	},
+	{
+		content: "I find that a Vitamix works best.",
+		commentable_type: "Step",
+		commentable_id: 10,
+	},
+	{
+		content: "This is the best part!",
+		commentable_type: "Step",
+		commentable_id: 15,
+	}
+]
+
+comments_on_step.each do |com|
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	unless comment.persisted?
+		puts "Could not create comment: #{comment.errors.full_messages}"
+	end
+end
 
 
+#### Seed users
