@@ -5,10 +5,10 @@ HeApp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'pages#home'
 
-  # get '/about', to: 'pages#about'
   # post "/session/login", to: 'users#login'
   # get "/session/logout", to: 'users#logout'
 
+  resources :home, only: [:index]
   resources :categories, only: [:index]
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
