@@ -156,7 +156,7 @@ projects = [
 	},
 	{
 		title: "Wheatgrass", 
-		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a "shot" of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.",  
+		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a 'shot' of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.",  
 		video: "https://www.youtube.com/watch?v=Mw57kmVdx5Q",
 		difficulty: 2,
 		batch_size: 500,
@@ -210,7 +210,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2137582657,
 			# unit_size: ,
-			unit_measure: "sq yd"
+			unit_measure: "sq yd",
 			availability: true	
 		},
 		{
@@ -231,18 +231,18 @@ ingredients = [
 		},
 		{
 			name: "Citric acid",
-			type: "",
+			type: "ingredient",
 			shopify_id: nil,
 			unit_size: 0.5,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: true	
 		},
 		{
 			name: "Milk",
-			type: "",
+			type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
-			unit_measure: "L"
+			unit_measure: "L",
 			availability: false	
 		}
 	],
@@ -252,7 +252,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 4461196737,
 			unit_size: 10,
-			unit_measure: "grams"
+			unit_measure: "grams",
 			availability: true	
 		},
 		{
@@ -260,7 +260,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2136870465,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -268,7 +268,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2134881985,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -276,7 +276,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2134896641,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -284,7 +284,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2137938945,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -292,7 +292,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: nil,
 			unit_size: 6,
-			unit_measure: "oz"
+			unit_measure: "oz",
 			availability: false	
 		},
 		{
@@ -300,7 +300,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: false	
 		}
 	],
@@ -310,7 +310,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: nil,
 			unit_size: 3.75,
-			unit_measure: "cups"
+			unit_measure: "cups",
 			availability: false	
 		},
 		{
@@ -318,7 +318,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 2135044289,
 			unit_size: 5,
-			unit_measure: "g"
+			unit_measure: "g",
 			availability: true	
 		},
 		{
@@ -326,7 +326,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -334,7 +334,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -342,7 +342,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 3780636545,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		}
 	],
@@ -352,7 +352,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 2137702657,
 			unit_size: 0.125,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: true	
 		},
 		{
@@ -360,7 +360,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 3523484097,
 			unit_size: 0.125,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -368,7 +368,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 2136450625,
 			unit_size: 0.125,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: true	
 		},
 		{
@@ -376,7 +376,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 2137582657,
 			unit_size: 0.25,
-			unit_measure: "sq yd"
+			unit_measure: "sq yd",
 			availability: true	
 		},
 		{
@@ -384,7 +384,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 3824391809,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -392,7 +392,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -400,7 +400,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		},
 		{
@@ -408,7 +408,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
-			unit_measure: "L"
+			unit_measure: "L",
 			availability: false	
 		},
 		{
@@ -416,7 +416,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: nil,
 			unit_size: 0.5,
-			unit_measure: "tsp"
+			unit_measure: "tsp",
 			availability: false	
 		},
 		{
@@ -424,7 +424,7 @@ ingredients = [
 			type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: false	
 		},
 		{
@@ -432,7 +432,7 @@ ingredients = [
 			type: "ingredient",
 			shopify_id: 2134508417,
 			unit_size: 1,
-			unit_measure: ""
+			unit_measure: "",
 			availability: true	
 		}
 	],

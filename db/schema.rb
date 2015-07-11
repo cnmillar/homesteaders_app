@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711004541) do
+ActiveRecord::Schema.define(version: 20150711022029) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -41,7 +41,7 @@ ActiveRecord::Schema.define(version: 20150711004541) do
 
   create_table "ingredients", force: true do |t|
     t.string   "name"
-    t.string   "type"
+    t.string   "ing_type"
     t.integer  "shopify_id"
     t.float    "unit_size"
     t.string   "unit_measure"
