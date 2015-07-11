@@ -23,7 +23,7 @@
 	<% @equipment.each do |equip|%>
 		<li>
 			<% if equip.availability %>
-				<input type="checkbox">
+				<input type="checkbox" class="shopify_cart">
 					<h5 style="display: inline;"><%= equip.name %></h5>
 				</input>
 			<% else %>

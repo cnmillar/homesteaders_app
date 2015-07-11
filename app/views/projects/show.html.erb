@@ -1,8 +1,15 @@
 <script>
 	$(function(){
 		$("#submit-to-cart").on("click", function(){
-			console.log("Clicky!");
-		})
+			items = $(".shopify_cart");
+			cart = "http://homesteaders-emporium.myshopify.com/cart";
+			for (var i=0; i < items.length; i++ ) {
+				if ($(items[i]).is(":checked")) {
+					// cart = cart + "/" + this.shopify_id + ":" + this.quantity;
+				}
+			}
+			window.open(cart);
+		});
 	})
 </script>
 
