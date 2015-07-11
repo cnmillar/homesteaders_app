@@ -641,3 +641,44 @@ end
 
 
 #### Seed users
+
+users = [
+	{
+		admin: true,
+		email: "cnmillar@gmail.com",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Caitlin",
+		last_name: "Millar",
+		facebook_id: 123456789
+	},
+	{
+		admin: true,
+		email: "test@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "David",
+		last_name: "Good",
+		facebook_id: 223456789
+	},
+	{
+		admin: true,
+		email: "beth@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Beth",
+		last_name: "Hammett",
+		facebook_id: 223456799
+	},
+	{
+		email: "sam@smith.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Sam",
+		last_name: "Smith",
+		facebook_id: 11335544
+	}
+]
+
+users.each do |u|
+	user = User.create(email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
+	unless user.persisted?
+		puts "Could not create user: #{u.errors.full_messages}"
+	end
+end
