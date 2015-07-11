@@ -1,0 +1,18 @@
+<h2>Instructions</h2>
+<!-- <ul> -->
+	<%# @project.steps.each do |step| %>
+		<!-- <li> -->
+			<%# step.ordinal %>
+			<%# step.content %>
+		<!-- </li> -->
+	<%# end %>
+<!-- </ul> -->
+
+<table>
+	<% @project.steps.each do |step| %>
+		<tr>
+			<td><h5><%= step.ordinal %>. </h5></td>
+			<td><h5><%= step.content %></h5></td>
+		</tr>
+	<% end %>
+</table>
