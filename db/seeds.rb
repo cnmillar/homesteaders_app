@@ -191,7 +191,7 @@ ingredients = [
 	[
 		{
 			name: "Instant-read thermometer",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
 			# unit_measure: ""
@@ -199,7 +199,7 @@ ingredients = [
 		},
 		{
 			name: "Thermometer clip",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
 			# unit_measure: ""
@@ -207,7 +207,7 @@ ingredients = [
 		},
 		{
 			name: "CFH Muslin",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2137582657,
 			# unit_size: ,
 			unit_measure: "sq yd",
@@ -215,7 +215,7 @@ ingredients = [
 		},
 		{
 			name: "Colander",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 3824391809,
 			unit_size: 1,
 			# unit_measure: ""
@@ -223,7 +223,7 @@ ingredients = [
 		},
 		{
 			name: "Stainless steel pot",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
 			# unit_measure: ""
@@ -231,7 +231,7 @@ ingredients = [
 		},
 		{
 			name: "Citric acid",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 0.5,
 			unit_measure: "tsp",
@@ -239,7 +239,7 @@ ingredients = [
 		},
 		{
 			name: "Milk",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
 			unit_measure: "L",
@@ -249,7 +249,7 @@ ingredients = [
 	[
 		{
 			name: "Nigari Flakes",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 4461196737,
 			unit_size: 10,
 			unit_measure: "grams",
@@ -257,7 +257,7 @@ ingredients = [
 		},
 		{
 			name: "8x10 Hemp Bag",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136870465,
 			unit_size: 1,
 			unit_measure: "",
@@ -265,7 +265,7 @@ ingredients = [
 		},
 		{
 			name: "Reblochon Cheese Mold",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2134881985,
 			unit_size: 1,
 			unit_measure: "",
@@ -273,7 +273,7 @@ ingredients = [
 		},
 		{
 			name: "Reblochon Follower",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2134896641,
 			unit_size: 1,
 			unit_measure: "",
@@ -281,7 +281,7 @@ ingredients = [
 		},
 		{
 			name: "Kitchen Scale",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2137938945,
 			unit_size: 1,
 			unit_measure: "",
@@ -289,7 +289,7 @@ ingredients = [
 		},
 		{
 			name: "Dry Soybeans",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 6,
 			unit_measure: "oz",
@@ -297,7 +297,7 @@ ingredients = [
 		},
 		{
 			name: "Blender",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
 			unit_measure: "",
@@ -307,7 +307,7 @@ ingredients = [
 	[
 		{
 			name: "Milk",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 3.75,
 			unit_measure: "cups",
@@ -315,7 +315,7 @@ ingredients = [
 		},
 		{
 			name: "Yogourmet",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2135044289,
 			unit_size: 5,
 			unit_measure: "g",
@@ -323,7 +323,7 @@ ingredients = [
 		},
 		{
 			name: "Instant-read thermometer",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
 			unit_measure: "",
@@ -331,7 +331,7 @@ ingredients = [
 		},
 		{
 			name: "Thermometer clip",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
 			unit_measure: "",
@@ -339,7 +339,7 @@ ingredients = [
 		},
 		{
 			name: "2L Yogotherm incubator",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 3780636545,
 			unit_size: 1,
 			unit_measure: "",
@@ -349,7 +349,7 @@ ingredients = [
 	[
 		{
 			name: "Mesophilic starter",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2137702657,
 			unit_size: 0.125,
 			unit_measure: "tsp",
@@ -357,7 +357,7 @@ ingredients = [
 		},
 		{
 			name: "Rennet tablet",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 3523484097,
 			unit_size: 0.125,
 			unit_measure: "",
@@ -365,7 +365,7 @@ ingredients = [
 		},
 		{
 			name: "Calcium Chloride",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2136450625,
 			unit_size: 0.125,
 			unit_measure: "tsp",
@@ -373,7 +373,7 @@ ingredients = [
 		},
 		{
 			name: "CHM Muslin",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2137582657,
 			unit_size: 0.25,
 			unit_measure: "sq yd",
@@ -381,7 +381,7 @@ ingredients = [
 		},
 		{
 			name: "Colander",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 3824391809,
 			unit_size: 1,
 			unit_measure: "",
@@ -389,7 +389,7 @@ ingredients = [
 		},
 		{
 			name: "Instant-read thermometer",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
 			unit_measure: "",
@@ -397,7 +397,7 @@ ingredients = [
 		},
 		{
 			name: "Thermometer clip",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
 			unit_measure: "",
@@ -405,7 +405,7 @@ ingredients = [
 		},
 		{
 			name: "Milk",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
 			unit_measure: "L",
@@ -413,7 +413,7 @@ ingredients = [
 		},
 		{
 			name: "Salt",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 0.5,
 			unit_measure: "tsp",
@@ -421,7 +421,7 @@ ingredients = [
 		},
 		{
 			name: "Long knife",
-			type: "equipment",
+			ing_type: "equipment",
 			shopify_id: nil,
 			unit_size: 1,
 			unit_measure: "",
@@ -429,7 +429,7 @@ ingredients = [
 		},
 		{
 			name: "Curd skimmer",
-			type: "ingredient",
+			ing_type: "ingredient",
 			shopify_id: 2134508417,
 			unit_size: 1,
 			unit_measure: "",
@@ -544,25 +544,25 @@ projects.each_with_index do |pro, index|
 		puts "Could not create project #{project.errors.full_messages}"
 	end
 
-	ingredients[index].each do |ing|
+	ingredients[index][0].each do |ing|
 		ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
-			ingredient.update_attributes(ing)
+			ingredient.update_attributes(ing, project_id: project.id)
 			unless ingredient.persisted?
 				puts "Could not create ingredient for project #{project.name}: #{ingredient.errors.full_messages}"
 			end
 		}
 	end
 
-	steps[index].each do |st|
-		step = Step.create(ordinal: st[:ordinal], content: st[:content])
-		unless step.persisted?
-			puts "Could not create step for project #{project.name}: #{step.errors.full_messages}"
-		end
-	end
+	# steps[index].each do |st|
+	# 	step = Step.create(ordinal: st[:ordinal], content: st[:content])
+	# 	unless step.persisted?
+	# 		puts "Could not create step for project #{project.name}: #{step.errors.full_messages}"
+	# 	end
+	# end
 
-	unless project.persisted?
-		puts "Could not create project #{project.errors.full_messages}"
-	end
+	# unless project.persisted?
+	# 	puts "Could not create project #{project.errors.full_messages}"
+	# end
 
 end
 
