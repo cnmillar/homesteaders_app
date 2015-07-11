@@ -5,15 +5,26 @@
 		})
 	})
 </script>
-
-<%= render 'projects/name_description' %>
-<%= render 'projects/details' %>
-<%= render 'projects/community_summary' %>
-<%= render 'projects/social_toolbar' %>
-<%= render 'projects/instructions' %>
-<%= render 'projects/supplies' %>
-<%= render 'projects/images' %>
-<%= render 'projects/popular' %>
-<%= render 'projects/video' %>
-<%= render 'projects/video_comments' %>
-<%= render 'projects/comments' %>
+<div class = 'row custom-row section'>
+  <div class = 'large-5 columns section'>
+    <%= render 'projects/name_description' %>
+    <%= render 'projects/details' %>
+    <div class = 'row'>
+      <div class = 'large-6 columns' >
+        <%= render 'projects/community_summary' %>
+      </div>
+      <div class = 'large-6 columns' >
+        <%= render 'projects/social_toolbar' %>
+      </div>
+    </div>
+    <%= render 'projects/instructions' %>
+    <%= render 'projects/supplies' %>
+    <%= render 'projects/images' %>
+    <%= render 'projects/popular' %>
+  </div>
+  <div class = 'large-7 columns section'>
+    <%= render 'projects/video' %>
+    <%= render 'projects/video_comments' %>
+    <%= render 'projects/comments' %>
+  </div>
+</div>

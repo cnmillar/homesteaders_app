@@ -25,4 +25,14 @@ nav {
 
 .section {
   border: 1px $primary-color dotted;
+  padding: 1em;
+}
+
+.video {
+
+}
+
+/* Foundation overrides */
+.custom-row {
+  max-width: 1000rem;
 }
