@@ -1,4 +1,6 @@
 
 <div class = 'video section'>
-	<%= content_tag :iframe, nil, src: @project.youtube_url %>
+  <iframe id="ytplayer" type="text/html" width="640" height="480"
+  src="<%= @project.video.url %>"
+  frameborder="0"/>
 </div>
