@@ -8,4 +8,10 @@ class Project < ActiveRecord::Base
 	
 	belongs_to :category
 
+	def youtube_url
+    youtube_id = self.video.split("=").last
+    # "<iframe src='//www.youtube.com/embed/#{youtube_id}'></iframe>"
+    "//www.youtube.com/embed/#{youtube_id}"
+  end
+
 end
