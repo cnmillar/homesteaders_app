@@ -54,3 +54,4 @@ gem 'pry'
 # gem 'debugger', group: [:development, :test]
 
 # User added gems
+gem 'youtube_it', '~> 2.4.0'

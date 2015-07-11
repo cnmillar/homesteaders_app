@@ -93,7 +93,6 @@ projects = [
 	{
 		title: "Sweet Ricotta Cheese", 
 		description: "Ricotta is typically made from whey, the watery byproduct of cheesemaking. But since whey can be difficult to find, you can use a combination of whole milk and cream instead. This ricotta is similar to a queso fresco or paneer.",  
-		video: "https://www.youtube.com/watch?v=Usx_0kY6wno",
 		difficulty: 2,
 		batch_size: 2,
 		batch_unit: "cups"
@@ -102,7 +101,6 @@ projects = [
 	{
 		title: "Handmade Block Tofu", 
 		description: "Why make tofu yourself? Because you want to experience it at its peak -- freshly made, creamy, and subtly sweet. Homemade tofu is as precious as homemade bread.",  
-		video: "https://www.youtube.com/watch?v=EgdOjyYjjEc",
 		difficulty: 4,
 		batch_size: 250,
 		batch_unit: "grams"
@@ -111,7 +109,6 @@ projects = [
 	{
 		title: "Yogurt", 
 		description: "Store-bought yogurt may be convenient but it can't compare to the mild creaminess of homemade. The good news is that making yogurt is incredibly easy—as long as you keep your tools clean and don't jiggle the mixture while it's setting, it's almost foolproof. Plus, it's a fun science project for experimenters both young and old.",  
-		video: "https://www.youtube.com/watch?v=KoL-lmWzzDs",
 		difficulty: 2,
 		batch_size: 4,
 		batch_unit: "cups"
@@ -120,7 +117,6 @@ projects = [
 	{
 		title: "Farmer Cheese", 
 		description: "This is an easy home made farmer's cheese. It doesn't age well, so be sure you eat it within a week after it's made - well, if you can let it last that long. If you bake with it, it melts very beautifully. It makes a perfect soft cheese for snacking.",  
-		video: "https://www.youtube.com/watch?v=K_gQJu2I1QE",
 		difficulty: 3,
 		batch_size: 1,
 		batch_unit: "pound"
@@ -129,7 +125,6 @@ projects = [
 	{
 		title: "Mozzarella Cheese", 
 		description: "Knowing how to make your own mozzarella is a dangerous thing. Knowing that at any moment, should the desire present itself, you could whip up your very own ball of creamy mozzarella, still warm from the whey whence it came? Yes. Very very dangerous. Here's how to do it.",  
-		video: "https://www.youtube.com/watch?v=1-y9X56ZlUU",
 		difficulty: 3,
 		batch_size: 1,
 		batch_unit: "pound"
@@ -139,7 +134,6 @@ projects = [
 	{
 		title: "Grow Sprouts", 
 		description: "Amazingly, half of a cup of most sprouts contains more vitamin C than five glasses of orange juice! To grow your own sprouts, all you need is a mason-type jar, a piece of cheesecloth or other breathable fabric, and the seeds, beans, grains, or nuts you wish to sprout.",  
-		video: "https://www.youtube.com/watch?v=OSt0DmAPDm4",
 		difficulty: 2,
 		batch_size: 1,
 		batch_unit: "quart"
@@ -148,7 +142,6 @@ projects = [
 	{
 		title: "Nut Milk", 
 		description: "Once you make homemade nut milks at home, you'll likely stop buying them at the store. They really are so, so simple and it's nice knowing exactly what's in them and being able to completely control the amount of sweetness on your own. That's the upside.",  
-		video: "https://www.youtube.com/watch?v=WeZCMNB2YO0",
 		difficulty: 2,
 		batch_size: 5,
 		batch_unit: "cups"
@@ -157,7 +150,6 @@ projects = [
 	{
 		title: "Wheatgrass", 
 		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a 'shot' of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.",  
-		video: "https://www.youtube.com/watch?v=Mw57kmVdx5Q",
 		difficulty: 2,
 		batch_size: 500,
 		batch_unit: "grams"
@@ -167,7 +159,6 @@ projects = [
 	{
 		title: "Sausage", 
 		description: "Making sausage at home is one of those lost arts that really is not so difficult as it sounds. At its core, a sausage is simply ground meat and fat, salt, and flavorings. It really is not much more involved than grinding your own hamburger; you don’t even have to stuff it into links if you don’t want to. Yet the flavor of a well-made link surpasses the sum of its parts, and a truly great sausage is fit to be served as a main course at a fancy dinner.",  
-		video: "https://www.youtube.com/watch?v=X36ZlEs9GIU",
 		difficulty: 3,
 		batch_size: 5,
 		batch_unit: "pounds"
@@ -176,7 +167,6 @@ projects = [
 	{
 		title: "Bacon", 
 		description: "If bacon had it’s own Twitter account it would have more followers than Katy Perry, Justin Bieber, and Barack Obama combined. Everyone loves those slabs of salty goodness. Even those forbidden to eat it have been known to long for it. ",  
-		video: "https://www.youtube.com/watch?v=9mxFqfgzonM",
 		difficulty: 3,
 		batch_size: 1,
 		batch_unit: "kg"
@@ -556,25 +546,99 @@ projects.each_with_index do |pro, index|
 
 end
 
+##### Seed videos
+
+videos = 
+[
+	{
+		title: "Making ricotta cheese",
+		url:  "https://www.youtube.com/embed/Usx_0kY6wno",
+		duration: 155,
+		project_id: 1 
+	},
+	{
+		title: "Making tofu",
+		url: "https://www.youtube.com/embed/EgdOjyYjjEc",
+		duration: 155,
+		project_id: 2
+	},
+	{
+		url: "https://www.youtube.com/embed/KoL-lmWzzDs",
+		title: "Making yogurt",
+		duration: 155,
+		project_id: 3
+	},
+	{
+		title: "Farmer Cheese", 
+		url: "https://www.youtube.com/embed/K_gQJu2I1QE",
+		duration: 155,
+		project_id: 4
+	},
+	{
+		title: "Mozzarella Cheese", 
+		url: "https://www.youtube.com/embed/1-y9X56ZlUU",
+		duration: 155,
+		project_id: 5
+	},
+	{
+		title: "Grow Sprouts", 
+		url: "https://www.youtube.com/embed/OSt0DmAPDm4",
+		duration: 155,
+		project_id: 6		
+
+	},
+	{
+		title: "Nut Milk", 
+		url: "https://www.youtube.com/embed/WeZCMNB2YO0",
+		duration: 155,
+		project_id: 7
+	},
+	{
+		title: "Wheatgrass", 
+		url: "https://www.youtube.com/embed/Mw57kmVdx5Q",
+		duration: 155,
+		project_id: 8
+	},
+	{
+		title: "Sausage", 
+		url: "https://www.youtube.com/embed/X36ZlEs9GIU",
+		duration: 155,
+		project_id: 9		
+	},
+	{
+		title: "Bacon", 
+		url: "https://www.youtube.com/embed/9mxFqfgzonM",
+		duration: 155,
+		project_id: 10
+	}
+]		
+videos.each_with_index do |v|
+	video = Video.create(title: v[:title], url: v[:url], duration: v[:duration], project_id: v[:project_id])
+	unless video.persisted?
+		puts "Could not create video: #{v.errors.full_messages}"
+	end
+end
+
+
 ##### Seed comments
 
 comments_on_video = 
 [
 	{
 		content: "Wow, loved this!",
-		commentable_type: "Project",
+		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 50
 	},
 	{
 		content: "I would add more salt here!",
-		commentable_type: "Project",
+		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 50
 	},
 	{
 		content: "You can also use vinegar instead of lemon juice.",
-		commentable_type: "Project",
+		commentable_type: "Video",
 		commentable_id: 8,
 		video_time: 100
 	}
@@ -586,6 +650,34 @@ comments_on_video.each do |com|
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
 end
+
+comments_on_project = 
+[
+	{
+		content: "Wow, loved this!",
+		commentable_type: "Project",
+		commentable_id: 1,
+	},
+	{
+		content: "I would add more salt to the recipe!",
+		commentable_type: "Project",
+		commentable_id: 3,
+		video_time: 50
+	},
+	{
+		content: "Anybody tried this with vinegar?",
+		commentable_type: "Project",
+		commentable_id: 8,
+	}
+]
+
+comments_on_project.each do |com|
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	unless comment.persisted?
+		puts "Could not create comment: #{comment.errors.full_messages}"
+	end
+end
+
 
 comments_on_ingredient = 
 [
