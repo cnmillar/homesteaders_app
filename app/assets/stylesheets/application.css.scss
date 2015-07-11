@@ -15,7 +15,12 @@
  
  */
 
-$primary-color: #970000;
+$primary-color: #B2230A;
+$secondary-color: #F2AA0E;
+
+h1, h2, h3 {
+  color: $primary-color;
+}
 
 nav {
   height: 100px;
