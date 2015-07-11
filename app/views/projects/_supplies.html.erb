@@ -1,37 +1,37 @@
+<div class = 'section'>
 
 
+	<h2>Supplies</h2>
+	<h3>Ingredients</h3>
 
-<h2>Supplies</h2>
-<h3>Ingredients</h3>
+	<ul>
+		<% @ingredients.each do |ing|%>
+			<li>
+				<% if ing.availability %>
+					<input type="checkbox" class="shopify_cart">
+						<h5 style="display:inline;"><%= ing.name %></h5>
+					</input>
+				<% else %>
+						<h5><%= ing.name %></h5>
+				<% end %>
+			</li>
+		<% end %>	
+	</ul>
 
-<ul>
-	<% @ingredients.each do |ing|%>
-		<li>
-			<% if ing.availability %>
-				<input type="checkbox" class="shopify_cart">
-					<h5 style="display:inline;"><%= ing.name %></h5>
-				</input>
-			<% else %>
-					<h5><%= ing.name %></h5>
-			<% end %>
-		</li>
-	<% end %>	
-</ul>
-
-<h3>Equipment</h3>
-<ul>
-	<% @equipment.each do |equip|%>
-		<li>
-			<% if equip.availability %>
-				<input type="checkbox" class="shopify_cart">
+	<h3>Equipment</h3>
+	<ul>
+		<% @equipment.each do |equip|%>
+			<li>
+				<% if equip.availability %>
+					<input type="checkbox" class="shopify_cart">
+						<h5 style="display: inline;"><%= equip.name %></h5>
+					</input>
+				<% else %>
 					<h5 style="display: inline;"><%= equip.name %></h5>
-				</input>
-			<% else %>
-				<h5 style="display: inline;"><%= equip.name %></h5>
-			<% end %>
-		</li>
-	<% end %>
-</ul>
+				<% end %>
+			</li>
+		<% end %>
+	</ul>
 
-<button id="submit-to-cart">Add to cart</button>
-
+	<button id="submit-to-cart">Add to cart</button>
+</div>
