@@ -96,7 +96,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=Usx_0kY6wno",
 		difficulty: 2,
 		batch_size: 2,
-		batch_unit: "cups",
+		batch_unit: "cups"
 		# kit_id: 
 	},
 	{
@@ -105,7 +105,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=EgdOjyYjjEc",
 		difficulty: 4,
 		batch_size: 250,
-		batch_unit: "grams",
+		batch_unit: "grams"
 		# kit_id: 	
 	},
 	{
@@ -114,7 +114,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=KoL-lmWzzDs",
 		difficulty: 2,
 		batch_size: 4,
-		batch_unit: "cups",
+		batch_unit: "cups"
 		# kit_id: 	
 	},
 	{
@@ -123,7 +123,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=K_gQJu2I1QE",
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound",
+		batch_unit: "pound"
 		# kit_id: 	
 	},
 	{
@@ -132,7 +132,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=1-y9X56ZlUU",
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound",
+		batch_unit: "pound"
 		# kit_id: 	
 	},
 	# Super foods
@@ -142,7 +142,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=OSt0DmAPDm4",
 		difficulty: 2,
 		batch_size: 1,
-		batch_unit: "quart",
+		batch_unit: "quart"
 		# kit_id: 	
 	},
 	{
@@ -151,7 +151,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=WeZCMNB2YO0",
 		difficulty: 2,
 		batch_size: 5,
-		batch_unit: "cups",
+		batch_unit: "cups"
 		# kit_id: 	
 	},
 	{
@@ -160,7 +160,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=Mw57kmVdx5Q",
 		difficulty: 2,
 		batch_size: 500,
-		batch_unit: "grams",
+		batch_unit: "grams"
 		# kit_id: 	
 	},
 	# Whole Animal
@@ -170,7 +170,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=X36ZlEs9GIU",
 		difficulty: 3,
 		batch_size: 5,
-		batch_unit: "pounds",
+		batch_unit: "pounds"
 		# kit_id: 	
 	},
 	{
@@ -179,7 +179,7 @@ projects = [
 		video: "https://www.youtube.com/watch?v=9mxFqfgzonM",
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "kilogram",
+		batch_unit: "kg"
 		# kit_id: 	
 	}
 ]
@@ -435,12 +435,7 @@ ingredients = [
 			unit_measure: "",
 			availability: true	
 		}
-	],
-	[],
-	[],
-	[],
-	[],
-	[]	
+	]
 ]
 
 steps = [
@@ -527,12 +522,7 @@ steps = [
 			ordinal: 5,
 			content: "Press under weight for a firm-textured cheese."
 		}
-	],
-	[],
-	[],
-	[],
-	[],
-	[]
+	]
 ]
 
 projects.each_with_index do |pro, index|
@@ -544,25 +534,29 @@ projects.each_with_index do |pro, index|
 		puts "Could not create project #{project.errors.full_messages}"
 	end
 
-	ingredients[index][0].each do |ing|
-		ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
-			ingredient.update_attributes(ing, project_id: project.id)
-			unless ingredient.persisted?
-				puts "Could not create ingredient for project #{project.name}: #{ingredient.errors.full_messages}"
-			end
-		}
+	if ingredients[index]
+		ingredients[index].each do |ing|
+			ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
+				ingredient.update_attributes(name: ing[:name], ing_type: ing[:ing_type], shopify_id: ing[:shopify_id], unit_size: ing[:unit_size], unit_measure: ing[:unit_measure], availability: ing[:availability], project_id: project.id)
+				unless ingredient.persisted?
+					puts "Could not create ingredient for project #{project.name}: #{ingredient.errors.full_messages}"
+				end
+			}
+		end
 	end
 
-	# steps[index].each do |st|
-	# 	step = Step.create(ordinal: st[:ordinal], content: st[:content])
-	# 	unless step.persisted?
-	# 		puts "Could not create step for project #{project.name}: #{step.errors.full_messages}"
-	# 	end
-	# end
+	if steps[index]
+		steps[index].each do |st|
+			step = Step.create(ordinal: st[:ordinal], content: st[:content], project_id: project.id)
+			unless step.persisted?
+				puts "Could not create step for project #{project.name}: #{step.errors.full_messages}"
+			end
+		end
 
-	# unless project.persisted?
-	# 	puts "Could not create project #{project.errors.full_messages}"
-	# end
+		unless project.persisted?
+			puts "Could not create project #{project.errors.full_messages}"
+		end
+	end
 
 end
 
