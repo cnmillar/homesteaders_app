@@ -10,4 +10,5 @@ class ProjectsController < ApplicationController
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
 	end
 
+
 end
