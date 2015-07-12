@@ -10,7 +10,7 @@ HeApp::Application.routes.draw do
   # get "/session/logout", to: 'users#logout'
 
   resources :home, only: [:index]
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
 
