@@ -1,11 +1,7 @@
-<h4>projects:</h4>
+<h4>Projects:</h4>
 <div>
-  <table>
     <% @category.projects.each do |project| %>
-      <tr>
-        <td><h5><%= project.title %> </h5></td>
-        <td><h5><%= project.description %></h5></td>
-      </tr>
+      <h4><strong><%= project.title %> </strong></h4>
+      <h5><%= project.description %></h5>
     <% end %>
-  </table>
 </div>
