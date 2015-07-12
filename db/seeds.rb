@@ -92,7 +92,8 @@ projects = [
 	# Dairy and Curd
 	{
 		title: "Sweet Ricotta Cheese", 
-		description: "Ricotta is typically made from whey, the watery byproduct of cheesemaking. But since whey can be difficult to find, you can use a combination of whole milk and cream instead. This ricotta is similar to a queso fresco or paneer.",  
+		description: "Ricotta is typically made from whey, the watery byproduct of cheesemaking. But since whey can be difficult to find, you can use a combination of whole milk and cream instead. This ricotta is similar to a queso fresco or paneer.",
+		category_id: 2,  
 		difficulty: 2,
 		batch_size: 2,
 		batch_unit: "cups"
@@ -100,7 +101,8 @@ projects = [
 	},
 	{
 		title: "Handmade Block Tofu", 
-		description: "Why make tofu yourself? Because you want to experience it at its peak -- freshly made, creamy, and subtly sweet. Homemade tofu is as precious as homemade bread.",  
+		description: "Why make tofu yourself? Because you want to experience it at its peak -- freshly made, creamy, and subtly sweet. Homemade tofu is as precious as homemade bread.", 
+		category_id: 2,  
 		difficulty: 4,
 		batch_size: 250,
 		batch_unit: "grams"
@@ -108,7 +110,8 @@ projects = [
 	},
 	{
 		title: "Yogurt", 
-		description: "Store-bought yogurt may be convenient but it can't compare to the mild creaminess of homemade. The good news is that making yogurt is incredibly easy—as long as you keep your tools clean and don't jiggle the mixture while it's setting, it's almost foolproof. Plus, it's a fun science project for experimenters both young and old.",  
+		description: "Store-bought yogurt may be convenient but it can't compare to the mild creaminess of homemade. The good news is that making yogurt is incredibly easy—as long as you keep your tools clean and don't jiggle the mixture while it's setting, it's almost foolproof. Plus, it's a fun science project for experimenters both young and old.", 
+		category_id: 2,  
 		difficulty: 2,
 		batch_size: 4,
 		batch_unit: "cups"
@@ -116,7 +119,8 @@ projects = [
 	},
 	{
 		title: "Farmer Cheese", 
-		description: "This is an easy home made farmer's cheese. It doesn't age well, so be sure you eat it within a week after it's made - well, if you can let it last that long. If you bake with it, it melts very beautifully. It makes a perfect soft cheese for snacking.",  
+		description: "This is an easy home made farmer's cheese. It doesn't age well, so be sure you eat it within a week after it's made - well, if you can let it last that long. If you bake with it, it melts very beautifully. It makes a perfect soft cheese for snacking.",
+		category_id: 2,   
 		difficulty: 3,
 		batch_size: 1,
 		batch_unit: "pound"
@@ -124,7 +128,8 @@ projects = [
 	},
 	{
 		title: "Mozzarella Cheese", 
-		description: "Knowing how to make your own mozzarella is a dangerous thing. Knowing that at any moment, should the desire present itself, you could whip up your very own ball of creamy mozzarella, still warm from the whey whence it came? Yes. Very very dangerous. Here's how to do it.",  
+		description: "Knowing how to make your own mozzarella is a dangerous thing. Knowing that at any moment, should the desire present itself, you could whip up your very own ball of creamy mozzarella, still warm from the whey whence it came? Yes. Very very dangerous. Here's how to do it.",
+		category_id: 2,   
 		difficulty: 3,
 		batch_size: 1,
 		batch_unit: "pound"
@@ -133,7 +138,8 @@ projects = [
 	# Super foods
 	{
 		title: "Grow Sprouts", 
-		description: "Amazingly, half of a cup of most sprouts contains more vitamin C than five glasses of orange juice! To grow your own sprouts, all you need is a mason-type jar, a piece of cheesecloth or other breathable fabric, and the seeds, beans, grains, or nuts you wish to sprout.",  
+		description: "Amazingly, half of a cup of most sprouts contains more vitamin C than five glasses of orange juice! To grow your own sprouts, all you need is a mason-type jar, a piece of cheesecloth or other breathable fabric, and the seeds, beans, grains, or nuts you wish to sprout.", 
+		category_id: 14,  
 		difficulty: 2,
 		batch_size: 1,
 		batch_unit: "quart"
@@ -141,7 +147,8 @@ projects = [
 	},
 	{
 		title: "Nut Milk", 
-		description: "Once you make homemade nut milks at home, you'll likely stop buying them at the store. They really are so, so simple and it's nice knowing exactly what's in them and being able to completely control the amount of sweetness on your own. That's the upside.",  
+		description: "Once you make homemade nut milks at home, you'll likely stop buying them at the store. They really are so, so simple and it's nice knowing exactly what's in them and being able to completely control the amount of sweetness on your own. That's the upside.", 
+		category_id: 14, 
 		difficulty: 2,
 		batch_size: 5,
 		batch_unit: "cups"
@@ -149,7 +156,8 @@ projects = [
 	},
 	{
 		title: "Wheatgrass", 
-		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a 'shot' of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.",  
+		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a 'shot' of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.", 
+		category_id: 14, 
 		difficulty: 2,
 		batch_size: 500,
 		batch_unit: "grams"
@@ -159,6 +167,7 @@ projects = [
 	{
 		title: "Sausage", 
 		description: "Making sausage at home is one of those lost arts that really is not so difficult as it sounds. At its core, a sausage is simply ground meat and fat, salt, and flavorings. It really is not much more involved than grinding your own hamburger; you don’t even have to stuff it into links if you don’t want to. Yet the flavor of a well-made link surpasses the sum of its parts, and a truly great sausage is fit to be served as a main course at a fancy dinner.",  
+		category_id: 16,
 		difficulty: 3,
 		batch_size: 5,
 		batch_unit: "pounds"
@@ -167,6 +176,7 @@ projects = [
 	{
 		title: "Bacon", 
 		description: "If bacon had it’s own Twitter account it would have more followers than Katy Perry, Justin Bieber, and Barack Obama combined. Everyone loves those slabs of salty goodness. Even those forbidden to eat it have been known to long for it. ",  
+		category_id: 16,
 		difficulty: 3,
 		batch_size: 1,
 		batch_unit: "kg"
