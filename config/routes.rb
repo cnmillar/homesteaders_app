@@ -13,9 +13,9 @@ HeApp::Application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
-
-    # resources :homes, only: [:show]
-    # root to: "homes#show"
+  
+  get 'signup'  => 'users#new' 
+  resources :users
 
 
 end
