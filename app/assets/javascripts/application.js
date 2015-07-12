@@ -13,8 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require turbolinks
-//= require foundation
+//= require social-share-button
 //= require_tree .
-$(function() {
-  $(document).foundation();
-});
+
+

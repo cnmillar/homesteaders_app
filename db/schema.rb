@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150711022029) do
+ActiveRecord::Schema.define(version: 20150711224341) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -94,5 +94,16 @@ ActiveRecord::Schema.define(version: 20150711022029) do
     t.string   "last_name"
     t.integer  "facebook_id"
   end
+
+  create_table "videos", force: true do |t|
+    t.integer  "project_id"
+    t.string   "url"
+    t.string   "title"
+    t.string   "duration"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "videos", ["project_id"], name: "index_videos_on_project_id"
 
 end

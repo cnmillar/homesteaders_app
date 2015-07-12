@@ -1,12 +1,46 @@
-<%# navigation styled for Zurb Foundation 5 %>
-<nav class="top-bar" data-topbar>
-  <ul class="title-area">
-    <li class="name"><%= link_to 'Home', root_path %></li>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-  </ul>
-  <div class="top-bar-section">
-    <ul>
-      <%= render 'layouts/navigation_links' %>
-    </ul>
+<nav data-topbar >
+  <div class = "row">
+    <div class = "large-2 columns">
+      <ul>
+        <li class="name">
+          <h1><a href="/">My Site</a></h1>
+        </li>
+      </ul>
+    </div>
+    <div class = "large-6 columns">
+      <ul class="inline-list">
+        <li class="active"><a href="#">Categories</a></li>
+        <li class="active"><a href="#">Popular</a></li>
+        <li class="active"><a href="/users/1">User #1</a></li>
+        <li class="active"><a href="/projects/2">Project #2</a></li>
+      </ul>
+    </div>
+    <div class = "large-4 columns">
+      <div class = 'user-panel'>
+        <ul class="inline-list">
+          <li>
+            <%= render 'pages/login' %>
+            <script>
+              window.fbAsyncInit = function() {
+                FB.init({  
+                  appId      : '1643888345868772',
+                  xfbml      : true,
+                  version    : 'v2.4'
+                });
+              };
+
+              (function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "//connect.facebook.net/en_US/sdk.js";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, 'script', 'facebook-jssdk'));
+            </script>
+          </li>
+          <li><a href="#">Sign up</a></li>
+        </ul>      
+        <%= render 'layouts/search' %>      
+    </div>
   </div>
 </nav>

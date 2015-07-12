@@ -40,6 +40,8 @@ group :doc do
 end
 
 gem 'pry'
+gem 'social-share-button', '~> 0.1.6'
+# gem 'jquery-star-rating-rails'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
@@ -54,3 +56,4 @@ gem 'pry'
 # gem 'debugger', group: [:development, :test]
 
 # User added gems
+gem 'youtube_it', '~> 2.4.0'

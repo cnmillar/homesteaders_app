@@ -5,8 +5,10 @@ class ProjectsController < ApplicationController
 	end
 
 	def show
-    @project = Project.find(params[:id])
-  end
-	
+		@project = Project.find(params[:id])
+		@equipment = @project.ingredients.where(ing_type: "equipment")
+		@ingredients = @project.ingredients.where(ing_type: "ingredient")
+	end
+
 
 end

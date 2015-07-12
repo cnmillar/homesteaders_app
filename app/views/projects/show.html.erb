@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,3 +24,43 @@
     </div>
   </body>
 </html>
+=======
+<script>
+	$(function(){
+		$("#submit-to-cart").on("click", function(){
+			items = $(".shopify_cart");
+			cart = "http://homesteaders-emporium.myshopify.com/cart";
+			for (var i=0; i < items.length; i++ ) {
+				if ($(items[i]).is(":checked")) {
+					// cart = cart + "/" + this.shopify_id + ":" + this.quantity;
+				}
+			}
+			window.open(cart);
+		});
+	})
+</script>
+
+<div class = 'row custom-row section'>
+  <div class = 'large-5 columns section'>
+    <%= render 'projects/name_description' %>
+    <%= render 'projects/details' %>
+    <div class = 'row'>
+      <div class = 'large-6 columns' >
+        <%= render 'projects/community_summary' %>
+      </div>
+      <div class = 'large-6 columns' >
+        <%= render 'projects/social_toolbar' %>
+      </div>
+    </div>
+    <%= render 'projects/instructions' %>
+    <%= render 'projects/supplies' %>
+    <%= render 'projects/images' %>
+    <%= render 'projects/popular' %>
+  </div>
+  <div class = 'large-7 columns section'>
+    <%= render 'projects/video' %>
+    <%= render 'projects/video_comments' %>
+    <%= render 'projects/comments' %>
+  </div>
+</div>
+>>>>>>> f11bb594c51a79c69b9d45fe27186af8f5b1d359

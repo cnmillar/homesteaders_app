@@ -4,48 +4,12 @@
   <title>HeApp</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"%>
+  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"%>
 
   <%= csrf_meta_tags %>
 </head>
 <body>
- <nav>
-      <div>
-        <div>
-            <a href="/"><span> <h1>Homesteader's Emporium</h1></span></a>      
-        </div class="nav-panel">
-          <ul>
-            <li>Home</li>
-            <li>Categories</li>
-            <li>Popular</li>
-          </ul>
-          <div id ="nav-panel">
-            <ul>
-              <li>Login</li>
-              <li>Signup</li>
-            </ul>
-          </div>
-     
-      </div>
-    </nav>
-
-<script>
-    window.fbAsyncInit = function() {
-      FB.init({  
-        appId      : '1643888345868772',
-        xfbml      : true,
-        version    : 'v2.4'
-      });
-    };
-
-    (function(d, s, id){
-       var js, fjs = d.getElementsByTagName(s)[0];
-       if (d.getElementById(id)) {return;}
-       js = d.createElement(s); js.id = id;
-       js.src = "//connect.facebook.net/en_US/sdk.js";
-       fjs.parentNode.insertBefore(js, fjs);
-     }(document, 'script', 'facebook-jssdk'));
-  </script>
+<%= render 'layouts/navigation' %>
 
 <%= yield %>
 

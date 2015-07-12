@@ -11,6 +11,35 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require social-share-button
  *= require_self
  
  */
+
+$primary-color: #B2230A;
+$secondary-color: #F2AA0E;
+
+h1, h2, h3 {
+  color: $primary-color;
+}
+
+nav {
+  height: 100px;
+  width: 100%;
+  border: 1px black dotted;
+}
+
+.section {
+  border: 1px $primary-color dotted;
+  padding: 1em;
+}
+
+.video-section {
+  
+
+}
+
+/* Foundation overrides */
+.custom-row {
+  max-width: 1000rem;
+}
