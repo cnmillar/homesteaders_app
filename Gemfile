@@ -56,3 +56,4 @@ gem 'social-share-button', '~> 0.1.6'
 # gem 'debugger', group: [:development, :test]
 
 # User added gems
+gem 'youtube_it', '~> 2.4.0'
