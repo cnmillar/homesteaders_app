@@ -14,8 +14,10 @@ HeApp::Application.routes.draw do
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
   
-  get 'signup'  => 'users#new' 
+  get 'signup' => 'users#new' 
   resources :users
-
+  get '/login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
 end
