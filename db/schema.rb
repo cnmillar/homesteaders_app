@@ -32,8 +32,6 @@ ActiveRecord::Schema.define(version: 20150711022029) do
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
 
   create_table "galleries", force: true do |t|
-    t.integer  "user_id"
-    t.integer  "project_id"
     t.string   "original_image"
     t.string   "resized_image"
     t.string   "description"
@@ -41,11 +39,7 @@ ActiveRecord::Schema.define(version: 20150711022029) do
     t.datetime "updated_at"
   end
 
-  add_index "galleries", ["project_id"], name: "index_galleries_on_project_id"
-  add_index "galleries", ["user_id"], name: "index_galleries_on_user_id"
-
   create_table "ingredients", force: true do |t|
-    t.integer  "project_id"
     t.string   "name"
     t.string   "ing_type"
     t.integer  "shopify_id"
@@ -56,10 +50,7 @@ ActiveRecord::Schema.define(version: 20150711022029) do
     t.datetime "updated_at"
   end
 
-  add_index "ingredients", ["project_id"], name: "index_ingredients_on_project_id"
-
   create_table "projects", force: true do |t|
-    t.integer  "category_id"
     t.string   "title"
     t.text     "description"
     t.string   "video"
@@ -73,17 +64,12 @@ ActiveRecord::Schema.define(version: 20150711022029) do
     t.integer  "duration"
   end
 
-  add_index "projects", ["category_id"], name: "index_projects_on_category_id"
-
   create_table "steps", force: true do |t|
-    t.integer  "project_id"
     t.integer  "ordinal"
     t.text     "content"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  add_index "steps", ["project_id"], name: "index_steps_on_project_id"
 
   create_table "user_projects", force: true do |t|
     t.integer  "users_id"

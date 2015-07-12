@@ -1,0 +1,7 @@
+  <h4>Ingredients: </h4>
+    <% @project.ingredients.each do |ingredient| %>
+      <%= ingredient.name %><br>
+      <%= ingredient.unit_size %><br>
+      <%= ingredient.unit_measure %><br>
+    <% end %>
+ 
