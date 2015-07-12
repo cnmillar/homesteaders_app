@@ -1,3 +1,11 @@
-<% 10.times do %>
-<p>I am a project!</p> 
-<% end %>
+<h4>projects</h4>
+<div>
+  <table>
+    <% @category.projects.each do |project| %>
+      <tr>
+        <td><h5><%= project.title %>. </h5></td>
+        <td><h5><%= project.description %></h5></td>
+      </tr>
+    <% end %>
+  </table>
+</div>
