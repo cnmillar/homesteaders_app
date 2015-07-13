@@ -4,7 +4,7 @@
 	<h2>Supplies</h2>
 	<h3>Ingredients</h3>
 
-	<ul>
+	<ul class="no-bullet">
 		<% @ingredients.each do |ing|%>
 			<li>
 				<% if ing.availability %>
@@ -19,7 +19,7 @@
 	</ul>
 
 	<h3>Equipment</h3>
-	<ul>
+	<ul class="no-bullet">
 		<% @equipment.each do |equip|%>
 			<li>
 				<% if equip.availability %>
