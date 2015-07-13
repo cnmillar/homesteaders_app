@@ -2,10 +2,11 @@
 	$(function(){
 		$("#submit-to-cart").on("click", function(){
 			items = $(".shopify_cart");
-			cart = "http://homesteaders-emporium.myshopify.com/cart";
+			cart = "http://homesteaders-emporium.myshopify.com/cart/";
+
 			for (var i=0; i < items.length; i++ ) {
 				if ($(items[i]).is(":checked")) {
-					// cart = cart + "/" + this.shopify_id + ":" + this.quantity;
+					cart = cart + $(items[i]).attr("data-shopifyid") + ":" + parseInt($(items[i]).attr("data-quantity")) + ",";
 				}
 			}
 			window.open(cart);

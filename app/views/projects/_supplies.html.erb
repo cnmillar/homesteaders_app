@@ -8,7 +8,7 @@
 		<% @ingredients.each do |ing|%>
 			<li>
 				<% if ing.availability %>
-					<input type="checkbox" class="shopify_cart">
+					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.unit_size %>>
 						<h5 style="display:inline;"><%= ing.name %></h5>
 					</input>
 				<% else %>
@@ -23,7 +23,7 @@
 		<% @equipment.each do |equip|%>
 			<li>
 				<% if equip.availability %>
-					<input type="checkbox" class="shopify_cart">
+					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= equip.shopify_id %> data-quantity = <%= equip.unit_size %>>
 						<h5 style="display: inline;"><%= equip.name %></h5>
 					</input>
 				<% else %>
@@ -32,6 +32,5 @@
 			</li>
 		<% end %>
 	</ul>
-
 	<button id="submit-to-cart">Add to cart</button>
 </div>
