@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713203441) do
+ActiveRecord::Schema.define(version: 20150713225946) do
 
   create_table "average_caches", force: true do |t|
     t.integer  "rater_id"
@@ -141,14 +141,14 @@ ActiveRecord::Schema.define(version: 20150713203441) do
   add_index "user_projects", ["users_id"], name: "index_user_projects_on_users_id"
 
   create_table "users", force: true do |t|
-    t.boolean  "admin",       default: false
-    t.string   "email"
-    t.string   "avatar"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer  "facebook_id"
     t.string   "first_name"
     t.string   "last_name"
-    t.integer  "facebook_id"
+    t.string   "email"
+    t.string   "avatar"
+    t.boolean  "admin"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "videos", force: true do |t|

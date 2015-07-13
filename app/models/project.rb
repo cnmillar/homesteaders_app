@@ -11,7 +11,7 @@ class Project < ActiveRecord::Base
 	
 	belongs_to :category
 
-	ratyrate_rateable 'ease', 'project_quality', 'overall'
+	ratyrate_rateable 'overall'
 
 	def youtube_url
     youtube_id = self.video.split("=").last

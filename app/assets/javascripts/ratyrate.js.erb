@@ -10,7 +10,7 @@ $(function(){
     var $halfShow = ($(this).attr('data-half-show') == 'true');
     var $single   = ($(this).attr('data-single') == 'true');
     $(this).raty({
-      score: function() {
+      score: function() {        
         return $(this).attr('data-rating')
       },
       number: function() {
@@ -37,7 +37,10 @@ $(function(){
       targetFormat: $(this).attr('data-target-format'),
       targetScoret: $(this).attr('data-target-score'),
       readOnly: $readonly,
-      click: function(score, evt) {
+
+      click: function(score, evt) {  
+      debugger;
+            
         var _this = this;
         if (score == null) { score = 0; }
         $.post('<%= Rails.application.class.routes.url_helpers.rate_path %>',
@@ -50,7 +53,6 @@ $(function(){
         function(data) {
           if(data) {
             // success code goes here ...
-
             if ($(_this).attr('data-disable-after-rate') == 'true') {
               $(_this).raty('set', { readOnly: true, score: score });
             }

@@ -91,7 +91,7 @@ end
 projects = [
 	# Dairy and Curd
 	{
-		title: "Sweet Ricotta Cheese", 
+		title: "Make Sweet Ricotta Cheese", 
 		description: "Ricotta is typically made from whey, the watery byproduct of cheesemaking. But since whey can be difficult to find, you can use a combination of whole milk and cream instead. This ricotta is similar to a queso fresco or paneer.",
 		category_id: 2,  
 		difficulty: 2,
@@ -100,7 +100,7 @@ projects = [
 		# kit_id: 
 	},
 	{
-		title: "Handmade Block Tofu", 
+		title: "Make Handmade Block Tofu", 
 		description: "Why make tofu yourself? Because you want to experience it at its peak -- freshly made, creamy, and subtly sweet. Homemade tofu is as precious as homemade bread.", 
 		category_id: 2,  
 		difficulty: 4,
@@ -109,7 +109,7 @@ projects = [
 		# kit_id: 	
 	},
 	{
-		title: "Yogurt", 
+		title: "Make Yogurt", 
 		description: "Store-bought yogurt may be convenient but it can't compare to the mild creaminess of homemade. The good news is that making yogurt is incredibly easy—as long as you keep your tools clean and don't jiggle the mixture while it's setting, it's almost foolproof. Plus, it's a fun science project for experimenters both young and old.", 
 		category_id: 2,  
 		difficulty: 2,
@@ -118,7 +118,7 @@ projects = [
 		# kit_id: 	
 	},
 	{
-		title: "Farmer Cheese", 
+		title: "Make Farmer Cheese", 
 		description: "This is an easy home made farmer's cheese. It doesn't age well, so be sure you eat it within a week after it's made - well, if you can let it last that long. If you bake with it, it melts very beautifully. It makes a perfect soft cheese for snacking.",
 		category_id: 2,   
 		difficulty: 3,
@@ -127,7 +127,7 @@ projects = [
 		# kit_id: 	
 	},
 	{
-		title: "Mozzarella Cheese", 
+		title: "Make Mozzarella Cheese", 
 		description: "Knowing how to make your own mozzarella is a dangerous thing. Knowing that at any moment, should the desire present itself, you could whip up your very own ball of creamy mozzarella, still warm from the whey whence it came? Yes. Very very dangerous. Here's how to do it.",
 		category_id: 2,   
 		difficulty: 3,
@@ -146,7 +146,7 @@ projects = [
 		# kit_id: 	
 	},
 	{
-		title: "Nut Milk", 
+		title: "Make Nut Milk", 
 		description: "Once you make homemade nut milks at home, you'll likely stop buying them at the store. They really are so, so simple and it's nice knowing exactly what's in them and being able to completely control the amount of sweetness on your own. That's the upside.", 
 		category_id: 14, 
 		difficulty: 2,
@@ -155,7 +155,7 @@ projects = [
 		# kit_id: 	
 	},
 	{
-		title: "Wheatgrass", 
+		title: "Grow Wheatgrass", 
 		description: "Wheatgrass is packed with essential vitamins and nutrients that keep your mind and body healthy and vibrant. Taking a 'shot' of juiced wheatgrass as part of your morning breakfast routine is considered a healthy way to start the day, but it can get very expensive. If you want to make wheatgrass a regular part of your diet, try growing it yourself at home instead of buying it already juiced.", 
 		category_id: 14, 
 		difficulty: 2,
@@ -165,7 +165,7 @@ projects = [
 	},
 	# Whole Animal
 	{
-		title: "Sausage", 
+		title: "Make Sausage", 
 		description: "Making sausage at home is one of those lost arts that really is not so difficult as it sounds. At its core, a sausage is simply ground meat and fat, salt, and flavorings. It really is not much more involved than grinding your own hamburger; you don’t even have to stuff it into links if you don’t want to. Yet the flavor of a well-made link surpasses the sum of its parts, and a truly great sausage is fit to be served as a main course at a fancy dinner.",  
 		category_id: 16,
 		difficulty: 3,
@@ -174,7 +174,7 @@ projects = [
 		# kit_id: 	
 	},
 	{
-		title: "Bacon", 
+		title: "Make Bacon", 
 		description: "If bacon had it’s own Twitter account it would have more followers than Katy Perry, Justin Bieber, and Barack Obama combined. Everyone loves those slabs of salty goodness. Even those forbidden to eat it have been known to long for it. ",  
 		category_id: 16,
 		difficulty: 3,
@@ -770,6 +770,7 @@ users = [
 		facebook_id: 223456799
 	},
 	{
+		admin: false,
 		email: "sam@smith.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
 		first_name: "Sam",
@@ -779,7 +780,7 @@ users = [
 ]
 
 users.each do |u|
-	user = User.create(email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
+	user = User.create(admin: u[:admin], email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
 	unless user.persisted?
 		puts "Could not create user: #{u.errors.full_messages}"
 	end
