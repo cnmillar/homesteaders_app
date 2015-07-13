@@ -36,11 +36,25 @@
                  js.src = "//connect.facebook.net/en_US/sdk.js";
                  fjs.parentNode.insertBefore(js, fjs);
                }(document, 'script', 'facebook-jssdk'));
-            </script>
+          </script>
           </li>
-          <li><a href="#">Sign up</a></li>
+          <% if current_user %> 
+          <ul> 
+            <li><%= current_user.email %></li> 
+            <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+          </ul> 
+          <% else %> 
+          <ul> 
+            <li><%= link_to "Login", 'login' %></a></li> 
+            <li><%= link_to "Signup", 'signup' %></a></li> 
+          </ul> 
+          <% end %>
+
+
         </ul>      
         <%= render 'layouts/search' %>      
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+
