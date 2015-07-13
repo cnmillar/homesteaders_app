@@ -11,6 +11,20 @@
 			}
 			window.open(cart);
 		});
+
+    $("#select-all").on("click", function(e){
+      if(this.checked){
+        $('.shopify_cart').each(function(){
+          this.checked = true;
+        })
+      }
+      else {
+        $('.shopify_cart').each(function(){
+          this.checked = false;
+        })
+      }
+    })
+
 	})
 </script>
 

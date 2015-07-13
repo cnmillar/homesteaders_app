@@ -209,7 +209,7 @@ ingredients = [
 			name: "CFH Muslin",
 			ing_type: "equipment",
 			shopify_id: 2137582657,
-			# unit_size: ,
+			unit_size: 1,
 			unit_measure: "sq yd",
 			availability: true	
 		},
@@ -235,7 +235,7 @@ ingredients = [
 			shopify_id: nil,
 			unit_size: 0.5,
 			unit_measure: "tsp",
-			availability: true	
+			availability: false	
 		},
 		{
 			name: "Milk",
