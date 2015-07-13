@@ -1,5 +1,6 @@
 class Project < ActiveRecord::Base
-    scope :search, -> (title) { where("title like ?", "%" + title + "%") }
+
+  scope :search, -> (title) { where("title like ?", "%" + title + "%") }
 
 	has_many :ingredients
 	has_many :steps
@@ -10,9 +11,10 @@ class Project < ActiveRecord::Base
 	
 	belongs_to :category
 
+	ratyrate_rateable 'ease', 'project_quality', 'overall'
+
 	def youtube_url
     youtube_id = self.video.split("=").last
-    # "<iframe src='//www.youtube.com/embed/#{youtube_id}'></iframe>"
     "//www.youtube.com/embed/#{youtube_id}"
   end
 
