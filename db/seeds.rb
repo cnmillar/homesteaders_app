@@ -908,112 +908,112 @@ gallery_images = [
 	},
 	{
 		user_id: 1,
-		project_id: 7,
+		project_id: 8,
 		original_image: 'project_gallery/wheatgrass-1.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 7,
+		project_id: 8,
 		original_image: 'project_gallery/wheatgrass-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 7,
+		project_id: 8,
 		original_image: 'project_gallery/wheatgrass-3.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 7,
+		project_id: 8,
 		original_image: 'project_gallery/wheatgrass-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 7,
+		project_id: 8,
 		original_image: 'project_gallery/wheatgrass-5.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 7,
+		project_id: 8,
 		original_image: 'project_gallery/wheatgrass-6.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 7,
+		project_id: 8,
 		original_image: 'project_gallery/wheatgrass-7.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 8,
+		project_id: 9,
 		original_image: 'project_gallery/sausage-1.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
-		project_id: 8,
+		project_id: 9,
 		original_image: 'project_gallery/sausage-2.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
-		project_id: 8,
+		project_id: 9,
 		original_image: 'project_gallery/sausage-3.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
-		project_id: 8,
+		project_id: 9,
 		original_image: 'project_gallery/sausage-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
-		project_id: 9,
+		project_id: 10,
 		original_image: 'project_gallery/bacon-1.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
-		project_id: 9,
+		project_id: 10,
 		original_image: 'project_gallery/bacon-2.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
-		project_id: 9,
+		project_id: 10,
 		original_image: 'project_gallery/bacon-3.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
-		project_id: 9,
+		project_id: 10,
 		original_image: 'project_gallery/bacon-4.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
-		project_id: 9,
+		project_id: 10,
 		original_image: 'project_gallery/bacon-5.jpg'
 		# resized_image:
 		# description:
