@@ -1,36 +1,53 @@
-    <div id="player"></div>
+<div>
+  <div id="player"></div>
 
-    <script>
-      // 2. This code loads the IFrame Player API code asynchronously.
-      var tag = document.createElement('script');
+  <script>
+    var tag = document.createElement('script');
 
-      tag.src = "https://www.youtube.com/iframe_api";
-      var firstScriptTag = document.getElementsByTagName('script')[0];
-      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-      // 3. This function creates an <iframe> (and YouTube player)
-      //    after the API code downloads.
-      var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '390',
-          width: '640',
-          videoId: 'M7lc1UVf-VE',
-          events: {
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: 'EgdOjyYjjEc',
+        events: {
 
-          }
-        });
-      }
+        }
+      });
+    }
+  </script>
+  <div id = "user-timeline">
+  </div>
+</div>
 
-
-    </script>
 <div>
   <a href="#" class = 'button' id = 'get-time'>Get current time</a>
   <script>
-    $('.button').on('click', function( event ) {
+    $('#get-time').on('click', function( event ) {
       event.preventDefault();
       currentTime = player.getCurrentTime();
-      alert("The player is at " + currentTime + ' seconds.')
+      totalTime = player.getDuration();
+      percentComplete = ((currentTime/totalTime)*100);
+      alert('The player is ' + percentComplete + '% complete.')
     });
   </script>
+
+  <a href="#" class = 'button' id = 'place-marker'>Place avatar</a>
+  <script>
+    $('#place-marker').on('click', function( event ) {
+      event.preventDefault();
+      currentTime = player.getCurrentTime();
+      totalTime = player.getDuration();
+      percentComplete = currentTime/totalTime;
+      timelineX = percentComplete*640;
+      var newAvatar = $('<div />').addClass('user-avatar').css({'left': timelineX, 'top' : 0 });
+      $('#user-timeline').append(newAvatar);
+
+    });
+  </script>
+
 </div>

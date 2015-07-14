@@ -39,6 +39,22 @@ nav {
 
 }
 
+#user-timeline {
+  background-color: pink;
+  width: 640px;
+  height: 32px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: blue;
+  display: inline-block;
+  position: absolute;
+}
+
 /* Foundation overrides */
 .custom-row {
   max-width: 1000rem;
