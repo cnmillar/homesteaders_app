@@ -16,38 +16,32 @@
       </ul>
     </div>
     <div class = "large-4 columns">
+      <%= render 'pages/login' %>
+      <script type="text/javascript">
+        window.fbAsyncInit = function() {
+          FB.init({  
+            appId      : '1643888345868772',
+            xfbml      : true,
+            version    : 'v2.4'
+          });
+        };
+
+        (function(d, s, id){
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) {return;}
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));
+      </script>
       <div class = 'user-panel'>
-        <ul class="inline-list">
-          <li>
-            <%= render 'pages/login' %>
-            <script>
-              window.fbAsyncInit = function() {
-                FB.init({  
-                  appId      : '1643888345868772',
-                  xfbml      : true,
-                  version    : 'v2.4'
-                });
-              };
-
-              (function(d, s, id){
-                 var js, fjs = d.getElementsByTagName(s)[0];
-                 if (d.getElementById(id)) {return;}
-                 js = d.createElement(s); js.id = id;
-                 js.src = "//connect.facebook.net/en_US/sdk.js";
-                 fjs.parentNode.insertBefore(js, fjs);
-               }(document, 'script', 'facebook-jssdk'));
-          </script>
-          </li>
-          <% if current_user %> 
-          <ul> 
-            <li><%= current_user.email %></li> 
-            <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
-          </ul> 
+            <% if current_user %> 
+            <ul> 
+              <li><%= current_user.email %></li> 
+              <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+            </ul> 
           <% else %> 
-          <% end %>
-
-
-        </ul>      
+          <% end %>   
         <%= render 'layouts/search' %>      
       </div>
     </div>
