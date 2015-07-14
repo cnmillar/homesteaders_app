@@ -23,13 +23,9 @@ class SessionsController < ApplicationController
 
   end
 
-
-
   def auth_hash
     request.env['omniauth.auth']
   end
-    
-
 
   def destroy 
     session[:user_id] = nil 
