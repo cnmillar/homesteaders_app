@@ -131,8 +131,8 @@ projects = [
 		batch_size: 1,
 		batch_unit: "pound",
 		duration: 5,
-		duration_unit: "hours"
-		# kit_id: 	
+		duration_unit: "hours",
+		kit_id: 3514926913	
 	},
 	{
 		title: "Make Mozzarella Cheese", 
@@ -154,8 +154,8 @@ projects = [
 		batch_size: 1,
 		batch_unit: "quart",
 		duration: 30,
-		duration_unit: "minutes"
-		# kit_id: 	
+		duration_unit: "minutes",
+		kit_id: 3514925441	
 	},
 	{
 		title: "Make Nut Milk", 
@@ -199,8 +199,8 @@ projects = [
 		batch_size: 1,
 		batch_unit: "kg",
 		duration: 1,
-		duration_unit: "hour"
-		# kit_id: 	
+		duration_unit: "hour",
+		kit_id: 2135948673	
 	}
 ]
 

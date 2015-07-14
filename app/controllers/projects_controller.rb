@@ -29,10 +29,16 @@ class ProjectsController < ApplicationController
 
   def send_project_mail
     @project = Project.find(params[:id])
-    @user = User.first #need to change to current user
-    UserMailer.send_project_email(@project, @user).deliver
-    flash[:notice] = "Project sent."
-    redirect_to project_path(@project.id)
+    @user = current_user
+
+    if current_user.email
+      @user_email = current_user.email
+      UserMailer.send_project_email(@project, @user_email).deliver
+      flash[:notice] = "Project sent."
+    else
+      flash[:notice] = "We can't find an email for you!"
+      redirect_to project_path(@project.id)
+    end
   end
 
   protected

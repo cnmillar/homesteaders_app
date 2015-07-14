@@ -8,7 +8,6 @@
 		<% @ingredients.each do |ing|%>
 			<li>
 				<% if ing.availability %>
-					<%= binding.pry %>
 					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.shopify_unit %>>
 						<h5 style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
 					</input>
