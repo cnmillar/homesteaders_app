@@ -1,5 +1,6 @@
 <div class = 'section'>
   <!-- Check out the social_share_button docs: https://github.com/huacnlee/social-share-button -->
 	<%= social_share_button_tag("Check out this project!") %>
-	<button>Email yourself this project</button>
+	<%= link_to "Email yourself this project", :controller => "projects", :action => "send_project_mail", :id => @project.id %>
+	<!-- <button id="send-email">Email yourself this project</button> -->
 </div>

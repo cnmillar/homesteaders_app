@@ -20,5 +20,6 @@ HeApp::Application.routes.draw do
   get '/login' => 'sessions#new'
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
+  get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail
 
 end

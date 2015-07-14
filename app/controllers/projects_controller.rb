@@ -27,6 +27,14 @@ class ProjectsController < ApplicationController
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
 	end
 
+  def send_project_mail
+    @project = Project.find(params[:id])
+    @user = User.first #need to change to current user
+    UserMailer.send_project_email(@project, @user).deliver
+    flash[:notice] = "Project sent."
+    redirect_to project_path(@project.id)
+  end
+
   protected
 
   def projects_params
