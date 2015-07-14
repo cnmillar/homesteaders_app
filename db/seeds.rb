@@ -578,7 +578,7 @@ projects.each_with_index do |pro, index|
 	if ingredients[index]
 		ingredients[index].each do |ing|
 			ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
-				ingredient.update_attributes(name: ing[:name], ing_type: ing[:ing_type], shopify_id: ing[:shopify_id], unit_size: ing[:unit_size], unit_measure: ing[:unit_measure], availability: ing[:availability], project_id: project.id)
+				ingredient.update_attributes(name: ing[:name], ing_type: ing[:ing_type], shopify_id: ing[:shopify_id], unit_size: ing[:unit_size], unit_measure: ing[:unit_measure], availability: ing[:availability], project_id: project.id, shopify_unit: ing[:shopify_unit])
 				unless ingredient.persisted?
 					puts "Could not create ingredient for project #{project.name}: #{ingredient.errors.full_messages}"
 				end
