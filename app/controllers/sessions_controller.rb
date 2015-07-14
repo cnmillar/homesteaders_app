@@ -16,10 +16,10 @@ class SessionsController < ApplicationController
 
       user = User.create(facebook_id: facebook_id, first_name: first_name, last_name: last_name, avatar: avatar)
   
-
     end
-      session[:user_id] = user[0].id
-      redirect_to '/' 
+  
+    session[:user_id] = user.first.id
+    redirect_to '/' 
 
   end
 

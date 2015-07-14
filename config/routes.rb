@@ -19,11 +19,8 @@ HeApp::Application.routes.draw do
   resources :users
 
   delete 'logout' => 'sessions#destroy'
-<<<<<<< HEAD
   get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail
 
   # get '/auth/:provider/callback' => 'users#callback'
-=======
->>>>>>> feature/new_users
   get '/auth/:provider/callback', to: 'sessions#create'
 end
