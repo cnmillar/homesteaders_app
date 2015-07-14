@@ -1,4 +1,4 @@
-class Gallery < ActiveRecord::Base
+class Image < ActiveRecord::Base
 
 	belongs_to :user
 	belongs_to :project
