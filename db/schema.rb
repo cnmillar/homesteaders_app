@@ -40,18 +40,17 @@ ActiveRecord::Schema.define(version: 20150713225946) do
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
 
-  create_table "galleries", force: true do |t|
+  create_table "images", force: true do |t|
     t.integer  "user_id"
     t.integer  "project_id"
-    t.string   "original_image"
-    t.string   "resized_image"
+    t.string   "original"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "galleries", ["project_id"], name: "index_galleries_on_project_id"
-  add_index "galleries", ["user_id"], name: "index_galleries_on_user_id"
+  add_index "images", ["project_id"], name: "index_images_on_project_id"
+  add_index "images", ["user_id"], name: "index_images_on_user_id"
 
   create_table "ingredients", force: true do |t|
     t.integer  "project_id"

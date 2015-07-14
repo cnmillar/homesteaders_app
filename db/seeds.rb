@@ -786,235 +786,235 @@ users.each do |u|
 	end
 end
 
-gallery_images = [
+images = [
 	{
 		user_id: 1,
 		project_id: 1,
-		original_image: 'project_gallery/ricotta-1.jpg'
+		original: 'project_gallery/ricotta-1.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 1,
-		original_image: 'project_gallery/ricotta-2.jpg'
+		original: 'project_gallery/ricotta-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original_image: 'project_gallery/tofu-1.jpg'
+		original: 'project_gallery/tofu-1.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original_image: 'project_gallery/tofu-2.jpg'
+		original: 'project_gallery/tofu-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original_image: 'project_gallery/tofu-3.jpg'
+		original: 'project_gallery/tofu-3.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-1.jpg'
+		original: 'project_gallery/farmer-cheese-1.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-2.jpg'
+		original: 'project_gallery/farmer-cheese-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-3.jpg'
+		original: 'project_gallery/farmer-cheese-3.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-4.jpg'
+		original: 'project_gallery/farmer-cheese-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-1.jpg'
+		original: 'project_gallery/mozzarella-1.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-2.jpg'
+		original: 'project_gallery/mozzarella-2.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-3.jpg'
+		original: 'project_gallery/mozzarella-3.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-4.jpg'
+		original: 'project_gallery/mozzarella-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-5.jpg'
+		original: 'project_gallery/mozzarella-5.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 6,
-		original_image: 'project_gallery/sprouts-1.jpg'
+		original: 'project_gallery/sprouts-1.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 6,
-		original_image: 'project_gallery/sprouts-2.jpg'
+		original: 'project_gallery/sprouts-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 6,
-		original_image: 'project_gallery/sprouts-3.jpg'
+		original: 'project_gallery/sprouts-3.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-1.jpg'
+		original: 'project_gallery/wheatgrass-1.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-2.jpg'
+		original: 'project_gallery/wheatgrass-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-3.jpg'
+		original: 'project_gallery/wheatgrass-3.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-4.jpg'
+		original: 'project_gallery/wheatgrass-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-5.jpg'
+		original: 'project_gallery/wheatgrass-5.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-6.jpg'
+		original: 'project_gallery/wheatgrass-6.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-7.jpg'
+		original: 'project_gallery/wheatgrass-7.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-1.jpg'
+		original: 'project_gallery/sausage-1.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-2.jpg'
+		original: 'project_gallery/sausage-2.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-3.jpg'
+		original: 'project_gallery/sausage-3.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-4.jpg'
+		original: 'project_gallery/sausage-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-1.jpg'
+		original: 'project_gallery/bacon-1.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-2.jpg'
+		original: 'project_gallery/bacon-2.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-3.jpg'
+		original: 'project_gallery/bacon-3.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-4.jpg'
+		original: 'project_gallery/bacon-4.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-5.jpg'
+		original: 'project_gallery/bacon-5.jpg'
 		# resized_image:
 		# description:
 	}
@@ -1022,8 +1022,8 @@ gallery_images = [
 
 ]
 
-gallery_images.each do |img|
-	image = Gallery.create(user_id: img[:user_id], project_id: img[:project_id], original_image: img[:original_image])
+images.each do |img|
+	image = Image.create(user_id: img[:user_id], project_id: img[:project_id], original: img[:original])
 	unless image.persisted?
 		puts "Could not add image: #{img.errors.full_messages}"
 	end
