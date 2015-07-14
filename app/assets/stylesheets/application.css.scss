@@ -55,6 +55,21 @@ nav {
   position: absolute;
 }
 
+.user-avatar:hover {
+  width: 40px;
+  height: 40px;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+.user-avatar-flyout {
+  width: 400px;
+  height: 40px;
+  opacity: .7;
+  background-color: black;
+/*  position: absolute;*/
+}
+
 /* Foundation overrides */
 .custom-row {
   max-width: 1000rem;
