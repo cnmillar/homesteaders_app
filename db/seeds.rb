@@ -780,8 +780,8 @@ users = [
 ]
 
 users.each do |u|
-	user = User.create(admin: u[:admin], email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
-	unless user.persisted?
-		puts "Could not create user: #{u.errors.full_messages}"
-	end
+	user = User.create!(admin: u[:admin], email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
+	# unless user.persisted?
+	# 	puts "Could not create user: #{u.errors.full_messages}"
+	# end
 end

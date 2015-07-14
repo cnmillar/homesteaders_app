@@ -128,8 +128,8 @@ ActiveRecord::Schema.define(version: 20150713225946) do
   add_index "steps", ["project_id"], name: "index_steps_on_project_id"
 
   create_table "user_projects", force: true do |t|
-    t.integer  "users_id"
-    t.integer  "projects_id"
+    t.integer  "user_id"
+    t.integer  "project_id"
     t.boolean  "favourited"
     t.boolean  "completed"
     t.integer  "rating"
@@ -137,8 +137,8 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.datetime "updated_at"
   end
 
-  add_index "user_projects", ["projects_id"], name: "index_user_projects_on_projects_id"
-  add_index "user_projects", ["users_id"], name: "index_user_projects_on_users_id"
+  add_index "user_projects", ["project_id"], name: "index_user_projects_on_project_id"
+  add_index "user_projects", ["user_id"], name: "index_user_projects_on_user_id"
 
   create_table "users", force: true do |t|
     t.integer  "facebook_id"

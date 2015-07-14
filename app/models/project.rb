@@ -6,6 +6,7 @@ class Project < ActiveRecord::Base
 	has_many :steps
 	has_many :images
 	has_many :users, through: :user_projects
+	has_many :user_projects
 	has_many :comments, as: :commentable
   has_one :video
 	
@@ -16,6 +17,10 @@ class Project < ActiveRecord::Base
 	def youtube_url
     youtube_id = self.video.split("=").last
     "//www.youtube.com/embed/#{youtube_id}"
+  end
+
+  def favourited
+
   end
 
 end
