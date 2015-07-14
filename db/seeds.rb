@@ -96,7 +96,9 @@ projects = [
 		category_id: 2,  
 		difficulty: 2,
 		batch_size: 2,
-		batch_unit: "cups"
+		batch_unit: "cups",
+		duration: 12,
+		duration_unit: "hours"
 		# kit_id: 
 	},
 	{
@@ -105,7 +107,9 @@ projects = [
 		category_id: 2,  
 		difficulty: 4,
 		batch_size: 250,
-		batch_unit: "grams"
+		batch_unit: "grams",
+		duration: 2,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	{
@@ -114,7 +118,9 @@ projects = [
 		category_id: 2,  
 		difficulty: 2,
 		batch_size: 4,
-		batch_unit: "cups"
+		batch_unit: "cups",
+		duration: 5,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	{
@@ -123,7 +129,9 @@ projects = [
 		category_id: 2,   
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound"
+		batch_unit: "pound",
+		duration: 5,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	{
@@ -132,7 +140,9 @@ projects = [
 		category_id: 2,   
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound"
+		batch_unit: "pound",
+		duration: 2,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	# Super foods
@@ -142,7 +152,9 @@ projects = [
 		category_id: 14,  
 		difficulty: 2,
 		batch_size: 1,
-		batch_unit: "quart"
+		batch_unit: "quart",
+		duration: 30,
+		duration_unit: "minutes"
 		# kit_id: 	
 	},
 	{
@@ -151,7 +163,9 @@ projects = [
 		category_id: 14, 
 		difficulty: 2,
 		batch_size: 5,
-		batch_unit: "cups"
+		batch_unit: "cups",
+		duration: 30,
+		duration_unit: "minutes"
 		# kit_id: 	
 	},
 	{
@@ -160,7 +174,9 @@ projects = [
 		category_id: 14, 
 		difficulty: 2,
 		batch_size: 500,
-		batch_unit: "grams"
+		batch_unit: "grams",
+		duration: 30,
+		duration_unit: "minutes"
 		# kit_id: 	
 	},
 	# Whole Animal
@@ -170,7 +186,9 @@ projects = [
 		category_id: 16,
 		difficulty: 3,
 		batch_size: 5,
-		batch_unit: "pounds"
+		batch_unit: "pounds",
+		duration: 3,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	{
@@ -179,7 +197,9 @@ projects = [
 		category_id: 16,
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "kg"
+		batch_unit: "kg",
+		duration: 1,
+		duration_unit: "hour"
 		# kit_id: 	
 	}
 ]
@@ -194,7 +214,8 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
-			# unit_measure: ""
+			# unit_measure: "",
+			shopify_unit: 1,
 			availability: true 
 		},
 		{
@@ -202,6 +223,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
+			shopify_unit: 1,
 			# unit_measure: ""
 			availability: true 
 		},
@@ -211,6 +233,7 @@ ingredients = [
 			shopify_id: 2137582657,
 			unit_size: 1,
 			unit_measure: "sq yd",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -218,6 +241,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 3824391809,
 			unit_size: 1,
+			shopify_unit: 1,
 			# unit_measure: ""
 			availability: true
 		},
@@ -253,6 +277,7 @@ ingredients = [
 			shopify_id: 4461196737,
 			unit_size: 10,
 			unit_measure: "grams",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -260,6 +285,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2136870465,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -268,6 +294,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2134881985,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -276,6 +303,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2134896641,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -284,6 +312,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2137938945,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -319,6 +348,7 @@ ingredients = [
 			shopify_id: 2135044289,
 			unit_size: 5,
 			unit_measure: "g",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -327,6 +357,7 @@ ingredients = [
 			shopify_id: 2136960769,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -335,6 +366,7 @@ ingredients = [
 			shopify_id: 2135581953,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -343,6 +375,7 @@ ingredients = [
 			shopify_id: 3780636545,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		}
 	],
@@ -353,6 +386,7 @@ ingredients = [
 			shopify_id: 2137702657,
 			unit_size: 0.125,
 			unit_measure: "tsp",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -361,6 +395,7 @@ ingredients = [
 			shopify_id: 3523484097,
 			unit_size: 0.125,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -369,6 +404,7 @@ ingredients = [
 			shopify_id: 2136450625,
 			unit_size: 0.125,
 			unit_measure: "tsp",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -377,6 +413,7 @@ ingredients = [
 			shopify_id: 2137582657,
 			unit_size: 0.25,
 			unit_measure: "sq yd",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -385,6 +422,7 @@ ingredients = [
 			shopify_id: 3824391809,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -393,6 +431,7 @@ ingredients = [
 			shopify_id: 2136960769,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -401,6 +440,7 @@ ingredients = [
 			shopify_id: 2135581953,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -433,6 +473,7 @@ ingredients = [
 			shopify_id: 2134508417,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		}
 	]
