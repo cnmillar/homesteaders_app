@@ -1,2 +1,2 @@
-class GalleriesController < ApplicationController
+class ImagesController < ApplicationController
 end
