@@ -4,8 +4,6 @@ class CreateImages < ActiveRecord::Migration
       t.belongs_to :user, index: true
       t.belongs_to :project, index: true
     	t.string :original
-    	t.string :carousel
-      t.string :thumb
     	t.string :description
       t.timestamps
     end
