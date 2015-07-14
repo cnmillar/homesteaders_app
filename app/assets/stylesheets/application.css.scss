@@ -39,6 +39,37 @@ nav {
 
 }
 
+#user-timeline {
+  background-color: pink;
+  width: 640px;
+  height: 32px;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+.user-avatar {
+  width: 32px;
+  height: 32px;
+  background-color: blue;
+  display: inline-block;
+  position: absolute;
+}
+
+.user-avatar:hover {
+  width: 40px;
+  height: 40px;
+  margin-left: -4px;
+  margin-top: -4px;
+}
+
+.user-avatar-flyout {
+  width: 400px;
+  height: 40px;
+  opacity: .7;
+  background-color: black;
+/*  position: absolute;*/
+}
+
 /* Foundation overrides */
 .custom-row {
   max-width: 1000rem;

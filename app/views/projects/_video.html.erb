@@ -1,8 +1,46 @@
+<div>
+  <div id="player"></div>
 
-<div class = 'video section'>
-  <div id = "video-wrapper section">
-    <iframe id="ytplayer" type="text/html" width="640" height="480"
-    src="<%= @project.video.url %>"
-    frameborder="0"/>
+  <script>
+    var tag = document.createElement('script');
+
+    tag.src = "https://www.youtube.com/iframe_api";
+    var firstScriptTag = document.getElementsByTagName('script')[0];
+    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+    var player;
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '390',
+        width: '640',
+        videoId: 'EgdOjyYjjEc',
+        events: {
+
+        }
+      });
+    }
+  </script>
+  <div id = "user-timeline">
   </div>
 </div>
+
+<div>
+  <a href="#" class = 'button' id = 'place-marker'>Place avatar</a>
+  <script>
+    $('#place-marker').on('click', function( event ) {
+      event.preventDefault();
+      currentTime = player.getCurrentTime();
+      totalTime = player.getDuration();
+      percentComplete = currentTime/totalTime;
+      timelineX = percentComplete*640;
+      var newAvatar = $('<div />').addClass('user-avatar').css({'left': timelineX, 'top' : 0 });
+      $('#user-timeline').append(newAvatar);
+    });
+    $('.user-avatar').hover(function(){
+      clickedAvatar = $(this)
+      var avatarFlyout = $('<div />').addClass('user-avatar-flyout').text('This is a comment.');
+      clickedAvatar.append(avatarFlyout);
+      });
+
+
+  </script>

@@ -18,3 +18,7 @@
 lib/.DS_Store
 assets/javascripts/.DS_Store
 *.DS_Store
+
+.DS_Store
+app/assets/.DS_Store
+app/assets/javascripts/.DS_Store
