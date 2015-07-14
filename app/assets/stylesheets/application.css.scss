@@ -27,6 +27,19 @@ nav {
   height: 100px;
   width: 100%;
   border: 1px black dotted;
+  color: $primary-color;
+}
+
+.top-bar {
+  height: 100px;
+}
+
+.user-panel {
+  background-color: $secondary-color;
+  width: 15rem;
+}
+.user-panel a {
+  color: white;
 }
 
 .section {
@@ -38,6 +51,11 @@ nav {
   
 
 }
+
+.search-box {
+  width: 20em;
+}
+
 
 #user-timeline {
   background-color: pink;

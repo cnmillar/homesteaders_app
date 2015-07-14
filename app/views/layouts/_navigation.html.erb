@@ -1,50 +1,64 @@
-<nav data-topbar >
-  <div class = "row">
-    <div class = "large-2 columns">
-      <ul>
-        <li class="name">
-          <h1><a href="/">My Site</a></h1>
-        </li>
+<nav class= 'top-bar center' data-topbar>
+  <div class = 'row'>
+    <div class = 'large-6 columns'>
+      <ul class = "title-area">
+        <li class="name"></li>
+        <li class = "toggle-topbar menu-icon"><a href="#">Menu</a></li>
       </ul>
-    </div>
-    <div class = "large-6 columns">
-      <ul class="inline-list">
-        <li class="active"><a href="/categories">Categories</a></li>
-        <li class="active"><a href="#">Popular</a></li>
-        <li class="active"><a href="/users/1">User #1</a></li>
-        <li class="active"><a href="/projects/2">Project #2</a></li>
-      </ul>
-    </div>
-    <div class = "large-4 columns">
-      <%= render 'pages/login' %>
-      <script type="text/javascript">
-        window.fbAsyncInit = function() {
-          FB.init({  
-            appId      : '1643888345868772',
-            xfbml      : true,
-            version    : 'v2.4'
-          });
-        };
 
-        (function(d, s, id){
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) {return;}
-           js = d.createElement(s); js.id = id;
-           js.src = "//connect.facebook.net/en_US/sdk.js";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));
-      </script>
-      <div class = 'user-panel'>
-            <% if current_user %> 
+      <section class = 'top-bar-section'>
+        <ul>
+          <li><a href="/categories">Categories</a></li>
+          <li><a href="#">Popular</a></li>
+          <li><a href="/users/1">User #1</a></li>
+          <li><a href="/projects/2">Project #2</a></li>
+        </ul>
+      </section>
+    </div>
+    <div class = 'large-3 columns'>
+      <section>
+        <%= render 'layouts/search' %>   
+      </section>
+    </div>
+    <div class = 'large-3 columns'>
+      <section class = 'user-panel right'>
+        <%= render 'pages/login' %>
+        <script type="text/javascript">
+            window.fbAsyncInit = function() {
+              FB.init({  
+                appId      : '1643888345868772',
+                xfbml      : true,
+                version    : 'v2.4'
+              });
+            };
+
+            (function(d, s, id){
+               var js, fjs = d.getElementsByTagName(s)[0];
+               if (d.getElementById(id)) {return;}
+               js = d.createElement(s); js.id = id;
+               js.src = "//connect.facebook.net/en_US/sdk.js";
+               fjs.parentNode.insertBefore(js, fjs);
+             }(document, 'script', 'facebook-jssdk'));
+        </script>
+          <% if current_user %> 
             <ul> 
               <li><%= current_user.email %></li> 
               <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
             </ul> 
           <% else %> 
-          <% end %>   
-        <%= render 'layouts/search' %>      
-      </div>
-    </div>
-  </nav>
+          <!--
+  Below we include the Login Button social plugin. This button uses
+  the JavaScript SDK to present a graphical Login button that triggers
+  the FB.login() function when clicked.
+-->
+            <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
+<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+</fb:login-button>
 
-
+<fb:logout-button scope="public_profile,email" onlogin="FB.logout();">
+</fb:logout-button> -->
+          <% end %>
+      </section> 
+    </div>     
+  </div>
+</nav>
