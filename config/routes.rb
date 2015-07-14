@@ -16,9 +16,7 @@ HeApp::Application.routes.draw do
   
   get 'signup' => 'users#new' 
   resources :users
-  get '/login' => 'sessions#new'
-  post 'login' => 'sessions#create'
+
   delete 'logout' => 'sessions#destroy'
-  # get '/auth/:provider/callback' => 'users#callback'
   get '/auth/:provider/callback', to: 'sessions#create'
 end
