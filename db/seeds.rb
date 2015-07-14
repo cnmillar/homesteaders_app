@@ -817,6 +817,22 @@ users = [
 		first_name: "Sam",
 		last_name: "Smith",
 		facebook_id: 11335544
+	},
+	{
+		admin: false,
+		email: nil,
+		avatar: nil,
+		first_name: "Beth",
+		last_name: "Smith",
+		facebook_id: 10155764870935693
+	},
+	{
+		admin: true,
+		email: "cnmillar@gmail.com",
+		avatar: "http://graph.facebook.com/10101421296841741/picture",
+		first_name: "Caitlin",
+		last_name: "Millar",
+		facebook_id: 10101421296841741
 	}
 ]
 
