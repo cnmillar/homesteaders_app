@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713225946) do
+ActiveRecord::Schema.define(version: 20150714192332) do
 
   create_table "average_caches", force: true do |t|
     t.integer  "rater_id"
@@ -63,6 +63,7 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.boolean  "availability"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "shopify_unit"
   end
 
   add_index "ingredients", ["project_id"], name: "index_ingredients_on_project_id"
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "duration"
+    t.string   "duration_unit"
   end
 
   add_index "projects", ["category_id"], name: "index_projects_on_category_id"
