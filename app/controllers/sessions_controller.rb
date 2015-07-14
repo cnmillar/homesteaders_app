@@ -4,22 +4,23 @@ class SessionsController < ApplicationController
   end
 
   def create
-    # if user = User.where(facebook_id: auth_hash[:uid])
 
-      # session[:user_id] = user.facebook_id
+    user = User.where(facebook_id: auth_hash[:uid]).limit(1)
+  
+    if !user 
 
-
-    # else 
       first_name = auth_hash[:info][:name].split(' ').first
       last_name = auth_hash[:info][:name].split(' ').last 
       facebook_id =  auth_hash[:uid]
       avatar = auth_hash[:info][:image]
-      binding.pry
 
-      User.create(facebook_id: facebook_id, first_name: first_name, last_name: last_name, avatar: avatar)
-      session[:user_id] = user.facebook_id
+      user = User.create(facebook_id: facebook_id, first_name: first_name, last_name: last_name, avatar: avatar)
+  
+
+    end
+      session[:user_id] = user[0].id
       redirect_to '/' 
-    # end
+
   end
 
 
@@ -36,14 +37,4 @@ class SessionsController < ApplicationController
   end
 end
 
-  def create
-    user = User.find_by(email: params[:email])
 
-    if user && user.authenticate(params[:password])
-      session[:user_id] = user.id
-      redirect_to movies_path, notice: "Welcome back, #{user.firstname}!"
-    else
-      flash.now[:alert] = "Log in failed..."
-      render :new
-    end
-  end

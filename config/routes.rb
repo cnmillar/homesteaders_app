@@ -17,11 +17,13 @@ HeApp::Application.routes.draw do
   
   get 'signup' => 'users#new' 
   resources :users
-  get '/login' => 'sessions#new'
-  post 'login' => 'sessions#create'
+
   delete 'logout' => 'sessions#destroy'
+<<<<<<< HEAD
   get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail
 
   # get '/auth/:provider/callback' => 'users#callback'
+=======
+>>>>>>> feature/new_users
   get '/auth/:provider/callback', to: 'sessions#create'
 end
