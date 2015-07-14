@@ -14,7 +14,6 @@ class UsersController < ApplicationController
 
   def callback
     puts request.env['omniauth.auth'].inspect
-
     redirect_to '/'
   end
 
