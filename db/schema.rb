@@ -44,8 +44,6 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.integer  "user_id"
     t.integer  "project_id"
     t.string   "original"
-    t.string   "carousel"
-    t.string   "thumb"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
