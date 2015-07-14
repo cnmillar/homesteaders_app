@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
 	has_many :images
 	has_many :users, through: :user_projects
 	has_many :user_projects
-	has_many :comments, as: :commentable
+	has_many :comments
   has_one :video
 	
 	belongs_to :category

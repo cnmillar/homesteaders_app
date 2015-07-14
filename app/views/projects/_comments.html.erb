@@ -1,3 +1,10 @@
 <div class = 'comments section'>
-  <h3>This is the comments section</h3>
+
+	<h3>Comments</h3>
+
+	<%= form_for @project, url: {action: "create"}, html: {class: "form"} do |f| %>
+	  <%= f.text_field :title %>
+	  <%= f.submit "Comment" %>
+	<% end %>
+
 </div>
