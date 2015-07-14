@@ -41,10 +41,10 @@ end
 
 gem 'pry'
 gem 'social-share-button', '~> 0.1.6'
-# gem 'jquery-star-rating-rails'
+gem 'ratyrate'
 
 # Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
 # Use unicorn as the app server
 # gem 'unicorn'
@@ -57,3 +57,5 @@ gem 'social-share-button', '~> 0.1.6'
 
 # User added gems
 gem 'youtube_it', '~> 2.4.0'
+gem 'omniauth-facebook'
+gem "koala", "~> 2.0"

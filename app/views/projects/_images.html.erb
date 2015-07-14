@@ -1,3 +1,6 @@
 <div class = 'section'>
-  This is the photos section
+<% @project.galleries.each do |image| %>
+	<%= image_tag(image.original_image, width: '25%') %>
+<% end %>
+
 </div>

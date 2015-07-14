@@ -1,7 +1,8 @@
 <div class = 'search-box section'>
     <%= form_tag(projects_path, method: "get", class: "navbar-form", id: "search-form") do %>
-    <%= text_field_tag :title, params[:title], class: "span2", placeholder: "Search by Title" %><br>
+    <%= text_field_tag :title, params[:title], class: "span2", placeholder: "Search by Project Title" %><br>
     <%= submit_tag("Search") %>
 </div>
 <% end %>
+
 

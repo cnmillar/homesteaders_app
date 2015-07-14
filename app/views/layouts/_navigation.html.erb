@@ -9,7 +9,7 @@
     </div>
     <div class = "large-6 columns">
       <ul class="inline-list">
-        <li class="active"><a href="#">Categories</a></li>
+        <li class="active"><a href="/categories">Categories</a></li>
         <li class="active"><a href="#">Popular</a></li>
         <li class="active"><a href="/users/1">User #1</a></li>
         <li class="active"><a href="/projects/2">Project #2</a></li>
@@ -36,11 +36,21 @@
                  js.src = "//connect.facebook.net/en_US/sdk.js";
                  fjs.parentNode.insertBefore(js, fjs);
                }(document, 'script', 'facebook-jssdk'));
-            </script>
+          </script>
           </li>
-          <li><a href="#">Sign up</a></li>
+          <% if current_user %> 
+          <ul> 
+            <li><%= current_user.email %></li> 
+            <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+          </ul> 
+          <% else %> 
+          <% end %>
+
+
         </ul>      
         <%= render 'layouts/search' %>      
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+

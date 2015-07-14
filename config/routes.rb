@@ -1,4 +1,5 @@
 HeApp::Application.routes.draw do
+  post '/rate' => 'rater#create', :as => 'rate'
   get "homes/show"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
@@ -13,9 +14,13 @@ HeApp::Application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
+  
+  get 'signup' => 'users#new' 
+  resources :users
 
-    # resources :homes, only: [:show]
-    # root to: "homes#show"
+  delete 'logout' => 'sessions#destroy'
+  get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail
 
-
+  # get '/auth/:provider/callback' => 'users#callback'
+  get '/auth/:provider/callback', to: 'sessions#create'
 end
