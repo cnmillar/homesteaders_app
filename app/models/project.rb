@@ -1,4 +1,5 @@
 class Project < ActiveRecord::Base
+    scope :search, -> (title) { where("title like ?", "%" + title + "%") }
 
 	has_many :ingredients
 	has_many :steps

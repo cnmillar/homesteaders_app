@@ -10,12 +10,14 @@ HeApp::Application.routes.draw do
   # get "/session/logout", to: 'users#logout'
 
   resources :home, only: [:index]
-  resources :categories, only: [:index]
+  resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
-
-    # resources :homes, only: [:show]
-    # root to: "homes#show"
-
+  
+  get 'signup' => 'users#new' 
+  resources :users
+  get '/login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
 
 end

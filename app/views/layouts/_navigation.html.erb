@@ -3,7 +3,7 @@
     <div class = "large-2 columns">
       <ul>
         <li class="name">
-          <h1><a href="#">My Site</a></h1>
+          <h1><a href="/">My Site</a></h1>
         </li>
       </ul>
     </div>
@@ -16,29 +16,45 @@
       </ul>
     </div>
     <div class = "large-4 columns">
-      <ul class="inline-list">
-        <li>
-          <%= render 'pages/login' %>
-          <script>
-            window.fbAsyncInit = function() {
-              FB.init({  
-                appId      : '1643888345868772',
-                xfbml      : true,
-                version    : 'v2.4'
-              });
-            };
+      <div class = 'user-panel'>
+        <ul class="inline-list">
+          <li>
+            <%= render 'pages/login' %>
+            <script>
+              window.fbAsyncInit = function() {
+                FB.init({  
+                  appId      : '1643888345868772',
+                  xfbml      : true,
+                  version    : 'v2.4'
+                });
+              };
 
-            (function(d, s, id){
-               var js, fjs = d.getElementsByTagName(s)[0];
-               if (d.getElementById(id)) {return;}
-               js = d.createElement(s); js.id = id;
-               js.src = "//connect.facebook.net/en_US/sdk.js";
-               fjs.parentNode.insertBefore(js, fjs);
-             }(document, 'script', 'facebook-jssdk'));
+              (function(d, s, id){
+                 var js, fjs = d.getElementsByTagName(s)[0];
+                 if (d.getElementById(id)) {return;}
+                 js = d.createElement(s); js.id = id;
+                 js.src = "//connect.facebook.net/en_US/sdk.js";
+                 fjs.parentNode.insertBefore(js, fjs);
+               }(document, 'script', 'facebook-jssdk'));
           </script>
-        </li>
-        <li><a href="#">Sign up</a></li>
-      </ul>
+          </li>
+          <% if current_user %> 
+          <ul> 
+            <li><%= current_user.email %></li> 
+            <li><%= link_to "Log out", logout_path, method: "delete" %></li> 
+          </ul> 
+          <% else %> 
+          <ul> 
+            <li><%= link_to "Login", 'login' %></a></li> 
+            <li><%= link_to "Signup", 'signup' %></a></li> 
+          </ul> 
+          <% end %>
+
+
+        </ul>      
+        <%= render 'layouts/search' %>      
+      </div>
     </div>
-  </div>
-</nav>
+  </nav>
+
+
