@@ -1,6 +1,36 @@
+    <div id="player"></div>
 
-<div class = 'video section'>
-  <iframe id="ytplayer" type="text/html" width="640" height="480"
-  src="<%= @project.video.url %>"
-  frameborder="0"/>
+    <script>
+      // 2. This code loads the IFrame Player API code asynchronously.
+      var tag = document.createElement('script');
+
+      tag.src = "https://www.youtube.com/iframe_api";
+      var firstScriptTag = document.getElementsByTagName('script')[0];
+      firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+      // 3. This function creates an <iframe> (and YouTube player)
+      //    after the API code downloads.
+      var player;
+      function onYouTubeIframeAPIReady() {
+        player = new YT.Player('player', {
+          height: '390',
+          width: '640',
+          videoId: 'M7lc1UVf-VE',
+          events: {
+
+          }
+        });
+      }
+
+
+    </script>
+<div>
+  <a href="#" class = 'button' id = 'get-time'>Get current time</a>
+  <script>
+    $('.button').on('click', function( event ) {
+      event.preventDefault();
+      currentTime = player.getCurrentTime();
+      alert("The player is at " + currentTime + ' seconds.')
+    });
+  </script>
 </div>
