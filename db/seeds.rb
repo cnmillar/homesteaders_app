@@ -809,10 +809,10 @@ users = [
 	{
 		admin: true,
 		email: "test@test.ca",
-		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		avatar: "http://graph.facebook.com/10153480204621660/picture%7C%7C2015-07-14",
 		first_name: "David",
 		last_name: "Good",
-		facebook_id: 223456789
+		facebook_id: 10153480204621660
 	},
 	{
 		admin: true,
@@ -859,231 +859,231 @@ images = [
 	{
 		user_id: 1,
 		project_id: 1,
-		original: 'project_gallery/ricotta-1.jpg'
+		original: 'project_gallery/ricotta-1'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 1,
-		original: 'project_gallery/ricotta-2.jpg'
+		original: 'project_gallery/ricotta-2'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original: 'project_gallery/tofu-1.jpg'
+		original: 'project_gallery/tofu-1'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original: 'project_gallery/tofu-2.jpg'
+		original: 'project_gallery/tofu-2'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original: 'project_gallery/tofu-3.jpg'
+		original: 'project_gallery/tofu-3'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 4,
-		original: 'project_gallery/farmer-cheese-1.jpg'
+		original: 'project_gallery/farmer-cheese-1'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original: 'project_gallery/farmer-cheese-2.jpg'
+		original: 'project_gallery/farmer-cheese-2'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original: 'project_gallery/farmer-cheese-3.jpg'
+		original: 'project_gallery/farmer-cheese-3'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original: 'project_gallery/farmer-cheese-4.jpg'
+		original: 'project_gallery/farmer-cheese-4'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original: 'project_gallery/mozzarella-1.jpg'
+		original: 'project_gallery/mozzarella-1'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 5,
-		original: 'project_gallery/mozzarella-2.jpg'
+		original: 'project_gallery/mozzarella-2'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 5,
-		original: 'project_gallery/mozzarella-3.jpg'
+		original: 'project_gallery/mozzarella-3'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original: 'project_gallery/mozzarella-4.jpg'
+		original: 'project_gallery/mozzarella-4'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original: 'project_gallery/mozzarella-5.jpg'
+		original: 'project_gallery/mozzarella-5'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 6,
-		original: 'project_gallery/sprouts-1.jpg'
+		original: 'project_gallery/sprouts-1'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 6,
-		original: 'project_gallery/sprouts-2.jpg'
+		original: 'project_gallery/sprouts-2'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 6,
-		original: 'project_gallery/sprouts-3.jpg'
+		original: 'project_gallery/sprouts-3'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original: 'project_gallery/wheatgrass-1.jpg'
+		original: 'project_gallery/wheatgrass-1'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original: 'project_gallery/wheatgrass-2.jpg'
+		original: 'project_gallery/wheatgrass-2'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original: 'project_gallery/wheatgrass-3.jpg'
+		original: 'project_gallery/wheatgrass-3'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original: 'project_gallery/wheatgrass-4.jpg'
+		original: 'project_gallery/wheatgrass-4'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original: 'project_gallery/wheatgrass-5.jpg'
+		original: 'project_gallery/wheatgrass-5'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original: 'project_gallery/wheatgrass-6.jpg'
+		original: 'project_gallery/wheatgrass-6'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original: 'project_gallery/wheatgrass-7.jpg'
+		original: 'project_gallery/wheatgrass-7'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 9,
-		original: 'project_gallery/sausage-1.jpg'
+		original: 'project_gallery/sausage-1'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original: 'project_gallery/sausage-2.jpg'
+		original: 'project_gallery/sausage-2'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original: 'project_gallery/sausage-3.jpg'
+		original: 'project_gallery/sausage-3'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original: 'project_gallery/sausage-4.jpg'
+		original: 'project_gallery/sausage-4'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 10,
-		original: 'project_gallery/bacon-1.jpg'
+		original: 'project_gallery/bacon-1'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original: 'project_gallery/bacon-2.jpg'
+		original: 'project_gallery/bacon-2'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original: 'project_gallery/bacon-3.jpg'
+		original: 'project_gallery/bacon-3'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original: 'project_gallery/bacon-4.jpg'
+		original: 'project_gallery/bacon-4'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original: 'project_gallery/bacon-5.jpg'
+		original: 'project_gallery/bacon-5'
 		# resized_image:
 		# description:
 	}

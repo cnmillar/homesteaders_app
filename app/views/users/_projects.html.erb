@@ -1,8 +1,12 @@
 <div class = "large-4 columns section">
-  <div>
-    <% @user_projects.each do |project| %>
-      <h4><strong><%= project.project.title %> </strong></h4>
-      <h5><%= project.project.description %></h5>
-    <% end %>
-</div>
+  <% @user_projects.each do |proj| %>
+    <div class = "row section">
+      <h4><strong><%= proj.project.title %> </strong></h4>
+       <% proj.project.images.each do |img| %>
+       <% @images = [] %>
+       <% @images << img.original %>
+      <% end %> 
+        <%= image_tag(@images.first, width: '300px') %>
+     </div>
+  <% end %>
 </div>

@@ -1,6 +1,7 @@
-<div class = 'search-box section'>
-    <%= form_tag(projects_path, method: "get", class: "navbar-form", id: "search-form") do %>
+<div class = 'search-box'>
+    <%= form_tag(projects_path, method: "get") do %>
     <%= text_field_tag :title, params[:title], class: "span2", placeholder: "Search by Project Title" %><br>
+    <!-- TODO: handle consecutive words that don't match exactly to project title< -->
     <%= submit_tag("Search") %>
 </div>
 <% end %>
