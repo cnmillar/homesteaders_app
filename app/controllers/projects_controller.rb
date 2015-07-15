@@ -26,7 +26,7 @@ class ProjectsController < ApplicationController
 		@equipment = @project.ingredients.where(ing_type: "equipment")
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
 
-    @all_comments = @project.get_all_comments.sort_by(&:created_at).reverse
+    @all_comments = @project.comments.paginate(:page => params[:page], :per_page => 5)
 	end
 
   def send_project_mail
