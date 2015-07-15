@@ -14,6 +14,7 @@ HeApp::Application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
+  resources :user_projects, only: [:show]
   
   # get "/users/:id", to: 'users#show'
 
