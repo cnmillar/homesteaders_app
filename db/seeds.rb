@@ -816,27 +816,11 @@ users = [
 	},
 	{
 		admin: true,
-		email: "beth@test.ca",
+		email: "chris@test.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Beth",
-		last_name: "Hammett",
+		first_name: "Chris",
+		last_name: "Jones",
 		facebook_id: 223456799
-	},
-	{
-		admin: false,
-		email: "sam@smith.ca",
-		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Sam",
-		last_name: "Smith",
-		facebook_id: 11335544
-	},
-	{
-		admin: false,
-		email: nil,
-		avatar: nil,
-		first_name: "Beth",
-		last_name: "Smith",
-		facebook_id: 10155764870935693
 	},
 	{
 		admin: true,
@@ -845,6 +829,30 @@ users = [
 		first_name: "Caitlin",
 		last_name: "Millar",
 		facebook_id: 10101421296841741
+	},
+	{
+		admin: true,
+		email: "susan@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Susan",
+		last_name: "Smith",
+		facebook_id: 109488894
+	},
+	{
+		admin: true,
+		email: "john@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "John",
+		last_name: "Doe",
+		facebook_id: 234984756
+	},
+	{
+		admin: false,
+		email: "beth@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		first_name: "Beth",
+		last_name: "Hammett",
+		facebook_id: 10155764870935693
 	}
 ]
 
@@ -1176,7 +1184,27 @@ user_projects = [
     completed: true
     # rating:
 	},
-
+		{
+		user_id: 7,
+    project_id: 1,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 7,
+    project_id: 2,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 7,
+    project_id: 3,
+    favourited: true,
+    completed: true
+    # rating:
+	},
 ]
 
 user_projects.each do |proj|
