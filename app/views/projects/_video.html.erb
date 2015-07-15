@@ -32,7 +32,12 @@
       currentTime = player.getCurrentTime();
       totalTime = player.getDuration();
       percentComplete = currentTime/totalTime;
-      timelineX = percentComplete*640;
+      //Subtract 10 so that the avatar is centered on the timestamp.
+      timelineX = percentComplete*640 - 10;
+      //If timelineX is now less than 0, reset to 0
+      if (timelineX < 0) {
+        timelineX = 0
+      }
       var newAvatar = $('<div />').addClass('user-avatar').css({'left': timelineX, 'top' : 0 });
       $('#user-timeline').append(newAvatar);
     });
