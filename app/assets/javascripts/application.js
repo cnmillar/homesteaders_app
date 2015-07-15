@@ -16,7 +16,7 @@
 //= require social-share-button
 //= require jquery.raty
 //= require ratyrate
-//= require_tree .
+//= require_self
 
 if (window.location.hash == '#_=_') {
     window.location.hash = ''; // for older browsers, leaves a # behind
