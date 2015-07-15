@@ -2,11 +2,13 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = Comment.new(comment_params)
-
-		if @comment && @comment.save
-			redirect_to project_path(@comment.commentable_id), notice: "Successfully added comment."
-		else
-			redirect_to project_path(comment_params[:commentable_id]), notice: "Was not able to add comment."
+		@comment.user = current_user
+		respond_to do |format|
+			if @comment && @comment.save
+				format.json{render json: @comment}
+			else
+				format.json{render json: {error_message: "Unable to add comment"}}
+			end
 		end
 
 	end
@@ -14,7 +16,7 @@ class CommentsController < ApplicationController
 	private
 
 	def comment_params
-		params.require(:comment).permit(:content, :commentable_type, :commentable_id, :user_id)
+		params.require(:comment).permit(:content, :commentable_type, :commentable_id)
 	end
 
 end

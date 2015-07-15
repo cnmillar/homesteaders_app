@@ -12,7 +12,6 @@ class ProjectsController < ApplicationController
 	def show
     @current_user = current_user
 		@project = Project.find(params[:id])
-    
     user_projects = @project.user_projects
     @fav_count = 0
     @comp_count = 0
@@ -27,7 +26,7 @@ class ProjectsController < ApplicationController
 		@equipment = @project.ingredients.where(ing_type: "equipment")
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
 
-    @all_comments = @project.get_all_comments.sort_by(&:created_at).reverse.paginate(:page => params[:page])
+    @all_comments = @project.get_all_comments.sort_by(&:created_at).reverse
 	end
 
   def send_project_mail
