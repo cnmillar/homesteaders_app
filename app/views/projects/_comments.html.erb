@@ -1,3 +1,30 @@
+<script>
+	// $("#new_comment").on("submit", function(e){
+ //  	console.log("It worked!");
+ //  	// $("#add-comment").append("")
+ //  })
+// $('#new_comment').submit(function() {  
+//     var valuesToSubmit = $(this).serialize();
+//     $.ajax({
+//         type: "POST",
+//         url: $(this).attr('action'), //sumbits it to the given url of the form
+//         data: valuesToSubmit,
+//         dataType: "JSON" // you want a difference between normal and ajax-calls, and json is standard
+//     }).success(function(json){
+//         console.log("success", json);
+//     });
+//     return false; // prevents normal behaviour
+// });
+
+// $("#add-comment").ajaxForm({url: $(this).attr('action'), type: 'post'})
+
+	$("#new_comment").on("ajax:success", function(e, data, status, xhr){
+		debugger;
+		console.log("Yeah!");
+	})
+
+</script>
+
 <div class = 'comments section'>
 
 	<h3>Comments</h3>
@@ -6,18 +33,19 @@
 		<% @all_comments.each do |comment| %>
 				<%= image_tag(comment.user.avatar, width: '10%') %>	
 					<%= comment.user.first_name %> <%= comment.user.last_name %>					
-					<%= comment.content %>		
+					<%= comment.content %>
+					<%= comment.created_at.to_datetime %>	
 					<small>(<%= comment.commentable_type %>)</small>		
 			<hr>
 		<% end %>
 	</div>
 
-	<%= form_for Comment.new(commentable_id: @project.id, commentable_type: "Project", user_id: current_user.id), html: {class: "form"}, remote: true do |f| %>
+	<%= form_for @comment=Comment.new(commentable_id: @project.id, commentable_type: "Project", user_id: current_user.id), remote: true do |f| %>
 	  <%= f.text_area :content, placeholder: "Comment on this project" %>
 	  <%= f.hidden_field :commentable_type %>
 	  <%= f.hidden_field :commentable_id %>
 	  <%= f.hidden_field :user_id %>
-	  <%= f.submit "Comment", class: "button", id: "add-comment" %>
+	  <%= f.submit "Comment", class: "button"%>
 	<% end %>
 
 </div>
