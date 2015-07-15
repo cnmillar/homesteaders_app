@@ -11,7 +11,10 @@
       <ul class="inline-list">
         <li class="active"><a href="/categories">Categories</a></li>
         <li class="active"><a href="#">Popular</a></li>
-        <li class="active"><a href="/users/1">User #1</a></li>
+    <% if @current_user && @current_user.id %>
+      <li class="active"><a href="/users/<%=@current_user.id%>">Profile</a></li>
+    <% end %>
+      
         <li class="active"><a href="/projects/2">Project #2</a></li>
       </ul>
     </div>
