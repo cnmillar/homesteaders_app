@@ -24,6 +24,8 @@ if (window.location.hash == '#_=_') {
     e.preventDefault(); // no page reload
 }
 
+jQuery(function($){
+
 // Video timeline marker placement
     $('#place-marker').on('click', function( event ) {
       event.preventDefault();
@@ -46,4 +48,6 @@ if (window.location.hash == '#_=_') {
       var avatarFlyout = $('<div />').addClass('user-avatar-flyout').text('This is a comment.');
       clickedAvatar.append(avatarFlyout);
       });
+
+});
 
