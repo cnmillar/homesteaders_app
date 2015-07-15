@@ -7,7 +7,7 @@ class Project < ActiveRecord::Base
 	has_many :images
 	has_many :users, through: :user_projects
 	has_many :user_projects
-	has_many :comments
+	has_many :comments, as: :commentable
   has_one :video
 	
 	belongs_to :category
@@ -18,5 +18,30 @@ class Project < ActiveRecord::Base
     youtube_id = self.video.split("=").last
     "//www.youtube.com/embed/#{youtube_id}"
   end
+
+	def get_all_comments
+		
+		all_comments = self.comments
+
+		self.ingredients.each do |ing|
+			ing.comments do |com|
+				all_comments << com
+			end
+		end
+
+		self.steps.each do |step|
+			step.comments do |com|
+				all_comments << com
+			end
+		end
+
+		self.video.comments do |com|
+			all_comments << com
+		end
+		binding.pry
+
+		return all_comments
+
+	end
 
 end

@@ -2,8 +2,22 @@
 
 	<h3>Comments</h3>
 
-	<%= form_for @project, url: {action: "create"}, html: {class: "form"} do |f| %>
-	  <%= f.text_field :title %>
+	<table>
+		<% @all_comments.each do |comment| %>
+			<tr>
+				<td>
+					comment.content		
+				</td>
+			</tr>
+		<% end %>
+
+	</table>
+
+
+	<%= form_for @project.comments.new, html: {class: "form"} do |f| %>
+	  <%= f.text_area :content %>
+	  <%= f.hidden_field :commentable_type %>
+	  <%= f.hidden_field :commentable_id %>
 	  <%= f.submit "Comment" %>
 	<% end %>
 

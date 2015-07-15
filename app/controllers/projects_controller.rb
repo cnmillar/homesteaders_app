@@ -25,6 +25,8 @@ class ProjectsController < ApplicationController
 
 		@equipment = @project.ingredients.where(ing_type: "equipment")
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
+
+    @all_comments = @project.get_all_comments
 	end
 
   def send_project_mail

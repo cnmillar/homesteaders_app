@@ -14,6 +14,7 @@ HeApp::Application.routes.draw do
   resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
+  resources :comments, only: [:create]
   
 
   delete 'logout' => 'sessions#destroy'
