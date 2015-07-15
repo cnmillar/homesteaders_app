@@ -24,4 +24,26 @@ if (window.location.hash == '#_=_') {
     e.preventDefault(); // no page reload
 }
 
+// Video timeline marker placement
+    $('#place-marker').on('click', function( event ) {
+      event.preventDefault();
+      currentTime = player.getCurrentTime();
+      totalTime = player.getDuration();
+      percentComplete = currentTime/totalTime;
+      //Subtract 10 so that the avatar is centered on the timestamp.
+      timelineX = percentComplete*640 - 10;
+      //If timelineX is now less than 0, reset to 0
+      if (timelineX < 0) {
+        timelineX = 0
+      }
+      var newAvatar = $('<div />').addClass('user-avatar').css({'left': timelineX, 'top' : 0 });
+      $('#user-timeline').append(newAvatar);
+    });
+
+// Start of hover state for placed markers
+    $('.user-avatar').hover(function(){
+      clickedAvatar = $(this)
+      var avatarFlyout = $('<div />').addClass('user-avatar-flyout').text('This is a comment.');
+      clickedAvatar.append(avatarFlyout);
+      });
 
