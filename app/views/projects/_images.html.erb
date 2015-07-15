@@ -1,6 +1,6 @@
 <div class = 'section'>
 <% @project.images.each do |image| %>
-	<%= image_tag(image.original + '_thumb.jpg', width: '300px') %>
+	<%= link_to( image_tag(image.original + '_thumb.jpg', width: '300px'), image_path(image.original + '_carousel.jpg')) %>
 <% end %>
 
 </div>
