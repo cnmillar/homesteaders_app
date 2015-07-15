@@ -1,24 +1,21 @@
 <div class = 'comments section'>
 
 	<h3>Comments</h3>
+	<hr>
+	<% @all_comments.each do |comment| %>
+			<%= image_tag(comment.user.avatar, width: '10%') %>	
+				<%= comment.user.first_name %> <%= comment.user.last_name %>					
+				<%= comment.content %>		
+				<small>(<%= comment.commentable_type %>)</small>		
+		<hr>
+	<% end %>
 
-	<table>
-		<% @all_comments.each do |comment| %>
-			<tr>
-				<td>
-					comment.content		
-				</td>
-			</tr>
-		<% end %>
-
-	</table>
-
-
-	<%= form_for @project.comments.new, html: {class: "form"} do |f| %>
-	  <%= f.text_area :content %>
+	<%= form_for Comment.new(commentable_id: @project.id, commentable_type: "Project", user_id: current_user.id), html: {class: "form"} do |f| %>
+	  <%= f.text_area :content, placeholder: "Comment on this project" %>
 	  <%= f.hidden_field :commentable_type %>
 	  <%= f.hidden_field :commentable_id %>
-	  <%= f.submit "Comment" %>
+	  <%= f.hidden_field :user_id %>
+	  <%= f.submit "Comment", class: "button" %>
 	<% end %>
 
 </div>

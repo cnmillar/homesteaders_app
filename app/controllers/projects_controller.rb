@@ -33,7 +33,6 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @user = current_user
 
-    # binding.pry
     if current_user && current_user.email
       @user_email = current_user.email
       UserMailer.send_project_email(@project, @user).deliver

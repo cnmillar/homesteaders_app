@@ -24,22 +24,21 @@ class Project < ActiveRecord::Base
 		all_comments = self.comments
 
 		self.ingredients.each do |ing|
-			ing.comments do |com|
+			ing.comments.each do |com|
 				all_comments << com
 			end
 		end
 
 		self.steps.each do |step|
-			step.comments do |com|
+			step.comments.each do |com|
 				all_comments << com
 			end
 		end
 
-		self.video.comments do |com|
+		self.video.comments.each do |com|
 			all_comments << com
 		end
 		binding.pry
-
 		return all_comments
 
 	end

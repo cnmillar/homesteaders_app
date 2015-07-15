@@ -680,26 +680,26 @@ comments_on_video =
 		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 50,
-		project_id: 1
+		user_id: 1
 	},
 	{
 		content: "I would add more salt here!",
 		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 50,
-		project_id: 2
+		user_id: 2
 	},
 	{
 		content: "You can also use vinegar instead of lemon juice.",
 		commentable_type: "Video",
 		commentable_id: 8,
 		video_time: 100,
-		project_id: 2
+		user_id: 2
 	}
 ]
 
 comments_on_video.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -729,7 +729,7 @@ comments_on_project =
 ]
 
 comments_on_project.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], user_id: com[:user_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -759,7 +759,7 @@ comments_on_ingredient =
 ]
 
 comments_on_ingredient.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -788,7 +788,7 @@ comments_on_step =
 ]
 
 comments_on_step.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
