@@ -1028,3 +1028,91 @@ images.each do |img|
 		puts "Could not add image: #{img.errors.full_messages}"
 	end
 end
+
+user_projects = [
+	{
+		user_id: 1,
+    project_id: 3,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+		{
+		user_id: 1,
+    project_id: 10,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 1,
+    project_id: 5,
+    favourited: true,
+    completed: true
+    # rating:
+	},
+		{
+		user_id: 2,
+    project_id: 10,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+		{
+		user_id: 2,
+    project_id: 8,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 3,
+    project_id: 5,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 4,
+    project_id: 2,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+		{
+		user_id: 5,
+    project_id: 7,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 6,
+    project_id: 10,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 6,
+    project_id: 4,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 6,
+    project_id: 6,
+    favourited: true,
+    completed: true
+    # rating:
+	},
+
+]
+
+user_projects.each do |proj|
+	project = UserProject.create(user_id: proj[:user_id], project_id: proj[:project_id], favourited: proj[:favourited], completed: proj[:completed])
+	unless project.persisted?
+		puts "Could not add project: #{proj.errors.full_messages}"
+	end
+end
