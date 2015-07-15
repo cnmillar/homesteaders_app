@@ -676,21 +676,21 @@ end
 comments_on_video = 
 [
 	{
-		content: "Wow, loved this!",
+		content: "This is a video comment!",
 		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 50,
 		user_id: 1
 	},
 	{
-		content: "I would add more salt here!",
+		content: "This is a video comment!",
 		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 50,
 		user_id: 2
 	},
 	{
-		content: "You can also use vinegar instead of lemon juice.",
+		content: "This is a video comment!",
 		commentable_type: "Video",
 		commentable_id: 8,
 		video_time: 100,
@@ -708,20 +708,20 @@ end
 comments_on_project = 
 [
 	{
-		content: "Wow, loved this!",
+		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 1,
 		user_id: 1
 	},
 	{
-		content: "I would add more salt to the recipe!",
+		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 3,
 		video_time: 50,
 		user_id: 1
 	},
 	{
-		content: "Anybody tried this with vinegar?",
+		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 8,
 		user_id: 1
@@ -739,19 +739,19 @@ end
 comments_on_ingredient = 
 [
 	{
-		content: "Wow, good idea!",
+		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 2,
 		user_id: 1
 	},
 	{
-		content: "Add a bit extra of this ingredient.",
+		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 3,
 		user_id: 1
 	},
 	{
-		content: "You can also use vinegar instead of lemon juice.",
+		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 20,
 		user_id: 1
@@ -768,19 +768,19 @@ end
 comments_on_step = 
 [
 	{
-		content: "Wow, good idea!",
+		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 5,
 		user_id: 1
 	},
 	{
-		content: "I find that a Vitamix works best.",
+		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 10,
 		user_id: 1
 	},
 	{
-		content: "This is the best part!",
+		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 15,
 		user_id: 1

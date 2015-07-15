@@ -20,8 +20,13 @@ class Project < ActiveRecord::Base
   end
 
 	def get_all_comments
-		
-		all_comments = self.comments
+		all_comments = []
+
+		project_comments = self.comments
+
+		project_comments.each do |com|
+			all_comments << com
+		end
 
 		self.ingredients.each do |ing|
 			ing.comments.each do |com|
@@ -38,7 +43,7 @@ class Project < ActiveRecord::Base
 		self.video.comments.each do |com|
 			all_comments << com
 		end
-		binding.pry
+
 		return all_comments
 
 	end
