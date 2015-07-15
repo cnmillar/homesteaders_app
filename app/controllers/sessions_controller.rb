@@ -19,6 +19,7 @@ class SessionsController < ApplicationController
   
     end
     session[:user_id] = user.id
+    @current_user = current_user
     redirect_to '/' 
 
   end
