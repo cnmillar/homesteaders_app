@@ -1,5 +1,6 @@
 
-$(function(){
+$(function()
+{
 	function createComment(data){
 		var comment = $("<div>");
 		var userImage = $("<img>").attr("src", APP.userAvatar).css("width", "10%");

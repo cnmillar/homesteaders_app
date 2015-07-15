@@ -16,6 +16,7 @@
 //= require social-share-button
 //= require jquery.raty
 //= require ratyrate
+//= require new_comment
 //= require_self
 
 if (window.location.hash == '#_=_') {
