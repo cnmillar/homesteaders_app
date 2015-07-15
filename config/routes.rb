@@ -15,6 +15,7 @@ HeApp::Application.routes.draw do
   resources :projects, only: [:index, :show]
   resources :users, only: [:new, :show]
   
+  # get "/users/:id", to: 'users#show'
 
   delete 'logout' => 'sessions#destroy'
   get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail
