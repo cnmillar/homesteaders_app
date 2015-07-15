@@ -1,11 +1,4 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Facebook Login JavaScript Example</title>
-<meta charset="UTF-8">
-</head>
-<body>
-<script>
+<script type="text/javascript">
   // This is called with the results from from FB.getLoginStatus().
   function statusChangeCallback(response) {
     console.log('statusChangeCallback');
@@ -64,6 +57,7 @@
     statusChangeCallback(response);
   });
   };
+
   // Load the SDK asynchronously
   (function(d, s, id) {
     var js, fjs = d.getElementsByTagName(s)[0];
@@ -87,26 +81,37 @@
   //       // Person is now logged out
   // });
 
+  window.fbAsyncInit = function() {
+    FB.init({  
+      appId      : '1643888345868772',
+      xfbml      : true,
+      version    : 'v2.4'
+    });
+  };
 
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+  
 </script>
-
-<!--
+<% if current_user %> 
+  <ul> 
+    <li><%= current_user.email %></li> 
+    <li><%= link_to "Log out", logout_path, method: "delete", class: "button radius" %></li> 
+  </ul> 
+<% else %> 
+          <!--
   Below we include the Login Button social plugin. This button uses
   the JavaScript SDK to present a graphical Login button that triggers
   the FB.login() function when clicked.
 -->
-<% unless current_user %>
-<a href ="/auth/facebook">Login with Facebook</a>
+  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
+    <!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
+    </fb:login-button> -->
 <% end %>
-<!-- <fb:login-button scope="public_profile,email" onlogin="checkLoginState();">
-</fb:login-button>
 
-<fb:logout-button scope="public_profile,email" onlogin="FB.logout();">
-</fb:logout-button> -->
-
-<div id="status">
-</div>
-
-</body>
-</html>
 

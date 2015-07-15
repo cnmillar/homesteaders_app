@@ -809,10 +809,10 @@ users = [
 	{
 		admin: true,
 		email: "test@test.ca",
-		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		avatar: "http://graph.facebook.com/10153480204621660/picture%7C%7C2015-07-14",
 		first_name: "David",
 		last_name: "Good",
-		facebook_id: 223456789
+		facebook_id: 10153480204621660
 	},
 	{
 		admin: true,
