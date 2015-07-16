@@ -1,3 +1,4 @@
-<% @user.comments.each do |comment| %>
-<%= comment %>
+<% @comments.each do |comment| %>
+	<%= comment.content %>
+	<%= comment.project %>
 <% end %>
