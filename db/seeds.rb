@@ -680,21 +680,24 @@ comments_on_video =
 		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 50,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a video comment!",
 		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 50,
-		user_id: 2
+		user_id: 2,
+		project_id: 1
 	},
 	{
 		content: "This is a video comment!",
 		commentable_type: "Video",
 		commentable_id: 8,
 		video_time: 100,
-		user_id: 2
+		user_id: 2,
+		project_id: 1
 	}
 ]
 
@@ -711,20 +714,23 @@ comments_on_project =
 		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 1,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 3,
 		video_time: 50,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 8,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
@@ -742,19 +748,22 @@ comments_on_ingredient =
 		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 2,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 3,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 20,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
@@ -771,19 +780,22 @@ comments_on_step =
 		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 5,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 10,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 15,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
