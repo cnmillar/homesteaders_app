@@ -8,6 +8,7 @@
 		  <%= f.hidden_field :commentable_type %>
 		  <%= f.hidden_field :commentable_id %>
 		  <%= f.hidden_field :user_id %>
+		  <%= f.hidden_field :project_id, :value => @project.id %>
 		  <%= f.submit "Comment", class: "button"%>
 		<% end %>
 	<% end %>
