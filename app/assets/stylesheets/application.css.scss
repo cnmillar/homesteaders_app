@@ -34,6 +34,10 @@ nav {
   height: 100px;
 }
 
+.top-bar-section li {
+  height: 100%;
+}
+
 .user-panel {
   background-color: #222;
   width: 20rem;
@@ -78,16 +82,9 @@ nav {
 }
 
 .search-box {
-  width: 20em;
-  
-  form {
-    display: inline-block;
-  }
-  input {
-    display: inline-block;
-  }
-
-}
+  width: 250px;
+  margin: 30px 20px 0 0;
+} 
 
 
 #user-timeline {
@@ -123,4 +120,12 @@ nav {
 /* Foundation overrides */
 .custom-row {
   max-width: 1000rem;
+}
+
+.top-bar-section {
+  margin-left: 20px;
+}
+
+.title-area {
+  width : 435px;
 }
