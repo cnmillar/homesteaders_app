@@ -7,15 +7,15 @@ class SessionsController < ApplicationController
 
     user = User.where(facebook_id: auth_hash[:uid]).first
 
-  
     if !user
 
       first_name = auth_hash[:info][:name].split(' ').first
       last_name = auth_hash[:info][:name].split(' ').last 
       facebook_id =  auth_hash[:uid]
       avatar = auth_hash[:info][:image]
+      email = auth_hash[:info][:email]
 
-      user = User.create(facebook_id: facebook_id, first_name: first_name, last_name: last_name, avatar: avatar)
+      user = User.create(facebook_id: facebook_id, first_name: first_name, last_name: last_name, avatar: avatar, email: email)
   
     end
     session[:user_id] = user.id
