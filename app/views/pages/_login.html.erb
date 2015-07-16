@@ -1,9 +1,11 @@
 
 <% if current_user %> 
-  <ul> 
-    <li><%= current_user.email %></li> 
-    <li><%= link_to "Log out", logout_path, method: "delete", class: "button radius" %></li> 
-  </ul> 
+  <%= image_tag(current_user.avatar) %>
+  <p>
+    <a href="#" class = 'username'><%= current_user.first_name %> <%= current_user.last_name %></a><br />
+      <a href="#">My projects</a> | 
+    <%= link_to "Log out", logout_path, method: "delete" %>
+  </p>
 <% else %> 
           <!--
   Below we include the Login Button social plugin. This button uses
