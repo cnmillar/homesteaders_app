@@ -30,4 +30,10 @@ HeApp::Application.routes.draw do
 
   post 'completed/:user_project_id', to: 'user_projects#completed', as: 'completed'
   get 'completed/:user_project_id' => 'user_projects#completed'
+
+  resources :users do
+    resources :comments
+  end
+
+  get '/users/:user_id/comments/:id' => 'comments#show'
 end
