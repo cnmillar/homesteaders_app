@@ -809,7 +809,7 @@ users = [
 	{
 		admin: true,
 		email: "test@test.ca",
-		avatar: "http://graph.facebook.com/10153480204621660/picture%7C%7C2015-07-14",
+		avatar: "http://graph.facebook.com/10153480204621660/picture",
 		first_name: "David",
 		last_name: "Good",
 		facebook_id: 10153480204621660

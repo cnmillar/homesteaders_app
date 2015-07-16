@@ -35,18 +35,37 @@ nav {
 }
 
 .user-panel {
-  background-color: none;
-  width: 15rem;
-  margin: 1rem;
+  background-color: #222;
+  width: 20rem;
+  margin: .5rem;
+  border: 1px solid #AAA;
   border-radius: .5rem;
-  height: 4rem;
+  height: 5rem;
+  padding: .6rem;
+  display: inline-block;
 }
 .user-panel a {
   color: white;
 }
 
+.user-panel img {
+  height : 100%;
+  max-height: 50px;
+  position: absolute;
+  top: .25rem;
+  left: .25rem;
+  margin: .5rem;
+
+}
+
 .user-panel button {
   margin: auto;
+}
+
+.user-panel p {
+  margin-left: 4rem;
+  margin-top: .25rem;
+  color : $secondary-color;
 }
 
 .section {
