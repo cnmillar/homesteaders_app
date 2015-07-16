@@ -680,26 +680,29 @@ comments_on_video =
 		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 50,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a video comment!",
 		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 50,
-		user_id: 2
+		user_id: 2,
+		project_id: 1
 	},
 	{
 		content: "This is a video comment!",
 		commentable_type: "Video",
 		commentable_id: 8,
 		video_time: 100,
-		user_id: 2
+		user_id: 2,
+		project_id: 1
 	}
 ]
 
 comments_on_video.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id], project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -711,25 +714,28 @@ comments_on_project =
 		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 1,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 3,
 		video_time: 50,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 8,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
 comments_on_project.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], user_id: com[:user_id], project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -742,24 +748,27 @@ comments_on_ingredient =
 		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 2,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 3,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 20,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
 comments_on_ingredient.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id],project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -771,24 +780,27 @@ comments_on_step =
 		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 5,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 10,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	},
 	{
 		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 15,
-		user_id: 1
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
 comments_on_step.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id],project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end

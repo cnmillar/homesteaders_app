@@ -1,3 +1,8 @@
-<% @user.comments.each do |comment| %>
-<%= comment %>
-<% end %>
+<ul>
+	<% @comments.each do |comment| %>
+		<li>
+			<%= comment.content %>
+			<%= comment.project.title %>
+		</li>
+	<% end %>	
+</ul>

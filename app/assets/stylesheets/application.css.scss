@@ -150,6 +150,25 @@ nav {
   // .next_page.disabled { background: white; color: #777 }
 }
 
+.count-icon {
+    display: inline-block;
+    position: relative;
+}
+
+.count {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    height: 16px;
+    width: 16px;
+
+    border-radius: 8px;
+
+    font-size: 12px;    
+    text-align: center;
+}
+
 /* Foundation overrides */
 
 .top-bar-section {
