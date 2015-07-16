@@ -702,7 +702,7 @@ comments_on_video =
 ]
 
 comments_on_video.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id], project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -735,7 +735,7 @@ comments_on_project =
 ]
 
 comments_on_project.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], user_id: com[:user_id], project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -768,7 +768,7 @@ comments_on_ingredient =
 ]
 
 comments_on_ingredient.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id],project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -800,7 +800,7 @@ comments_on_step =
 ]
 
 comments_on_step.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id],project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
