@@ -1,28 +1,19 @@
 <nav class= 'top-bar center' data-topbar>
-  <div class = 'row'>
-    <div class = 'large-6 columns'>
-      <ul class = "title-area">
-        <li class="name">
-          <%= image_tag "logo_small.png" %>
-        <li class = "toggle-topbar menu-icon"><a href="#">Menu</a></li>
-      </ul>
-
-      <section class = 'top-bar-section'>
-        <ul>
-          <li><a href="/categories">Categories</a></li>
-          <li><a href="#">Popular</a></li>
-          <li><a href="/users/1">User #1</a></li>
-          <li><a href="/projects/2">Project #2</a></li>
-        </ul>
-      </section>
-    </div>
-    <div class = 'large-3 columns'>
-      <section>
-        <%= render 'layouts/search' %>   
-      </section>
-    </div>
-    <div class = 'large-3 columns user-panel'>
-        <%= render 'pages/login' %>
-    </div>     
-  </div>
+  <ul class = "title-area left">
+    <li class="name">
+      <%= image_tag "logo_small.png" %>
+    <li class = "toggle-topbar menu-icon"><a href="#">Menu</a></li>
+  </ul>
+  <section class = 'top-bar-section'>
+    <ul>
+      <li><a href="/categories">Categories</a></li>
+      <li><a href="#">Popular</a></li>
+      <li><a href="/users/1">User #1</a></li>
+      <li><a href="/projects/2">Project #2</a></li>
+    </ul>
+  </section>
+    <div class = 'right user-panel'>
+      <%= render 'pages/login' %>
+    </div>   
+    <%= render 'layouts/search' %>  
 </nav>

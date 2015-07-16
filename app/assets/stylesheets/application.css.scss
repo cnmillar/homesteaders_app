@@ -37,12 +37,11 @@ nav {
 .user-panel {
   background-color: #222;
   width: 20rem;
-  margin: .5rem;
-  border: 1px solid #AAA;
+  margin: 8px;
+  border: 1px solid #555;
   border-radius: .5rem;
   height: 5rem;
-  padding: .6rem;
-  display: inline-block;
+  padding: 8px;
 }
 .user-panel a {
   color: white;
@@ -51,10 +50,9 @@ nav {
 .user-panel img {
   height : 100%;
   max-height: 50px;
-  position: absolute;
-  top: .25rem;
-  left: .25rem;
-  margin: .5rem;
+  vertical-align: top;
+  margin: 4px;
+  border: 1px solid #444;
 
 }
 
@@ -63,9 +61,10 @@ nav {
 }
 
 .user-panel p {
-  margin-left: 4rem;
+  margin-left: 10px;
   margin-top: .25rem;
   color : $secondary-color;
+  display: inline-block;
 }
 
 .section {
