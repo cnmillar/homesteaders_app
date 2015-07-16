@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require social-share-button
 //= require jquery.raty
 //= require ratyrate
@@ -152,5 +151,18 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
+});
+
+$(document).ready(function() {
+  $(".comments").on("click", ".load-comments .pagination a", function(e)
+  {
+    e.preventDefault();
+    e.stopPropagation();
+    //debugger;
+    $.getScript(this.href, function(data, status, jqxhr) {
+      console.log("DATA", data);
+    });
+    return false;
+  });
 });
 

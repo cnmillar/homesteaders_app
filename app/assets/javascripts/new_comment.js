@@ -13,11 +13,5 @@ $(function()
 		$("#comment-content").val("");
 	});
 
-	$(".comments").on("click", ".load-comments .pagination a", function(e)
-	{
-  	e.preventDefault();
-  	e.stopPropagation();
-    $.getScript(this.href);
-    return false;
-  });
+	
 })

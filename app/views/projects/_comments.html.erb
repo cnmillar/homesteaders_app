@@ -2,12 +2,14 @@
 
 	<h3>Comments</h3>
 	<hr>
-	<%= form_for @project.comments.new, remote: true do |f| %>
-	  <%= f.text_area :content, placeholder: "Comment on this project", id: "comment-content" %>
-	  <%= f.hidden_field :commentable_type %>
-	  <%= f.hidden_field :commentable_id %>
-	  <%= f.hidden_field :user_id %>
-	  <%= f.submit "Comment", class: "button"%>
+	<% if current_user %>
+		<%= form_for @project.comments.new, remote: true do |f| %>
+		  <%= f.text_area :content, placeholder: "Comment on this project", id: "comment-content" %>
+		  <%= f.hidden_field :commentable_type %>
+		  <%= f.hidden_field :commentable_id %>
+		  <%= f.hidden_field :user_id %>
+		  <%= f.submit "Comment", class: "button"%>
+		<% end %>
 	<% end %>
 
 	<div class="load-comments">
