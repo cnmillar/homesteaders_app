@@ -44,11 +44,11 @@ jQuery(function($){
     if (timelineX < 0) {
       timelineX = 0
     }
-    var newAvatar = $('<div />').addClass('user-avatar').css({'left': timelineX, 'top' : 0 });
+    var newAvatar = $('<div />').addClass('video-comment-avatar').html('<img src = "https://placekitten.com/g/32/32" />').css({'left': timelineX, 'top' : 0 });
     $('#user-timeline').append(newAvatar);
   });
 
-  // Start of hover state for placed markers
+// Start of hover state for placed markers
   $('.user-avatar').hover(function(){
     clickedAvatar = $(this)
     var avatarFlyout = $('<div />').addClass('user-avatar-flyout').text('This is a comment.');
@@ -68,8 +68,6 @@ jQuery(function($){
       return false;
     }
   );
-
-
 
 });
 
@@ -150,7 +148,7 @@ jQuery(function($){
     }(document, 'script', 'facebook-jssdk')
   );
 
-// Remove garbage from URL after FB login
+// Remove garbage from URL that appears after successful FB login
   if (window.location.hash == '#_=_') {
       window.location.hash = ''; // for older browsers, leaves a # behind
       history.pushState('', document.title, window.location.pathname); // nice and clean
@@ -160,23 +158,23 @@ jQuery(function($){
 
 
 // YouTube player
-    var tag = document.createElement('script');
+  var tag = document.createElement('script');
 
-    tag.src = "https://www.youtube.com/iframe_api";
-    var firstScriptTag = document.getElementsByTagName('script')[0];
-    firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+  tag.src = "https://www.youtube.com/iframe_api";
+  var firstScriptTag = document.getElementsByTagName('script')[0];
+  firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-    var player;
-    function onYouTubeIframeAPIReady() {
-      player = new YT.Player('player', {
-        height: '390',
-        width: '640',
-        videoId: 'EgdOjyYjjEc',
-        events: {
+  var player;
+  function onYouTubeIframeAPIReady() {
+    player = new YT.Player('player', {
+      height: '390',
+      width: '640',
+      videoId: 'EgdOjyYjjEc',
+      events: {
 
-        }
-      });
-    }
+      }
+    });
+  }
 
 
 

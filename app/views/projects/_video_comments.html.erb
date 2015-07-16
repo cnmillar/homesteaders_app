@@ -1,3 +1,11 @@
 <div class = 'video-comments section'>
-  <h5>This is the video comment section</h5>
+  <h3>Video comments on partial</h3>
+  <% @video_comments.each do |comment| %>
+    <%= image_tag(comment.user.avatar, width: '10%') %> 
+    <%= comment.user.first_name %> <%= comment.user.last_name %>          
+    <%= comment.content %>
+    <%= comment.created_at.to_datetime %> 
+    <small>(<%= comment.commentable_type %>)</small>    
+    <hr>
+  <% end %>
 </div>

@@ -93,20 +93,24 @@ nav {
 } 
 
 
-#user-timeline {
-  background-color: pink;
+#video-timeline {
+  background-color: #333;
   width: 640px;
   height: 32px;
   margin-bottom: 10px;
   position: relative;
 }
 
-.user-avatar {
+.video-comment-avatar {
   width: 32px;
   height: 32px;
   background-color: blue;
   display: inline-block;
   position: absolute;
+}
+
+#player {
+  height: 350px;
 }
 
 .user-avatar:hover {
