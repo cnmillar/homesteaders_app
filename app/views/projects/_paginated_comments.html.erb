@@ -1,6 +1,4 @@
-
 <% @all_comments.each do |comment| %>
-	<div class="comment">
 	<%= image_tag(comment.user.avatar, width: '10%') %>	
 	<%= comment.user.first_name %> <%= comment.user.last_name %>					
 	<%= comment.content %>
