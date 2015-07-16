@@ -1,6 +1,6 @@
 
 <% if current_user %> 
-  <%= image_tag(current_user.avatar, width: '50px') %>
+  <%= image_tag(current_user.avatar) %>
   <p>
     <a href="#" class = 'username'><%= current_user.first_name %> <%= current_user.last_name %></a><br />
       <a href="#">My projects</a> | 
