@@ -17,6 +17,7 @@
 //= require jquery.raty
 //= require ratyrate
 //= require new_comment
+//= require step_comments
 //= require_self
 
 if (window.location.hash == '#_=_') {
