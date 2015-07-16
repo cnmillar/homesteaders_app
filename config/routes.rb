@@ -24,4 +24,10 @@ HeApp::Application.routes.draw do
 
   # get '/auth/:provider/callback' => 'users#callback'
   get '/auth/:provider/callback', to: 'sessions#create'
+
+  post 'favourited/:user_project_id', to: 'user_projects#favourited', as: 'favourited'
+  get 'favourited/:user_project_id' => 'user_projects#favourited'
+
+  post 'completed/:user_project_id', to: 'user_projects#completed', as: 'completed'
+  get 'completed/:user_project_id' => 'user_projects#completed'
 end
