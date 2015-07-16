@@ -23,6 +23,11 @@ h1, h2, h3 {
   color: $primary-color;
 }
 
+.section {
+  border: 1px $primary-color dotted;
+  padding: 1em;
+}
+
 nav {
   height: 100px;
   width: 100%;
@@ -82,11 +87,6 @@ nav {
 
 }
 
-.section {
-  border: 1px $primary-color dotted;
-  padding: 1em;
-}
-
 .search-box {
   width: 250px;
   margin: 25px 20px 0 0;
@@ -123,10 +123,27 @@ nav {
   background-color: black;
 }
 
-/* Foundation overrides */
-.custom-row {
-  max-width: 1000rem;
+.carousel {
+  max-height: 400px;
 }
+
+.category {
+  height: 200px;
+  background-color: white;
+  opacity: .7;
+  margin: 30px;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.categories {
+  margin: 20px 50px;
+  padding: 1em;
+  font-size: 2em;
+}
+
+
+/* Foundation overrides */
 
 .top-bar-section {
   margin-left: 20px;
