@@ -9,11 +9,11 @@ class UsersController < ApplicationController
   # end
 
 	def show
-    @images = []
     @current_user = current_user
     @user =  User.find(params[:id])
     @user_projects =  UserProject.where(user_id: @user.id)
-    @comments = Comment.where(user_id: current_user.id).includes(:project)
+    @images=[]
+    @comments = Comment.where(user_id: @user.id)
 	end
 
   def callback
