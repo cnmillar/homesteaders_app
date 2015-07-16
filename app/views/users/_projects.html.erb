@@ -6,17 +6,11 @@
       <% proj.project.images.each do |img| %>
         <% @images = [] %>
         <% @images << img.original %>
-      <% end %>
 
-      <% if @images.first %> 
-        <%= image_tag("#{@images.first}_thumb.jpg", width: '300px') %>
-      <% end %>
-
-      <li><%=link_to "Favourited", favourited_path(proj), method: "post" %>
-      <%= proj.favourited %></li> 
-      
-      <li><%=link_to "Completed", completed_path(proj), method: "post" %>
-      <%= proj.completed %></li> 
+      <% end %> 
+      <%= image_tag(@images.first, width: '300px') %>
+      <li><%=link_to(image_tag("/svg/heart213#{proj.favourited ? "red" : ""}.svg"), favourited_path(proj), method: "post") %></li>
+      <li><%=link_to(image_tag("/svg/#{proj.completed ? "checkmark4" : "delete38"}.svg"), completed_path(proj), method: "post") %></li>
     </div>
   <% end %>
 </div>
