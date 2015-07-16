@@ -24,15 +24,19 @@ class Project < ActiveRecord::Base
 
 		project_comments = self.comments
 
-		project_comments.each do |com|
+		project_comments.includes(:user).each do |com|
 			all_comments << com
 		end
+
+		# self.ingredients.includes(:comments)
 
 		self.ingredients.each do |ing|
 			ing.comments.each do |com|
 				all_comments << com
 			end
-		end
+		end	
+
+		# self.steps.includes(:comments)
 
 		self.steps.each do |step|
 			step.comments.each do |com|

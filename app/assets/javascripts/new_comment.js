@@ -9,7 +9,15 @@ $(function()
 	}
 
 	$("#new_comment").on("ajax:success", function(e, data, status, xhr){
-		$("#load-comments").prepend(createComment(data));
+		$(".load-comments").prepend(createComment(data));
 		$("#comment-content").val("");
-	})
+	});
+
+	$(".comments").on("click", ".load-comments .pagination a", function(e)
+	{
+  	e.preventDefault();
+  	e.stopPropagation();
+    $.getScript(this.href);
+    return false;
+  });
 })

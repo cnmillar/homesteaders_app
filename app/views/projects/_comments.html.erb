@@ -10,17 +10,8 @@
 	  <%= f.submit "Comment", class: "button"%>
 	<% end %>
 
-	<div id="load-comments">
-		<%= will_paginate @all_comments %>
-			<% @all_comments.each do |comment| %>
-					<%= image_tag(comment.user.avatar, width: '10%') %>	
-						<%= comment.user.first_name %> <%= comment.user.last_name %>					
-						<%= comment.content %>
-						<%= comment.created_at.to_datetime %>	
-						<small>(<%= comment.commentable_type %>)</small>		
-				<hr>
-			<% end %>
-		<%= will_paginate @all_comments %>
+	<div class="load-comments">
+		<%= render 'paginated_comments' %>
 	</div>
 
 </div>
