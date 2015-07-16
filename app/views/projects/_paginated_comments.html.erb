@@ -1,0 +1,10 @@
+<% @all_comments.each do |comment| %>
+	<div class="comment">
+	<%= image_tag(comment.user.avatar, width: '10%') %>	
+	<%= comment.user.first_name %> <%= comment.user.last_name %>					
+	<%= comment.content %>
+	<%= comment.created_at.to_datetime %>	
+	<small>(<%= comment.commentable_type %>)</small>		
+	<hr>
+<% end %>
+<%= will_paginate @all_comments %>
