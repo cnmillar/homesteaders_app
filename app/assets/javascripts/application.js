@@ -18,6 +18,7 @@
 //= require ratyrate
 //= require new_comment
 //= require step_comments
+//= require jquery.paging
 //= require_self
 
 if (window.location.hash == '#_=_') {
@@ -164,18 +165,5 @@ window.fbAsyncInit = function() {
 }(document, 'script', 'facebook-jssdk'));
 
 
-});
-
-$(document).ready(function() {
-  $(".comments").on("click", ".load-comments .pagination a", function(e)
-  {
-    e.preventDefault();
-    e.stopPropagation();
-    //debugger;
-    $.getScript(this.href, function(data, status, jqxhr) {
-      console.log("DATA", data);
-    });
-    return false;
-  });
 });
 
