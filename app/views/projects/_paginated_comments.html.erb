@@ -1,5 +1,6 @@
 <% @all_comments.each do |comment| %>
 	<div class="element <%= comment.commentable_type %> <%= comment.commentable_id %>" style="display:none;">
+		<!-- CHECK FOR HELPER ROUTE -->
 		<%= link_to(image_tag(comment.user.avatar, width: '10%'), "/users/#{comment.user.id}") %>	
 		<%= comment.user.first_name %> <%= comment.user.last_name %>					
 		<%= comment.content %>

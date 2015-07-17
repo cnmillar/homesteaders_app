@@ -5,10 +5,12 @@ class SessionsController < ApplicationController
 
   def create
     user = User.where(facebook_id: auth_hash[:uid]).first
+    # change to: 
+    # user = User.find_by(facebook_id: auth_hash[:uid]).first
 
     if !user
 
-      first_name = auth_hash[:info][:name].split(' ').first
+      first_name = auth_hash[:info][:name].split(' ').first # change to full_name field in users table
       last_name = auth_hash[:info][:name].split(' ').last 
       facebook_id =  auth_hash[:uid]
       avatar = auth_hash[:info][:image]
@@ -27,8 +29,9 @@ class SessionsController < ApplicationController
     request.env['omniauth.auth']
   end
 
-  def destroy 
-    session[:user_id] = nil 
+  def destroy
+    session.clear 
+    session[:user_id] = nil # change to session.clear
     redirect_to '/' 
   end
 end
