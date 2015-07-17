@@ -2,9 +2,8 @@
 <% if current_user %> 
   <%= image_tag(current_user.avatar) %>
   <p>
-  <!-- USE LINK_TO INSTEAD OF a TAGS -->
-    <a href="#" class = 'username'><%= current_user.full_name %> </a><br />
-      <a href="#">My projects</a> | 
+    <%= link_to current_user.full_name, user_path(current_user.id) %><br />
+    <%= link_to 'My Projects', user_path(current_user.id) %>
     <%= link_to "Log out", logout_path, method: "delete" %>
   </p>
 <% else %> 

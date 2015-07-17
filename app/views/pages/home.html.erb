@@ -1,34 +1,33 @@
 
-<div class = "row">
-  <div class = "large-12 columns" >
+<div class="row">
+  <div class="large-12 columns" >
     <%= render 'pages/showcased' %>
   </div>
 </div>
-<div class = "row">
-  <div class = "large-4 columns">
+<div class="row">
+  <div class="large-4 columns">
      <%= render 'pages/popular' %>
   </div>
-  <div class = "large-4 columns">
+  <div class="large-4 columns">
      <%= render 'pages/popular' %>
   </div>
-  <div class = "large-4 columns">
+  <div class="large-4 columns">
      <%= render 'pages/popular' %>
   </div>
      <%= render 'users/email' %>
 </div>
-<div class = "row">
+<div class="row">
   <div class = 'category categories'>
     <h4>All Categories:</h4>
     <% @categories.in_groups(3, false) do |group| %>
       <div class="large-4 columns">
         <ul>
           <% group.each do |category| %>
-          <!-- USE LINK_TO INSTEAD OF A TAG | MAKE CATEGORIES PATH HELPER -->
-            <li><a href="./categories/<%= category.id %>"><%= category.name %></a></li>
+            <li><%= link_to category.name, category_path(category) %>
+            </li>
           <% end %>
         </ul>
       </div>
     <% end %>
   </div>
 </div>
-

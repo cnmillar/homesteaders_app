@@ -5,6 +5,7 @@ run Rails.application
 
 if Rails.env.prof?
  use Rack::RubyProf, :path => '/tmp/prof'
+  RubyProf.start
   result = RubyProf.stop
   printer = RubyProf::GraphPrinter.new(result)
   printer.print(STDOUT, :min_percent => 2)
