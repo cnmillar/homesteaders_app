@@ -1,23 +1,6 @@
-// Jquery to add comment to page on form submission without page reload
 
 $(function()
 {
-	function createComment(data){
-	return '<div>'+
-			'<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+	" " + 
-			APP.userName +	" " +				
-			data.content + " " + 
-			data.created_at +	" " + 
-			'<small>('+ data.commentable_type +')</small>	' +	
-			'<hr>' + 
-		'</div>'
-	}
-
-	$("#new_comment").on("ajax:success", function(e, data, status, xhr){
-		$(".load-comments").prepend(createComment(data));
-		$("#comment-content").val("");
-	});	
-
 /////////////////////////////////////
 // Comment pagination
 
@@ -67,7 +50,7 @@ $(function()
 	  paginate(content);
 	  $('#view-all-comments').css("display","inline");
 	  if (content.length === 0){
-	  	$(".load-comments").append("<p class='no-comments'> No comments yet! </p>")
+	  	$("#no-comments").css("display","inline");
 	  }
 	});
 
@@ -77,6 +60,35 @@ $(function()
 	  $('.load-comments div.element').css("display", "none");
 	  paginate(content);
 	  $('#view-all-comments').css("display","none");
+	  $("#no-comments").css("display","none");
+
 	});
+
+/////////////////////////////
+// Jquery to add comment to page on form submission without page reload
+
+	// function createComment(data){
+	// return '<div>'+
+	// 		'<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+	" " + 
+	// 		APP.userName +	" " +				
+	// 		data.content + " " + 
+	// 		data.created_at +	" " + 
+	// 		'<small>('+ data.commentable_type +')</small>	' +	
+	// 		'<hr>' + 
+	// 	'</div>'
+	// }
+
+	$("#new_comment").on("ajax:success", function(e, data, status, xhr){
+		$("#comment-content").val("");
+
+		var prev = {start: 0, stop: 0},
+	    content = $('.load-comments div.element');
+	  $('.load-comments div.element').css("display", "none");
+	  paginate(content);
+	  $('#view-all-comments').css("display","none");
+	  if (content.length === 0){
+	  	$("#no-comments").css("display","inline");
+	  }
+	});	
 
 })

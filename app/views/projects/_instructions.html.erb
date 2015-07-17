@@ -6,8 +6,7 @@
 				<td><h5><%= step.ordinal %>. </h5></td>
 				<td><h5><%= step.content %>
 		  		<span class="count-icon">
-		  		<%= link_to(image_tag("comment-icon.png", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments"), "javascript:void(0)", "data-step-id" => step.id, "data-project-id" => @project.id, "data-n-comments" => step.comments.length, "data-comments" => step.comments.to_json) %>
-		  		<%#= link_to(image_tag("comment-icon.png", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments"), "#", "data-reveal-id"=>"myModal") %>
+		  		<%= link_to(image_tag("comment-icon.png", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments"), "javascript:void(0)", "data-step-id" => step.id, "data-comments" => step.comments.to_json) %>
 				    <span class="count"><%= step.comments.length %></span>
 					</span>
 				</h5></td>
@@ -15,19 +14,3 @@
 		<% end %>
 	</table>
 </div>
-
-<!-- <div id="myModal" class="reveal-modal medium" data-reveal aria-labelledby="modalTitle" aria-hidden="true" role="dialog">
-  <h2 id="modalTitle">Awesome. I have it.</h2>
-  <p class="lead">Your couch.  It is mine.</p>
-  <p>I'm a cool paragraph that lives inside of an even cooler modal. Wins!</p>
-  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
-</div> -->
-
-<script>
-	// $(document).ready(function(){
- //    $(document).foundation();
-	// 	$('#dd').click(function(){
-	//  		$('#myModal').foundation('reveal', 'open');
-	// 	}); 
-	// });  
-</script>
