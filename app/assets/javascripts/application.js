@@ -72,7 +72,6 @@ $(function($){
     $("#activeComment").remove();
   });
 
-
 // Facebook login feature
 
 });
