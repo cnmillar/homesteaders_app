@@ -11,10 +11,8 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 
 # Add Foundation and Normalize
-gem 'foundation-rails'
-group :development do
-  gem 'rails_layout'
-end
+# gem 'foundation-rails'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -39,9 +37,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'pry'
-gem 'social-share-button', '~> 0.1.6'
-gem 'ratyrate'
+group :prof do
+  gem 'ruby-prof'
+end
+
+group :development do
+  gem 'rails_layout'
+  gem 'pry'
+end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
@@ -59,3 +62,5 @@ gem 'bcrypt-ruby', '~> 3.0.0'
 gem 'youtube_it', '~> 2.4.0'
 gem 'omniauth-facebook'
 gem "koala", "~> 2.0"
+gem 'social-share-button', '~> 0.1.6'
+gem 'ratyrate'
