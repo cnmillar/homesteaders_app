@@ -13,7 +13,7 @@
 <body>
 
 <% if current_user %>
-  <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.first_name %> <%=current_user.last_name %>"}</script>
+  <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.full_name %>"}</script>
 <% end %>
 
 <%= render 'layouts/navigation' %>

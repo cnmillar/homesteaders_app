@@ -3,7 +3,7 @@
     <div class= "email">
       <%= form_for @current_user, url: user_path(@current_user), html: {method: :patch} do |f| %>
         <%= f.text_area :email, placeholder: "Please enter your email address" %>
-        <%= f.submit "Submit", class: "button"%>
+        <%= f.submit "Update", class: "button"%>
       <% end %>
     </div>
   </div>

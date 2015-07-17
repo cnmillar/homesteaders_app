@@ -854,64 +854,57 @@ end
 users = [
 	{
 		admin: true,
-		email: "cnmillar@gmail.com",
+		email: "cpilon@gmail.com",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Caitlin",
-		last_name: "Millar",
+		full_name: "Caitlin Pilon",
 		facebook_id: 123456789
 	},
 	{
 		admin: true,
 		email: "test@test.ca",
 		avatar: "http://graph.facebook.com/10153480204621660/picture",
-		first_name: "David",
-		last_name: "Good",
+		full_name: "David Good",
 		facebook_id: 10153480204621660
 	},
 	{
 		admin: true,
 		email: "chris@test.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Chris",
-		last_name: "Jones",
+		full_name: "Chris Jones",
 		facebook_id: 223456799
 	},
 	{
 		admin: true,
 		email: "cnmillar@gmail.com",
 		avatar: "http://graph.facebook.com/10101421296841741/picture",
-		first_name: "Caitlin",
-		last_name: "Millar",
+		full_name: "Caitlin Millar",
 		facebook_id: 10101421296841741
 	},
 	{
 		admin: true,
 		email: "susan@test.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Susan",
-		last_name: "Smith",
+		full_name: "Susan Smith",
 		facebook_id: 109488894
 	},
 	{
 		admin: true,
 		email: "john@test.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "John",
-		last_name: "Doe",
+		full_name: "John Doe",
 		facebook_id: 234984756
 	},
 	{
 		admin: false,
 		email: "beth@test.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Beth",
-		last_name: "Hammett",
+		full_name: "Beth Hammett",
 		facebook_id: 10155764870935693
 	}
 ]
 
 users.each do |u|
-	user = User.create!(admin: u[:admin], email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
+	user = User.create!(admin: u[:admin], email: u[:email], avatar: u[:avatar], full_name: u[:full_name], facebook_id: u[:facebook_id])
 	unless user.persisted?
 		puts "Could not create user: #{u.errors.full_messages}"
 	end

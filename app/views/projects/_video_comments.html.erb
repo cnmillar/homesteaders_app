@@ -2,7 +2,7 @@
   <h3>Video comments on partial</h3>
   <% @video_comments.each do |comment| %>
     <%= image_tag(comment.user.avatar, width: '32px') %> 
-    <%= comment.user.first_name %> <%= comment.user.last_name %>          
+    <%= comment.user.full_name %>          
     <%= comment.content %>  
     <%= comment.video_time %>
     <hr>

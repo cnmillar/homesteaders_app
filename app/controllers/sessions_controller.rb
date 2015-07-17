@@ -10,13 +10,12 @@ class SessionsController < ApplicationController
 
     if !user
 
-      first_name = auth_hash[:info][:name].split(' ').first # change to full_name field in users table
-      last_name = auth_hash[:info][:name].split(' ').last 
+      full_name = auth_hash[:info][:name]
       facebook_id =  auth_hash[:uid]
       avatar = auth_hash[:info][:image]
       email = auth_hash[:info][:email]
 
-      user = User.create(facebook_id: facebook_id, first_name: first_name, last_name: last_name, avatar: avatar, email: email)
+      user = User.create(facebook_id: facebook_id, full_name: full_name, avatar: avatar, email: email)
   
     end
     session[:user_id] = user.id
