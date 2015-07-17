@@ -40,13 +40,13 @@ class ProjectsController < ApplicationController
     end
   end
 
-  protected
+  # protected
 
-  # do we use this? do we need this?
-  def projects_params
-    params.require(:project).permit(
-      :title
-    )
-  end
+
+  # def projects_params
+  #   params.require(:project).permit(
+  #     :title
+  #   )
+  # end
 
 end
