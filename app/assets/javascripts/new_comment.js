@@ -6,7 +6,7 @@ $(function()
 
 	var paginate = function(content){
 		$(".pagination").paging(content.length, { 
-	    format: '[< ncnnn >]', // define how the navigation should look like and in which order onFormat() get's called
+	    format: '[ <nncnn>]', // define how the navigation should look like and in which order onFormat() get's called
 	    perpage: 5, // show 5 elements per page
 	    lapping: 0, // don't overlap pages for the moment
 	    page: 1, // start at page, can also be "null" or negative
@@ -29,9 +29,9 @@ $(function()
 	        case 'prev': // <
 	            return '<a href="javascript:null;">&lt;</a>';
 	        case 'first': // [
-	            return '<a href="javascript:null;">first</a>';
+	            return '<a href="javascript:null;">First</a>';
 	        case 'last': // ]
-	            return '<a href="javascript:null;">last</a>';
+	            return '<a href="javascript:null;">Last (' + this.pages + ')</a>';
 	        }
 	    }
 		});
@@ -40,10 +40,12 @@ $(function()
 	var prev = {start: 0, stop: 0},
 	    content = $('.load-comments div.element');
 
+// On page load, call paginate function to paginate all comments
 	$('.pagination').html('<div/>');
 	paginate(content);
 
-	$("#steps-table a").on("click", function(){
+// Step comments filter
+	$("#steps-table .filter-step-comments").on("click", function(){
 		var prev = {start: 0, stop: 0},
 	    content = $('.load-comments div.element.Step.' + $(this).data("step-id"));
 	  $('.load-comments div.element').css("display", "none");
@@ -54,6 +56,19 @@ $(function()
 	  }
 	});
 
+// Ingredient comments filter
+	$(".ing-ul .filter-ing-comments").on("click", function(){
+		var prev = {start: 0, stop: 0},
+	    content = $('.load-comments div.element.Ingredient.' + $(this).data("ing-id"));
+	  $('.load-comments div.element').css("display", "none");
+	  paginate(content);
+	  $('#view-all-comments').css("display","inline");
+	  if (content.length === 0){
+	  	$("#no-comments").css("display","inline");
+	  }
+	});
+
+// When displaying filtered comments, let user click "View all comments" to return to all comments
 	$("#view-all-comments").on("click", function(){
 		var prev = {start: 0, stop: 0},
 	    content = $('.load-comments div.element');

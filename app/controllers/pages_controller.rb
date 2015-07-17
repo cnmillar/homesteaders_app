@@ -1,8 +1,8 @@
 class PagesController < ApplicationController	
 
 	def home
-		@categories = Category.order('name asc').all
-    @current_user = current_user
+		@categories = Category.all.order('name asc')
+    @current_user = current_user # remove
 	end
 
 end

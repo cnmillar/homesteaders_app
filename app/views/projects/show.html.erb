@@ -1,8 +1,10 @@
+<!-- REMOVE SCRIPT FROM VIEW -->
+
 <script>
 	$(function(){
 		$("#submit-to-cart").on("click", function(){
-			items = $(".shopify_cart");
-			cart = "http://homesteaders-emporium.myshopify.com/cart/";
+			var items = $(".shopify_cart");
+			var cart = "http://homesteaders-emporium.myshopify.com/cart/";
 
 			for (var i=0; i < items.length; i++ ) {
 				if ($(items[i]).is(":checked")) {
@@ -12,18 +14,26 @@
 			window.open(cart);
 		});
 
+    // $("#select-all").on("click", function(e){
+    //   if(this.checked){
+    //     $('.shopify_cart').each(function(){
+    //       this.checked = true;
+    //     })
+    //   }
+    //   else {
+    //     $('.shopify_cart').each(function(){
+    //       this.checked = false;
+    //     })
+    //   }
+    // })
+
     $("#select-all").on("click", function(e){
-      if(this.checked){
+      var is_checked = $(this).is(":checked");
         $('.shopify_cart').each(function(){
-          this.checked = true;
-        })
-      }
-      else {
-        $('.shopify_cart').each(function(){
-          this.checked = false;
-        })
-      }
-    })
+          $(this).attr('checked', is_checked);
+        });
+      });
+    });
 
 	})
 </script>

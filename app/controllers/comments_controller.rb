@@ -1,8 +1,9 @@
 class CommentsController < ApplicationController
 
 	def create
-		@comment = Comment.new(comment_params)
-		@comment.user = current_user
+		@comment = current_user.comments.new(comment_params)
+		# @comment = Comment.new(comment_params)
+		# @comment.user = current_user
 		respond_to do |format|
 			if @comment && @comment.save
 				format.json{render json: @comment}
