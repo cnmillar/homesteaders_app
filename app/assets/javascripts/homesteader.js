@@ -81,13 +81,13 @@ $(function($){
     //   }
     // })
 
-    $("#select-all").on("click", function(e){
-      var is_checked = $(this).is(":checked");
-        $('.shopify_cart').each(function(){
-          $(this).attr('checked', is_checked);
-        });
-      });
-    });
+    // $("#select-all").on("click", function(e){
+    //   var is_checked = $(this).is(":checked");
+    //     $('.shopify_cart').each(function(){
+    //       $(this).attr('checked', is_checked);
+    //     });
+    //   });
+    // });
 });
 
 // Facebook login feature
