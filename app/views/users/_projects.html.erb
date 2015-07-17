@@ -8,10 +8,10 @@
         <% @images << img.original %>
 
       <% end %> 
-      <%= image_tag(@images.first, width: '300px') %>
+      <%= image_tag("#{@images.first}.jpg", width: '300px') %>
       <ul class="no-bullet">
-      <%=link_to(image_tag("/svg/heart213#{proj.favourited ? "red" : ""}.svg"), favourited_path(proj), method: "post") %>
-      <%=link_to(image_tag("/svg/#{proj.completed ? "checkmark4" : "delete38"}.svg"), completed_path(proj), method: "post") %>
+        <%=link_to(image_tag("/svg/heart213#{proj.favourited ? "red" : ""}.svg"), favourited_path(proj), method: "post") %>
+        <%=link_to(image_tag("/svg/#{proj.completed ? "checkmark4" : "delete38"}.svg"), completed_path(proj), method: "post") %>
       </ul>
     </div>
   <% end %>

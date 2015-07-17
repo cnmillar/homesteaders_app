@@ -21,7 +21,7 @@
 //= require_self
 
 
-jQuery(function($){
+$(function($){
 
 // Slick carousel
   $('.carousel').slick({
@@ -108,10 +108,7 @@ window.fbAsyncInit = function() {
   });
 };
 
-});
-=======
->>>>>>> b76156dfb795f7b20e0bc8438a993b3ed606884f
-
+// });
 
 // Facebook login feature. Extensive comments have been deleted but are available on the Facebook dev site
 
@@ -214,17 +211,7 @@ window.fbAsyncInit = function() {
       videoId: 'EgdOjyYjjEc',
       events: {
 
-<<<<<<< HEAD
         }
       });
     }
-=======
-      }
-    });
-  }
 
-
-
-
-
->>>>>>> b76156dfb795f7b20e0bc8438a993b3ed606884f
