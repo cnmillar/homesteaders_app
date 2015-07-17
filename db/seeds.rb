@@ -676,26 +676,68 @@ end
 comments_on_video = 
 [
 	{
-		content: "This is a video comment!",
+		content: "This is video comment 1!",
 		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 50,
-		user_id: 1
+		user_id: 4
 	},
 	{
-		content: "This is a video comment!",
+		content: "This is video comment 2!",
 		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 50,
 		user_id: 2
 	},
 	{
-		content: "This is a video comment!",
+		content: "This is video comment 3!",
 		commentable_type: "Video",
 		commentable_id: 8,
 		video_time: 100,
 		user_id: 2
-	}
+	},
+	{
+		content: "This is video comment 4!",
+		commentable_type: "Video",
+		commentable_id: 3,
+		video_time: 400,
+		user_id: 3
+	},	
+	{
+		content: "This is video comment 5!",
+		commentable_type: "Video",
+		commentable_id: 8,
+		video_time: 200,
+		user_id: 4
+	},	
+	{
+		content: "This is video comment 6!",
+		commentable_type: "Video",
+		commentable_id: 8,
+		video_time: 300,
+		user_id: 2
+	},	
+	{
+		content: "This is video comment 7!",
+		commentable_type: "Video",
+		commentable_id: 3,
+		video_time: 400,
+		user_id: 3
+	},	
+	{
+		content: "This is video comment 8!",
+		commentable_type: "Video",
+		commentable_id: 6,
+		video_time: 500,
+		user_id: 1
+	},	
+	{
+		content: "This is video comment 9!",
+		commentable_type: "Video",
+		commentable_id: 3,
+		video_time: 600,
+		user_id: 2
+	}	
 ]
 
 comments_on_video.each do |com|

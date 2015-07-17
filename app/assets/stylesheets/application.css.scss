@@ -94,7 +94,7 @@ nav {
 
 
 #video-timeline {
-  background-color: #333;
+  background-color: #666;
   width: 640px;
   height: 32px;
   margin-bottom: 10px;
@@ -104,27 +104,36 @@ nav {
 .video-comment-avatar {
   width: 32px;
   height: 32px;
+  border: 1px solid #888;
   background-color: blue;
   display: inline-block;
   position: absolute;
+  top: 0;
+  transition: .3s;
+}
+
+.video-comment-avatar:hover {
+  width: 50px;
+  height: 50px;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 1px solid #888;
+}
+
+.video-comment-flybelow {
+  width: 640px;
+  height: 40px;
+  opacity: .7;
+  background-color: black;
+  position: relative;
+  top: 42px;
+  color: white;
+  z-index: 10;
+  padding: .5em;
 }
 
 #player {
   height: 350px;
-}
-
-.user-avatar:hover {
-  width: 40px;
-  height: 40px;
-  margin-left: -4px;
-  margin-top: -4px;
-}
-
-.user-avatar-flyout {
-  width: 400px;
-  height: 40px;
-  opacity: .7;
-  background-color: black;
 }
 
 .carousel {

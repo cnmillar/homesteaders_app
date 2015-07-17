@@ -45,14 +45,25 @@ jQuery(function($){
       timelineX = 0
     }
     var newAvatar = $('<div />').addClass('video-comment-avatar').html('<img src = "https://placekitten.com/g/32/32" />').css({'left': timelineX, 'top' : 0 });
-    $('#user-timeline').append(newAvatar);
+    $('#video-timeline').append(newAvatar);
   });
 
-// Start of hover state for placed markers
-  $('.user-avatar').hover(function(){
-    clickedAvatar = $(this)
-    var avatarFlyout = $('<div />').addClass('user-avatar-flyout').text('This is a comment.');
-    clickedAvatar.append(avatarFlyout);
+// Hover state for comment markers
+  $('.video-comment').on('mouseenter', function() {
+    $('#activeComment').remove();
+    hoveredAvatar = $(this);
+    avatarFlyout = $('<div />', {
+      id: 'activeComment',
+      class: 'video-comment-flybelow',
+      text: 'this is a comment'
+    });
+    setTimeout(function(){
+      hoveredAvatar.append(avatarFlyout).fadeIn(1000);
+    }, 200); 
+  });
+
+  $('.video-comment').on('mouseleave', function() {
+    $("#activeComment").remove();
   });
 
 // Comments 
