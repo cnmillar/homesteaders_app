@@ -178,3 +178,20 @@ nav {
 .title-area {
   width : 435px;
 }
+
+.email_container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.email {
+  width: 300px;
+  margin: 300px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
+}

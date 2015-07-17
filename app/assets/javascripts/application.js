@@ -85,7 +85,7 @@ function statusChangeCallback(response) {
         //       });
     'Thanks for logging in, ' + response.name + '!';
     // Logged into your app and Facebook.
-  FB.api('/me', function(response) {
+  FB.api('/v2.4/me?fields=id,name,email', function(response) {
    // FB.api('/me?fields=id,name,email', function(response) {
       // console.log(JSON.stringify(response));
      });;
