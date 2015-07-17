@@ -42,9 +42,6 @@ GEM
     execjs (2.5.2)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
-    foundation-rails (5.5.0.0)
-      railties (>= 3.1.0)
-      sass (>= 3.2.0, < 3.4)
     hashie (3.4.2)
     hike (1.2.3)
     i18n (0.7.0)
@@ -113,6 +110,7 @@ GEM
     ratyrate (1.2.2.alpha)
     rdoc (4.2.0)
       json (~> 1.4)
+    ruby-prof (0.15.8)
     sass (3.2.19)
     sass-rails (4.0.5)
       railties (>= 4.0.0, < 5.0)
@@ -163,7 +161,6 @@ PLATFORMS
 DEPENDENCIES
   bcrypt-ruby (~> 3.0.0)
   coffee-rails (~> 4.0.0)
-  foundation-rails
   jbuilder (~> 1.2)
   jquery-rails
   koala (~> 2.0)
@@ -172,9 +169,13 @@ DEPENDENCIES
   rails (= 4.0.0)
   rails_layout
   ratyrate
+  ruby-prof
   sass-rails (~> 4.0.0)
   sdoc
   social-share-button (~> 0.1.6)
   sqlite3
   uglifier (>= 1.3.0)
   youtube_it (~> 2.4.0)
+
+BUNDLED WITH
+   1.10.2

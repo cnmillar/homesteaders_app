@@ -2,3 +2,10 @@
 
 require ::File.expand_path('../config/environment',  __FILE__)
 run Rails.application
+
+if Rails.env.prof?
+ use Rack::RubyProf, :path => '/tmp/prof'
+  result = RubyProf.stop
+  printer = RubyProf::GraphPrinter.new(result)
+  printer.print(STDOUT, :min_percent => 2)
+end
