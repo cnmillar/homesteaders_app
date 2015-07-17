@@ -22,7 +22,7 @@ $(function($){
     totalTime = player.getDuration();
     percentComplete = currentTime/totalTime;
     //Subtract 10 so that the avatar is centered on the timestamp.
-    timelineX = percentComplete*640 - 10;
+    timelineX = percentComplete*720 - 10;
     //If timelineX is now less than 0, reset to 0
     if (timelineX < 0) {
       timelineX = 0
@@ -88,6 +88,7 @@ $(function($){
     //     });
     //   });
     // });
+  });
 });
 
 // Facebook login feature
@@ -221,8 +222,8 @@ window.fbAsyncInit = function() {
   var player;
   function onYouTubeIframeAPIReady() {
     player = new YT.Player('player', {
-      height: '390',
-      width: '640',
+      height: '480',
+      width: '720',
       videoId: 'EgdOjyYjjEc',
       events: {
 
