@@ -8,7 +8,7 @@ class UserProjectsController < ApplicationController
   def favourited
     @current_user = current_user
     @user_project = UserProject.find(params[:user_project_id])
-    if @user_project.favourited == true
+    if @user_project.favourited 
       @user_project.update_attributes(favourited: false)
     else
       @user_project.update_attributes(favourited: true)
@@ -20,7 +20,7 @@ class UserProjectsController < ApplicationController
     def completed
     @current_user = current_user
     @user_project = UserProject.find(params[:user_project_id])
-    if @user_project.completed == true
+    if @user_project.completed
       @user_project.update_attributes(completed: false)
     else
       @user_project.update_attributes(completed: true)

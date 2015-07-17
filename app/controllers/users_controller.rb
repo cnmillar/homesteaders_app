@@ -1,12 +1,12 @@
 class UsersController < ApplicationController
 
-  # def new
 
-  # end
+  def update
+    current_user.update_attributes(user_params)
+    redirect_to :back
+  end
 
-  # def create 
 
-  # end
 
 	def show
     @images = []
@@ -20,4 +20,9 @@ class UsersController < ApplicationController
     redirect_to '/'
   end
 
+  private
+
+  def user_params
+    params.require(:user).permit(:email)
+  end
 end

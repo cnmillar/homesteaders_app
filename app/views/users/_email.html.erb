@@ -1,0 +1,6 @@
+<div class= "email">
+  <%= form_for @current_user, url: user_path(@current_user), html: {method: :patch} do |f| %>
+    <%= f.text_area :email, placeholder: "Please enter you email address" %>
+    <%= f.submit "Submit", class: "button"%>
+  <% end %>
+</div>
