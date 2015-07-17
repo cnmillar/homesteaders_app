@@ -22,9 +22,9 @@ $(function()
 // Comment pagination
 
 	var paginate = function(content){
-		$(".pagination").paging(content.length, { // make 1337 elements navigatable
+		$(".pagination").paging(content.length, { 
 	    format: '[< ncnnn >]', // define how the navigation should look like and in which order onFormat() get's called
-	    perpage: 2, // show 10 elements per page
+	    perpage: 5, // show 5 elements per page
 	    lapping: 0, // don't overlap pages for the moment
 	    page: 1, // start at page, can also be "null" or negative
 	    onSelect: function (page) {
@@ -63,10 +63,20 @@ $(function()
 	$("#steps-table a").on("click", function(){
 		var prev = {start: 0, stop: 0},
 	    content = $('.load-comments div.element.Step.' + $(this).data("step-id"));
-	  // $(".load-comments").html("");
 	  $('.load-comments div.element').css("display", "none");
 	  paginate(content);
+	  $('#view-all-comments').css("display","inline");
+	  if (content.length === 0){
+	  	$(".load-comments").append("<p class='no-comments'> No comments yet! </p>")
+	  }
+	});
 
+	$("#view-all-comments").on("click", function(){
+		var prev = {start: 0, stop: 0},
+	    content = $('.load-comments div.element');
+	  $('.load-comments div.element').css("display", "none");
+	  paginate(content);
+	  $('#view-all-comments').css("display","none");
 	});
 
 })
