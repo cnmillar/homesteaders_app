@@ -93,34 +93,47 @@ nav {
 } 
 
 
-#user-timeline {
-  background-color: pink;
+#video-timeline {
+  background-color: #666;
   width: 640px;
   height: 32px;
   margin-bottom: 10px;
   position: relative;
 }
 
-.user-avatar {
+.video-comment-avatar {
   width: 32px;
   height: 32px;
+  border: 1px solid #888;
   background-color: blue;
   display: inline-block;
   position: absolute;
+  top: 0;
+  transition: .3s;
 }
 
-.user-avatar:hover {
-  width: 40px;
-  height: 40px;
-  margin-left: -4px;
-  margin-top: -4px;
+.video-comment-avatar:hover {
+  width: 50px;
+  height: 50px;
+  margin-left: -8px;
+  margin-top: -8px;
+  border: 1px solid #888;
 }
 
-.user-avatar-flyout {
-  width: 400px;
+.video-comment-flybelow {
+  width: 640px;
   height: 40px;
   opacity: .7;
   background-color: black;
+  position: relative;
+  top: 42px;
+  color: white;
+  z-index: 10;
+  padding: .5em;
+}
+
+#player {
+  height: 350px;
 }
 
 .carousel {
@@ -177,4 +190,21 @@ nav {
 
 .title-area {
   width : 435px;
+}
+
+.email_container {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0px;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.email {
+  width: 300px;
+  margin: 300px auto;
+  padding: 20px;
+  border-radius: 5px;
+  background-color: white;
 }

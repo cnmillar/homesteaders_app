@@ -4,7 +4,6 @@ class SessionsController < ApplicationController
   end
 
   def create
-
     user = User.where(facebook_id: auth_hash[:uid]).first
 
     if !user

@@ -27,6 +27,7 @@ class ProjectsController < ApplicationController
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
 
     @all_comments = @project.get_all_comments.sort_by(&:created_at).reverse
+    @video_comments = @project.video.comments
 	end
 
   def send_project_mail
