@@ -87,6 +87,7 @@ jQuery(function($){
 
 });
 
+
 // Facebook login feature. Extensive comments have been deleted but are available on the Facebook dev site
 
   // This is called with the results from from FB.getLoginStatus().
