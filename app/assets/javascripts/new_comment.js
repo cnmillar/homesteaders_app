@@ -68,7 +68,7 @@ $(function()
 // Jquery to add comment to page on form submission without page reload
 
 	function createComment(data){
-	return '<div>'+
+	return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
 			'<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+	" " + 
 			APP.userName +	" " +				
 			data.content + " " + 
@@ -80,9 +80,8 @@ $(function()
 
 	$("#new_comment").on("ajax:success", function(e, data, status, xhr){
 		$("#comment-content").val("");
-
 		var prev = {start: 0, stop: 0},
-	    content = $('.load-comments div.element');
+	    content = $('.load-comments div.element').prepend(createComment(data));
 	  $('.load-comments div.element').css("display", "none");
 	  paginate(content);
 	  $('#view-all-comments').css("display","none");
