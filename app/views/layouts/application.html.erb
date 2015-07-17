@@ -4,26 +4,25 @@
   <title>HeApp</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
-  <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
   <!-- TODO: Move script above out of html file -->
   <%= csrf_meta_tags %>
 </head>
 
 <body>
+  <% if current_user %>
+    <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.first_name %> <%=current_user.last_name %>"}</script>
+  <% end %>
 
-<% if current_user %>
-  <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.first_name %> <%=current_user.last_name %>"}</script>
-<% end %>
+  <%= render 'layouts/navigation' %>
 
-<%= render 'layouts/navigation' %>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
 
-<% if flash[:notice] %>
-  <div class="notice"><%= flash[:notice] %></div>
-<% end %>
+  <%= yield %>
 
-<%= yield %>
-
-<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js">
-</script>
+  <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js">
+  </script>
 </body>
