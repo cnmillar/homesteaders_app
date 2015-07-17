@@ -2,13 +2,6 @@
   <% @user_projects.each do |proj| %>
     <div class = "row section">
       <h4><strong><%= proj.project.title %> </strong></h4>
-
-<!-- TURN INTO HELPER METHOD -->
-      <%# proj.project.images.each do |img| %>
-        <%# @images = [] %>
-        <%# @images << img.original %>
-      <%# end %> 
-      <%# image_tag("#{@images.first}.jpg", width: '300px') %>
       <%= image_tag("#{proj.project.images.first.original}.jpg", width: '300px') %>
       <ul class="no-bullet">
         <%=link_to(image_tag("/svg/heart213#{proj.favourited ? "red" : ""}.svg"), favourited_path(proj), method: "post") %>

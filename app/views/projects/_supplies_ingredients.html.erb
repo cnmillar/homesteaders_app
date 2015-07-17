@@ -1,0 +1,20 @@
+	<ul class="no-bullet ing-ul">
+		<% @ingredients.each do |ing|%>
+			<li>
+				<% if ing.availability %>
+					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.shopify_unit %>>
+						<h5 style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+					</input>
+				<% else %>
+						<h5 style="display: inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+				<% end %>
+				<span class="count-icon">
+		  		<%= link_to("javascript:void(0)", "data-ing-id" => ing.id, "data-comments" => ing.comments.to_json, :class => "filter-ing-comments") do %>
+						<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+				    <span class="count"><%= ing.comments.length %></span>							
+		  		<% end %>
+				</span>
+				<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null") %>
+			</li>
+		<% end %>	
+	</ul>

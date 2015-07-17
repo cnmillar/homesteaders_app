@@ -23,11 +23,6 @@
 
 $(function($){
 
-//ADD TO PREVENT # FROM SHOWING IN URL
-  // $("a.noclick").on("click", function(e) {
-  //   e.preventDefault;
-  // })
-
 // Slick carousel
   $('.carousel').slick({
     autoplay: true,

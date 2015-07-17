@@ -1,54 +1,13 @@
 <div class = 'section'>
 
-
 	<h2>Supplies</h2>
 	<h3>Ingredients</h3>
 
-
-
-	<ul class="no-bullet ing-ul">
-		<% @ingredients.each do |ing|%>
-			<li>
-				<% if ing.availability %>
-					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.shopify_unit %>>
-						<h5 style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
-					</input>
-				<% else %>
-						<h5 style="display: inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
-				<% end %>
-				<span class="count-icon">
-		  		<%= link_to("javascript:void(0)", "data-ing-id" => ing.id, "data-comments" => ing.comments.to_json, :class => "filter-ing-comments") do %>
-						<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
-				    <span class="count"><%= ing.comments.length %></span>							
-		  		<% end %>
-				</span>
-				<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null") %>
-			</li>
-		<% end %>	
-	</ul>
+	<%= render "supplies_ingredients" %>
 
 	<h3>Equipment</h3>
-	<ul class="no-bullet ing-ul">
-		<% @equipment.each do |equip|%>
-			<li>
-				<% if equip.availability %>
-					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= equip.shopify_id %> data-quantity = <%= equip.shopify_unit %>>
-						<h5 style="display: inline;"><%= equip.unit_size %> <%= equip.unit_measure %> <%= equip.name %></h5>
-					</input>
-				<% else %>
-					<h5 style="display: inline;"><%= equip.name %></h5>
-				<% end %>
-				<span class="count-icon">
-		  		<%= link_to("javascript:void(0)", "data-ing-id" => equip.id, "data-comments" => equip.comments.to_json, :class => "filter-ing-comments") do %>
-						<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
-				    <span class="count"><%= equip.comments.length %></span>							
-		  		<% end %>
-				</span>
-				<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null") %>
-			</li>
-		<% end %>
-	</ul>
-	<input type="checkbox" id="select-all">Select all available items</input> </br>
-	<button id="submit-to-cart">Add to cart</button>
-	<p>Powered by <a href="http://www.homesteadersemporium.ca" target="_blank">Homesteader's Emporium</a></p>
+
+	<%= render "supplies_equipment" %>
+	
+	<%= render "shopping_cart" %>
 </div>

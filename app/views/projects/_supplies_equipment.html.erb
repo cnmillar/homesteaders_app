@@ -1,0 +1,20 @@
+<ul class="no-bullet ing-ul">
+		<% @equipment.each do |equip|%>
+			<li>
+				<% if equip.availability %>
+					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= equip.shopify_id %> data-quantity = <%= equip.shopify_unit %>>
+						<h5 style="display: inline;"><%= equip.unit_size %> <%= equip.unit_measure %> <%= equip.name %></h5>
+					</input>
+				<% else %>
+					<h5 style="display: inline;"><%= equip.name %></h5>
+				<% end %>
+				<span class="count-icon">
+		  		<%= link_to("javascript:void(0)", "data-ing-id" => equip.id, "data-comments" => equip.comments.to_json, :class => "filter-ing-comments") do %>
+						<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+				    <span class="count"><%= equip.comments.length %></span>							
+		  		<% end %>
+				</span>
+				<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null") %>
+			</li>
+		<% end %>
+	</ul>

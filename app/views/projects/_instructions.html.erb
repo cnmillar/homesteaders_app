@@ -6,7 +6,7 @@
 				<td><h5><%= step.ordinal %>. </h5></td>
 				<td><h5><%= step.content %>
 		  		<span class="count-icon">
-			  		<%= link_to("#", "data-step-id" => step.id, "data-comments" => step.comments.to_json, :class => "filter-step-comments noclick") do %>
+			  		<%= link_to("javascript:null;", "data-step-id" => step.id, "data-comments" => step.comments.to_json, :class => "filter-step-comments") do %>
 							<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
 					    <span class="count"><%= step.comments.length %></span>							
 			  		<% end %>
