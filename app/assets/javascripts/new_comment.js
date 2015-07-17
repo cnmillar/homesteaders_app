@@ -80,8 +80,9 @@ $(function()
 
 	$("#new_comment").on("ajax:success", function(e, data, status, xhr){
 		$("#comment-content").val("");
-		var prev = {start: 0, stop: 0},
-	    content = $('.load-comments div.element').prepend(createComment(data));
+		var prev = {start: 0, stop: 0}
+		$(".load-comments").prepend(createComment(data));
+    var content = $('.load-comments div.element');
 	  $('.load-comments div.element').css("display", "none");
 	  paginate(content);
 	  $('#view-all-comments').css("display","none");
