@@ -9,7 +9,10 @@
 			  		<%= link_to(image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments"), "javascript:void(0)", "data-step-id" => step.id, "data-comments" => step.comments.to_json, :style => "display: block;") %>
 				    <span class="count"><%= step.comments.length %></span>	
 					</span>
-					<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:void(0)") %>
+					<!-- <div id="flip"> -->
+						<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:void(0)", :id => "flip #{step.ordinal}") %>
+					<!-- </div> -->
+				<div id="panel">Hello world!</div>
 				</h5></td>
 			</tr>
 		<% end %>

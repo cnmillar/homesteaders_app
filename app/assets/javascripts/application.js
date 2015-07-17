@@ -56,6 +56,12 @@ jQuery(function($){
     clickedAvatar.append(avatarFlyout);
   });
 
+  // 
+
+  $("#flip").click(function(){
+        $("#panel").slideToggle("slow");
+    });
+
 
 // Facebook login feature
 
