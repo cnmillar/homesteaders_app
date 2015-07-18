@@ -6,7 +6,7 @@ $(function()
 
 	var paginate = function(content){
 		$(".pagination").paging(content.length, { 
-	    format: '[ <nncnn>]', // define how the navigation should look like and in which order onFormat() get's called
+	    format: '[ <>]', // define how the navigation should look like and in which order onFormat() get's called
 	    perpage: 5, // show 5 elements per page
 	    lapping: 0, // don't overlap pages for the moment
 	    page: 1, // start at page, can also be "null" or negative
@@ -25,13 +25,13 @@ $(function()
 	        case 'block': // n and c
 	            return '<a href="javascript:null;">' + this.value + '</a>';
 	        case 'next': // >
-	            return '<a href="javascript:null;">&gt;</a>';
+	            return '<a href="javascript:null;"><img src="/svg/right42.svg" width="20px"></a>';
 	        case 'prev': // <
-	            return '<a href="javascript:null;">&lt;</a>';
+	            return '<a href="javascript:null;"><img src="/svg/left43.svg" width="20px"></a>';
 	        case 'first': // [
-	            return '<a href="javascript:null;">First</a>';
+	            return '<a href="javascript:null;"><img src="/svg/previous8.svg" width="20px"></a>';
 	        case 'last': // ]
-	            return '<a href="javascript:null;">Last (' + this.pages + ')</a>';
+	            return '<a href="javascript:null;"><img src="/svg/forward13.svg" width="20px"> (' + this.pages + ')</a>';
 	        }
 	    }
 		});
