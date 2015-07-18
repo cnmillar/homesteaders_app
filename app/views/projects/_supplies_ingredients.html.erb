@@ -23,7 +23,7 @@
 					<span class="count-icon">
 			  		<%= link_to("javascript:void(0)", "data-ing-id" => ing.id, "data-comments" => ing.comments.to_json, :class => "filter-ing-comments") do %>
 							<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
-					    <span class='<%= "count #{ing.id}" %>'><%= ing.comments.length %></span>							
+					    <span class='<%= "ing-count #{ing.id}" %>'><%= ing.comments.length %></span>							
 			  		<% end %>
 					</span>
 					<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-ing", "data-ing-id" => ing.id) %>
@@ -35,7 +35,7 @@
 			<div class="panel">
 				<% if current_user %>
 				  <h5>Add a comment:</h5>
-					<%= form_for ing.comments.new, :html => { :id => "ing-comment-id" }, remote: true do |f| %>
+					<%= form_for ing.comments.new, :html => { :class => "ing-comment-id" }, remote: true do |f| %>
 					  <%= f.text_area :content, placeholder: "Comment on this ingredient.", id: "ing-comment-content" %>
 					  <%= f.hidden_field :commentable_type %>
 					  <%= f.hidden_field :commentable_id %>

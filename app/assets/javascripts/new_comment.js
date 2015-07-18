@@ -128,18 +128,66 @@ $(function()
 
 	$(".step-comment-id").on("ajax:success", function(e, data, status, xhr){
 		$(".steps-comment-content").val("");
-		$(".count." + $(this).find('input').last().data("step-id")).text(parseInt($(".count." + $(this).find('input').last().data("step-id")).text())+1)
+		var stepId = $(this).find('input').last().data("step-id");
+		var oldCount = parseInt($(".step-count."+stepId).text());
+		var newCount = oldCount + 1;
+		$(".step-count." + stepId).text(newCount);
+
+		var prev = {start: 0, stop: 0}
+		$(".load-comments").prepend(createComment(data));
+    var content = $('.load-comments div.element');
+	  $('.load-comments div.element').css("display", "none");
+	  paginate(content);
+	  $('#view-all-comments').css("display","none");
+	  if (content.length === 0){
+	  	$("#no-comments").css("display","inline");
+	  }
+
 		$("#add-comment-step"+$(this).find('input').last().data("step-id")).slideToggle('slow', function(){
 		})
 	});	
 
-	// $(".equip-comment-button").on("click", function(e, data, status, xhr){
-	// 	$(".equip-comment-content").val("");
-	// 	$(".count." + $(this).data("equip-id")).text(parseInt($(".count." + $(this).data("equip-id")).text())+1);
-	// 	$("#add-comment-equip"+$(this).data("equip-id")).slideToggle('slow', function(){
-	// 	})
-	// });	
+	$(".equip-comment-id").on("ajax:success", function(e, data, status, xhr){
+		$(".equip-comment-content").val("");
+		var equipId = $(this).find('input').last().data("equip-id");
+		var oldCount = parseInt($(".equip-count."+equipId).text());
+		var newCount = oldCount + 1;
+		$(".equip-count." + equipId).text(newCount);
 
+		var prev = {start: 0, stop: 0}
+		$(".load-comments").prepend(createComment(data));
+    var content = $('.load-comments div.element');
+	  $('.load-comments div.element').css("display", "none");
+	  paginate(content);
+	  $('#view-all-comments').css("display","none");
+	  if (content.length === 0){
+	  	$("#no-comments").css("display","inline");
+	  }
+
+		$("#add-comment-equip"+$(this).find('input').last().data("equip-id")).slideToggle('slow', function(){
+		})
+	});	
+
+	$(".ing-comment-id").on("ajax:success", function(e, data, status, xhr){
+		$(".ing-comment-content").val("");
+		var ingId = $(this).find('input').last().data("ing-id");
+		var oldCount = parseInt($(".ing-count."+ingId).text());
+		var newCount = oldCount + 1;
+		$(".ing-count." + ingId).text(newCount);
+
+		var prev = {start: 0, stop: 0}
+		$(".load-comments").prepend(createComment(data));
+    var content = $('.load-comments div.element');
+	  $('.load-comments div.element').css("display", "none");
+	  paginate(content);
+	  $('#view-all-comments').css("display","none");
+	  if (content.length === 0){
+	  	$("#no-comments").css("display","inline");
+	  }
+
+		$("#add-comment-ing"+$(this).find('input').last().data("ing-id")).slideToggle('slow', function(){
+		})
+	});	
 
 
 
