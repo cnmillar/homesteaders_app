@@ -1,6 +1,6 @@
 <div class = 'section'>
 	<h2>Instructions</h2>
-	<ul class="no-bullet ing-ul">
+	<ul class="no-bullet steps-ul">
 	  <% @project.steps.each do |step|%>
 	    <li>
 	      <div class="row">
@@ -19,13 +19,13 @@
 	              <span class="count"><%= step.comments.length %></span>             
 	            <% end %>
 	          </span>
-	          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment", "data-step-id" => step.id) %>
+	          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-step", "data-step-id" => step.id) %>
 	        </div>
 	        
 	      </div>
 	    </li>
 
-	    <li id='<%= "add-comment-#{step.id}" %>' style="display:none;">
+	    <li id='<%= "add-comment-step#{step.id}" %>' style="display:none;">
 	      <div class="panel">
 	        <h5>This is a regular panel.</h5>
 	        <p>It has an easy to override visual style, and is appropriately subdued.</p>

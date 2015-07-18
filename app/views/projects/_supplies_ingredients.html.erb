@@ -26,12 +26,12 @@
 					    <span class="count"><%= ing.comments.length %></span>							
 			  		<% end %>
 					</span>
-					<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment", "data-ing-id" => ing.id) %>
+					<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-ing", "data-ing-id" => ing.id) %>
 				</div>
 				
 			</div>
 		</li>
-		<li id='<%= "add-comment-#{ing.id}" %>' style="display:none;">
+		<li id='<%= "add-comment-ing#{ing.id}" %>' style="display:none;">
 			<div class="panel">
 			  <h5>This is a regular panel.</h5>
 			  <p>It has an easy to override visual style, and is appropriately subdued.</p>

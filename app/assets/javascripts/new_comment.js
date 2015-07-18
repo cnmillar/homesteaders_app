@@ -45,7 +45,7 @@ $(function()
 	paginate(content);
 
 // Step comments filter
-	$("#steps-table .filter-step-comments").on("click", function(){
+	$(".steps-ul .filter-step-comments").on("click", function(){
 		var prev = {start: 0, stop: 0},
 	    content = $('.load-comments div.element.Step.' + $(this).data("step-id"));
 	  $('.load-comments div.element').css("display", "none");
@@ -109,16 +109,16 @@ $(function()
 ///////////////////////////
 // add comment with toggle slide
 
-	$(".add-comment").on("click", function(){
-		$("#add-comment-"+$(this).data("ing-id")).slideToggle('slow', function(){
+	$(".add-comment-ing").on("click", function(){
+		$("#add-comment-ing"+$(this).data("ing-id")).slideToggle('slow', function(){
 		})
 	})
-	$(".add-comment").on("click", function(){
-		$("#add-comment-"+$(this).data("equip-id")).slideToggle('slow', function(){
+	$(".add-comment-equip").on("click", function(){
+		$("#add-comment-equip"+$(this).data("equip-id")).slideToggle('slow', function(){
 		})
 	})
-	$(".add-comment").on("click", function(){
-		$("#add-comment-"+$(this).data("step-id")).slideToggle('slow', function(){
+	$(".add-comment-step").on("click", function(){
+		$("#add-comment-step"+$(this).data("step-id")).slideToggle('slow', function(){
 		})
 	})
 
