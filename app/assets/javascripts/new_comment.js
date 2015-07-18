@@ -128,6 +128,10 @@ $(function()
 		$("#add-comment-general").slideToggle('slow', function(){})
 	})
 
+	$(".add-image").on("click", function(){
+		$("#add-image").slideToggle('slow', function(){})
+	})
+
 
 ///////////////////////////
 // add comment and display information without page reload
