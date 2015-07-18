@@ -68,26 +68,18 @@ $(function($){
       window.open(cart);
     });
 
-    // $("#select-all").on("click", function(e){
-    //   if(this.checked){
-    //     $('.shopify_cart').each(function(){
-    //       this.checked = true;
-    //     })
-    //   }
-    //   else {
-    //     $('.shopify_cart').each(function(){
-    //       this.checked = false;
-    //     })
-    //   }
-    // })
-
-    // $("#select-all").on("click", function(e){
-    //   var is_checked = $(this).is(":checked");
-    //     $('.shopify_cart').each(function(){
-    //       $(this).attr('checked', is_checked);
-    //     });
-    //   });
-    // });
+    $("#select-all").on("click", function(e){
+      if(this.checked){
+        $('.shopify_cart').each(function(){
+          this.checked = true;
+        })
+      }
+      else {
+        $('.shopify_cart').each(function(){
+          this.checked = false;
+        })
+      }
+    })
   });
 });
 

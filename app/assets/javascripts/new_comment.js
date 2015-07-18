@@ -93,8 +93,8 @@ $(function()
 		'</div>'
 	}
 
-	$("#new_comment").on("ajax:success", function(e, data, status, xhr){
-		$("#comment-content").val("");
+	$(".new_comment").on("ajax:success", function(e, data, status, xhr){
+		$(this).find("#comment-content").val("");
 		var prev = {start: 0, stop: 0}
 		$(".load-comments").prepend(createComment(data));
     var content = $('.load-comments div.element');
@@ -107,7 +107,7 @@ $(function()
 	});	
 
 ///////////////////////////
-// add comment with toggle slide
+// add comment form with toggle slide
 
 	$(".add-comment-ing").on("click", function(){
 		$("#add-comment-ing"+$(this).data("ing-id")).slideToggle('slow', function(){
@@ -122,6 +122,17 @@ $(function()
 		})
 	})
 
-})
 
+///////////////////////////
+// add comment and display information without page reload
+
+	$(".steps-comment-button").on("click", function(e, data, status, xhr){
+		$(".steps-comment-content").val("");
+		$(".count." + $(this).data("step-id")).text(parseInt($(".count." + $(this).data("step-id")).text())+1);
+		$("#add-comment-step"+$(this).data("step-id")).slideToggle('slow', function(){
+		})
+	});	
+
+
+})
 

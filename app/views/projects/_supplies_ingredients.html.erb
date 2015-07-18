@@ -35,7 +35,7 @@
 			<div class="panel">
 				<% if current_user %>
 				  <h5>Add a comment:</h5>
-					<%= form_for ing.comments.new, remote: true do |f| %>
+					<%= form_for ing.comments.new,:html => { :id => "step-comment-id" }, remote: true do |f| %>
 					  <%= f.text_area :content, placeholder: "Comment on this ingredient.", id: "ing-comment-content" %>
 					  <%= f.hidden_field :commentable_type %>
 					  <%= f.hidden_field :commentable_id %>
