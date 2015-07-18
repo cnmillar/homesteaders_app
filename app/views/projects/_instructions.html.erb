@@ -27,8 +27,20 @@
 
 	    <li id='<%= "add-comment-step#{step.id}" %>' style="display:none;">
 	      <div class="panel">
-	        <h5>This is a regular panel.</h5>
-	        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+					<% if current_user %>
+						<h5>Add a comment:</h5>
+						<%= form_for step.comments.new, remote: true do |f| %>
+						  <%= f.text_area :content, placeholder: "Comment on this step.", id: "step-comment-content" %>
+						  <%= f.hidden_field :commentable_type %>
+						  <%= f.hidden_field :commentable_id %>
+						  <%= f.hidden_field :user_id %>
+						  <%= f.hidden_field :project_id, :value => @project.id %>
+						  <%= f.submit "Comment", class: "button"%>
+						<% end %>
+				<% else %>
+					<h5>You must be logged in to make a comment.</h5>
+				  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
+					<% end %>
 	      </div>
 	    </li>
 
