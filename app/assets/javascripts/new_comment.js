@@ -117,6 +117,10 @@ $(function()
 		$("#add-comment-"+$(this).data("equip-id")).slideToggle('slow', function(){
 		})
 	})
+	$(".add-comment").on("click", function(){
+		$("#add-comment-"+$(this).data("step-id")).slideToggle('slow', function(){
+		})
+	})
 
 })
 
