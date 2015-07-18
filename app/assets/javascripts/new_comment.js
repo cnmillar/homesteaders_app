@@ -126,12 +126,21 @@ $(function()
 ///////////////////////////
 // add comment and display information without page reload
 
-	$(".steps-comment-button").on("click", function(e, data, status, xhr){
+	$(".step-comment-id").on("ajax:success", function(e, data, status, xhr){
 		$(".steps-comment-content").val("");
-		$(".count." + $(this).data("step-id")).text(parseInt($(".count." + $(this).data("step-id")).text())+1);
-		$("#add-comment-step"+$(this).data("step-id")).slideToggle('slow', function(){
+		$(".count." + $(this).find('input').last().data("step-id")).text(parseInt($(".count." + $(this).find('input').last().data("step-id")).text())+1)
+		$("#add-comment-step"+$(this).find('input').last().data("step-id")).slideToggle('slow', function(){
 		})
 	});	
+
+	// $(".equip-comment-button").on("click", function(e, data, status, xhr){
+	// 	$(".equip-comment-content").val("");
+	// 	$(".count." + $(this).data("equip-id")).text(parseInt($(".count." + $(this).data("equip-id")).text())+1);
+	// 	$("#add-comment-equip"+$(this).data("equip-id")).slideToggle('slow', function(){
+	// 	})
+	// });	
+
+
 
 
 })
