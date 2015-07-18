@@ -5,6 +5,19 @@ $(function($){
   //   e.preventDefault;
   // })
 
+  var s = $("#comments");
+  var pos = s.position();                    
+  $(window).scroll(function() {
+      var windowpos = $(window).scrollTop();
+      if (windowpos >= pos.top) {
+          s.addClass("stick");
+      } else {
+          s.removeClass("stick"); 
+      }
+  });
+
+$("#comments").stick_in_parent();
+
 // Slick carousel
   $('.carousel').slick({
     autoplay: true,

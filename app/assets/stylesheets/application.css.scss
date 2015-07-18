@@ -216,3 +216,15 @@ nav {
 
 li { background: '#000000'; }
 li:nth-child(2n+3) { background: '#666666'; }
+
+body {
+  padding-top: 65px; // make room for fixed navigation bar
+}
+
+.stick {
+    position:fixed;
+    top:65px;
+    bottom:0;
+    overflow-y:scroll;
+    overflow-x:hidden;
+}

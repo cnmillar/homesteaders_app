@@ -1,20 +1,22 @@
-<nav class='top-bar center' data-topbar>
-  <ul class="title-area left">
-    <li class="name">
-      <%= link_to image_tag("logo_small.png"), "/" %>
-    <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
-  </ul>
-  <section class = 'top-bar-section'>
-    <ul>
-    <!-- TODO DAVID change into image links -->
-      <li><a href="/categories">Categories</a></li>
-      <li><a href="#">Popular</a></li>
-      <li><a href="/users/1">Usr #1</a></li>
-      <li><a href="/projects/2">Pjct #2</a></li>
+<div class='fixed'>
+  <nav class='top-bar center' data-topbar>
+    <ul class="title-area left">
+      <li class="name">
+        <%= link_to image_tag("logo_small.png"), "/" %>
+      <li class="toggle-topbar menu-icon"><a href="#">Menu</a></li>
     </ul>
-  </section>
-    <div class='right user-panel'>
-      <%= render 'pages/login' %>
-    </div>   
-    <%= render 'layouts/search' %>  
-</nav>
+    <section class = 'top-bar-section'>
+      <ul>
+      <!-- TODO DAVID change into image links -->
+        <li><a href="/categories">Categories</a></li>
+        <li><a href="#">Popular</a></li>
+        <li><a href="/users/1">Usr #1</a></li>
+        <li><a href="/projects/2">Pjct #2</a></li>
+      </ul>
+    </section>
+      <div class='right user-panel'>
+        <%= render 'pages/login' %>
+      </div>   
+      <%= render 'layouts/search' %>  
+  </nav>
+</div>
