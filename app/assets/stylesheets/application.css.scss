@@ -94,8 +94,8 @@ nav {
 
 
 #video-timeline {
-  background-color: #666;
-  width: 640px;
+  background-color: #CCC;
+  width: 720px;
   height: 32px;
   margin-bottom: 10px;
   position: relative;
@@ -209,3 +209,10 @@ nav {
   background-color: white;
 
 }
+
+.no-collapse {
+  min-height: 1px;
+}
+
+li { background: '#000000'; }
+li:nth-child(2n+3) { background: '#666666'; }

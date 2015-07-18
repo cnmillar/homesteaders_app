@@ -1,20 +1,41 @@
 <ul class="no-bullet ing-ul">
-		<% @equipment.each do |equip|%>
-			<li>
-				<% if equip.availability %>
-					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= equip.shopify_id %> data-quantity = <%= equip.shopify_unit %>>
-						<h5 style="display: inline;"><%= equip.unit_size %> <%= equip.unit_measure %> <%= equip.name %></h5>
-					</input>
-				<% else %>
-					<h5 style="display: inline;"><%= equip.name %></h5>
-				<% end %>
-				<span class="count-icon">
-		  		<%= link_to("javascript:void(0)", "data-ing-id" => equip.id, "data-comments" => equip.comments.to_json, :class => "filter-ing-comments") do %>
-						<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
-				    <span class="count"><%= equip.comments.length %></span>							
-		  		<% end %>
-				</span>
-				<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null") %>
-			</li>
-		<% end %>
-	</ul>
+  <% @equipment.each do |equip|%>
+    <li>
+      <div class="row">
+        <% if equip.availability %>
+
+          <div class="large-1 column no-collapse">
+            <input type="checkbox" class="shopify_cart" data-shopifyid = <%= equip.shopify_id %> data-quantity = <%= equip.shopify_unit %>></input>
+          </div>
+
+          <div class="large-9 column">
+            <h5 style="display:inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></h5>
+          </div>
+
+        <% else %>
+          <div class="large-1 no-collapse column">   </div>
+          <div class="large-9 column">
+            <h5 style="display: inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></h5>
+          </div>
+        <% end %>
+
+        <div class="large-2 column">
+          <span class="count-icon">
+            <%= link_to("javascript:void(0)", "data-equip-id" => equip.id, "data-comments" => equip.comments.to_json, :class => "filter-equip-comments") do %>
+              <%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+              <span class="count"><%= equip.comments.length %></span>             
+            <% end %>
+          </span>
+          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment", "data-equip-id" => equip.id) %>
+        </div>
+        
+      </div>
+    </li>
+    <li id='<%= "add-comment-#{equip.id}" %>' style="display:none;">
+      <div class="panel">
+        <h5>This is a regular panel.</h5>
+        <p>It has an easy to override visual style, and is appropriately subdued.</p>
+      </div>
+    </li>
+  <% end %> 
+</ul>

@@ -13,8 +13,8 @@
 		<% end %>
 	<% end %>
 
-	<!-- USE LINK_TO INSTEAD OF A TAG -->
-	<a href="javascript:null;" id="view-all-comments" style="display: none;">View all comments</a>
+	<%= link_to('View all comments', 'javascript:null', :id => "view-all-comments", :style => "display: none;")  %>
+
 	<div class="load-comments">
 		<%= render 'paginated_comments' %>
 	</div>

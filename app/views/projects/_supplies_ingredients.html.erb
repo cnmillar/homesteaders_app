@@ -1,20 +1,41 @@
-	<ul class="no-bullet ing-ul">
-		<% @ingredients.each do |ing|%>
-			<li>
+<ul class="no-bullet ing-ul">
+	<% @ingredients.each do |ing|%>
+		<li>
+			<div class="row">
 				<% if ing.availability %>
-					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.shopify_unit %>>
+
+					<div class="large-1 column no-collapse">
+						<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.shopify_unit %>></input>
+					</div>
+
+					<div class="large-9 column">
 						<h5 style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
-					</input>
+					</div>
+
 				<% else %>
+					<div class="large-1 no-collapse column">   </div>
+					<div class="large-9 column">
 						<h5 style="display: inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+					</div>
 				<% end %>
-				<span class="count-icon">
-		  		<%= link_to("javascript:void(0)", "data-ing-id" => ing.id, "data-comments" => ing.comments.to_json, :class => "filter-ing-comments") do %>
-						<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
-				    <span class="count"><%= ing.comments.length %></span>							
-		  		<% end %>
-				</span>
-				<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null") %>
-			</li>
-		<% end %>	
-	</ul>
+
+				<div class="large-2 column">
+					<span class="count-icon">
+			  		<%= link_to("javascript:void(0)", "data-ing-id" => ing.id, "data-comments" => ing.comments.to_json, :class => "filter-ing-comments") do %>
+							<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+					    <span class="count"><%= ing.comments.length %></span>							
+			  		<% end %>
+					</span>
+					<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment", "data-ing-id" => ing.id) %>
+				</div>
+				
+			</div>
+		</li>
+		<li id='<%= "add-comment-#{ing.id}" %>' style="display:none;">
+			<div class="panel">
+			  <h5>This is a regular panel.</h5>
+			  <p>It has an easy to override visual style, and is appropriately subdued.</p>
+			</div>
+		</li>
+	<% end %>	
+</ul>

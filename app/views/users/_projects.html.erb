@@ -1,8 +1,10 @@
-<div class = "large-4 columns section">
+'<div class="large-4 columns section">
   <% @user_projects.each do |proj| %>
-    <div class = "row section">
+    <div class="row section">
       <h4><strong><%= proj.project.title %> </strong></h4>
-      <%= image_tag("#{proj.project.images.first.original}.jpg", width: '300px') %>
+      <% if !proj.project.images.empty? %>
+        <%= image_tag("#{proj.project.images.first.original}.jpg", width: '300px') %>
+      <% end %>
       <ul class="no-bullet">
         <%=link_to(image_tag("/svg/heart213#{proj.favourited ? "red" : ""}.svg"), favourited_path(proj), method: "post") %>
         <%=link_to(image_tag("/svg/#{proj.completed ? "checkmark4" : "delete38"}.svg"), completed_path(proj), method: "post") %>

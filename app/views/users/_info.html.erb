@@ -1,7 +1,4 @@
 <div class = "profile-user-info section">
-  <!-- REMOVE IF STATEMENT HERE -->
-  <% if @user %> 
-	  <h2><%= @user.first_name + " " + @user.last_name %></h2>
-    <%= image_tag(@user.avatar) %>
-  <% end %>
+	<h2><%= @user.full_name %></h2>
+  <%= image_tag(@user.avatar) %>
 </div>

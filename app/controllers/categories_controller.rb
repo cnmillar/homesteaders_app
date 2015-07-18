@@ -5,7 +5,6 @@ class CategoriesController < ApplicationController
   end
 
   def show
-    @current_user = current_user # remove 
     @category = Category.find(params[:id])
   end
 
