@@ -16,6 +16,9 @@
 				  <%= f.hidden_field :project_id, :value => @project.id %>
 				  <%= f.submit "Comment", class: "button"%>
 				<% end %>
+			<% else %>
+				<h5>You must be logged in to make a comment.</h5>
+			  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
 			<% end %>
 		</div>
 	</div>
@@ -25,6 +28,6 @@
 		<%= render 'paginated_comments' %>
 	</div>
 	<p id="no-comments" style="display: none;">No comments yet!</p>
-	<div class="pagination"></div>
+	<div class="pagination" style="text-align: center;"></div>
 
 </div>

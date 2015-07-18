@@ -1,9 +1,13 @@
+
 $(function($){
 
 //ADD TO PREVENT # FROM SHOWING IN URL
   // $("a.noclick").on("click", function(e) {
   //   e.preventDefault;
   // })
+
+  $(document).foundation();
+
 
   var s = $("#comments");
   var pos = s.position();                    
@@ -15,8 +19,6 @@ $(function($){
           s.removeClass("stick"); 
       }
   });
-
-$("#comments").stick_in_parent();
 
 // Slick carousel
   $('.carousel').slick({

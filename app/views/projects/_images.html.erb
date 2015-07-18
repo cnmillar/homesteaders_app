@@ -1,6 +1,14 @@
 <div class = 'section'>
-<% @project.images.each do |image| %>
-	<%= link_to( image_tag(image.original + '_thumb.jpg', width: '300px'), image_path(image.original + '_carousel.jpg')) %>
-<% end %>
+<ul class="clearing-thumbs" data-clearing>
+<!--   <li><a href="path/to/your/img"><img src="path/to/your/img-th"></a></li>
+  <li><a href="path/to/your/img"><img src="path/to/your/img-th"></a></li>
+  <li><a href="path/to/your/img"><img src="path/to/your/img-th"></a></li> -->
+	<% @project.images.each do |image| %>
+	  <li>
+		<%= link_to( image_tag(image.original + '_carousel.jpg', width: '300px'), image_path(image.original + '_thumb.jpg')) %>
+		</li>
+	<% end %>
+</ul>
+
 
 </div>
