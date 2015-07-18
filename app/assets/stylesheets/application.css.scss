@@ -223,8 +223,20 @@ body {
 
 .stick {
     position:fixed;
-    top:65px;
-    bottom:0;
+    top:90px;
+    bottom:30px;
+    width: 54.5% ;
     overflow-y:scroll;
     overflow-x:hidden;
+}
+
+#icon-position {
+  text-align: right; 
+  position: absolute; 
+  bottom: 35%; 
+  right: 79%;
+}
+
+#footer {
+  height: 30px;
 }

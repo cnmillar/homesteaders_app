@@ -104,6 +104,8 @@ $(function()
 	  if (content.length === 0){
 	  	$("#no-comments").css("display","inline");
 	  }
+		$("#add-comment-general").slideToggle('slow', function(){});
+
 	});	
 
 ///////////////////////////
@@ -120,6 +122,10 @@ $(function()
 	$(".add-comment-step").on("click", function(){
 		$("#add-comment-step"+$(this).data("step-id")).slideToggle('slow', function(){
 		})
+	})
+
+	$(".add-comment-general").on("click", function(){
+		$("#add-comment-general").slideToggle('slow', function(){})
 	})
 
 
@@ -188,7 +194,6 @@ $(function()
 		$("#add-comment-ing"+$(this).find('input').last().data("ing-id")).slideToggle('slow', function(){
 		})
 	});	
-
 
 
 })
