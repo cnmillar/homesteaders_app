@@ -694,7 +694,7 @@ comments_on_video =
 	{
 		content: "This is video comment 3!",
 		commentable_type: "Video",
-		commentable_id: 8,
+		commentable_id: 1,
 		video_time: 100,
 		user_id: 2,
 		project_id: 1
@@ -702,14 +702,14 @@ comments_on_video =
 	{
 		content: "This is video comment 4!",
 		commentable_type: "Video",
-		commentable_id: 3,
+		commentable_id: 1,
 		video_time: 400,
 		user_id: 3
 	},	
 	{
 		content: "This is video comment 5!",
 		commentable_type: "Video",
-		commentable_id: 8,
+		commentable_id: 1,
 		video_time: 200,
 		user_id: 4
 	},	

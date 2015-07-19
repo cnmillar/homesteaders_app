@@ -278,7 +278,6 @@ window.fbAsyncInit = function() {
   var player;
   function onYouTubeIframeAPIReady() {
     var videoId = $('#player').data('video-id');
-    console.log(videoId)
     player = new YT.Player('player', {
       height: '480',
       width: '720',
