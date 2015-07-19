@@ -26,18 +26,19 @@ $(function($){
         enabled: true,
         nativeFS: false
       },
+
       // deeplinking: {
       //   // deep linking options go gere
       //   enabled: true,
       //   prefix: 'slider-'
       // },
+
       autoPlay: {
         // autoplay options go gere
         enabled: true,
         pauseOnHover: true
       }
   }); 
-
 
     var win = $(window),
         w,
@@ -105,17 +106,17 @@ $(function($){
 
 // Hover state for comment markers
   $('.video-comment').on('mouseenter', function() {
-    //comment = '<%= comment.content %>';
     var comment_id = $(this).data('comment-id');
+    var comment_user = $(this).data('comment-user-name');
+    var comment_timestamp = $(this).data('comment-timestamp');
     var comment_content_el = $('#comment_id_' + comment_id);
     var comment_content = comment_content_el.text();
-    //console.log('whoa comment content: ' + comment_content.text());
     $('#activeComment').remove();
     hoveredAvatar = $(this);
     avatarFlyout = $('<div />', {
       id: 'activeComment',
       class: 'video-comment-flybelow',
-      text: comment_content
+      text: comment_user + " said: " + comment_content + " at " + comment_timestamp
     });
     setTimeout(function(){
       hoveredAvatar.append(avatarFlyout).fadeIn(1000);
@@ -274,8 +275,6 @@ window.fbAsyncInit = function() {
       e.preventDefault(); // no page reload
   }
 
-
-
 // YouTube player
   var tag = document.createElement('script');
 
@@ -285,10 +284,11 @@ window.fbAsyncInit = function() {
 
   var player;
   function onYouTubeIframeAPIReady() {
+    var videoId = $('#player').data('video-id');
     player = new YT.Player('player', {
       height: '480',
       width: '720',
-      videoId: 'EgdOjyYjjEc',
+      videoId: videoId,
       events: {
 
         }

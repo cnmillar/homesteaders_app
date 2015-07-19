@@ -603,62 +603,62 @@ videos =
 [
 	{
 		title: "Making ricotta cheese",
-		url:  "https://www.youtube.com/embed/Usx_0kY6wno",
+		url:  "Usx_0kY6wno",
 		duration: 155,
 		project_id: 1 
 	},
 	{
 		title: "Making tofu",
-		url: "https://www.youtube.com/embed/EgdOjyYjjEc",
+		url: "EgdOjyYjjEc",
 		duration: 155,
 		project_id: 2
 	},
 	{
-		url: "https://www.youtube.com/embed/KoL-lmWzzDs",
+		url: "KoL-lmWzzDs",
 		title: "Making yogurt",
 		duration: 155,
 		project_id: 3
 	},
 	{
 		title: "Farmer Cheese", 
-		url: "https://www.youtube.com/embed/K_gQJu2I1QE",
+		url: "K_gQJu2I1QE",
 		duration: 155,
 		project_id: 4
 	},
 	{
 		title: "Mozzarella Cheese", 
-		url: "https://www.youtube.com/embed/1-y9X56ZlUU",
+		url: "1-y9X56ZlUU",
 		duration: 155,
 		project_id: 5
 	},
 	{
 		title: "Grow Sprouts", 
-		url: "https://www.youtube.com/embed/OSt0DmAPDm4",
+		url: "OSt0DmAPDm4",
 		duration: 155,
 		project_id: 6		
 
 	},
 	{
 		title: "Nut Milk", 
-		url: "https://www.youtube.com/embed/WeZCMNB2YO0",
+		url: "WeZCMNB2YO0",
 		duration: 155,
 		project_id: 7
 	},
 	{
 		title: "Wheatgrass", 
-		url: "https://www.youtube.com/embed/Mw57kmVdx5Q",
+		url: "Mw57kmVdx5Q",
 		duration: 155,
 		project_id: 8
 	},
 	{
 		title: "Sausage", 
-		url: "https://www.youtube.com/embed/X36ZlEs9GIU",
+		url: "X36ZlEs9GIU",
 		duration: 155,
 		project_id: 9		
 	},
 	{
 		title: "Bacon", 
-		url: "https://www.youtube.com/embed/9mxFqfgzonM",
+		url: "9mxFqfgzonM",
 		duration: 155,
 		project_id: 10
 	}
@@ -694,7 +694,7 @@ comments_on_video =
 	{
 		content: "This is video comment 3!",
 		commentable_type: "Video",
-		commentable_id: 8,
+		commentable_id: 1,
 		video_time: 100,
 		user_id: 2,
 		project_id: 1
@@ -702,14 +702,14 @@ comments_on_video =
 	{
 		content: "This is video comment 4!",
 		commentable_type: "Video",
-		commentable_id: 3,
+		commentable_id: 1,
 		video_time: 400,
 		user_id: 3
 	},	
 	{
 		content: "This is video comment 5!",
 		commentable_type: "Video",
-		commentable_id: 8,
+		commentable_id: 1,
 		video_time: 200,
 		user_id: 4
 	},	
