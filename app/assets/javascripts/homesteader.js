@@ -3,7 +3,8 @@ $(function($){
 
 /////////////
 
-// Initializes and opens PhotoSwipe
+// Gallery JS
+
 
   $(".royalSlider").royalSlider({
       // options go here
@@ -16,6 +17,11 @@ $(function($){
         enabled: true,
         nativeFS: false
       },
+      // deeplinking: {
+      //   // deep linking options go gere
+      //   enabled: true,
+      //   prefix: 'slider-'
+      // },
       autoPlay: {
         // autoplay options go gere
         enabled: true,
