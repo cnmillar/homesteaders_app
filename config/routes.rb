@@ -16,6 +16,7 @@ HeApp::Application.routes.draw do
   resources :images, only: [:create]
   
   # get "/users/:id", to: 'users#show'
+  get "/about", to: 'pages#about'
 
   delete 'logout' => 'sessions#destroy'
   get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail

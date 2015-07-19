@@ -4,4 +4,8 @@ class PagesController < ApplicationController
 		@categories = Category.all.order('name asc')
 	end
 
+	def about
+
+	end
+
 end
