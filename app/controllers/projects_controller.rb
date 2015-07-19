@@ -10,6 +10,7 @@ class ProjectsController < ApplicationController
     user_projects = @project.user_projects
     @fav_count = 0
     @comp_count = 0
+
     user_projects.each do |user|
       if user.favourited
         @fav_count += 1

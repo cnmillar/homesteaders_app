@@ -1,14 +1,43 @@
 <div class = 'section'>
-<ul class="clearing-thumbs" data-clearing>
-<!--   <li><a href="path/to/your/img"><img src="path/to/your/img-th"></a></li>
-  <li><a href="path/to/your/img"><img src="path/to/your/img-th"></a></li>
-  <li><a href="path/to/your/img"><img src="path/to/your/img-th"></a></li> -->
-	<% @project.images.each do |image| %>
-	  <li>
-		<%= link_to( image_tag(image.original + '_carousel.jpg', width: '300px'), image_path(image.original + '_thumb.jpg')) %>
-		</li>
-	<% end %>
-</ul>
 
+	<div class="row" style="position: relative;">
+			<h3>Community Gallery</h3>
+		<div id="icon-position-image">
+			<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add image to gallery", :width => 20, :height => 20, :title => "Add image to gallery"), "javascript:null", :class => "add-image") %>
+		</div>
+	</div>
+	<div id="add-image" style="display: none;">
+		<div class="panel">
+			<% if current_user %>
+				<%= form_for Image.new, :html => {:multipart => true}, remote: true do |f| %>
+					<%= f.file_field :original %>
+					<%= f.text_area :description %>
+					<%= f.hidden_field :project_id, :value => @project.id %>
+					<%= f.hidden_field :user_id, :value => current_user.id %>
+					<%= f.submit "Upload", class: "button"%>
+				<% end %>
+			<% else %>
+				<h5>You must be logged in to add an image to the gallery.</h5>
+			  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
+		  <% end %>
+		</div>
+	</div>
+
+
+<!-- add social sharing (e.g., pinterest) to gallery -->
+<!-- http://atlchris.com/1665/how-to-create-custom-share-buttons-for-all-the-popular-social-services/ -->
+	<div class="royalSlider rsDefault">
+		<% @project.images.each do |image| %>
+			<div>
+				<a href=<%= "#{image.original_url}" %> class="rsImg"></a>
+				<div class="rsABlock">
+					<% if image.user %>
+						<h3><%= image.user.full_name %></h3>
+					<% end %>
+					<p><%= image.description %></p>
+				</div>
+			</div>
+		<% end %>
+	</div>
 
 </div>

@@ -12,6 +12,7 @@
  *
  *= require_tree .
  *= require social-share-button
+ *= require rs-default
  *= require_self
  
  */
@@ -230,13 +231,97 @@ body {
     overflow-x:hidden;
 }
 
-#icon-position {
+#icon-position, #icon-position-image {
   text-align: right; 
   position: absolute; 
   bottom: 35%; 
   right: 79%;
 }
 
+#icon-position-image {
+  right: 51%;
+}
+
 #footer {
   height: 30px;
+}
+
+// social media button customization
+.social-share-button-facebook, .social-share-button-twitter, .social-share-button-google_plus, .social-share-button-google_bookmark, .social-share-button-tumbler, .social-share-button-pinterest {
+  background: url("/social-icons/facebook.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:30px;
+  height:30px;
+  bottom:0;
+  right:0;
+}
+
+.social-share-button-twitter {
+  background: url("/social-icons/facebook.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:30px;
+  height:30px;
+  bottom:0;
+  right:0;
+}
+
+.social-share-button-twitter {
+  background: url("/social-icons/twitter.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:30px;
+  height:30px;
+  bottom:0;
+  right:0;
+}
+
+.social-share-button-google_plus {
+  background: url("/social-icons/googleplus.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:30px;
+  height:30px;
+  bottom:0;
+  right:0;
+}
+
+.social-share-button-tumblr {
+  background: url("/social-icons/tumbler.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:30px;
+  height:30px;
+  bottom:0;
+  right:0;
+}
+
+.social-share-button-pinterest {
+  background: url("/social-icons/pinterest.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:30px;
+  height:30px;
+  bottom:0;
+  right:0;
+}
+/////////////////////////////////////
+// gallery css
+
+.royalSlider {
+  width: 100%;
+  // height: 300px;
+}
+
+.rsABlock {
+  opacity: 0.4;
+  filter: alpha(opacity=40); /* For IE8 and earlier */
+  background-color: "#777777";
 }

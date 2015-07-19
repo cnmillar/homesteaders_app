@@ -16,6 +16,7 @@ HeApp::Application.routes.draw do
   resources :users, only: [:new, :show]
   resources :comments, only: [:create]
   resources :user_projects, only: [:show]
+  resources :images, only: [:create]
   
   # get "/users/:id", to: 'users#show'
 
