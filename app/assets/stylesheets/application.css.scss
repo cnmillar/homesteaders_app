@@ -396,7 +396,7 @@ body {
 
 
   #completed-true {
-    background: url('/svg/checkmark4.svg');
+    background: url('/svg/checkmark_hover.png');
     background-repeat: no-repeat;
     background-size: 40px, 40px;
     width: 40px;
@@ -404,7 +404,7 @@ body {
   }
 
   #completed-false {
-    background: url('/svg/delete38.svg');
+    background: url('/svg/checkmark4.png');
     background-repeat: no-repeat;
     background-size: 40px, 40px;
     width: 40px;
@@ -412,7 +412,7 @@ body {
   }
 
   #completed-false:hover {
-    background: url('/svg/checkmark4.svg');
+    background: url('/svg/checkmark_hover.png');
     background-size: 40px, 40px;
     background-repeat: no-repeat;
   }

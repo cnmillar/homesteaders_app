@@ -8,7 +8,7 @@ $(function($){
   })
 
   $("#completed-by-user").one("click", function(){
-    $("#completed-false").css("background", "url('/svg/checkmark4.svg')").css("background-size", "40px, 40px");
+    $("#completed-false").css("background", "url('/svg/checkmark_hover.png')").css("background-size", "40px, 40px");
     $("#complete-count").html(parseInt($("#complete-count").html())+1);
   })
 
