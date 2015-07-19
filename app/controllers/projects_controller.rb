@@ -19,6 +19,8 @@ class ProjectsController < ApplicationController
       end
     end
 
+    @user_project = current_user.user_projects.where(project_id: @project.id)[0]
+
 		@equipment = @project.ingredients.where(ing_type: "equipment")
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
 

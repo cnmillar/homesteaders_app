@@ -33,9 +33,5 @@ HeApp::Application.routes.draw do
     resources :comments
   end
 
-resources :user_projects do  
-  get 'toggle_favourite', :on => :member  
-end 
-
   get '/users/:user_id/comments/:id' => 'comments#show'
 end

@@ -7,8 +7,7 @@ class UserProjectsController < ApplicationController
   def favourited
     @user_project = UserProject.find(params[:user_project_id])
     @user_project.update_attributes(favourited: !@user_project.favourited)    
-    # redirect_to user_path(current_user)
-    render :nothing => true
+    redirect_to user_path(current_user)
   end
 
     def completed
