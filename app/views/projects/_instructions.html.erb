@@ -1,11 +1,49 @@
 <div class = 'section'>
 	<h2>Instructions</h2>
-	<table>
-		<% @project.steps.each do |step| %>
-			<tr>
-				<td><h5><%= step.ordinal %>. </h5></td>
-				<td><h5><%= step.content %></h5></td>
-			</tr>
-		<% end %>
-	</table>
+	<ul class="no-bullet steps-ul">
+	  <% @project.steps.each do |step|%>
+	    <li>
+	      <div class="row">
+	        <div class="large-1 column no-collapse">
+						<h5><%= step.ordinal %></h5>
+	        </div>
+
+	        <div class="large-9 column">
+						<h5><%= step.content %></h5>
+	        </div>
+
+	        <div class="large-2 column">
+	          <span class="count-icon">
+	            <%= link_to("javascript:void(0)", "data-step-id" => step.id, "data-comments" => step.comments.to_json, :class => "filter-step-comments") do %>
+	              <%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+	              <span class='<%= "step-count #{step.id}" %>'><%= step.comments.length %></span>             
+	            <% end %>
+	          </span>
+	          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-step", "data-step-id" => step.id) %>
+	        </div>
+	        
+	      </div>
+	    </li>
+
+	    <li id='<%= "add-comment-step#{step.id}" %>' style="display:none;">
+	      <div class="panel">
+					<% if current_user %>
+						<h5>Add a comment:</h5>
+						<%= form_for step.comments.new, :html => { :class => "step-comment-id" }, remote: true do |f| %>
+						  <%= f.text_area :content, placeholder: "Comment on this step.", class: "steps-comment-content" %>
+						  <%= f.hidden_field :commentable_type %>
+						  <%= f.hidden_field :commentable_id %>
+						  <%= f.hidden_field :user_id %>
+						  <%= f.hidden_field :project_id, :value => @project.id %>
+						  <%= f.submit "Comment", class: "button steps-comment-button", data: {"step_id" => step.id}%>
+						<% end %>
+				<% else %>
+					<h5>You must be logged in to make a comment.</h5>
+				  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
+				<% end %>
+	      </div>
+	    </li>
+
+	  <% end %> 
+	</ul>
 </div>

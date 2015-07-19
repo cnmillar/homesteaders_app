@@ -1,3 +1,12 @@
 <div class = 'video-comments section'>
-  <h5>This is the video comment section</h5>
+  <h3>Video comments on partial</h3>
+  <% @video_comments.each do |comment| %>
+    <%= image_tag(comment.user.avatar, width: '32px') %> 
+    <%= comment.user.full_name %>          
+    <%= comment.content %>  
+    <%= comment.video_time %>
+    <hr>
+  <% end %>
 </div>
+
+<!-- TODO - change query to be self.video.comments -->

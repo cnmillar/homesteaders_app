@@ -1,0 +1,11 @@
+<% @all_comments.each do |comment| %>
+	<div class="element <%= comment.commentable_type %> <%= comment.commentable_id %>" style="display:none;">
+		<!-- CHECK FOR HELPER ROUTE -->
+		<%= link_to(image_tag(comment.user.avatar, width: '10%'), "/users/#{comment.user.id}") %>	
+		<%= comment.user.full_name %> 			
+		<%= comment.content %>
+		<%= comment.created_at.to_datetime %>	
+		<small>(<%= comment.commentable_type %>)</small>		
+		<hr>
+	</div>
+<% end %>

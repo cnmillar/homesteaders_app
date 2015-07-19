@@ -96,7 +96,9 @@ projects = [
 		category_id: 2,  
 		difficulty: 2,
 		batch_size: 2,
-		batch_unit: "cups"
+		batch_unit: "cups",
+		duration: 12,
+		duration_unit: "hours"
 		# kit_id: 
 	},
 	{
@@ -105,7 +107,9 @@ projects = [
 		category_id: 2,  
 		difficulty: 4,
 		batch_size: 250,
-		batch_unit: "grams"
+		batch_unit: "grams",
+		duration: 2,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	{
@@ -114,7 +118,9 @@ projects = [
 		category_id: 2,  
 		difficulty: 2,
 		batch_size: 4,
-		batch_unit: "cups"
+		batch_unit: "cups",
+		duration: 5,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	{
@@ -123,8 +129,10 @@ projects = [
 		category_id: 2,   
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound"
-		# kit_id: 	
+		batch_unit: "pound",
+		duration: 5,
+		duration_unit: "hours",
+		kit_id: 3514926913	
 	},
 	{
 		title: "Make Mozzarella Cheese", 
@@ -132,7 +140,9 @@ projects = [
 		category_id: 2,   
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "pound"
+		batch_unit: "pound",
+		duration: 2,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	# Super foods
@@ -142,8 +152,10 @@ projects = [
 		category_id: 14,  
 		difficulty: 2,
 		batch_size: 1,
-		batch_unit: "quart"
-		# kit_id: 	
+		batch_unit: "quart",
+		duration: 30,
+		duration_unit: "minutes",
+		kit_id: 3514925441	
 	},
 	{
 		title: "Make Nut Milk", 
@@ -151,7 +163,9 @@ projects = [
 		category_id: 14, 
 		difficulty: 2,
 		batch_size: 5,
-		batch_unit: "cups"
+		batch_unit: "cups",
+		duration: 30,
+		duration_unit: "minutes"
 		# kit_id: 	
 	},
 	{
@@ -160,7 +174,9 @@ projects = [
 		category_id: 14, 
 		difficulty: 2,
 		batch_size: 500,
-		batch_unit: "grams"
+		batch_unit: "grams",
+		duration: 30,
+		duration_unit: "minutes"
 		# kit_id: 	
 	},
 	# Whole Animal
@@ -170,7 +186,9 @@ projects = [
 		category_id: 16,
 		difficulty: 3,
 		batch_size: 5,
-		batch_unit: "pounds"
+		batch_unit: "pounds",
+		duration: 3,
+		duration_unit: "hours"
 		# kit_id: 	
 	},
 	{
@@ -179,8 +197,10 @@ projects = [
 		category_id: 16,
 		difficulty: 3,
 		batch_size: 1,
-		batch_unit: "kg"
-		# kit_id: 	
+		batch_unit: "kg",
+		duration: 1,
+		duration_unit: "hour",
+		kit_id: 2135948673	
 	}
 ]
 
@@ -194,7 +214,8 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2136960769,
 			unit_size: 1,
-			# unit_measure: ""
+			# unit_measure: "",
+			shopify_unit: 1,
 			availability: true 
 		},
 		{
@@ -202,6 +223,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2135581953,
 			unit_size: 1,
+			shopify_unit: 1,
 			# unit_measure: ""
 			availability: true 
 		},
@@ -211,6 +233,7 @@ ingredients = [
 			shopify_id: 2137582657,
 			unit_size: 1,
 			unit_measure: "sq yd",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -218,6 +241,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 3824391809,
 			unit_size: 1,
+			shopify_unit: 1,
 			# unit_measure: ""
 			availability: true
 		},
@@ -253,6 +277,7 @@ ingredients = [
 			shopify_id: 4461196737,
 			unit_size: 10,
 			unit_measure: "grams",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -260,6 +285,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2136870465,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -268,6 +294,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2134881985,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -276,6 +303,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2134896641,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -284,6 +312,7 @@ ingredients = [
 			ing_type: "equipment",
 			shopify_id: 2137938945,
 			unit_size: 1,
+			shopify_unit: 1,
 			unit_measure: "",
 			availability: true	
 		},
@@ -319,6 +348,7 @@ ingredients = [
 			shopify_id: 2135044289,
 			unit_size: 5,
 			unit_measure: "g",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -327,6 +357,7 @@ ingredients = [
 			shopify_id: 2136960769,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -335,6 +366,7 @@ ingredients = [
 			shopify_id: 2135581953,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -343,6 +375,7 @@ ingredients = [
 			shopify_id: 3780636545,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		}
 	],
@@ -353,6 +386,7 @@ ingredients = [
 			shopify_id: 2137702657,
 			unit_size: 0.125,
 			unit_measure: "tsp",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -361,6 +395,7 @@ ingredients = [
 			shopify_id: 3523484097,
 			unit_size: 0.125,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -369,6 +404,7 @@ ingredients = [
 			shopify_id: 2136450625,
 			unit_size: 0.125,
 			unit_measure: "tsp",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -377,6 +413,7 @@ ingredients = [
 			shopify_id: 2137582657,
 			unit_size: 0.25,
 			unit_measure: "sq yd",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -385,6 +422,7 @@ ingredients = [
 			shopify_id: 3824391809,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -393,6 +431,7 @@ ingredients = [
 			shopify_id: 2136960769,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -401,6 +440,7 @@ ingredients = [
 			shopify_id: 2135581953,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		},
 		{
@@ -433,6 +473,7 @@ ingredients = [
 			shopify_id: 2134508417,
 			unit_size: 1,
 			unit_measure: "",
+			shopify_unit: 1,
 			availability: true	
 		}
 	]
@@ -537,7 +578,7 @@ projects.each_with_index do |pro, index|
 	if ingredients[index]
 		ingredients[index].each do |ing|
 			ingredient = Ingredient.where(name: ing[:name]).first_or_create { |ingredient|
-				ingredient.update_attributes(name: ing[:name], ing_type: ing[:ing_type], shopify_id: ing[:shopify_id], unit_size: ing[:unit_size], unit_measure: ing[:unit_measure], availability: ing[:availability], project_id: project.id)
+				ingredient.update_attributes(name: ing[:name], ing_type: ing[:ing_type], shopify_id: ing[:shopify_id], unit_size: ing[:unit_size], unit_measure: ing[:unit_measure], availability: ing[:availability], project_id: project.id, shopify_unit: ing[:shopify_unit])
 				unless ingredient.persisted?
 					puts "Could not create ingredient for project #{project.name}: #{ingredient.errors.full_messages}"
 				end
@@ -562,62 +603,62 @@ videos =
 [
 	{
 		title: "Making ricotta cheese",
-		url:  "https://www.youtube.com/embed/Usx_0kY6wno",
+		url:  "Usx_0kY6wno",
 		duration: 155,
 		project_id: 1 
 	},
 	{
 		title: "Making tofu",
-		url: "https://www.youtube.com/embed/EgdOjyYjjEc",
+		url: "EgdOjyYjjEc",
 		duration: 155,
 		project_id: 2
 	},
 	{
-		url: "https://www.youtube.com/embed/KoL-lmWzzDs",
+		url: "KoL-lmWzzDs",
 		title: "Making yogurt",
 		duration: 155,
 		project_id: 3
 	},
 	{
 		title: "Farmer Cheese", 
-		url: "https://www.youtube.com/embed/K_gQJu2I1QE",
+		url: "K_gQJu2I1QE",
 		duration: 155,
 		project_id: 4
 	},
 	{
 		title: "Mozzarella Cheese", 
-		url: "https://www.youtube.com/embed/1-y9X56ZlUU",
+		url: "1-y9X56ZlUU",
 		duration: 155,
 		project_id: 5
 	},
 	{
 		title: "Grow Sprouts", 
-		url: "https://www.youtube.com/embed/OSt0DmAPDm4",
+		url: "OSt0DmAPDm4",
 		duration: 155,
 		project_id: 6		
 
 	},
 	{
 		title: "Nut Milk", 
-		url: "https://www.youtube.com/embed/WeZCMNB2YO0",
+		url: "WeZCMNB2YO0",
 		duration: 155,
 		project_id: 7
 	},
 	{
 		title: "Wheatgrass", 
-		url: "https://www.youtube.com/embed/Mw57kmVdx5Q",
+		url: "Mw57kmVdx5Q",
 		duration: 155,
 		project_id: 8
 	},
 	{
 		title: "Sausage", 
-		url: "https://www.youtube.com/embed/X36ZlEs9GIU",
+		url: "X36ZlEs9GIU",
 		duration: 155,
 		project_id: 9		
 	},
 	{
 		title: "Bacon", 
-		url: "https://www.youtube.com/embed/9mxFqfgzonM",
+		url: "9mxFqfgzonM",
 		duration: 155,
 		project_id: 10
 	}
@@ -635,27 +676,75 @@ end
 comments_on_video = 
 [
 	{
-		content: "Wow, loved this!",
+		content: "This is video comment 1!",
 		commentable_type: "Video",
 		commentable_id: 1,
-		video_time: 50
+		video_time: 50,
+		user_id: 1,
+		project_id: 1
 	},
 	{
-		content: "I would add more salt here!",
+		content: "This is video comment 2!",
 		commentable_type: "Video",
 		commentable_id: 3,
-		video_time: 50
+		video_time: 50,
+		user_id: 2,
+		project_id: 1
 	},
 	{
-		content: "You can also use vinegar instead of lemon juice.",
+		content: "This is video comment 3!",
 		commentable_type: "Video",
 		commentable_id: 8,
-		video_time: 100
-	}
+		video_time: 100,
+		user_id: 2,
+		project_id: 1
+	},
+	{
+		content: "This is video comment 4!",
+		commentable_type: "Video",
+		commentable_id: 3,
+		video_time: 400,
+		user_id: 3
+	},	
+	{
+		content: "This is video comment 5!",
+		commentable_type: "Video",
+		commentable_id: 8,
+		video_time: 200,
+		user_id: 4
+	},	
+	{
+		content: "This is video comment 6!",
+		commentable_type: "Video",
+		commentable_id: 8,
+		video_time: 300,
+		user_id: 2
+	},	
+	{
+		content: "This is video comment 7!",
+		commentable_type: "Video",
+		commentable_id: 3,
+		video_time: 400,
+		user_id: 3
+	},	
+	{
+		content: "This is video comment 8!",
+		commentable_type: "Video",
+		commentable_id: 6,
+		video_time: 500,
+		user_id: 1
+	},	
+	{
+		content: "This is video comment 9!",
+		commentable_type: "Video",
+		commentable_id: 3,
+		video_time: 600,
+		user_id: 2
+	}	
 ]
 
 comments_on_video.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id], project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -664,25 +753,31 @@ end
 comments_on_project = 
 [
 	{
-		content: "Wow, loved this!",
+		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 1,
+		user_id: 1,
+		project_id: 1
 	},
 	{
-		content: "I would add more salt to the recipe!",
+		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 3,
-		video_time: 50
+		video_time: 50,
+		user_id: 1,
+		project_id: 1
 	},
 	{
-		content: "Anybody tried this with vinegar?",
+		content: "This is a project comment!",
 		commentable_type: "Project",
 		commentable_id: 8,
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
 comments_on_project.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], user_id: com[:user_id], project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -692,24 +787,30 @@ end
 comments_on_ingredient = 
 [
 	{
-		content: "Wow, good idea!",
+		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
-		commentable_id: 1,
+		commentable_id: 2,
+		user_id: 1,
+		project_id: 1
 	},
 	{
-		content: "Add a bit extra of this ingredient.",
+		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 3,
+		user_id: 1,
+		project_id: 1
 	},
 	{
-		content: "You can also use vinegar instead of lemon juice.",
+		content: "This is an ingredient comment!",
 		commentable_type: "Ingredient",
 		commentable_id: 20,
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
 comments_on_ingredient.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id],project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -718,24 +819,30 @@ end
 comments_on_step = 
 [
 	{
-		content: "Wow, good idea!",
+		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 5,
+		user_id: 1,
+		project_id: 1
 	},
 	{
-		content: "I find that a Vitamix works best.",
+		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 10,
+		user_id: 1,
+		project_id: 1
 	},
 	{
-		content: "This is the best part!",
+		content: "This is a step comment!",
 		commentable_type: "Step",
 		commentable_id: 15,
+		user_id: 1,
+		project_id: 1
 	}
 ]
 
 comments_on_step.each do |com|
-	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time])
+	comment = Comment.create(content: com[:content], commentable_id: com[:commentable_id], commentable_type: com[:commentable_type], video_time: com[:video_time], user_id: com[:user_id],project_id: com[:project_id])
 	unless comment.persisted?
 		puts "Could not create comment: #{comment.errors.full_messages}"
 	end
@@ -747,274 +854,291 @@ end
 users = [
 	{
 		admin: true,
-		email: "cnmillar@gmail.com",
+		email: "cpilon@gmail.com",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Caitlin",
-		last_name: "Millar",
+		full_name: "Caitlin Pilon",
 		facebook_id: 123456789
 	},
 	{
 		admin: true,
 		email: "test@test.ca",
-		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "David",
-		last_name: "Good",
-		facebook_id: 223456789
+		avatar: "http://graph.facebook.com/10153480204621660/picture",
+		full_name: "David Good",
+		facebook_id: 10153480204621660
 	},
 	{
 		admin: true,
-		email: "beth@test.ca",
+		email: "chris@test.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Beth",
-		last_name: "Hammett",
+		full_name: "Chris Jones",
 		facebook_id: 223456799
 	},
 	{
-		admin: false,
-		email: "sam@smith.ca",
+		admin: true,
+		email: "cnmillar@gmail.com",
+		avatar: "http://graph.facebook.com/10101421296841741/picture",
+		full_name: "Caitlin Millar",
+		facebook_id: 10101421296841741
+	},
+	{
+		admin: true,
+		email: "susan@test.ca",
 		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
-		first_name: "Sam",
-		last_name: "Smith",
-		facebook_id: 11335544
+		full_name: "Susan Smith",
+		facebook_id: 109488894
+	},
+	{
+		admin: true,
+		email: "john@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		full_name: "John Doe",
+		facebook_id: 234984756
+	},
+	{
+		admin: false,
+		email: "beth@test.ca",
+		avatar: "http://www.sunnyskyz.com/images/webpics/2012-11/98fl3-happy-face.jpg",
+		full_name: "Beth Hammett",
+		facebook_id: 10155764870935693
 	}
 ]
 
 users.each do |u|
-	user = User.create!(admin: u[:admin], email: u[:email], avatar: u[:avatar], first_name: u[:first_name], last_name: u[:last_name], facebook_id: u[:facebook_id])
+	user = User.create!(admin: u[:admin], email: u[:email], avatar: u[:avatar], full_name: u[:full_name], facebook_id: u[:facebook_id])
 	unless user.persisted?
 		puts "Could not create user: #{u.errors.full_messages}"
 	end
 end
 
-gallery_images = [
+images = [
 	{
 		user_id: 1,
 		project_id: 1,
-		original_image: 'project_gallery/ricotta-1.jpg'
+		original: '/app/assets/images/project_gallery/ricotta-1.jpg',
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 1,
-		original_image: 'project_gallery/ricotta-2.jpg'
+		original: '/app/assets/images/project_gallery/ricotta-2.jpg',
 		# resized_image:
-		# description:
+		description:"Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original_image: 'project_gallery/tofu-1.jpg'
+		original: '/app/assets/images/project_gallery/tofu-1.jpg',
 		# resized_image:
-		# description:
+		description: "Mmmmm, tofy!"
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original_image: 'project_gallery/tofu-2.jpg'
+		original: '/app/assets/images/project_gallery/tofu-2.jpg',
 		# resized_image:
-		# description:
+		description: "Mmmmm, tofu!"
 	},
 	{
 		user_id: 1,
 		project_id: 2,
-		original_image: 'project_gallery/tofu-3.jpg'
+		original: '/app/assets/images/project_gallery/tofu-3.jpg',
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 		{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-1.jpg'
+		original: '/app/assets/images/project_gallery/farmer-cheese-1.jpg',
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-2.jpg'
+		original: '/app/assets/images/project_gallery/farmer-cheese-2.jpg', 
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-3.jpg'
+		original: '/app/assets/images/project_gallery/farmer-cheese-3.jpg', 
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 4,
-		original_image: 'project_gallery/farmer-cheese-4.jpg'
+		original: '/app/assets/images/project_gallery/farmer-cheese-4.jpg',
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-1.jpg'
+		original: '/app/assets/images/project_gallery/mozzarella-1.jpg', 
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 		{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-2.jpg'
+		original: '/app/assets/images/project_gallery/mozzarella-2.jpg', 
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 		{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-3.jpg'
+		original: '/app/assets/images/project_gallery/mozzarella-3.jpg', 
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-4.jpg'
+		original: '/app/assets/images/project_gallery/mozzarella-4.jpg', 
 		# resized_image:
-		# description:
+		description: "Mmmmm, cheese!"
 	},
 	{
 		user_id: 1,
 		project_id: 5,
-		original_image: 'project_gallery/mozzarella-5.jpg'
+		original: '/app/assets/images/project_gallery/mozzarella-5.jpg', 
+		# resized_image:
+		description: "Mmmmm, cheese!"
+	},
+	{
+		user_id: 1,
+		project_id: 6,
+		original: '/app/assets/images/project_gallery/sprouts-1.jpg', 
+		# resized_image:
+		description: "Mmmmm, sprouts!"
+	},
+	{
+		user_id: 1,
+		project_id: 6,
+		original: '/app/assets/images/project_gallery/sprouts-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 6,
-		original_image: 'project_gallery/sprouts-1.jpg'
-		# resized_image:
-		# description:
-	},
-	{
-		user_id: 1,
-		project_id: 6,
-		original_image: 'project_gallery/sprouts-2.jpg'
-		# resized_image:
-		# description:
-	},
-	{
-		user_id: 1,
-		project_id: 6,
-		original_image: 'project_gallery/sprouts-3.jpg'
+		original: '/app/assets/images/project_gallery/sprouts-3.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-1.jpg'
+		original: '/app/assets/images/project_gallery/wheatgrass-1.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-2.jpg'
+		original: '/app/assets/images/project_gallery/wheatgrass-2.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-3.jpg'
+		original: '/app/assets/images/project_gallery/wheatgrass-3.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-4.jpg'
+		original: '/app/assets/images/project_gallery/wheatgrass-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-5.jpg'
+		original: '/app/assets/images/project_gallery/wheatgrass-5.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-6.jpg'
+		original: '/app/assets/images/project_gallery/wheatgrass-6.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 8,
-		original_image: 'project_gallery/wheatgrass-7.jpg'
+		original: '/app/assets/images/project_gallery/wheatgrass-7.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-1.jpg'
+		original: '/app/assets/images/project_gallery/sausage-1.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-2.jpg'
+		original: '/app/assets/images/project_gallery/sausage-2.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-3.jpg'
+		original: '/app/assets/images/project_gallery/sausage-3.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 9,
-		original_image: 'project_gallery/sausage-4.jpg'
+		original: '/app/assets/images/project_gallery/sausage-4.jpg'
 		# resized_image:
 		# description:
 	},
 	{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-1.jpg'
+		original: '/app/assets/images/project_gallery/bacon-1.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-2.jpg'
+		original: '/app/assets/images/project_gallery/bacon-2.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-3.jpg'
+		original: '/app/assets/images/project_gallery/bacon-3.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-4.jpg'
+		original: '/app/assets/images/project_gallery/bacon-4.jpg'
 		# resized_image:
 		# description:
 	},
 		{
 		user_id: 1,
 		project_id: 10,
-		original_image: 'project_gallery/bacon-5.jpg'
+		original: '/app/assets/images/project_gallery/bacon-5.jpg'
 		# resized_image:
 		# description:
 	}
@@ -1022,9 +1146,117 @@ gallery_images = [
 
 ]
 
-gallery_images.each do |img|
-	image = Gallery.create(user_id: img[:user_id], project_id: img[:project_id], original_image: img[:original_image])
+images.each do |img|
+	image = Image.create(user_id: img[:user_id], project_id: img[:project_id], original: File.open(File.join(Rails.root,img[:original])))
 	unless image.persisted?
 		puts "Could not add image: #{img.errors.full_messages}"
+	end
+end
+
+user_projects = [
+	{
+		user_id: 1,
+    project_id: 3,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+		{
+		user_id: 1,
+    project_id: 10,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 1,
+    project_id: 5,
+    favourited: true,
+    completed: true
+    # rating:
+	},
+		{
+		user_id: 2,
+    project_id: 10,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+		{
+		user_id: 2,
+    project_id: 8,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 3,
+    project_id: 5,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 4,
+    project_id: 2,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+		{
+		user_id: 5,
+    project_id: 7,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 6,
+    project_id: 10,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 6,
+    project_id: 4,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 6,
+    project_id: 6,
+    favourited: true,
+    completed: true
+    # rating:
+	},
+		{
+		user_id: 7,
+    project_id: 1,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 7,
+    project_id: 2,
+    favourited: true,
+    completed: false
+    # rating:
+	},
+	{
+		user_id: 7,
+    project_id: 3,
+    favourited: true,
+    completed: true
+    # rating:
+	},
+]
+
+user_projects.each do |proj|
+	project = UserProject.create(user_id: proj[:user_id], project_id: proj[:project_id], favourited: proj[:favourited], completed: proj[:completed])
+	unless project.persisted?
+		puts "Could not add project: #{proj.errors.full_messages}"
 	end
 end

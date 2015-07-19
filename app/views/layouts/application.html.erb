@@ -2,16 +2,25 @@
 <html>
 <head>
   <title>HeApp</title>
-  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
-  <%= javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"%>
+  <%= stylesheet_link_tag    "application", media: "all" %>
+  <%= javascript_include_tag "application" %>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
+    <%= csrf_meta_tags %>
+  </head>
 
-  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
-
-  <%= csrf_meta_tags %>
-</head>
 <body>
-<%= render 'layouts/navigation' %>
+<% if current_user %>
+  <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.full_name %>"}</script>
+<% end %>
+  <%= render 'layouts/navigation' %>
 
-<%= yield %>
+  <% if flash[:notice] %>
+    <div class="notice"><%= flash[:notice] %></div>
+  <% end %>
 
+  <%= yield %>
+  
+<script src="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
 </body>
+<footer id="footer"><div id="footer">Footer</div></footer>

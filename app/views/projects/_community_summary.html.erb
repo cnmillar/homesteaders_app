@@ -1,5 +1,16 @@
 <div class = 'section'>
-	<p><%= @project.comments.length %> comments </p>
+	<%= image_tag("/svg/chat35.svg", :alt => "Comments", :width => 30, :height => 30, :title => "Comments") %>
+	<p><%= @all_comments.length %> comments </p>
+
+	<% if @user_project && @user_project.favourited %>
+		<div id="favourited-true"></div>
+	<% else %>
+		<%= link_to("", :href => toggle_favourite_user_project_path(@user_project), :remote => true, id: "favourited-by-user") do %>
+			<div id="favourited-false"></div>
+		<% end %>
+	<% end %>
 	<p><%= @fav_count %> favourited </p>
+
+	<%= image_tag("/svg/checkmark4.svg", :alt => "Completed", :width => 30, :height => 30, :title => "Favourited") %>
 	<p><%= @comp_count %> projects completed</p>
 </div>

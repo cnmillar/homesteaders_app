@@ -1,6 +1,45 @@
 <div class = 'section'>
-<% @project.galleries.each do |image| %>
-	<%= image_tag(image.original_image, width: '25%') %>
-<% end %>
+
+	<div class="row" style="position: relative;">
+			<h3>Community Gallery</h3>
+		<div id="icon-position-image">
+			<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add image to gallery", :width => 20, :height => 20, :title => "Add image to gallery"), "javascript:null", :class => "add-image") %>
+		</div>
+	</div>
+	<div id="add-image" style="display: none;">
+		<div class="panel">
+			<% if current_user %>
+				<%= form_for Image.new, :html => {:multipart => true}, remote: true do |f| %>
+					<%= f.file_field :original %>
+					<%= f.text_area :description %>
+					<%= f.hidden_field :project_id, :value => @project.id %>
+					<%= f.hidden_field :user_id, :value => current_user.id %>
+					<%= f.submit "Upload", class: "button"%>
+				<% end %>
+			<% else %>
+				<h5>You must be logged in to add an image to the gallery.</h5>
+			  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
+		  <% end %>
+		</div>
+	</div>
+
+
+<!-- add social sharing (e.g., pinterest) to gallery -->
+<!-- http://atlchris.com/1665/how-to-create-custom-share-buttons-for-all-the-popular-social-services/ -->
+
+<!-- contents of external ajax file -->
+	<div class="sliderContainer">
+	  <div class="royalSlider rsDefault sliderInLightbox">
+			<% @project.images.each do |image| %>
+				<a class="rsImg" href=<%= image.original_url %>>
+	        <div class="rsTmb">
+	          <h5><%= image.description %></h5>
+	          <p>By <%= image.user.full_name %></p>
+	        </div>
+				</a>
+	  	<% end %>
+	  </div>	  
+	</div>
+
 
 </div>

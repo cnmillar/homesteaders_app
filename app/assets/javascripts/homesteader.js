@@ -1,9 +1,14 @@
 
 $(function($){
 
+//// toggle jquery
+$("#favourited-by-user").on("click", function(){
+  $("#favourited").css("background", "url('/svg/heart213_hover.png')").css("background-size", "40px, 40px");
+})
+
 /////////////
 
-// Initializes and opens PhotoSwipe
+// Gallery JS
 
   $(".royalSlider").royalSlider({
       // options go here
@@ -16,6 +21,13 @@ $(function($){
         enabled: true,
         nativeFS: false
       },
+
+      // deeplinking: {
+      //   // deep linking options go gere
+      //   enabled: true,
+      //   prefix: 'slider-'
+      // },
+
       autoPlay: {
         // autoplay options go gere
         enabled: true,
@@ -23,6 +35,30 @@ $(function($){
       }
   }); 
 
+    var win = $(window),
+        w,
+        currRs;
+
+    $('.openBoxButton').magnificPopup({
+      type: 'ajax',
+      callbacks: {
+        close: function() {
+          // destroy the slider to avoid memory leaks
+          if(this.content) {
+            this.content.find('.royalSlider').data('royalSlider').destroy();
+          }
+          
+        }
+      }
+    });
+
+    $('.sliderInLightbox').royalSlider({
+      imageScaleMode: 'fill',
+      keyboardNavEnabled: true,
+      video: {
+        autoHideControlNav: true
+      }
+    });
 
 ////////////
 
@@ -65,11 +101,9 @@ $(function($){
 
 // Hover state for comment markers
   $('.video-comment').on('mouseenter', function() {
-    //comment = '<%= comment.content %>';
     var comment_id = $(this).data('comment-id');
     var comment_content_el = $('#comment_id_' + comment_id);
     var comment_content = comment_content_el.text();
-    //console.log('whoa comment content: ' + comment_content.text());
     $('#activeComment').remove();
     hoveredAvatar = $(this);
     avatarFlyout = $('<div />', {
@@ -234,8 +268,6 @@ window.fbAsyncInit = function() {
       e.preventDefault(); // no page reload
   }
 
-
-
 // YouTube player
   var tag = document.createElement('script');
 
@@ -245,10 +277,12 @@ window.fbAsyncInit = function() {
 
   var player;
   function onYouTubeIframeAPIReady() {
+    var videoId = $('#player').data('video-id');
+    console.log(videoId)
     player = new YT.Player('player', {
       height: '480',
       width: '720',
-      videoId: 'EgdOjyYjjEc',
+      videoId: videoId,
       events: {
 
         }

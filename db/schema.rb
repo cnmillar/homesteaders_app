@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150713225946) do
+ActiveRecord::Schema.define(version: 20150717235412) do
 
   create_table "average_caches", force: true do |t|
     t.integer  "rater_id"
@@ -36,22 +36,23 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "video_time"
+    t.integer  "user_id"
+    t.integer  "project_id"
   end
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
 
-  create_table "galleries", force: true do |t|
+  create_table "images", force: true do |t|
     t.integer  "user_id"
     t.integer  "project_id"
-    t.string   "original_image"
-    t.string   "resized_image"
+    t.string   "original"
     t.string   "description"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "galleries", ["project_id"], name: "index_galleries_on_project_id"
-  add_index "galleries", ["user_id"], name: "index_galleries_on_user_id"
+  add_index "images", ["project_id"], name: "index_images_on_project_id"
+  add_index "images", ["user_id"], name: "index_images_on_user_id"
 
   create_table "ingredients", force: true do |t|
     t.integer  "project_id"
@@ -63,6 +64,7 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.boolean  "availability"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "shopify_unit"
   end
 
   add_index "ingredients", ["project_id"], name: "index_ingredients_on_project_id"
@@ -79,7 +81,6 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.integer  "category_id"
     t.string   "title"
     t.text     "description"
-    t.string   "video"
     t.integer  "difficulty"
     t.float    "batch_size"
     t.string   "batch_unit"
@@ -88,6 +89,7 @@ ActiveRecord::Schema.define(version: 20150713225946) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "duration"
+    t.string   "duration_unit"
   end
 
   add_index "projects", ["category_id"], name: "index_projects_on_category_id"
@@ -142,13 +144,12 @@ ActiveRecord::Schema.define(version: 20150713225946) do
 
   create_table "users", force: true do |t|
     t.integer  "facebook_id"
-    t.string   "first_name"
-    t.string   "last_name"
     t.string   "email"
     t.string   "avatar"
     t.boolean  "admin"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "full_name"
   end
 
   create_table "videos", force: true do |t|

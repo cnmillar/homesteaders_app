@@ -1,0 +1,53 @@
+<ul class="no-bullet ing-ul">
+	<% @ingredients.each do |ing|%>
+		<li>
+			<div class="row">
+				<% if ing.availability %>
+
+					<div class="large-1 column no-collapse">
+						<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.shopify_unit %>></input>
+					</div>
+
+					<div class="large-9 column">
+						<h5 style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+					</div>
+
+				<% else %>
+					<div class="large-1 no-collapse column">   </div>
+					<div class="large-9 column">
+						<h5 style="display: inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+					</div>
+				<% end %>
+
+				<div class="large-2 column">
+					<span class="count-icon">
+			  		<%= link_to("javascript:void(0)", "data-ing-id" => ing.id, "data-comments" => ing.comments.to_json, :class => "filter-ing-comments") do %>
+							<%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+					    <span class='<%= "ing-count #{ing.id}" %>'><%= ing.comments.length %></span>							
+			  		<% end %>
+					</span>
+					<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-ing", "data-ing-id" => ing.id) %>
+				</div>
+				
+			</div>
+		</li>
+		<li id='<%= "add-comment-ing#{ing.id}" %>' style="display:none;">
+			<div class="panel">
+				<% if current_user %>
+				  <h5>Add a comment:</h5>
+					<%= form_for ing.comments.new, :html => { :class => "ing-comment-id" }, remote: true do |f| %>
+					  <%= f.text_area :content, placeholder: "Comment on this ingredient.", id: "ing-comment-content" %>
+					  <%= f.hidden_field :commentable_type %>
+					  <%= f.hidden_field :commentable_id %>
+					  <%= f.hidden_field :user_id %>
+					  <%= f.hidden_field :project_id, :value => @project.id %>
+					  <%= f.submit "Comment", class: "button ing-comment-button", data: {"ing_id" => ing.id}%>
+					<% end %>
+				<% else %>
+					<h5>You must be logged in to make a comment.</h5>
+				  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
+				<% end %>
+			</div>
+		</li>
+	<% end %>	
+</ul>

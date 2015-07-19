@@ -12,16 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
 //= require social-share-button
 //= require jquery.raty
 //= require ratyrate
-//= require_tree .
-
-if (window.location.hash == '#_=_') {
-    window.location.hash = ''; // for older browsers, leaves a # behind
-    history.pushState('', document.title, window.location.pathname); // nice and clean
-    e.preventDefault(); // no page reload
-}
-
+//= require jquery.paging
+//= require new_comment
+//= require_self
+//= require jquery.royalslider.min
+//= require jquery.magnific-popup.min.js
+//= require homesteader
 

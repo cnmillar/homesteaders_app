@@ -11,10 +11,8 @@ gem 'sqlite3'
 gem 'sass-rails', '~> 4.0.0'
 
 # Add Foundation and Normalize
-gem 'foundation-rails'
-group :development do
-  gem 'rails_layout'
-end
+# gem 'foundation-rails'
+
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -29,7 +27,7 @@ gem 'coffee-rails', '~> 4.0.0'
 gem 'jquery-rails'
 
 # Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
+# gem 'turbolinks'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
@@ -39,7 +37,14 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-gem 'pry'
+group :prof do
+  gem 'ruby-prof'
+end
+
+group :development do
+  gem 'rails_layout'
+  gem 'pry'
+end
 
 # Use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
@@ -59,3 +64,5 @@ gem 'omniauth-facebook'
 gem "koala", "~> 2.0"
 gem 'social-share-button', '~> 0.1.6'
 gem 'ratyrate'
+gem 'foreigner'
+gem 'carrierwave'

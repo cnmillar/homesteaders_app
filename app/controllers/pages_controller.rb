@@ -1,7 +1,7 @@
 class PagesController < ApplicationController	
 
 	def home
-		@categories = Category.order('name asc').all
+		@categories = Category.all.order('name asc')
 	end
 
 end

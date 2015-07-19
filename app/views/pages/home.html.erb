@@ -1,37 +1,33 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <style>
-  </style>
-</head>
-<body>
-  <div class = "row">
-    <div class = "large-12 columns section" >
-      <%= render 'pages/showcased' %>
-    </div>
+
+<div class="row">
+  <div class="large-12 columns" >
+    <%= render 'pages/showcased' %>
   </div>
-  <div class = "row">
-    <div class = "large-4 columns section">
-       <%= render 'pages/popular' %>
-    </div>
-    <div class = "large-4 columns section">
-       <%= render 'pages/popular' %>
-    </div>
-    <div class = "large-4 columns section">
-       <%= render 'pages/popular' %>
-    </div>
+</div>
+<div class="row">
+  <div class="large-4 columns">
+     <%= render 'pages/popular' %>
   </div>
-  <div class = "row section">
+  <div class="large-4 columns">
+     <%= render 'pages/popular' %>
+  </div>
+  <div class="large-4 columns">
+     <%= render 'pages/popular' %>
+  </div>
+     <%= render 'users/email' %>
+</div>
+<div class="row">
+  <div class = 'category categories'>
     <h4>All Categories:</h4>
-      <% @categories.in_groups(3, false) do |group| %>
-        <div class="categories large-4 columns">
-          <ul>
-            <% group.each do |category| %>
-              <li><a href="./categories/<%= category.id %>"><%= category.name %></a></li>
-            <% end %>
-          </ul>
-        </div>
-      <% end %>
-    </div>
-  </body>
-</html>
+    <% @categories.in_groups(3, false) do |group| %>
+      <div class="large-4 columns">
+        <ul>
+          <% group.each do |category| %>
+            <li><%= link_to category.name, category_path(category) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
