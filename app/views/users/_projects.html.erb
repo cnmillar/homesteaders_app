@@ -3,7 +3,7 @@
     <div class="row section">
       <h4><strong><%= proj.project.title %> </strong></h4>
       <% if !proj.project.images.empty? %>
-        <%= image_tag("#{proj.project.images.first.original}.jpg", width: '300px') %>
+        <%= image_tag("#{proj.project.images.first.original_url}", width: '300px') %>
       <% end %>
       <ul class="no-bullet">
         <%=link_to(image_tag("/svg/heart213#{proj.favourited ? "red" : ""}.svg"), favourited_path(proj), method: "post") %>
