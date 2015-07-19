@@ -137,8 +137,12 @@ $(function()
 	})
 
 	$(".add-comment-general").on("click", function(){
-		$("#add-comment-general").slideToggle('slow', function(){})
-	})
+		currentTime = player.getCurrentTime();
+		$("#add-comment-general").slideToggle('slow', function(){});
+		// if (currentTime > 0) {
+			$("#comment-content").append().html('<div>Append comment to</div>');
+		// }
+	});
 
 	$(".add-image").on("click", function(){
 		$("#add-image").slideToggle('slow', function(){})
