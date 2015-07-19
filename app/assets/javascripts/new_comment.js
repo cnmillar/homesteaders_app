@@ -68,6 +68,18 @@ $(function()
 	  }
 	});
 
+// Equipment comments filter
+	$(".equip-ul .filter-equip-comments").on("click", function(){
+		var prev = {start: 0, stop: 0},
+	    content = $('.load-comments div.element.Ingredient.' + $(this).data("equip-id"));
+	  $('.load-comments div.element').css("display", "none");
+	  paginate(content);
+	  $('#view-all-comments').css("display","inline");
+	  if (content.length === 0){
+	  	$("#no-comments").css("display","inline");
+	  }
+	});
+
 // When displaying filtered comments, let user click "View all comments" to return to all comments
 	$("#view-all-comments").on("click", function(){
 		var prev = {start: 0, stop: 0},
