@@ -1,16 +1,30 @@
 <div class = 'section'>
+	<!-- total number of comments -->
 	<%= image_tag("/svg/chat35.svg", :alt => "Comments", :width => 30, :height => 30, :title => "Comments") %>
 	<p><%= @all_comments.length %> comments </p>
 
+	<!-- total number of times this project was favourited -->
 	<% if @user_project && @user_project.favourited %>
 		<div id="favourited-true"></div>
 	<% else %>
-		<a href='javascript:null' id="favourited-by-user"><div id="favourited-false"></div></a>
+		<%= link_to('javascript:null', :id => "favourited-by-user") do %>
+			<div id="favourited-false"></div>
+		<% end %>
 	<% end %>
+
 	<p><span id="favourite-count"><%= @fav_count %></span> favourited </p>
 
-	<%= image_tag("/svg/checkmark4.svg", :alt => "Completed", :width => 30, :height => 30, :title => "Favourited") %>
-	<p><%= @comp_count %> projects completed</p>
+	<!-- total number of times the project was completed -->
+
+	<% if @user_project && @user_project.completed %>
+		<div id="completed-true"></div>
+	<% else %>
+		<%= link_to('javascript:null', :id => "completed-by-user") do %>
+			<div id="completed-false"></div>
+		<% end %>
+	<% end %>
+	<p><span id="complete-count"><%= @comp_count %></span> projects completed </p>
+
 </div>
 
 <script>
@@ -21,6 +35,14 @@
 			  <%= @user_project.update_attributes(:favourited => true) %>
 		  <% else %>
 			  <%= current_user.user_projects.create(project_id: @project.id, favourited: true) %>
+		  <% end %>
+		});
+
+		$("#completed-by-user").on("click", function(){
+		  <% if @user_project %>
+			  <%= @user_project.update_attributes(:completed => true) %>
+		  <% else %>
+			  <%= current_user.user_projects.create(project_id: @project.id, completed: true) %>
 		  <% end %>
 		});
 	});

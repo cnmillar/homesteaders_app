@@ -7,10 +7,13 @@ $(function($){
     $("#favourite-count").html(parseInt($("#favourite-count").html())+1);
   })
 
+  $("#completed-by-user").one("click", function(){
+    $("#completed-false").css("background", "url('/svg/checkmark4.svg')").css("background-size", "40px, 40px");
+    $("#complete-count").html(parseInt($("#complete-count").html())+1);
+  })
+
 /////////////
-
 // Gallery JS
-
 
   $(".royalSlider").royalSlider({
       // options go here
