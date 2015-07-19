@@ -26,18 +26,19 @@
 
 <!-- add social sharing (e.g., pinterest) to gallery -->
 <!-- http://atlchris.com/1665/how-to-create-custom-share-buttons-for-all-the-popular-social-services/ -->
-	<div class="royalSlider rsDefault">
-		<% @project.images.each do |image| %>
-			<div>
-				<a href=<%= "#{image.original_url}" %> class="rsImg"></a>
-				<div class="rsABlock">
-					<% if image.user %>
-						<h3><%= image.user.full_name %></h3>
-					<% end %>
-					<p><%= image.description %></p>
-				</div>
-			</div>
-		<% end %>
-	</div>
 
+
+<!-- contents of external ajax file -->
+	<div class="sliderContainer">
+	  <div class="royalSlider rsDefault sliderInLightbox">
+			<% @project.images.each do |image| %>
+				<a class="rsImg" href=<%= image.original_url %>>
+	        <div class="rsTmb">
+	          <h5><%= image.description %></h5>
+	          <p>By <%= image.user.full_name %></p>
+	        </div>
+				</a>
+	  	<% end %>
+	  </div>
+	</div>
 </div>

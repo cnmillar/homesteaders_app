@@ -24,6 +24,31 @@ $(function($){
   }); 
 
 
+    var win = $(window),
+        w,
+        currRs;
+
+    $('.openBoxButton').magnificPopup({
+      type: 'ajax',
+      callbacks: {
+        close: function() {
+          // destroy the slider to avoid memory leaks
+          if(this.content) {
+            this.content.find('.royalSlider').data('royalSlider').destroy();
+          }
+          
+        }
+      }
+    });
+
+    $('.sliderInLightbox').royalSlider({
+      imageScaleMode: 'fill',
+      keyboardNavEnabled: true,
+      video: {
+        autoHideControlNav: true
+      }
+    });
+
 ////////////
 
   var s = $("#comments");

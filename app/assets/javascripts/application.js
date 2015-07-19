@@ -19,5 +19,6 @@
 //= require new_comment
 //= require_self
 //= require jquery.royalslider.min
+//= require jquery.magnific-popup.min.js
 //= require homesteader
 
