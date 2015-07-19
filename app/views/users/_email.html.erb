@@ -1,10 +1,11 @@
- <% if current_user && current_user.email.empty? %>
+ <% if current_user && current_user.email.nil? %>
   <div class="email_container">
     <div class= "email">
-      <%= form_for @current_user, url: user_path(@current_user), html: {method: :patch} do |f| %>
+      <%= form_for current_user, url: edit_user_path(@current_user), html: {method: :patch} do |f| %>
         <%= f.text_area :email, placeholder: "Please enter your email address" %>
         <%= f.submit "Update", class: "button"%>
       <% end %>
     </div>
   </div>
 <% end %>
+

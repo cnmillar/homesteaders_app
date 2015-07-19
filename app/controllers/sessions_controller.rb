@@ -1,19 +1,23 @@
 class SessionsController < ApplicationController
 
+
   def new
   end
 
   def create
-    user = User.where(facebook_id: auth_hash[:uid]).first
-    # change to: 
-    # user = User.find_by(facebook_id: auth_hash[:uid]).first
+    user = User.find_by(facebook_id: auth_hash[:uid])
+
+    uid = auth_hash[:uid]
+    access_token = auth_hash[:credentials][:token] 
+    app_secret = '91a1fc735691bdddba3a2fdd27c68ca4'
+    obj = JSON.parse(open("https://graph.facebook.com/#{uid}?fields=email&access_token=#{access_token}").read)
 
     if !user
 
       full_name = auth_hash[:info][:name]
       facebook_id =  auth_hash[:uid]
       avatar = auth_hash[:info][:image]
-      email = auth_hash[:info][:email]
+      email =  obj["email"]
 
       user = User.create(facebook_id: facebook_id, full_name: full_name, avatar: avatar, email: email)
   
@@ -26,6 +30,8 @@ class SessionsController < ApplicationController
 
   def auth_hash
     request.env['omniauth.auth']
+
+
   end
 
   def destroy
