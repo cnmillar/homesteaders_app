@@ -103,6 +103,7 @@ $("#favourited-by-user").on("click", function(){
   $('.video-comment').on('mouseenter', function() {
     var comment_id = $(this).data('comment-id');
     var comment_user = $(this).data('comment-user-name');
+    var comment_timestamp = $(this).data('comment-timestamp');
     var comment_content_el = $('#comment_id_' + comment_id);
     var comment_content = comment_content_el.text();
     $('#activeComment').remove();
@@ -110,7 +111,7 @@ $("#favourited-by-user").on("click", function(){
     avatarFlyout = $('<div />', {
       id: 'activeComment',
       class: 'video-comment-flybelow',
-      text: comment_user + " said: " + comment_content
+      text: comment_user + " said: " + comment_content + " at " + comment_timestamp
     });
     setTimeout(function(){
       hoveredAvatar.append(avatarFlyout).fadeIn(1000);
