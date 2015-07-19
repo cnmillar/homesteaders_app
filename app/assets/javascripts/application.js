@@ -18,9 +18,6 @@
 //= require jquery.paging
 //= require new_comment
 //= require_self
-//= require js/jquery.magnific-popup
-//= require photoswipe.min
-//= require photoswipe-ui-default.min
 //= require jquery.royalslider.min
 //= require homesteader
 

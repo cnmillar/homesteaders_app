@@ -1,93 +1,26 @@
 
 $(function($){
 
-//ADD TO PREVENT # FROM SHOWING IN URL
-  // $("a.noclick").on("click", function(e) {
-  //   e.preventDefault;
-  // })
-
-  // $('.zoom-gallery').magnificPopup({
-  //   delegate: 'a',
-  //   type: 'image',
-  //   closeOnContentClick: false,
-  //   closeBtnInside: false,
-  //   mainClass: 'mfp-with-zoom mfp-img-mobile',
-  //   image: {
-  //     verticalFit: true,
-  //     titleSrc: function(item) {
-  //      var caption = item.el.attr('title');
-
-  //                       var pinItURL = "http://pinterest.com/pin/create/button/";
-
-  //                       // Refer to http://developers.pinterest.com/pin_it/
-  //                       pinItURL += '?url=' + 'http://dimsemenov.com/plugins/magnific-popup/';
-  //                       pinItURL += '&media=' + item.el.attr('href');
-  //                       pinItURL += '&description=' + caption;
-
-
-  //                       return caption + ' &middot; <a class="pin-it" href="'+pinItURL+'" target="_blank"><img src="http://assets.pinterest.com/images/pidgets/pin_it_button.png" /></a>';
-  //     }
-  //   },
-  //   gallery: {
-  //     enabled: true,
-  //     navigateByImgClick: true
-  //   },
-  //   zoom: {
-  //     enabled: true,
-  //     duration: 300, // don't foget to change the duration also in CSS
-  //     opener: function(element) {
-  //       return element.find('img');
-  //     }
-  //   }
-    
-  // });
 /////////////
 
 // Initializes and opens PhotoSwipe
 
-$("#gallery").on("click", function(){
-  var pswpElement = document.querySelectorAll('.pswp')[0];
-
-  var images = $(this).data("images"); 
-  var items1 = []; 
-  for (var i=0; i < Object.keys(images).length; i++) {
-    items1.push({
-      src: images[i].url,
-      description: images[i].description,
-      user: images[i].user,
-      created_at: images[i].created_at,
-      w: 1200,
-      h: 900
-    })
-  }
-  // build items array
-  var items = [
-      {
-          src: 'http://images.medicaldaily.com/sites/medicaldaily.com/files/2013/08/04/0/62/6259.jpg',
-          w: 600,
-          h: 400
-      },
-      {
-          src: 'http://www.vvcofhamburg.com/wp-content/uploads/2015/07/little_cute_cat_1920x1080.jpg',
-          w: 1200,
-          h: 900
-      }
-  ];
-
-  // define options (if needed)
-  var options = {
-      // optionName: 'option value'
-      // for example:
-      index: 0 // start at first slide
-  };
-  var gallery = new PhotoSwipe( pswpElement, PhotoSwipeUI_Default, items, options);
-  gallery.init();
-})
-
   $(".royalSlider").royalSlider({
       // options go here
       // as an example, enable keyboard arrows nav
-      keyboardNavEnabled: true
+      globalCaption: true,
+      keyboardNavEnabled: true,
+      autoScaleSlider: true,
+      fullscreen: {
+        // fullscreen options go gere
+        enabled: true,
+        nativeFS: false
+      },
+      autoPlay: {
+        // autoplay options go gere
+        enabled: true,
+        pauseOnHover: true
+      }
   }); 
 
 
