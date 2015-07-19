@@ -13,6 +13,7 @@
  *= require_tree .
  *= require social-share-button
  *= require rs-default
+ *= require leaflet
  *= require_self
  
  */
@@ -417,5 +418,8 @@ body {
     background-repeat: no-repeat;
   }
 
-  //leaflet map styling
+#map {
+  width: 400px;
+  height: 400px;
+}
 

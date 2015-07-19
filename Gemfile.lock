@@ -64,6 +64,7 @@ GEM
       addressable
       faraday
       multi_json
+    leaflet-rails (0.7.4)
     mail (2.5.4)
       mime-types (~> 1.16)
       treetop (~> 1.4.8)
@@ -173,6 +174,7 @@ DEPENDENCIES
   jbuilder (~> 1.2)
   jquery-rails
   koala (~> 2.0)
+  leaflet-rails
   omniauth-facebook
   pry
   rails (= 4.0.0)
