@@ -346,3 +346,28 @@ body {
       // height: 300px;
     }
   }
+
+  ////////////
+  // toggle styling
+
+  #favourited-true {
+    background: url('/svg/heart213_hover.png');
+    background-repeat: no-repeat;
+    background-size: 40px, 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #favourited-false {
+    background: url('/svg/heart213.svg');
+    background-repeat: no-repeat;
+    background-size: 40px, 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #favourited-false:hover {
+    background: url('/svg/heart213_hover.png');
+    background-size: 40px, 40px;
+    background-repeat: no-repeat;
+  }

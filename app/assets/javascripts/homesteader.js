@@ -1,6 +1,11 @@
 
 $(function($){
 
+//// toggle jquery
+$("#favourited-by-user").on("click", function(){
+  $("#favourited").css("background", "url('/svg/heart213_hover.png')").css("background-size", "40px, 40px");
+})
+
 /////////////
 
 // Gallery JS

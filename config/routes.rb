@@ -7,9 +7,6 @@ HeApp::Application.routes.draw do
   # You can have the root of your site routed with "root"
   root to: 'pages#home'
 
-  # post "/session/login", to: 'users#login'
-  # get "/session/logout", to: 'users#logout'
-
   resources :home, only: [:index]
   resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
@@ -35,6 +32,10 @@ HeApp::Application.routes.draw do
   resources :users do
     resources :comments
   end
+
+resources :user_projects do  
+  get 'toggle_favourite', :on => :member  
+end 
 
   get '/users/:user_id/comments/:id' => 'comments#show'
 end
