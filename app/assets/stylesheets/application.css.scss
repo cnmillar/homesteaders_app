@@ -20,7 +20,7 @@
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
 
-h1, h2, h3 {
+h1, h2, h3, h4 {
   color: $primary-color;
   margin: .4em
 }
@@ -30,11 +30,19 @@ h1, h2, h3 {
   padding: 1em;
 }
 
+a {
+  color: $secondary-color;
+}
+
 nav {
   height: 100px;
   width: 100%;
   border: 1px black dotted;
   color: $primary-color;
+}
+
+p {
+  margin-left: 1em;
 }
 
 .top-bar {
@@ -191,6 +199,19 @@ nav {
   margin: 20px 50px;
   padding: 1em;
   font-size: 2em;
+}
+
+.project-image-thumb {
+  width: 200px;
+  max-height: 140px;
+}
+
+.project-image-thumb:hover {
+  outline: $secondary-color, 3px, solid;
+}
+
+.project-result {
+  padding: 1em;
 }
 
 .pagination {
