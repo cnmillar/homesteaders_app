@@ -4,24 +4,31 @@
 	<p><%= @all_comments.length %> comments </p>
 
 	<!-- total number of times this project was favourited -->
-	<% if @user_project && @user_project.favourited %>
-		<div id="favourited-true"></div>
-	<% else %>
-		<%= link_to('javascript:null', :id => "favourited-by-user") do %>
-			<div id="favourited-false"></div>
+	<% if current_user %>
+		<% if @user_project && @user_project.favourited %>
+			<div id="favourited-true"></div>
+		<% else %>
+			<%= link_to('javascript:null', :id => "favourited-by-user") do %>
+				<div id="favourited-false"></div>
+			<% end %>
 		<% end %>
+	<% else %>
+			<div id="favourited-true"></div>
 	<% end %>
 
 	<p><span id="favourite-count"><%= @fav_count %></span> favourited </p>
 
 	<!-- total number of times the project was completed -->
-
-	<% if @user_project && @user_project.completed %>
-		<div id="completed-true"></div>
-	<% else %>
-		<%= link_to('javascript:null', :id => "completed-by-user") do %>
-			<div id="completed-false"></div>
+	<% if current_user %>
+		<% if @user_project && @user_project.completed %>
+			<div id="completed-true"></div>
+		<% else %>
+			<%= link_to('javascript:null', :id => "completed-by-user") do %>
+				<div id="completed-false"></div>
+			<% end %>
 		<% end %>
+	<% else %>
+			<div id="completed-true"></div>
 	<% end %>
 	<p><span id="complete-count"><%= @comp_count %></span> projects completed </p>
 
@@ -33,7 +40,7 @@
 		$("#favourited-by-user").on("click", function(){
 		  <% if @user_project %>
 			  <%= @user_project.update_attributes(:favourited => true) %>
-		  <% else %>
+		  <% elsif current_user %>
 			  <%= current_user.user_projects.create(project_id: @project.id, favourited: true) %>
 		  <% end %>
 		});
@@ -41,7 +48,7 @@
 		$("#completed-by-user").on("click", function(){
 		  <% if @user_project %>
 			  <%= @user_project.update_attributes(:completed => true) %>
-		  <% else %>
+		  <% elsif current_user %>
 			  <%= current_user.user_projects.create(project_id: @project.id, completed: true) %>
 		  <% end %>
 		});

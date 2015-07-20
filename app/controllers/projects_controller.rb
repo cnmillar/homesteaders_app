@@ -7,16 +7,18 @@ class ProjectsController < ApplicationController
 	def show
     @current_user = current_user
 		@project = Project.find(params[:id])
-    user_projects = @project.user_projects
     @fav_count = 0
     @comp_count = 0
+    
+    if current_user
+      user_projects = @project.user_projects
 
-    user_projects.each do |user|
-      @fav_count += 1 if user.favourited
-      @comp_count += 1 if user.completed
+      user_projects.each do |user|
+        @fav_count += 1 if user.favourited
+        @comp_count += 1 if user.completed
+      end
+      @user_project = current_user.user_projects.where(project_id: @project.id)[0]
     end
-
-    @user_project = current_user.user_projects.where(project_id: @project.id)[0]
 
 		@equipment = @project.ingredients.where(ing_type: "equipment")
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")
