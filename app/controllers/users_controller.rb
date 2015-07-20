@@ -17,6 +17,10 @@ class UsersController < ApplicationController
     redirect_to '/'
   end
 
+  def inbox
+    @conversations = current_user.conversations
+  end
+
   private
 
   def user_params

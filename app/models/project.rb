@@ -13,9 +13,6 @@ class Project < ActiveRecord::Base
 
 	scope :search, -> (title) { where("title like ?", "%" + title + "%") }
 
-  # scope :search, -> (title) { where("title like %?%", title) }
-
-
 	def youtube_url
     youtube_id = self.video.split("=").last
     "//www.youtube.com/embed/#{youtube_id}"

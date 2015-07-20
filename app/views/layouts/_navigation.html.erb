@@ -12,6 +12,9 @@
         <li><a href="#">Popular</a></li>
         <li><a href="/users/1">Usr #1</a></li>
         <li><a href="/projects/2">Pjct #2</a></li>
+        <% if current_user %>
+          <li><a href=<%= "/users/#{current_user.id}/inbox" %> >Inbox</a></li>
+        <% end %>
       </ul>
     </section>
       <%= render 'pages/login' %>

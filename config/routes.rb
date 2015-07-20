@@ -10,13 +10,14 @@ HeApp::Application.routes.draw do
   resources :home, only: [:index]
   resources :categories, only: [:index, :show]
   resources :projects, only: [:index, :show]
-  resources :users, only: [:new, :show]
+  resources :users, only: [:new, :show, :inbox]
   resources :comments, only: [:create]
   resources :user_projects, only: [:show]
   resources :images, only: [:create]
   
   # get "/users/:id", to: 'users#show'
   get "/about", to: 'pages#about'
+  get "/users/:id/inbox", to: 'users#inbox'
 
   delete 'logout' => 'sessions#destroy'
   get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail
