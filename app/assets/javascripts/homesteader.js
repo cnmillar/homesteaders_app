@@ -430,7 +430,7 @@ $(function()
   $(".add-comment-general").on("click", function(){
     var currentTime = player.getCurrentTime()
     $("#add-comment-general").slideToggle('slow', function(){})
-    $('#video-time-field').replaceWith('<input id="comment_video_time" type="hidden" name="video_time" value=' + currentTime + '" />');
+    $('#video-time-field').replaceWith('<input id="comment_video_time" type="hidden" name="comment[video_time]" value=' + currentTime + '" />');
     var hours = parseInt( currentTime / 3600 ) % 24;
     var minutes = parseInt( currentTime / 60 ) % 60;
     var seconds = Math.round(currentTime % 60);
