@@ -546,3 +546,11 @@ body {
     margin-top: -5px;
     right: auto;
     top: 50%; } }
+  
+  .messages {
+    overflow: auto;
+    padding: 50px;
+    margin:20px;
+    width: 100%;
+    position: relative;
+  }

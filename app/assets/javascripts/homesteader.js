@@ -1,6 +1,12 @@
 
 $(function($){
 
+// read message
+
+  $(".read-conversation").on("click", function(){
+    $("#read-message-"+$(this).data("conv-id")).slideToggle('slow', function(){});
+  })
+
 // focus
 
   $("#total-comments").on("click", function(){

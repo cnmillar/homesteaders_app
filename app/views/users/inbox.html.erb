@@ -2,26 +2,56 @@
 
 	<h1>Inbox</h1>
 	<h3>Messages:</h3>
-	<table>
-		<thead>
-			<tr>
-				<td>Read</td>
-				<td>From</td>
-				<td>Subject</td>
-				<td>Date</td>	
-			</tr>
-		</thead>
-		<tbody>
-			<% @conversations.each do |conv| %>
-			<tr>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-					
-			<% end %>	
-		</tbody>
-	
-	</table>
+	<div class="row">
+		<div class="large-2 column">
+			<p>Read</p>
+		</div>
+		<div class="large-2 column">
+			<p>From</p>
+		</div>
+		<div class="large-5 column">
+			<p>Subject</p>
+		</div>
+		<div class="large-3 column">
+			<p>Date</p>
+		</div>
+	</div>
+
+	<% @conversations.each do |conv| %>
+
+		<div class="row read-conversation" data-conv-id=<%= conv.id %>>
+			<div class="large-2 column">
+				<p><%= conv.read %></p>
+			</div>
+			<div class="large-2 column">
+				<p><%= conv.messages.last.user.full_name %></p>
+			</div>
+			<div class="large-5 column">
+				<p><%= link_to(conv.subject, "javascript:null", :id => "read-conversation-#{conv.id}") %></p>
+			</div>
+			<div class="large-3 column">
+				<p><%= conv.messages.last.created_at %></p>
+			</div>
+		</div>
+
+		<div class = "panel messages" id='<%= "read-message-#{conv.id}" %>' style="display:none;">
+			<% conv.messages.each do |message| %>
+				<div>
+					<div class="large-2 columns">
+						<%= link_to(image_tag(message.user.avatar, width: '30%'), "/users/#{message.user.id}") %>
+					</div>
+					<div class="large-6 columns">
+						<p><%= message.body %></p>
+					</div>
+					<div class="large-3 columns">
+						<p><%= message.created_at %></p>
+					</div>
+					<div class="large-1 columns">
+						<button class="reply">Reply</button>
+					</div>
+				<% end %>
+			</div>
+		</div>
+
+	<% end %>	
 </div>
