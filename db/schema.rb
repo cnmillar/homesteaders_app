@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150717235412) do
+ActiveRecord::Schema.define(version: 20150720215112) do
 
   create_table "average_caches", force: true do |t|
     t.integer  "rater_id"
@@ -42,6 +42,15 @@ ActiveRecord::Schema.define(version: 20150717235412) do
 
   add_index "comments", ["commentable_id", "commentable_type"], name: "index_comments_on_commentable_id_and_commentable_type"
 
+  create_table "conversations", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "receiver"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "conversations", ["user_id"], name: "index_conversations_on_user_id"
+
   create_table "images", force: true do |t|
     t.integer  "user_id"
     t.integer  "project_id"
@@ -68,6 +77,17 @@ ActiveRecord::Schema.define(version: 20150717235412) do
   end
 
   add_index "ingredients", ["project_id"], name: "index_ingredients_on_project_id"
+
+  create_table "messages", force: true do |t|
+    t.integer  "user_id"
+    t.text     "body"
+    t.string   "subject"
+    t.boolean  "read"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "messages", ["user_id"], name: "index_messages_on_user_id"
 
   create_table "overall_averages", force: true do |t|
     t.integer  "rateable_id"
