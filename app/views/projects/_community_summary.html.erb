@@ -6,7 +6,9 @@
 	<!-- total number of times this project was favourited -->
 	<% if current_user %>
 		<% if @user_project && @user_project.favourited %>
-			<div id="favourited-true"></div>
+			<%= link_to('javascript:null', :id => "favourited-by-user") do %>
+				<div id="favourited-true"></div>
+			<% end %>
 		<% else %>
 			<%= link_to('javascript:null', :id => "favourited-by-user") do %>
 				<div id="favourited-false"></div>
@@ -21,7 +23,9 @@
 	<!-- total number of times the project was completed -->
 	<% if current_user %>
 		<% if @user_project && @user_project.completed %>
-			<div id="completed-true"></div>
+			<%= link_to('javascript:null', :id => "completed-by-user") do %>
+				<div id="completed-true"></div>
+			<% end %>
 		<% else %>
 			<%= link_to('javascript:null', :id => "completed-by-user") do %>
 				<div id="completed-false"></div>
@@ -38,16 +42,20 @@
 // This script should go into a js.erb partial (e.g., toggle.js.erb) and included using javascript_include_tag("toggle.js.erb") in this view (it is dependent on the local variables in this view). To include this file, it will need to live in the public/javascripts directory, which for now, I would prefer to have closer to where it is needed for debugging purposes.
 	$(function($){
 		$("#favourited-by-user").on("click", function(){
-		  <% if @user_project %>
+		  <% if @user_project && !@user_project.favourited %>
 			  <%= @user_project.update_attributes(:favourited => true) %>
+			<% elsif @user_project && @user_project.favourited %>
+				<%= @user_project.update_attributes(:favourited => false) %>
 		  <% elsif current_user %>
 			  <%= current_user.user_projects.create(project_id: @project.id, favourited: true) %>
 		  <% end %>
 		});
 
 		$("#completed-by-user").on("click", function(){
-		  <% if @user_project %>
+		  <% if @user_project && !@user_project.completed %>
 			  <%= @user_project.update_attributes(:completed => true) %>
+			<% elsif @user_project && @user_project.completed %>
+			  <%= @user_project.update_attributes(:completed => false) %>
 		  <% elsif current_user %>
 			  <%= current_user.user_projects.create(project_id: @project.id, completed: true) %>
 		  <% end %>
