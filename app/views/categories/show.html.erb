@@ -1,2 +1,5 @@
-<h3><%= @category.name %></h3>
-<%= render 'project' %>
+<div class='section'>
+  <h1><%= @category.name %></h1>
+  <p>Projects in this category: <%= @category.projects.length %></p>
+  <%= render 'project' %>
+</div>
