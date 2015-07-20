@@ -1,7 +1,8 @@
 <div class = 'section'>
 	<!-- total number of comments -->
 	<%= link_to('javascript:null', :id => "total-comments") do %>
-		<%= image_tag("/svg/chat34.svg", :alt => "Comments", :width => 40, :height => 40, :title => "Comments") %>
+		<img src="/svg/chat34.svg" width=40 height=40 data-tooltip class="has-tip tip-right" data-width="200" title="Tooltips are awesome, you should totally use them!">
+		<%#= image_tag("/svg/chat34.svg", :alt => "Comments", :width => 40, :height => 40, :title => "Comments") %>
 	<% end %>
 	<p><%= @all_comments.length %> comments </p>
 

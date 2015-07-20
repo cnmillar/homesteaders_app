@@ -17,7 +17,6 @@ $(function($){
       $("#favourited-true").css("background", "url('/svg/heart213.png')").css("background-size", "40px, 40px").attr("id","favourited-false");
       $("#favourite-count").html(parseInt($("#favourite-count").html())-1);      
     }
-
   })
 
   $("#completed-by-user").on("click", function(){

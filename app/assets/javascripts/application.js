@@ -21,5 +21,8 @@
 //= require jquery.royalslider.min
 //= require jquery.magnific-popup.min
 //= require leaflet
+//= require js/foundation/foundation
+//= require modernizr
+//= require js/foundation/foundation.tooltip
 //= require homesteader
 
