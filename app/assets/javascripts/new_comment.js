@@ -50,13 +50,24 @@ $(function()
 
 // Step comments filter
 	$(".steps-ul .filter-step-comments").on("click", function(){
-		var prev = {start: 0, stop: 0},
-	    content = $('.load-comments div.element.Step.' + $(this).data("step-id"));
+		var prev = {start: 0, stop: 0}
+
+		if (!$(".load-comments").data("click")) {
+		  var content = $('.load-comments div.element.Step.' + $(this).data("step-id"));
+		  $(".load-comments").data("click", true);
+		  $('#view-all-comments').css("display","inline");
+		} else {
+		  var content = $('.load-comments div.element');
+		  $(".load-comments").data("click", false);
+		  $('#view-all-comments').css("display","none");
+		}
+
 	  $('.load-comments div.element').css("display", "none");
 	  paginate(content);
-	  $('#view-all-comments').css("display","inline");
 	  if (content.length === 0){
 	  	$("#no-comments").css("display","inline");
+	  } else {
+	  	$("#no-comments").css("display","none");
 	  }
 	});
 

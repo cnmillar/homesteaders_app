@@ -1,6 +1,13 @@
 
 $(function($){
 
+// focus
+
+  $("#total-comments").on("click", function(){
+    $("#add-comment-general").slideToggle('slow', function(){});
+    $("#comment-content").focus();
+  })
+
 //// toggle jquery
   $("#favourited-by-user").on("click", function(){
     if ($("#favourited-false").length > 0){

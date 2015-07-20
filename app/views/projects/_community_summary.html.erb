@@ -1,6 +1,8 @@
 <div class = 'section'>
 	<!-- total number of comments -->
-	<%= image_tag("/svg/chat34.svg", :alt => "Comments", :width => 40, :height => 40, :title => "Comments") %>
+	<%= link_to('javascript:null', :id => "total-comments") do %>
+		<%= image_tag("/svg/chat34.svg", :alt => "Comments", :width => 40, :height => 40, :title => "Comments") %>
+	<% end %>
 	<p><%= @all_comments.length %> comments </p>
 
 	<!-- total number of times this project was favourited -->

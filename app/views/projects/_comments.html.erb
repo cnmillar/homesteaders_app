@@ -12,9 +12,10 @@
 	</div>
 	<%= link_to('View all comments', 'javascript:null', :id => "view-all-comments", :style => "display: none;")  %>
 
-	<div class="load-comments">
+	<div class="load-comments" data-click="false" >
 		<%= render 'paginated_comments' %>
 	</div>
+
 	<p id="no-comments" style="display: none;">No comments yet!</p>
 	<div class="pagination" style="text-align: center;"></div>
 </div>
