@@ -12,12 +12,11 @@ class ProjectsController < ApplicationController
     @comp_count = 0
 
     user_projects.each do |user|
-      if user.favourited
-        @fav_count += 1
-      elsif user.completed
-        @comp_count += 1
-      end
+      @fav_count += 1 if user.favourited
+      @comp_count += 1 if user.completed
     end
+
+    @user_project = current_user.user_projects.where(project_id: @project.id)[0]
 
 		@equipment = @project.ingredients.where(ing_type: "equipment")
 		@ingredients = @project.ingredients.where(ing_type: "ingredient")

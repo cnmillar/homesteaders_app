@@ -429,3 +429,26 @@ body {
     background-size: 40px, 40px;
     background-repeat: no-repeat;
   }
+
+
+  #completed-true {
+    background: url('/svg/checkmark_hover.png');
+    background-repeat: no-repeat;
+    background-size: 40px, 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #completed-false {
+    background: url('/svg/checkmark4.png');
+    background-repeat: no-repeat;
+    background-size: 40px, 40px;
+    width: 40px;
+    height: 40px;
+  }
+
+  #completed-false:hover {
+    background: url('/svg/checkmark_hover.png');
+    background-size: 40px, 40px;
+    background-repeat: no-repeat;
+  }
