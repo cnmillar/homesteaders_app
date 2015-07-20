@@ -20,4 +20,3 @@
 //= require jquery.royalslider.min
 //= require jquery.magnific-popup.min.js
 //= require homesteader
-//= require new_comment
