@@ -1,8 +1,0 @@
-<div class = 'search-box right'>
-    <%= form_tag(projects_path, method: "get") do %>
-    <%= text_field_tag :title, params[:title], placeholder: "Search by Project Title", width: "200px" %>
-    <!-- TODO: handle consecutive words that don't match exactly to project title< -->
-</div>
-<% end %>
-
-
