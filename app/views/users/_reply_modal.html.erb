@@ -1,6 +1,6 @@
-<div style="display: none;" id="reply">
+<div style="display: none;" class='<%= "#reply#{conv.id}" %>'>
 	<div id="modal-container">
-	
+
 		<%= form_for Message.new, html: {id: "new_message_#{conv.id}"}, url:{ action: "create", controller: "messages"}, remote: true do |f| %>
 		  <%= f.text_area :body, placeholder: "Reply"%>
 		  <%= f.hidden_field :user_id, :value => current_user.id %>

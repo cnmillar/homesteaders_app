@@ -19,7 +19,7 @@
 
 	<div class="row">
 		<div class="large-1 column">
-			<a href="#reply" rel=<%= "replyModal#{conv.id}" %> id="reply-button" class="button reply-button">Reply</a>		
+			<a href='<%= "#reply#{conv.id}" %>' rel=<%= "reply#{conv.id}Modal" %> id='<%= "reply-button-#{conv.id}" %>' class="button reply-button">Reply</a>		
 		</div>
 		<div class="large-11 columns"></div>
 	</div>
@@ -30,9 +30,10 @@
 
 <script>
 	$(function($){
-
-
-		$('<%= "a[rel*=replyModal#{conv.id}]" %>').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });	
+		$('<%= "#reply-button-#{conv.id}" %>').on("click", function(){
+			debugger;
+			$('<%= "a[rel*=reply#{conv.id}Modal]" %>').leanModal({ top : 200, overlay : 0.4});			
+		})
 
 		function createReply(data){
 	    return '<div class="row"><div class="large-2 columns">'+ 
@@ -45,8 +46,9 @@
 	  }
 
 	  $('<%= "#new_message_#{conv.id}" %>').on("ajax:success", function(e, data, status, xhr){
-	    $("#reply").css("display","none");
+	    $(".reply").css("display","none");
 	    $("#lean_overlay").css("display","none");
+	    $("#message_body").val("");
 	    $('<%= "#read-message-#{conv.id}" %>').append(createReply(data));
 	  })
 
