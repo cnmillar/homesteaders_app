@@ -17,6 +17,7 @@ HeApp::Application.routes.draw do
   resources :messages, only: [:create]
   resources :conversations, only: [:create]
   
+  put '/update_new_message/:id', to: "conversations#update_new_message", as: :update_new_message
   # get "/users/:id", to: 'users#show'
   get "/about", to: 'pages#about'
   get "/users/:id/inbox", to: 'users#inbox'

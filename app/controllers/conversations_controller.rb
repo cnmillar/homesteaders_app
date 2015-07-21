@@ -5,7 +5,7 @@ class ConversationsController < ApplicationController
 		@conversation.user_id = conversation_params[:user_id]
 		@conversation.receiver = conversation_params[:receiver]
 		@conversation.subject = conversation_params[:subject]
-		@conversation.read = false
+		@conversation.new_message = @conversation.receiver
 
 		respond_to do |format|
 
@@ -25,6 +25,11 @@ class ConversationsController < ApplicationController
         format.json{render json: {error_message: "Unable to send message"}}
       end
     end
+	end
+
+	def update_new_message
+		Conversation.find(params[:id]).update_attributes(new_message: nil)
+		render json: nil, status: :ok
 	end
 
 	private
