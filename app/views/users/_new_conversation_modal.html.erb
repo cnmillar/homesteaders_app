@@ -1,10 +1,10 @@
 <div id="new-conversation" style="display: none;">
 	<div id="modal-container-conv">
 
-		<%= form_for Conversation.new, remote: true do |f| %>
+		<%= form_for @conversation, remote: true do |f| %>
 		  <%= f.text_field :subject, placeholder: "Subject" %>
 
-	    <%= f.fields_for Message.new do |m| %>
+	    <%= f.fields_for @conversation.messages.new do |m| %>
 	      <%=m.text_field :body, placeholder: "Message" %>
 	    <% end %>
 

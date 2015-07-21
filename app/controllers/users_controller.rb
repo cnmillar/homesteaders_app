@@ -10,7 +10,9 @@ class UsersController < ApplicationController
     @user_projects =  UserProject.where(user_id: @user.id)
     @images=[]
     @comments = @user.comments
-	end
+
+    @conversation = Conversation.new
+  	end
 
   def callback
     request.env['omniauth.auth']
