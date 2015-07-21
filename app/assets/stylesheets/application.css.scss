@@ -328,12 +328,14 @@ body {
 }
 
 .individual-comment-content p {
-  margin-left: 1em;
   display: block;
+  margin-left: 5.5em;
+  margin-top: .5em;
+  line-height: 1;
 }
 
 .individual-comment .timestamp {
-  color: #666;
+  color: #CCC;
 }
 
 #footer {
