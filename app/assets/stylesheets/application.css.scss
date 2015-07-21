@@ -327,7 +327,7 @@ body {
   width: 100%;
 }
 
-.section-header h4 {
+.section-header h3, h4 {
   float: left;
 }
 
@@ -366,8 +366,13 @@ hr {
   margin: .5em;
 }
 
-button .comment {
+.comment-button {
   margin-top: 1em;
+}
+
+.comment-button:hover {
+  box-shadow: 0 0 5px $secondary-color;
+  border: 1px solid $secondary-color;
 }
 
 #footer {
