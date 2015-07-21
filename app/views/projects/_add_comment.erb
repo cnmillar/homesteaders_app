@@ -2,7 +2,7 @@
 	<% if current_user %>
 		<%= attach_option = nil %>
 		<%= form_for @project.comments.new, remote: true do |f| %>
-		  <%= f.text_area :content, placeholder: "Comment on this project", id: "comment-content" %>
+		  <%= f.text_area :content, placeholder: "Comment on this project", id: "comment-content", autofocus: true %>
 		  <%= f.hidden_field :commentable_type %>
 		  <%= f.hidden_field :commentable_id %>
 		  <%= f.hidden_field :user_id %>
@@ -10,7 +10,7 @@
 		  <div id="video-time-field"></div>
 		  <%= f.check_box :commentable_type, {class: "commentable-type-checkbox-project"}, "Video", "Project"  %>
 			<div id="video-time-text"></div>	  
-		  <%= f.submit "Comment", class: "button"%>
+		  <%= f.submit "Comment", class: "button radius comment"%>
 		<% end %>
 	<% else %>
 		<p>You must be logged in to make a comment.</p>
