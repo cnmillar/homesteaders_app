@@ -920,10 +920,10 @@ images = [
 	},
 	{
 		user_id: 1,
-		project_id: 1,
-		original: '/app/assets/images/project_gallery/ricotta-2.jpg',
+		project_id: 3,
+		original: '/app/assets/images/project_gallery/yogurt-1.jpg',
 		# resized_image:
-		description:"Mmmmm, cheese!"
+		description:"Yogurt is great!"
 	},
 	{
 		user_id: 1,
@@ -1142,8 +1142,6 @@ images = [
 		# resized_image:
 		# description:
 	}
-
-
 ]
 
 images.each do |img|

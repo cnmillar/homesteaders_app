@@ -16,6 +16,7 @@ HeApp::Application.routes.draw do
   resources :images, only: [:create]
   
   # get "/users/:id", to: 'users#show'
+  get "/about", to: 'pages#about'
 
   delete 'logout' => 'sessions#destroy'
   get :send_project_mail, to: 'projects#send_project_mail', as: :send_project_mail
@@ -32,10 +33,6 @@ HeApp::Application.routes.draw do
   resources :users do
     resources :comments
   end
-
-resources :user_projects do  
-  get 'toggle_favourite', :on => :member  
-end 
 
   get '/users/:user_id/comments/:id' => 'comments#show'
 end

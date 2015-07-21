@@ -1,13 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>HeApp</title>
+  <title>Homesteader's Emporium</title>
   <%= stylesheet_link_tag    "application", media: "all" %>
   <%= javascript_include_tag "application" %>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
-    <%= csrf_meta_tags %>
-  </head>
+
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
+  <%= csrf_meta_tags %>
+</head>
 
 <body>
 <% if current_user %>
@@ -23,4 +24,3 @@
   
 <script src="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
 </body>
-<footer id="footer"><div id="footer">Footer</div></footer>

@@ -1,16 +1,56 @@
 <div class = 'section'>
+	<!-- total number of comments -->
 	<%= image_tag("/svg/chat35.svg", :alt => "Comments", :width => 30, :height => 30, :title => "Comments") %>
 	<p><%= @all_comments.length %> comments </p>
 
-	<% if @user_project && @user_project.favourited %>
-		<div id="favourited-true"></div>
-	<% else %>
-		<%= link_to("", :href => toggle_favourite_user_project_path(@user_project), :remote => true, id: "favourited-by-user") do %>
-			<div id="favourited-false"></div>
+	<!-- total number of times this project was favourited -->
+	<% if current_user %>
+		<% if @user_project && @user_project.favourited %>
+			<div id="favourited-true"></div>
+		<% else %>
+			<%= link_to('javascript:null', :id => "favourited-by-user") do %>
+				<div id="favourited-false"></div>
+			<% end %>
 		<% end %>
+	<% else %>
+			<div id="favourited-true"></div>
 	<% end %>
-	<p><%= @fav_count %> favourited </p>
 
-	<%= image_tag("/svg/checkmark4.svg", :alt => "Completed", :width => 30, :height => 30, :title => "Favourited") %>
-	<p><%= @comp_count %> projects completed</p>
+	<p><span id="favourite-count"><%= @fav_count %></span> favourited </p>
+
+	<!-- total number of times the project was completed -->
+	<% if current_user %>
+		<% if @user_project && @user_project.completed %>
+			<div id="completed-true"></div>
+		<% else %>
+			<%= link_to('javascript:null', :id => "completed-by-user") do %>
+				<div id="completed-false"></div>
+			<% end %>
+		<% end %>
+	<% else %>
+			<div id="completed-true"></div>
+	<% end %>
+	<p><span id="complete-count"><%= @comp_count %></span> projects completed </p>
+
 </div>
+
+<script>
+// This script should go into a js.erb partial (e.g., toggle.js.erb) and included using javascript_include_tag("toggle.js.erb") in this view (it is dependent on the local variables in this view). To include this file, it will need to live in the public/javascripts directory, which for now, I would prefer to have closer to where it is needed for debugging purposes.
+	$(function($){
+		$("#favourited-by-user").on("click", function(){
+		  <% if @user_project %>
+			  <%= @user_project.update_attributes(:favourited => true) %>
+		  <% elsif current_user %>
+			  <%= current_user.user_projects.create(project_id: @project.id, favourited: true) %>
+		  <% end %>
+		});
+
+		$("#completed-by-user").on("click", function(){
+		  <% if @user_project %>
+			  <%= @user_project.update_attributes(:completed => true) %>
+		  <% elsif current_user %>
+			  <%= current_user.user_projects.create(project_id: @project.id, completed: true) %>
+		  <% end %>
+		});
+	});
+</script>

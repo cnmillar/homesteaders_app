@@ -18,5 +18,6 @@
 //= require jquery.paging
 //= require_self
 //= require jquery.royalslider.min
-//= require jquery.magnific-popup.min.js
+//= require jquery.magnific-popup.min
+//= require leaflet
 //= require homesteader

@@ -1,0 +1,33 @@
+<div class='row custom-row section'>
+	<div class='large-4 columns section'>
+		<h3>Mission</h3>
+		<h5>We offer accessible, quality supplies for self-sufficiency, especially those that would otherwise be difficult or inconvenient to source. We offer a continuum of learning options, creating consistently awesome introductory content while tapping into a network of specialists to help people take their skills to higher levels. We forge alliances with grassroots organizations that promote self-sufficiency and sustainability through education.</h5>
+		<h3>Vision</h3>
+		<h5>Our vision is to bring self-sufficiency into the mainstream. We envision a world in which the way things are made is alive in the public's consciousness. We see a greater connection between ourselves, our neighbours, and the products we consume, and from that connection a society of greater understanding, dialogue, and sustainability. We don't imagine that every family will have it's own small farm, but we do imagine that every person will have a friend that is a farmer, and every child will grow up with a basic understanding of where food comes from. Let's get there together!</h5>
+	</div>
+	<div class='large 7 columns section'>
+		<div id="map-canvas">
+		 <div id='map'>
+		 				<script>
+				  // initialize the map
+			$(function($){
+		   var map = L.map('map').setView([49.264676, -123.049826], 12);
+		   var marker = L.marker([49.264676, -123.049826]).addTo(map);
+
+
+		    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+		        maxZoom: 19,
+		    }).addTo(map);
+		  })
+			</script>
+		 	
+		 </div>
+
+			</div>
+	</div>
+
+
+</div>
+
+
