@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
 	has_many :user_projects
 
 	ratyrate_rater
-  mount_uploader :avatar, AvatarUploader
+
+  #Do not delete
+  # mount_uploader :avatar, AvatarUploader
 
 end
