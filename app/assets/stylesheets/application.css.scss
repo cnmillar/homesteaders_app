@@ -20,19 +20,38 @@
 
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
+$tertiary-color: #EDBA3E;
+$font-stack-head: 'Architects Daughter', cursive;
+$font-stack-copy: 'Arvo', serif;
+
+body {
+  font-family: $font-stack-copy;
+}
 
 h1, h2, h3, h4 {
   color: $primary-color;
-  margin: .4em
+  font-family: $font-stack-head;
+  margin: .4em;  
+  margin-left: 0
 }
 
 .section {
-  border: 1px $primary-color dotted;
+/*  border: 1px $primary-color dotted; */
   padding: 1em;
 }
 
 a {
   color: $secondary-color;
+}
+
+input:focus {
+  box-shadow: 0 0 5px $tertiary-color;
+  border: 1px solid $tertiary-color;
+}
+
+textarea:focus {
+  box-shadow: 0 0 5px $secondary-color;
+  border: 1px solid $secondary-color;
 }
 
 nav {
@@ -124,7 +143,8 @@ p {
 
 
 #video-timeline {
-  background-color: #CCC;
+  background-image: image-url("timeline.png");
+  background-repeat: no-repeat;
   margin-bottom: 1em;
   width: 720px;
   height: 32px;
@@ -165,8 +185,21 @@ p {
   padding: .75em;
 }
 
+.comments {
+  width: 720px;
+}
+
+.commentable-type-checkbox-project {
+  display: none;
+}
+
+.commentable-type-checkbox-video {
+  display: block;
+}
+
 #player {
   height: 350px;
+  background: #DDD
 }
 
 .carousel {
@@ -289,16 +322,57 @@ body {
     overflow-y:scroll;
     overflow-x:hidden;
 }
+.section-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.section-header h3, h4 {
+  float: left;
+}
 
 #icon-position, #icon-position-image {
-  text-align: right; 
-  position: absolute; 
-  bottom: 35%; 
-  right: 79%;
+  display: inline-block;
+  margin-top: .7em;
+  float: left;
 }
 
 #icon-position-image {
   right: 51%;
+}
+
+.individual-comment {
+  display: inline-block;
+  width: 100%;
+}
+
+.individual-comment img {
+  float: left;
+  display: inline-block;
+}
+
+.individual-comment-content p {
+  display: block;
+  margin-left: 5.5em;
+  margin-top: .5em;
+  line-height: 1;
+}
+
+.individual-comment .timestamp {
+  color: #CCC;
+}
+
+hr {
+  margin: .5em;
+}
+
+.comment-button {
+  margin-top: 1em;
+}
+
+.comment-button:hover {
+  box-shadow: 0 0 5px $secondary-color;
+  border: 1px solid $secondary-color;
 }
 
 #footer {

@@ -1,14 +1,12 @@
-<div class = 'comments section' id="comments">
-	<div class="row" style="position: relative;">
-			<h3>Comments</h3>
+<div class='comments section' id="comments">
+	<div class='section-header'>
+		<h4>Comments</h4>
 		<div id="icon-position">
 			<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-general") %>
 		</div>
 	</div>
 	<div id="add-comment-general" style="display: none;">
-		<div class="panel">
-			<%= render 'add_comment' %>
-		</div>
+		<%= render 'add_comment' %>
 	</div>
 	<%= link_to('View all comments', 'javascript:null', :id => "view-all-comments", :style => "display: none;")  %>
 
@@ -18,4 +16,5 @@
 
 	<p id="no-comments" style="display: none;">No comments yet!</p>
 	<div class="pagination" style="text-align: center;"></div>
+
 </div>

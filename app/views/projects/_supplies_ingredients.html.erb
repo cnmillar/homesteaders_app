@@ -9,13 +9,13 @@
 					</div>
 
 					<div class="large-9 column">
-						<h5 style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+						<p style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></p>
 					</div>
 
 				<% else %>
 					<div class="large-1 no-collapse column">   </div>
 					<div class="large-9 column">
-						<h5 style="display: inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+						<p style="display: inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></p>
 					</div>
 				<% end %>
 
@@ -34,7 +34,7 @@
 		<li id='<%= "add-comment-ing#{ing.id}" %>' style="display:none;">
 			<div class="panel">
 				<% if current_user %>
-				  <h5>Add a comment:</h5>
+				  <p>Add a comment:</p>
 					<%= form_for ing.comments.new, :html => { :class => "ing-comment-id" }, remote: true do |f| %>
 					  <%= f.text_area :content, placeholder: "Comment on this ingredient.", id: "ing-comment-content" %>
 					  <%= f.hidden_field :commentable_type %>
@@ -44,7 +44,7 @@
 					  <%= f.submit "Comment", class: "button ing-comment-button", data: {"ing_id" => ing.id}%>
 					<% end %>
 				<% else %>
-					<h5>You must be logged in to make a comment.</h5>
+					<p>You must be logged in to make a comment.</p>
 				  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
 				<% end %>
 			</div>

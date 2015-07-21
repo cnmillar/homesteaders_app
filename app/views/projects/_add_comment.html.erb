@@ -1,13 +1,19 @@
-<% if current_user %>
-	<%= form_for @project.comments.new, remote: true do |f| %>
-	  <%= f.text_area :content, placeholder: "Comment on this project", id: "comment-content" %>
-	  <%= f.hidden_field :commentable_type %>
-	  <%= f.hidden_field :commentable_id %>
-	  <%= f.hidden_field :user_id %>
-	  <%= f.hidden_field :project_id, :value => @project.id %>
-	  <%= f.submit "Comment", class: "button"%>
+<div class="panel">
+	<% if current_user %>
+		<%= attach_option = nil %>
+		<%= form_for @project.comments.new, remote: true do |f| %>
+		  <%= f.text_area :content, placeholder: "Comment on this project", id: "comment-content", autofocus: true %>
+		  <%= f.hidden_field :commentable_type %>
+		  <%= f.hidden_field :commentable_id %>
+		  <%= f.hidden_field :user_id %>
+		  <%= f.hidden_field :project_id, :value => @project.id %>
+		  <div id="video-time-field"></div>
+		  <%= f.check_box :commentable_type, {class: "commentable-type-checkbox-project"}, "Video", "Project"  %>
+			<div id="video-time-text"></div>	  
+		  <%= f.submit "Comment", class: "button comment-button radius"%>
+		<% end %>
+	<% else %>
+		<p>You must be logged in to make a comment.</p>
+	  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
 	<% end %>
-<% else %>
-	<h5>You must be logged in to make a comment.</h5>
-  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
-<% end %>
+</div>

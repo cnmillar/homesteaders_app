@@ -16,10 +16,10 @@
 			<li>
 				<% if ing.availability %>
 					<input type="checkbox" class="shopify_cart" data-shopifyid = <%= ing.shopify_id %> data-quantity = <%= ing.unit_size %>>
-						<h5 style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+						<p style="display:inline;"><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></p>
 					</input>
 				<% else %>
-						<h5><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></h5>
+						<p><%= ing.unit_size %> <%= ing.unit_measure %>  <%= ing.name %></p>
 				<% end %>
 			</li>
 		<% end %>	

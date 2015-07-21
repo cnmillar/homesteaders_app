@@ -1,6 +1,6 @@
 <div class = 'section'>
 
-	<div class="row" style="position: relative;">
+	<div class="section-header">
 			<h3>Community Gallery</h3>
 		<div id="icon-position-image">
 			<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add image to gallery", :width => 20, :height => 20, :title => "Add image to gallery"), "javascript:null", :class => "add-image") %>
@@ -33,7 +33,7 @@
 			<% @project.images.each do |image| %>
 				<a class="rsImg" href=<%= image.original_url %>>
 	        <div class="rsTmb">
-	          <h5><%= image.description %></h5>
+	          <h4><%= image.description %></h4>
 	          <p>By <%= image.user.full_name %></p>
 	        </div>
 				</a>

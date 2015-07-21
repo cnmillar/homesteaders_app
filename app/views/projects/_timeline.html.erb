@@ -1,15 +1,12 @@
-  <div id = "video-timeline">
-
-    <% @video_comments.each do |comment| %>
-      <div class = 'video-comment' data-comment-id="<%= comment.id %>" data-comment-user-name="<%= comment.user.full_name %>" data-comment-timestamp="<%= comment.video_time %>">      
-      <%= image_tag(comment.user.avatar,
-        class: 'video-comment-avatar', 
-        :style => "left: #{comment.video_time}px") %>
-      </div> 
-
-      <div id="comment_id_<%=comment.id%>" style="display: none;">
-        <%= comment.content %>
-      </div>
-    <% end %>
-
-  </div>
+<div id="video-timeline">
+  <% @video_comments.each do |comment| %>
+    <div class = 'video-comment' data-comment-id="<%= comment.id %>" data-comment-user-name="<%= comment.user.full_name %>" data-comment-timestamp="<%= comment.video_time %>">      
+    <%= image_tag(comment.user.avatar,
+      class: 'video-comment-avatar', 
+      :style => "left: #{comment.video_time}px") %>
+    </div> 
+    <div id="comment_id_<%=comment.id%>" style="display: none;">
+      <%= comment.content %>
+    </div>
+  <% end %>
+</div>
