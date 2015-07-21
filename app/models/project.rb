@@ -11,7 +11,9 @@ class Project < ActiveRecord::Base
 	
 	ratyrate_rateable 'overall'
 
-  scope :search, -> (title) { where("title like %?%", title) }
+	scope :search, -> (title) { where("title like ?", "%" + title + "%") }
+
+  # scope :search, -> (title) { where("title like %?%", title) }
 
 
 	def youtube_url

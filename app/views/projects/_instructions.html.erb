@@ -14,12 +14,12 @@
 
 	        <div class="large-2 column">
 	          <span class="count-icon">
-	            <%= link_to("javascript:void(0)", "data-step-id" => step.id, "data-comments" => step.comments.to_json, :class => "filter-step-comments") do %>
-	              <%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+	            <%= link_to("javascript:null", "data-step-id" => step.id, "data-comments" => step.comments.to_json, :class => "filter-step-comments") do %>
+	              <%= image_tag("/svg/chat34.svg", :alt => "Instruction comments", :width => 25, :height => 25, :title => "Instruction comments") %>
 	              <span class='<%= "step-count #{step.id}" %>'><%= step.comments.length %></span>             
 	            <% end %>
 	          </span>
-	          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-step", "data-step-id" => step.id) %>
+	          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 25, :height => 25, :title => "Add comment"), "javascript:null", :class => "add-comment-step", "data-step-id" => step.id) %>
 	        </div>
 	        
 	      </div>

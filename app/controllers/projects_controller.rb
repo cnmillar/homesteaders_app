@@ -1,6 +1,12 @@
 class ProjectsController < ApplicationController
 
 	def index
+      #   title = params[:title]
+      # if title
+      #   @projects = Project.search(title)
+      # else
+      #  @projects = Project.all
+      # end
     params[:title] ? @projects = Project.search(params[:title]) : @projects = Project.all
 	end
 
@@ -42,7 +48,7 @@ class ProjectsController < ApplicationController
     end
   end
 
-  # protected
+  protected
 
 
   def projects_params

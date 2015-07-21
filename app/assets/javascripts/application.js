@@ -16,10 +16,11 @@
 //= require jquery.raty
 //= require ratyrate
 //= require jquery.paging
-//= require new_comment
 //= require_self
 //= require jquery.royalslider.min
 //= require jquery.magnific-popup.min
 //= require leaflet
+//= require js/foundation/foundation
+//= require modernizr
+//= require js/foundation/foundation.tooltip
 //= require homesteader
-
