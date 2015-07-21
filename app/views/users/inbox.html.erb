@@ -1,28 +1,37 @@
 <div class="section">
+	<div class = "row">
+		<div class="large-1 columns">
+			<h1>Inbox</h1>
+		</div>
+		<div class="large-9 column no-collapse">
 
-	<h1>Inbox</h1>
+		</div>
+		<div class="large-2 columns">
+			<%= link_to(image_tag("/svg/plus35.svg", :alt => "conversationModal", :width => 40, :height => 40, :title => "Start a new conversation"), "#new-conversation") %>
+		</div>
+	</div>
+
 	<h3>Messages:</h3>
 	<div class="row">
-		<div class="large-2 column">
-			<p>Read</p>
+		<div class="large-1 column">
+			<h3>#</h3>
 		</div>
 		<div class="large-2 column">
-			<p>From</p>
+			<h3>Read</h3>
+		</div>
+		<div class="large-2 column">
+			<h3>From</h3>
 		</div>
 		<div class="large-5 column">
-			<p>Subject</p>
+			<h3>Subject</h3>
 		</div>
-		<div class="large-3 column">
-			<p>Date</p>
+		<div class="large-2 column">
+			<h3>Date</h3>
 		</div>
 	</div>
 
 	<% @conversations.each do |conv| %>
-
-		<%= render partial: "conversation", collection: @conversations, locals: {conv: conv} %>
-
-		<%= render partial: "messages", collection: @conversations, locals: {conv: conv} %>
-
+		<%= render partial: "conversation", locals: {conv: conv} %>
+		<%= render partial: "messages", locals: {conv: conv} %>
 	<% end %>	
 </div>
-

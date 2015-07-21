@@ -1,14 +1,18 @@
 <div class="row read-conversation" data-conv-id=<%= conv.id %>>
-	<div class="large-2 column">
+	<div class="large-1 columns">
+		<p><%= conv.messages.length %></p>
+	</div>
+	<div class="large-2 columns">
 		<p><%= conv.read %></p>
 	</div>
-	<div class="large-2 column">
+	<div class="large-2 columns">
 		<p><%= conv.messages.last.user.full_name %></p>
 	</div>
-	<div class="large-5 column">
+	<div class="large-5 columns">
 		<p><%= link_to(conv.subject, "javascript:null", :id => "read-conversation-#{conv.id}") %></p>
 	</div>
-	<div class="large-3 column">
+	<div class="large-2 columns">
 		<p><%= conv.messages.last.created_at %></p>
 	</div>
 </div>
+

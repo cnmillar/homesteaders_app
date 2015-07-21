@@ -23,7 +23,6 @@
 //= require leaflet
 //= require js/foundation/foundation
 //= require modernizr
-//= require js/foundation/foundation.tooltip
-//= require jquery.avgrund
+//= require jquery.leanModal.min
 //= require homesteader
 

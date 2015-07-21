@@ -1,4 +1,9 @@
 <div class = "profile-user-info section">
 	<h2><%= @user.full_name %></h2>
   <%= image_tag(@user.avatar) %>
+  <% if current_user.id != params[:id].to_i %>
+	  <a href="#new-conversation" rel="conversationModal">Message this person</a>
+	<% end %>
 </div>
+
+<%= render "new_conversation_modal" %>

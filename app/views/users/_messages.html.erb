@@ -1,26 +1,57 @@
-<div class = "panel messages" id='<%= "read-message-#{conv.id}" %>' style="display:none;">
+<div class = "panel messages" id='<%= "messages#{conv.id}" %>' style="display:none;">
 
-	<% conv.messages.each do |message| %>
-		<div class="row">
-			<div class="large-2 columns">
-				<%= link_to(image_tag(message.user.avatar, width: '30%'), "/users/#{message.user.id}") %>
+	<div id='<%= "read-message-#{conv.id}" %>'>
+		<% conv.messages.each do |message| %>
+			<div class="row">
+				<div class="large-2 columns">
+					<%= link_to(image_tag(message.user.avatar, width: '30%'), "/users/#{message.user.id}") %>
+				</div>
+				<div class="large-6 columns">
+					<p><%= message.body %></p>
+				</div>
+				<div class="large-4 columns">
+					<p><%= message.created_at %></p>
+				</div>
 			</div>
-			<div class="large-6 columns">
-				<p><%= message.body %></p>
-			</div>
-			<div class="large-4 columns">
-				<p><%= message.created_at %></p>
-			</div>
-		</div>
-	<% end %>
+		<% end %>
+	</div>
 	<br>
+
 	<div class="row">
 		<div class="large-1 column">
-			<a href="#" id="reply-button" class="button">Reply</a>		
+			<a href="#reply" rel=<%= "replyModal#{conv.id}" %> id="reply-button" class="button reply-button">Reply</a>		
 		</div>
 		<div class="large-11 columns"></div>
 	</div>
 
+	<%= render partial: "reply_modal", collection: @conversations, locals: {conv: conv} %>
+
 </div>
 
-<%= render "reply_modal" %>
+<script>
+$(function($){
+
+	$(".reply-button").on("click", function(){
+		debugger;
+		$('<%= "a[rel*=replyModal#{conv.id}]" %>').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });	
+	})
+
+	function createReply(data){
+    return '<div class="row"><div class="large-2 columns">'+ 
+    '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + $("#avatar").data("avatar") + '", width: "30%"></img></a>' + 
+    '</div><div class="large-6 columns">' + 
+    '<p>' + data.body + '</p>' + 
+    '</div><div class="large-4 columns">' + 
+    '<p>' + data.created_at + '</p>' + 
+    '</div></div>'
+  }
+
+  $('<%= "#new_message_#{conv.id}" %>').on("ajax:success", function(e, data, status, xhr){
+    $("#reply").css("display","none");
+    $("#lean_overlay").css("display","none");
+    $('<%= "#read-message-#{conv.id}" %>').append(createReply(data));
+  })
+
+})
+</script>
+

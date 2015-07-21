@@ -1,3 +1,15 @@
-<div id="reply">
-	<%= form_for conv.messages.new %>
+<div style="display: none;" id="reply">
+	<div id="modal-container">
+	
+		<%= form_for Message.new, html: {id: "new_message_#{conv.id}"}, url:{ action: "create", controller: "messages"}, remote: true do |f| %>
+		  <%= f.text_area :body, placeholder: "Reply"%>
+		  <%= f.hidden_field :user_id, :value => current_user.id %>
+		  <%= f.hidden_field :conversation_id, :value => conv.id %>
+		  <%= f.hidden_field :avatar, :value => current_user.avatar %>
+		  <%= f.submit "Send", id: "reply-button", class: "button" %>
+		<% end %>
+
+		<input type="hidden" data-avatar = <%= current_user.avatar %> id="avatar"/>
+
+	</div>
 </div>

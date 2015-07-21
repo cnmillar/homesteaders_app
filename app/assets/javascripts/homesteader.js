@@ -1,28 +1,12 @@
 
 $(function($){
 
-  $('#reply-button').avgrund({
-    width: 700, // max is 640px
-    height: 400, // max is 350px
-    showClose: true, // switch to 'true' for enabling close button
-    showCloseText: '', // type your text for close button
-    closeByEscape: true, // enables closing popup by 'Esc'..
-    closeByDocument: true, // ..and by clicking document itself
-    holderClass: '', // lets you name custom class for popin holder..
-    overlayClass: '', // ..and overlay block
-    enableStackAnimation: true, // another animation type
-    onBlurContainer: '', // enables blur filter for specified block
-    openOnEvent: true, // set to 'false' to init on load
-    setEvent: 'click', // use your event like 'mouseover', 'touchmove', etc.
-    // onLoad: function (elem) { ... }, // set custom call before popin is inited..
-    // onUnload: function (elem) { ... }, // ..and after it was closed
-    template: $("#reply").detach()
-  });
+  $('a[rel*=conversationModal]').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
 
 // read message
 
   $(".read-conversation").on("click", function(){
-    $("#read-message-"+$(this).data("conv-id")).slideToggle('slow', function(){});
+    $("#messages"+$(this).data("conv-id")).slideToggle('slow', function(){});
   })
 
 // focus
