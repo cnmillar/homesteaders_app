@@ -16,11 +16,13 @@ class SessionsController < ApplicationController
 
       full_name = auth_hash[:info][:name]
       facebook_id =  auth_hash[:uid]
-      avatar = auth_hash[:info][:image]
+      avatar_url = auth_hash[:info][:image]
       email =  obj["email"]
+      
+      user = User.new(facebook_id: facebook_id, full_name: full_name, email: email)
+      user.remote_avatar_url = avatar_url
+      user.save!
 
-      user = User.create(facebook_id: facebook_id, full_name: full_name, avatar: avatar, email: email)
-  
     end
     session[:user_id] = user.id
     @current_user = current_user

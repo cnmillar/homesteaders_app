@@ -8,5 +8,6 @@ class User < ActiveRecord::Base
 	has_many :user_projects
 
 	ratyrate_rater
+  mount_uploader :avatar, AvatarUploader
 
 end
