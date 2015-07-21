@@ -119,7 +119,7 @@ $(function($){
       timelineX = 0
     }
     var newAvatar = $('<div />').addClass('video-comment-avatar').html('<img src = "https://placekitten.com/g/32/32" />').css({'left': timelineX, 'top' : 0 });
-    $('#video-timeline').append(newAvatar);
+    $('#video-timeline').append(newAvatar);    
   });
 
 // Hover state for comment markers
@@ -409,15 +409,33 @@ $(function()
 // Jquery to add comment to page on form submission without page reload
 
   function createComment(data){
-    console.log(data);
-  return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
-      '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+ " " + 
-      APP.userName +  " " +       
-      data.content + " " + 
-      data.created_at + " " +
-      '<small>('+ data.commentable_type +')</small> ' + 
-      '<hr>' + 
-    '</div>'
+    // Add avatar to timeline if video comment
+    if (data.commentable_type == "Video") {
+    
+      // This first part duplicates stuff below so could be made DRYer    
+      totalTime = player.getDuration();
+      percentComplete = data.video_time/totalTime;
+
+      //Subtract 10 so that the avatar is centered on the timestamp.
+      timelineX = percentComplete*720 - 10;
+
+      //If timelineX is now less than 0, reset to 0
+      if (timelineX < 0) {
+      timelineX = 0
+      } 
+      
+      newAvatar = $('<div />').addClass('video-comment-avatar').html("'<img src = ' + APP.userName />").css({'left': timelineX, 'top' : 0 });
+      $('#video-timeline').append(newAvatar);
+    }
+
+    return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
+        '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+ " " + 
+        APP.userName +  " " +       
+        data.content + " " + 
+        data.created_at +  
+        '<small>('+ data.commentable_type +')</small> ' + 
+        '<hr>' + 
+      '</div>'
   }
 
   $(".new_comment").on("ajax:success", function(e, data, status, xhr){
