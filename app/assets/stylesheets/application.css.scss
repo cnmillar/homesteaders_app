@@ -300,6 +300,7 @@ body {
 }
 .section-header {
   display: inline-block;
+  width: 100%;
 }
 
 .section-header h3 {
@@ -314,6 +315,25 @@ body {
 
 #icon-position-image {
   right: 51%;
+}
+
+.individual-comment {
+  display: inline-block;
+  width: 100%;
+}
+
+.individual-comment img {
+  float: left;
+  display: inline-block;
+}
+
+.individual-comment-content p {
+  margin-left: 1em;
+  display: block;
+}
+
+.individual-comment .timestamp {
+  color: #666;
 }
 
 #footer {
