@@ -16,7 +16,6 @@
 //= require jquery.raty
 //= require ratyrate
 //= require jquery.paging
-//= require new_comment
 //= require_self
 //= require jquery.royalslider.min
 //= require jquery.magnific-popup.min
@@ -25,4 +24,3 @@
 //= require modernizr
 //= require js/foundation/foundation.tooltip
 //= require homesteader
-

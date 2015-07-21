@@ -165,6 +165,14 @@ p {
   padding: .75em;
 }
 
+.commentable-type-checkbox-project {
+  display: none;
+}
+
+.commentable-type-checkbox-video {
+  display: block;
+}
+
 #player {
   height: 350px;
 }
