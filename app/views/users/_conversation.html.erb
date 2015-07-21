@@ -1,4 +1,4 @@
-<div class="row read-conversation" data-conv-id=<%= conv.id %>>
+<div id='<%= "read-conversation#{conv.id}" %>' class="row" data-conv-id=<%= conv.id %>>
 	<div class="large-1 columns">
 		<p><%= conv.messages.length %></p>
 	</div>
@@ -16,4 +16,11 @@
 	</div>
 </div>
 
-<input type="hidden" data-read=<%= conv.read %> class="read">
+<script>
+	$('<%= "#read-conversation#{conv.id}" %>').on("click", function(){
+    $("#messages"+$(this).data("conv-id")).slideToggle('slow', function(){});
+    if(<%= !conv.read %>){
+	    <%= conv.update_attributes(read: true) %>
+    }
+  })
+</script>

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150720222133) do
+ActiveRecord::Schema.define(version: 20150721205235) do
 
   create_table "average_caches", force: true do |t|
     t.integer  "rater_id"
@@ -48,7 +48,7 @@ ActiveRecord::Schema.define(version: 20150720222133) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "subject"
-    t.boolean  "read"
+    t.integer  "new_message"
   end
 
   add_index "conversations", ["user_id"], name: "index_conversations_on_user_id"

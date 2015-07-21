@@ -9,13 +9,6 @@ $(function($){
     $("#conversation_message_body").val("");
   })
 
-
-// read message
-
-  $(".read-conversation").on("click", function(){
-    $("#messages"+$(this).data("conv-id")).slideToggle('slow', function(){});
-  })
-
 // focus
 
   $("#total-comments").on("click", function(){
