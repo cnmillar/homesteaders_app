@@ -20,7 +20,8 @@ class SessionsController < ApplicationController
       email =  obj["email"]
       
       user = User.new(facebook_id: facebook_id, full_name: full_name, email: email)
-      user.remote_avatar_url = avatar_url
+      #Do not delete
+      # user.remote_avatar_url = avatar_url
       user.save!
 
     end
@@ -32,8 +33,6 @@ class SessionsController < ApplicationController
 
   def auth_hash
     request.env['omniauth.auth']
-
-
   end
 
   def destroy
