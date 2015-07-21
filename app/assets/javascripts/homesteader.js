@@ -3,6 +3,14 @@ $(function($){
 
   $('a[rel*=conversationModal]').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
 
+  $("#new_conversation").on("ajax:success", function(e, data, status, xhr){
+    $("#new-conversation").css("display","none");
+    $("#lean_overlay").css("display","none");
+    $("#conversation_subject").val("");
+    $("#conversation_message_body").val("");
+  })
+
+
 // read message
 
   $(".read-conversation").on("click", function(){

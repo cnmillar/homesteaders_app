@@ -5,14 +5,14 @@ class ConversationsController < ApplicationController
 		@conversation.user_id = conversation_params[:user_id]
 		@conversation.receiver = conversation_params[:receiver]
 		@conversation.subject = conversation_params[:subject]
+		@conversation.read = false
 
 		respond_to do |format|
 
       if @conversation && @conversation.save
-      	binding.pry
       	@message = Message.new
-      	@message.body = conversation_params[:message].body
-      	@message.conservation_id = @conversation.id
+      	@message.body = params[:conversation][:message][:body]
+      	@message.conversation_id = @conversation.id
       	@message.user_id = conversation_params[:user_id]
 
       	if @message && @message.save
@@ -30,7 +30,7 @@ class ConversationsController < ApplicationController
 	private
 
 	def conversation_params
-    params.require(:conversation).permit(:subject, :body, :user_id, :receiver, :message)
+    params.require(:conversation).permit(:subject, :body, :user_id, :receiver, :conversation)
 	end
 
 end
