@@ -1,11 +1,13 @@
 <% @all_comments.each do |comment| %>
-	<div class="element <%= comment.commentable_type %> <%= comment.commentable_id %>" style="display:none;">
+  <hr>
+	<div class="element <%= comment.commentable_type %> <%= comment.commentable_id %> individual-comment">
 		<!-- CHECK FOR HELPER ROUTE -->
-		<%= link_to(image_tag(comment.user.avatar, width: '10%'), "/users/#{comment.user.id}") %>	
-		<%= comment.user.full_name %> 			
-		<%= comment.content %>
-		<%= comment.created_at.to_datetime %>	
-		<small>(<%= comment.commentable_type %>)</small>		
-		<hr>
+    <div>
+		  <%= link_to(image_tag(comment.user.avatar, width: '10%'), "/users/#{comment.user.id}") %>
+    </div>				
+    <div class = "individual-comment-content">
+  		<p><%= comment.content %></p>
+      <p><%= link_to comment.user.full_name, user_path(comment.user.id) %> | <span class="timestamp small"><%= comment.created_at.to_datetime %> | (<%= comment.commentable_type %> comment)</span></p>
+    </div>
 	</div>
 <% end %>

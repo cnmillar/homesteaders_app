@@ -23,11 +23,11 @@ $secondary-color: #F2AA0E;
 
 h1, h2, h3, h4 {
   color: $primary-color;
-  margin: .4em
+  margin-left: 0
 }
 
 .section {
-  border: 1px $primary-color dotted;
+/*  border: 1px $primary-color dotted; */
   padding: 1em;
 }
 
@@ -124,7 +124,8 @@ p {
 
 
 #video-timeline {
-  background-color: #CCC;
+  background-image: image-url("timeline.png");
+  background-repeat: no-repeat;
   margin-bottom: 1em;
   width: 720px;
   height: 32px;
@@ -297,16 +298,48 @@ body {
     overflow-y:scroll;
     overflow-x:hidden;
 }
+.section-header {
+  display: inline-block;
+  width: 100%;
+}
+
+.section-header h3 {
+  float: left;
+}
 
 #icon-position, #icon-position-image {
-  text-align: right; 
-  position: absolute; 
-  bottom: 35%; 
-  right: 79%;
+  display: inline-block;
+  margin: .5em;
+  float: left;
 }
 
 #icon-position-image {
   right: 51%;
+}
+
+.individual-comment {
+  display: inline-block;
+  width: 100%;
+}
+
+.individual-comment img {
+  float: left;
+  display: inline-block;
+}
+
+.individual-comment-content p {
+  display: block;
+  margin-left: 5.5em;
+  margin-top: .5em;
+  line-height: 1;
+}
+
+.individual-comment .timestamp {
+  color: #CCC;
+}
+
+hr {
+  margin: .5em;
 }
 
 #footer {
