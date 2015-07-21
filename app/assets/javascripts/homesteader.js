@@ -391,11 +391,12 @@ $(function()
 // Jquery to add comment to page on form submission without page reload
 
   function createComment(data){
+    console.log(data);
   return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
       '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+ " " + 
       APP.userName +  " " +       
       data.content + " " + 
-      data.created_at + " " + 
+      data.created_at + " " +
       '<small>('+ data.commentable_type +')</small> ' + 
       '<hr>' + 
     '</div>'

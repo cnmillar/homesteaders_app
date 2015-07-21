@@ -20,10 +20,18 @@
 
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
+$font-stack-head: 'Architects Daughter', cursive;
+$font-stack-copy: 'Arvo', serif;
+
+body {
+  font-family: $font-stack-copy;
+}
 
 h1, h2, h3, h4 {
   color: $primary-color;
-  margin: .4em
+  font-family: $font-stack-head;
+  margin: .4em;  
+  margin-left: 0
 }
 
 .section {
@@ -175,6 +183,7 @@ p {
 
 #player {
   height: 350px;
+  background: #DDD
 }
 
 .carousel {
