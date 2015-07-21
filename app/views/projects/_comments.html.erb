@@ -1,19 +1,20 @@
-<div class = 'comments section' id="comments">
-	<div class="row" style="position: relative;">
-			<h3>Comments</h3>
-		<div id="icon-position">
-			<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-general") %>
+<div class='comments section' id="comments">
+	<div class='comment-header'>
+		<h3>Comments</h3>
+			<div id="icon-position">
+				<%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-general") %>
+			</div>
 		</div>
-	</div>
-	<div id="add-comment-general" style="display: none;">
-		<%= render 'add_comment' %>
-	</div>
-	<%= link_to('View all comments', 'javascript:null', :id => "view-all-comments", :style => "display: none;")  %>
+		<div id="add-comment-general" style="display: none;">
+			<%= render 'add_comment' %>
+		</div>
+		<%= link_to('View all comments', 'javascript:null', :id => "view-all-comments", :style => "display: none;")  %>
 
-	<div class="load-comments" data-click="false" >
-		<%= render 'paginated_comments' %>
-	</div>
+		<div class="load-comments" data-click="false" >
+			<%= render 'paginated_comments' %>
+		</div>
 
-	<p id="no-comments" style="display: none;">No comments yet!</p>
-	<div class="pagination" style="text-align: center;"></div>
+		<p id="no-comments" style="display: none;">No comments yet!</p>
+		<div class="pagination" style="text-align: center;"></div>
+
 </div>
