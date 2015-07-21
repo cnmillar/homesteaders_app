@@ -434,14 +434,16 @@ $(function()
     var hours = parseInt( currentTime / 3600 ) % 24;
     var minutes = parseInt( currentTime / 60 ) % 60;
     var seconds = Math.round(currentTime % 60);
-    console.log(seconds)
-    if (hours > 0) {
-      displayTime = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds) 
+    if (currentTime > 0) {
+      if (hours > 0) {
+        displayTime = (hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds) 
+      }
+      else {
+        displayTime = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds)
+      }
+      $('.commentable-type-checkbox-project').addClass('commentable-type-checkbox-video');
+      $('#video-time-text').replaceWith('<p>Attach this comment to: ' + displayTime + '.</p>')
     }
-    else {
-      displayTime = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds)
-    }
-    $('#video-time-text').replaceWith('<p>Attach this comment to: ' + displayTime + '.</p>')
   })
 
   $(".add-image").on("click", function(){

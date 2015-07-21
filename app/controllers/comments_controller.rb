@@ -2,11 +2,10 @@ class CommentsController < ApplicationController
 
 	def create
 		@comment = Comment.new(comment_params)
-		puts '//////////////////////////'
-		puts
-		puts
-		puts params
 		@comment.user = current_user
+		if @comment.commentable_type == 0
+			@comment.commentable_type = "Shmoject"
+		end
 		respond_to do |format|
 			if @comment && @comment.save
 				format.json{render json: @comment}
