@@ -19,7 +19,7 @@ class SessionsController < ApplicationController
       avatar_url = auth_hash[:info][:image]
       email =  obj["email"]
       
-      user = User.new(facebook_id: facebook_id, full_name: full_name, email: email)
+      user = User.new(facebook_id: facebook_id, full_name: full_name, avatar: avatar_url, email: email)
       #Do not delete
       # user.remote_avatar_url = avatar_url
       user.save!
