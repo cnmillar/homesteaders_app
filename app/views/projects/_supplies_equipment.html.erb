@@ -9,24 +9,24 @@
           </div>
 
           <div class="large-9 column">
-            <h5 style="display:inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></h5>
+            <p style="display:inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></p>
           </div>
 
         <% else %>
           <div class="large-1 no-collapse column">   </div>
           <div class="large-9 column">
-            <h5 style="display: inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></h5>
+            <p style="display: inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></p>
           </div>
         <% end %>
 
         <div class="large-2 column">
           <span class="count-icon">
             <%= link_to("javascript:void(0)", "data-equip-id" => equip.id, "data-comments" => equip.comments.to_json, :class => "filter-equip-comments") do %>
-              <%= image_tag("/svg/chat35.svg", :alt => "Instruction comments", :width => 30, :height => 30, :title => "Instruction comments") %>
+              <%= image_tag("/svg/chat34.svg", :alt => "Instruction comments", :width => 25, :height => 25, :title => "Instruction comments") %>
               <span class='<%= "equip-count #{equip.id}" %>'><%= equip.comments.length %></span>             
             <% end %>
           </span>
-          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 20, :height => 20, :title => "Add comment"), "javascript:null", :class => "add-comment-equip", "data-equip-id" => equip.id) %>
+          <%= link_to(image_tag("/svg/plus35.svg", :alt => "Add comment", :width => 25, :height => 25, :title => "Add comment"), "javascript:null", :class => "add-comment-equip", "data-equip-id" => equip.id) %>
         </div>
         
       </div>
@@ -34,7 +34,7 @@
     <li id='<%= "add-comment-equip#{equip.id}" %>' style="display:none;">
       <div class="panel">
         <% if current_user %>
-          <h5>Add a comment:</h5>
+          <p>Add a comment:</p>
           <%= form_for equip.comments.new,:html => { :class => "equip-comment-id" }, remote: true do |f| %>
             <%= f.text_area :content, placeholder: "Comment on this ingredient.", id: "equip-comment-content" %>
             <%= f.hidden_field :commentable_type %>
@@ -44,7 +44,7 @@
             <%= f.submit "Comment", class: "button equip-comment-button", data: {"equip_id" => equip.id}%>
           <% end %>
         <% else %>
-          <h5>You must be logged in to make a comment.</h5>
+          <p>You must be logged in to make a comment.</p>
           <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
         <% end %>
       </div>

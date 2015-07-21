@@ -9,4 +9,7 @@ class User < ActiveRecord::Base
 
 	ratyrate_rater
 
+  #Do not delete
+  # mount_uploader :avatar, AvatarUploader
+
 end

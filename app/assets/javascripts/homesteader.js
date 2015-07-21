@@ -1,15 +1,33 @@
 
 $(function($){
 
-//// toggle jquery
-  $("#favourited-by-user").one("click", function(){
-    $("#favourited-false").css("background", "url('/svg/heart213_hover.png')").css("background-size", "40px, 40px");
-    $("#favourite-count").html(parseInt($("#favourite-count").html())+1);
+// focus
+
+  $("#total-comments").on("click", function(){
+    $("#add-comment-general").slideToggle('slow', function(){});
+    $("#comment-content").focus();
   })
 
-  $("#completed-by-user").one("click", function(){
-    $("#completed-false").css("background", "url('/svg/checkmark_hover.png')").css("background-size", "40px, 40px");
-    $("#complete-count").html(parseInt($("#complete-count").html())+1);
+//// toggle jquery
+  $("#favourited-by-user").on("click", function(){
+    if ($("#favourited-false").length > 0){
+      $("#favourited-false").css("background", "url('/svg/heart213_hover.png')").css("background-size", "40px, 40px").attr("id","favourited-true");
+      $("#favourite-count").html(parseInt($("#favourite-count").html())+1);
+    } else{
+      $("#favourited-true").css("background", "url('/svg/heart213.png')").css("background-size", "40px, 40px").attr("id","favourited-false");
+      $("#favourite-count").html(parseInt($("#favourite-count").html())-1);      
+    }
+  })
+
+  $("#completed-by-user").on("click", function(){
+    if($("#completed-false").length > 0){
+      $("#completed-false").css("background", "url('/svg/checkmark_hover.png')").css("background-size", "40px, 40px").attr("id", "completed-true");
+      $("#complete-count").html(parseInt($("#complete-count").html())+1);
+    } else {
+      $("#completed-true").css("background", "url('/svg/checkmark4.png')").css("background-size", "40px, 40px").attr("id", 'completed-false');
+      $("#complete-count").html(parseInt($("#complete-count").html())-1);
+    }
+
   })
 
 /////////////
