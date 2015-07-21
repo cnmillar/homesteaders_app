@@ -202,8 +202,13 @@ p {
   background: #DDD
 }
 
+.carousel-wrapper {
+  padding: 0;
+}
+
 .carousel {
   max-height: 400px;
+  width: 1500px;
 }
 
 .category {
@@ -225,7 +230,8 @@ p {
 }
 
 .category p {
-  margin-left: .5em
+  margin-left: .5em;
+  text-align: left;
 }
 
 .categories {

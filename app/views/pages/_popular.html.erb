@@ -1,7 +1,7 @@
-<% @categories.each do |category|%>
-  <div class="category">
+<% @popular.each do |pop| %>
+  <div class="category" data-equalizer-watch>
     <img src = "http://placekitten.com/g/370/150" />
-    <h4><%= link_to category.name, category_path(category) %></h4>
-    <p><%= category.description %></p>
+    <h4><%= link_to pop.name, category_path(pop) %></h4>
+    <p><%= pop.description %></p>
   </div>
 <% end %> 
