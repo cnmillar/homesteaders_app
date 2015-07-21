@@ -19,7 +19,7 @@
 
 	<div class="row">
 		<div class="large-1 column">
-			<a href='<%= "#reply#{conv.id}" %>' rel=<%= "reply#{conv.id}Modal" %> id='<%= "reply-button-#{conv.id}" %>' class="button reply-button">Reply</a>		
+			<a href='<%= "#reply#{conv.id}" %>' rel='<%= "reply#{conv.id}Modal" %>' id='<%= "reply-button-#{conv.id}" %>' class="button reply-button">Reply</a>		
 		</div>
 		<div class="large-11 columns"></div>
 	</div>
@@ -30,10 +30,10 @@
 
 <script>
 	$(function($){
-		$('<%= "#reply-button-#{conv.id}" %>').on("click", function(){
-			debugger;
-			$('<%= "a[rel*=reply#{conv.id}Modal]" %>').leanModal({ top : 200, overlay : 0.4});			
-		})
+
+		// $('<%= "#reply-button-#{conv.id}" %>').on("click", function(){
+			$('<%= "a[rel*=reply#{conv.id}Modal]" %>').leanModal({ top : 200, overlay : 0.4});
+		// })
 
 		function createReply(data){
 	    return '<div class="row"><div class="large-2 columns">'+ 

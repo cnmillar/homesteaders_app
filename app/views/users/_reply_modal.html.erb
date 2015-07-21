@@ -1,4 +1,4 @@
-<div style="display: none;" class='<%= "#reply#{conv.id}" %>'>
+<div style="display: none;" class="reply" id='<%= "reply#{conv.id}" %>'>
 	<div id="modal-container">
 
 		<%= form_for Message.new, html: {id: "new_message_#{conv.id}"}, url:{ action: "create", controller: "messages"}, remote: true do |f| %>
