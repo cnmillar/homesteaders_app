@@ -5,11 +5,11 @@
 	    <li>
 	      <div class="row">
 	        <div class="large-1 column no-collapse">
-						<h5><%= step.ordinal %></h5>
+						<p><%= step.ordinal %></p>
 	        </div>
 
 	        <div class="large-9 column">
-						<h5><%= step.content %></h5>
+						<p><%= step.content %></p>
 	        </div>
 
 	        <div class="large-2 column">
@@ -28,7 +28,7 @@
 	    <li id='<%= "add-comment-step#{step.id}" %>' style="display:none;">
 	      <div class="panel">
 					<% if current_user %>
-						<h5>Add a comment:</h5>
+						<p>Add a comment:</p>
 						<%= form_for step.comments.new, :html => { :class => "step-comment-id" }, remote: true do |f| %>
 						  <%= f.text_area :content, placeholder: "Comment on this step.", class: "steps-comment-content" %>
 						  <%= f.hidden_field :commentable_type %>
@@ -38,7 +38,7 @@
 						  <%= f.submit "Comment", class: "button steps-comment-button", data: {"step_id" => step.id}%>
 						<% end %>
 				<% else %>
-					<h5>You must be logged in to make a comment.</h5>
+					<p>You must be logged in to make a comment.</p>
 				  <a href ="/auth/facebook" class = 'button radius'>Login with Facebook</a>
 				<% end %>
 	      </div>

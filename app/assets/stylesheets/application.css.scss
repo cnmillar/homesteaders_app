@@ -20,10 +20,17 @@
 
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
+$font-stack-head: 'Architects Daughter', cursive;
+$font-stack-copy: 'Arvo', serif;
 
 h1, h2, h3, h4 {
   color: $primary-color;
+  font-family: $font-stack-head;
   margin-left: 0
+}
+
+p {
+  font-family: $font-stack-copy;
 }
 
 .section {
