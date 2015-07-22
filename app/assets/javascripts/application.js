@@ -23,4 +23,5 @@
 //= require js/foundation/foundation
 //= require modernizr
 //= require jquery.leanModal.min
+//= require jquery.tooltipster.min
 //= require homesteader

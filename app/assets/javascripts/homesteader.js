@@ -388,13 +388,13 @@ $(function()
         case 'block': // n and c
             return '<a href="javascript:null;">' + this.value + '</a>';
         case 'next': // >
-            return '<a href="javascript:null;"><img src="/svg/right42.svg" width="20px"></a>';
+            return '        <a href="javascript:null;"><img src="/svg/fast40.svg" width="35px"></a>';
         case 'prev': // <
-            return '<a href="javascript:null;"><img src="/svg/left43.svg" width="20px"></a>';
+            return '    <a href="javascript:null;"><img src="/svg/rewind42.svg" width="35px"></a>';
         case 'first': // [
-            return '<a href="javascript:null;"><img src="/svg/previous8.svg" width="20px"></a>';
+            return '    <a href="javascript:null;"><img src="/svg/first46.svg" width="40px"></a>';
         case 'last': // ]
-            return '<a href="javascript:null;"><img src="/svg/forward13.svg" width="20px"> (' + this.pages + ')</a>';
+            return '    <a href="javascript:null;"><img src="/svg/last17.svg" width="40px"> (' + this.pages + ')</a>';
         }
       }
     });
