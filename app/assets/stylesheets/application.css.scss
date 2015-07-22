@@ -23,6 +23,8 @@ $secondary-color: #F2AA0E;
 $tertiary-color: #EDBA3E;
 $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
+$radius: 3px;
+$module-background-color: #DDD;
 
 body {
   font-family: $font-stack-copy;
@@ -148,6 +150,13 @@ nav {
 .project-details {
   background-image: image-url('drawn-box.png');
   background-size: 100% 100%;
+  padding: 2.5rem;
+}
+
+.project-module {
+  padding: 1rem;
+  border-radius: $radius;
+  background-color: $module-background-color;
 }
 
 
@@ -525,6 +534,19 @@ hr {
   bottom:0;
   right:0;
 }
+
+.social-share-button-email {
+  background: url("/social-icons/email.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:40px;
+  height:40px;
+  bottom:0;
+  right:0;
+  float: left;
+}
+
 /////////////////////////////////////
 // gallery css
 
@@ -749,7 +771,7 @@ hr {
 }
 
 .row {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
 }
 
 #new-conversation-comment {
@@ -758,3 +780,4 @@ hr {
   background-color: white;
   padding: 25px;
 }
+
