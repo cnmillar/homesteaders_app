@@ -1,47 +1,8 @@
 <div class = 'section'>
 	<div class="row">
-		<div class="large-4 columns">
-			<!-- total number of comments -->
-			<%= link_to('javascript:null', :id => "total-comments") do %>
-				<img src="/svg/chat34.svg" width=40 height=40 data-width="200">
-				<%#= image_tag("/svg/chat34.svg", :alt => "Comments", :width => 40, :height => 40, :title => "Comments") %>
-			<% end %>
-		</div>
-
-		<div class="large-4 columns">
-			<!-- total number of times this project was favourited -->
-			<% if current_user %>
-				<% if @user_project && @user_project.favourited %>
-					<%= link_to('javascript:null', :id => "favourited-by-user") do %>
-						<div id="favourited-true"></div>
-					<% end %>
-				<% else %>
-					<%= link_to('javascript:null', :id => "favourited-by-user") do %>
-						<div id="favourited-false"></div>
-					<% end %>
-				<% end %>
-			<% else %>
-					<div id="favourited-true"></div>
-			<% end %>
-
-		</div>
-
-		<div class="large-4 columns">
-			<!-- total number of times the project was completed -->
-			<% if current_user %>
-				<% if @user_project && @user_project.completed %>
-					<%= link_to('javascript:null', :id => "completed-by-user") do %>
-						<div id="completed-true"></div>
-					<% end %>
-				<% else %>
-					<%= link_to('javascript:null', :id => "completed-by-user") do %>
-						<div id="completed-false"></div>
-					<% end %>
-				<% end %>
-			<% else %>
-					<div id="completed-true"></div>
-			<% end %>
-		</div>
+		<%= render 'projects/community_comments' %>
+		<%= render 'projects/favourited' %>
+	 	<%= render 'projects/completed' %>
 	</div>
 
 	<div class="row">
@@ -50,11 +11,9 @@
 		</div>
 		<div class="large-4 columns">
 			<p><span id="favourite-count"><%= @fav_count %></span> </p>
-			
 		</div>
 		<div class="large-4 columns">
 			<p><span id="complete-count"><%= @comp_count %></span> </p>
-			
 		</div>
 	</div>
 

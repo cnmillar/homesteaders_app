@@ -852,26 +852,27 @@ end
 ### Seed users
 
 users = [
-	{
-		admin: true,
-		email: "beth.hammett@gmail.com",
-		avatar: "/uploads/user/avatar/1/10256184_10154078837500693_4522517122463806943_n.jpg",
-		full_name: "Beth Hammett",
-		facebook_id: 10155764870935693
-	},
-	{
-		admin: true,
-		email: "cnmillar@gmail.com",
-		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
-		full_name: "Caitlin Miller",
-		facebook_id: 10101421296841741
-	},
+
 	{
 		admin: true,
 		email: "davidgood@test.ca",
 		avatar: "/uploads/user/avatar/3/45265_10151595761691660_667105653_n.jpg",
 		full_name: "David Good",
 		facebook_id: 10153480204621660
+	},
+		{
+		admin: true,
+		email: "beth.hammett@gmail.com",
+		avatar: "/uploads/user/avatar/1/10256184_10154078837500693_4522517122463806943_n.jpg",
+		full_name: "Beth Hammett",
+		facebook_id: 10155764870935693
+	},
+		{
+		admin: true,
+		email: "cnmillar@gmail.com",
+		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
+		full_name: "Caitlin Millar",
+		facebook_id: 10101421296841741
 	},
 	{
 		admin: true,
