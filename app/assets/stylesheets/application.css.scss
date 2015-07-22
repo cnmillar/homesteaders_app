@@ -159,6 +159,11 @@ nav {
   background-color: $module-background-color;
 }
 
+.row.supply {
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
+
 
 #video-timeline {
   background-image: image-url("timeline.png");
