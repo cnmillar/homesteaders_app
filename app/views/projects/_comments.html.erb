@@ -8,7 +8,7 @@
 	<div id="add-comment-general" style="display: none;">
 		<%= render 'add_comment' %>
 	</div>
-	<%= link_to('View all comments', 'javascript:null', :id => "view-all-comments", :style => "display: none;")  %>
+	<%= link_to('View all', 'javascript:null', :id => "view-all-comments", :style => "display: none;")  %>
 
 	<div class="load-comments" data-click="false" >
 		<%= render 'paginated_comments' %>
