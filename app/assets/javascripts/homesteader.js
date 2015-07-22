@@ -24,20 +24,20 @@ $(function($){
 //// toggle jquery
   $("#favourited-by-user").on("click", function(){
     if ($("#favourited-false").length > 0){
-      $("#favourited-false").css("background", "url('/svg/heart213_hover.png')").css("background-size", "40px, 40px").attr("id","favourited-true");
+      $("#favourited-false").css("background", "url('/svg/heart213_hover.png')").css("background-size", "32px, 32px").attr("id","favourited-true");
       $("#favourite-count").html(parseInt($("#favourite-count").html())+1);
     } else{
-      $("#favourited-true").css("background", "url('/svg/heart213.png')").css("background-size", "40px, 40px").attr("id","favourited-false");
+      $("#favourited-true").css("background", "url('/svg/heart213.png')").css("background-size", "32px, 32px").attr("id","favourited-false");
       $("#favourite-count").html(parseInt($("#favourite-count").html())-1);      
     }
   })
 
   $("#completed-by-user").on("click", function(){
     if($("#completed-false").length > 0){
-      $("#completed-false").css("background", "url('/svg/checkmark_hover.png')").css("background-size", "40px, 40px").attr("id", "completed-true");
+      $("#completed-false").css("background", "url('/svg/checkmark_hover.png')").css("background-size", "30px, 30px").attr("id", "completed-true");
       $("#complete-count").html(parseInt($("#complete-count").html())+1);
     } else {
-      $("#completed-true").css("background", "url('/svg/checkmark4.png')").css("background-size", "40px, 40px").attr("id", 'completed-false');
+      $("#completed-true").css("background", "url('/svg/checkmark4.png')").css("background-size", "32px, 32px").attr("id", 'completed-false');
       $("#complete-count").html(parseInt($("#complete-count").html())-1);
     }
 
