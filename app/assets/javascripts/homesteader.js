@@ -339,6 +339,7 @@ window.fbAsyncInit = function() {
     player = new YT.Player('player', {
       height: '480',
       width: '720',
+      // origin: 'https://localhost:3000',
       videoId: videoId,
       events: {
 

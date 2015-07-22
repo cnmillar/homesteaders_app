@@ -23,4 +23,5 @@
 //= require js/foundation/foundation
 //= require modernizr
 //= require js/foundation/foundation.tooltip
+//= require js/foundation/foundation.equalizer.js
 //= require homesteader
