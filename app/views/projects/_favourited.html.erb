@@ -2,15 +2,17 @@
   <!-- total number of times this project was favourited -->
   <% if current_user %>
     <% if @user_project && @user_project.favourited %>
-      <%= link_to('javascript:null', :id => "favourited-by-user") do %>
+      <%= link_to('javascript:null', :id => "favourited-by-user", :title => "Unfavourite this project.") do %>
         <div id="favourited-true"></div>
       <% end %>
     <% else %>
-      <%= link_to('javascript:null', :id => "favourited-by-user") do %>
+      <%= link_to('javascript:null', :id => "favourited-by-user", :title => "Favourite this project.") do %>
         <div id="favourited-false"></div>
       <% end %>
     <% end %>
   <% else %>
-      <div id="favourited-true"></div>
+    <div id="cant-favourite", title= "Sign in to favourite this project.">
+      <div id="favourited-true" class="test"></div>
+    </div>
   <% end %>
 </div>

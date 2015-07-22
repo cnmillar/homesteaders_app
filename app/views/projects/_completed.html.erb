@@ -2,15 +2,17 @@
   <!-- total number of times the project was completed -->
   <% if current_user %>
     <% if @user_project && @user_project.completed %>
-      <%= link_to('javascript:null', :id => "completed-by-user") do %>
+      <%= link_to('javascript:null', :id => "completed-by-user", :title => "Mark this project as completed.") do %>
         <div id="completed-true"></div>
       <% end %>
     <% else %>
-      <%= link_to('javascript:null', :id => "completed-by-user") do %>
+      <%= link_to('javascript:null', :id => "completed-by-user", :title => "Mark this project as completed") do %>
         <div id="completed-false"></div>
       <% end %>
     <% end %>
   <% else %>
+    <div id="cant-complete" title="Sign in to mark this project as completed.">
       <div id="completed-true"></div>
+    </div>
   <% end %>
 </div>

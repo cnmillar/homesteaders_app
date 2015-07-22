@@ -10,13 +10,14 @@ class ProjectsController < ApplicationController
     @fav_count = 0
     @comp_count = 0
     
-    if current_user
-      user_projects = @project.user_projects
+    user_projects = @project.user_projects
 
-      user_projects.each do |user|
-        @fav_count += 1 if user.favourited
-        @comp_count += 1 if user.completed
-      end
+    user_projects.each do |user|
+      @fav_count += 1 if user.favourited
+      @comp_count += 1 if user.completed
+    end
+    
+    if current_user
       @user_project = current_user.user_projects.where(project_id: @project.id)[0]
     end
 

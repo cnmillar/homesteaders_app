@@ -1,5 +1,17 @@
 
 $(function($){
+
+  // tooltip
+
+  $("#favourited-by-user").tooltip();
+  $("#cant-favourite").tooltip();
+  $("#total-comments").tooltip();
+  $("#cant-comment").tooltip();
+  $("#completed-by-user").tooltip();
+  $("#cant-complete").tooltip();
+
+  // modal js
+
   $('a[rel*=conversationModal]').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
 
   $("#new_conversation").on("ajax:success", function(e, data, status, xhr){

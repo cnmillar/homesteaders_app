@@ -12,6 +12,7 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap/bootstrap-tooltip
 //= require social-share-button
 //= require jquery.raty
 //= require ratyrate
@@ -22,6 +23,6 @@
 //= require leaflet
 //= require js/foundation/foundation
 //= require modernizr
+//= require jquery-ui.min
 //= require jquery.leanModal.min
-//= require jquery.tooltipster.min
 //= require homesteader
