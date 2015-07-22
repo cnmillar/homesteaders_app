@@ -216,8 +216,25 @@ nav {
   display: none;
 }
 
+#video-checkbox {
+  margin: 2rem;
+}
+
+.video-comment-actions {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.video-time-text {
+  display: inline-block;
+}
+
+.video-comment-text {
+  display: inline-block;
+}
+
 .commentable-type-checkbox-video {
-  display: block;
+  display: inline-block;
 }
 
 #player {
