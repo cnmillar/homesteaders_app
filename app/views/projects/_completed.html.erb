@@ -1,0 +1,13 @@
+  <% if current_user %>
+    <% if @user_project && @user_project.completed %>
+      <%= link_to('javascript:null', :id => "completed-by-user") do %>
+        <div id="completed-true"></div>
+      <% end %>
+    <% else %>
+      <%= link_to('javascript:null', :id => "completed-by-user") do %>
+        <div id="completed-false"></div>
+      <% end %>
+    <% end %>
+  <% else %>
+      <div id="completed-true"></div>
+  <% end %>

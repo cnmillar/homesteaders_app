@@ -30,6 +30,27 @@ $(function($){
 
   })
 
+////User-project
+
+ $(".favourited, .not-favourited").bind('ajax:complete', function() {
+  console.log("I just clicked", this);
+  // var favourite_state = $(this).attr("class");
+  var favourited = ($(this).attr("class") === 'favourited' ? true : false)
+  console.log("favourite state", favourited);
+  if (favourited) {
+    $(this).find("img").remove();
+    $(this).removeClass('favourited');
+    $(this).append("<img src='/svg/heart213.svg'>");
+  } else {
+    $(this).find("img").remove();
+    $(this).addClass('favourited');
+    $(this).append("<img src='/svg/heart213_hover.png'>");
+
+  }
+   
+});
+
+
 /////////////
 // Gallery JS
 

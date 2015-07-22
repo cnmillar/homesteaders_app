@@ -7,37 +7,14 @@
 	<p><%= @all_comments.length %> comments </p>
 
 	<!-- total number of times this project was favourited -->
-	<% if current_user %>
-		<% if @user_project && @user_project.favourited %>
-			<%= link_to('javascript:null', :id => "favourited-by-user") do %>
-				<div id="favourited-true"></div>
-			<% end %>
-		<% else %>
-			<%= link_to('javascript:null', :id => "favourited-by-user") do %>
-				<div id="favourited-false"></div>
-			<% end %>
-		<% end %>
-	<% else %>
-			<div id="favourited-true"></div>
-	<% end %>
+	<%= render 'projects/favourited' %>
 
 	<p><span id="favourite-count"><%= @fav_count %></span> favourited </p>
 
 	<!-- total number of times the project was completed -->
-	<% if current_user %>
-		<% if @user_project && @user_project.completed %>
-			<%= link_to('javascript:null', :id => "completed-by-user") do %>
-				<div id="completed-true"></div>
-			<% end %>
-		<% else %>
-			<%= link_to('javascript:null', :id => "completed-by-user") do %>
-				<div id="completed-false"></div>
-			<% end %>
-		<% end %>
-	<% else %>
-			<div id="completed-true"></div>
-	<% end %>
-	<p><span id="complete-count"><%= @comp_count %></span> projects completed </p>
+ 	<%= render 'projects/completed' %>
+
+  <p><span id="complete-count"><%= @comp_count %></span> projects completed </p>
 
 </div>
 
