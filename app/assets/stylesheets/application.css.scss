@@ -304,7 +304,7 @@ nav {
   /*border: 1px solid $primary-color;*/
 }
 
-.category:nth-child(2) {
+.category:nth-child(even) {
   transform: rotate(3deg);
 }
 
