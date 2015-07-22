@@ -4,14 +4,15 @@
     <%= render 'pages/showcased' %>
   </div>
 </div>
+<h4 class='popular-head'>Popular projects</h4>
 <div class="row data-equalizer">
-  <div class="large-12 columns text-center">
+  <div class="large-12 columns text-center popular-holder">
      <%= render 'pages/popular' %>
   </div>
      <%= render 'users/email' %>
 </div>
 <div class="row">
-  <div class = 'category categories'>
+  <div class = 'categories'>
     <h4>All Categories:</h4>
     <% @categories.in_groups(3, false) do |group| %>
       <div class="large-4 columns">

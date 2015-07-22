@@ -100,7 +100,6 @@ $(function($){
   $('.carousel').slick({
     autoplay: true,
     infinite: true,
-    arrows: true,
     speed: 700,
     fade: true,
     cssEase: 'linear'
