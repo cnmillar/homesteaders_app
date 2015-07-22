@@ -112,7 +112,8 @@ $(function($){
       autoPlay: {
         // autoplay options go gere
         enabled: true,
-        pauseOnHover: true
+        pauseOnHover: true,
+        transitionSpeed: 1000
       }
   }); 
 

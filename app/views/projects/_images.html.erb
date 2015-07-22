@@ -11,7 +11,7 @@
 			<% if current_user %>
 				<%= form_for Image.new, :html => {:multipart => true}, remote: true do |f| %>
 					<%= f.file_field :original %>
-					<%= f.text_area :description %>
+					<%= f.text_area :description, :maxlength => 100 %>
 					<%= f.hidden_field :project_id, :value => @project.id %>
 					<%= f.hidden_field :user_id, :value => current_user.id %>
 					<%= f.submit "Upload", class: "button"%>
@@ -29,7 +29,7 @@
 
 <!-- contents of external ajax file -->
 	<div class="sliderContainer">
-	  <div class="royalSlider rsDefault sliderInLightbox">
+	  <div class="royalSlider rsMinW sliderInLightbox">
 			<% @project.images.each do |image| %>
 				<a class="rsImg" href=<%= image.original_url %>>
 	        <div class="rsTmb">
