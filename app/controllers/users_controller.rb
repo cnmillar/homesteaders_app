@@ -20,7 +20,7 @@ class UsersController < ApplicationController
   end
 
   def inbox
-    @conversations = current_user.conversations
+    @conversations = Conversation.order(created_at: :desc).where("user_id = ? OR receiver = ?", current_user.id, current_user.id)
     @user = User.find(params[:id])
   end
 

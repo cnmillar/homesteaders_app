@@ -1,7 +1,14 @@
 <div class = "panel messages" id='<%= "messages#{conv.id}" %>' style="display:none;">
 
+	<div class="row">
+		<div class="large-1 column">
+			<a href='<%= "#reply#{conv.id}" %>' rel='<%= "reply#{conv.id}Modal" %>' id='<%= "reply-button-#{conv.id}" %>' class="button reply-button">Reply</a>		
+		</div>
+		<div class="large-11 columns"></div>
+	</div>
+
 	<div id='<%= "read-message-#{conv.id}" %>'>
-		<% conv.messages.each do |message| %>
+		<% conv.messages.order(created_at: :desc).each do |message| %>
 			<div class="row">
 				<div class="large-2 columns">
 					<%= link_to(image_tag(message.user.avatar, width: '30%'), "/users/#{message.user.id}") %>
@@ -17,13 +24,6 @@
 	</div>
 	<br>
 
-	<div class="row">
-		<div class="large-1 column">
-			<a href='<%= "#reply#{conv.id}" %>' rel='<%= "reply#{conv.id}Modal" %>' id='<%= "reply-button-#{conv.id}" %>' class="button reply-button">Reply</a>		
-		</div>
-		<div class="large-11 columns"></div>
-	</div>
-
 	<%= render partial: "reply_modal", collection: @conversations, locals: {conv: conv} %>
 
 </div>
@@ -31,9 +31,7 @@
 <script>
 	$(function($){
 
-		// $('<%= "#reply-button-#{conv.id}" %>').on("click", function(){
-			$('<%= "a[rel*=reply#{conv.id}Modal]" %>').leanModal({ top : 200, overlay : 0.4});
-		// })
+		$('<%= "a[rel*=reply#{conv.id}Modal]" %>').leanModal({ top : 200, overlay : 0.4});
 
 		function createReply(data){
 	    return '<div class="row"><div class="large-2 columns">'+ 
@@ -49,7 +47,7 @@
 	    $(".reply").css("display","none");
 	    $("#lean_overlay").css("display","none");
 	    $("#message_body").val("");
-	    $('<%= "#read-message-#{conv.id}" %>').append(createReply(data));
+	    $('<%= "#read-message-#{conv.id}" %>').prepend(createReply(data));
 	  })
 
 	})

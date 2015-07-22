@@ -1,25 +1,25 @@
-<div id='<%= "read-conversation#{conv.id}" %>' class="row" data-conv-id=<%= conv.id %>>
-	<div class="large-1 columns">
-		<p><%= conv.messages.length %></p>
-	</div>
-
-	<div class="large-2 columns no-collapse">
-		<% if conv.new_message == current_user.id %>
-			<p>NEW!!!</p>
-		<% end %>
-	</div>
-
-	<div class="large-2 columns">
+<div id='<%= "read-conversation#{conv.id}" %>' class="row alternating-color" data-conv-id=<%= conv.id %>>
 		<% if current_user.id == conv.receiver %>
-			<%= User.find(conv.user_id).full_name %>
+			<div class="large-2 columns">
+				<%= link_to(image_tag(User.find(conv.user_id).avatar, width: '30%'), "/users/#{conv.user_id}") %>
+			</div>
+
+			<div class="large-2 columns">
+				<%= link_to(User.find(conv.user_id).full_name, "/users/#{conv.user_id}") %>
+			</div>
+
 		<% else %>
-			<%= User.find(conv.receiver).full_name %>
+			<div class="large-2 columns">
+				<%= link_to(image_tag(User.find(conv.receiver).avatar, width: '30%'), "/users/#{conv.receiver}") %>
+			</div>
+			<div class="large-2 columns">
+				<%= link_to(User.find(conv.receiver).full_name, "/users/#{conv.receiver}" )%>
+			</div>
 		<% end %>
-	</div>
 	<div class="large-5 columns">
 		<p><%= link_to(conv.subject, "javascript:null", :id => "read-conversation-#{conv.id}") %></p>
 	</div>
-	<div class="large-2 columns">
+	<div class="large-3 columns">
 		<p><%= conv.messages.last.created_at %></p>
 	</div>
 </div>
@@ -40,10 +40,14 @@
 	  			method: 'PUT',
 	  			url: '/update_new_message/' + convId
 	  		});
-		    // <%#= conv.update_attributes(new_message: nil) %>
 	    }
-
 	  });
+
+		<% if conv.new_message == current_user.id %>
+			$(selector).css("background", "#B9BAA3");
+			$(selector+" a").css("color","black");
+		<% end %>
+
 	 });
 
 </script>

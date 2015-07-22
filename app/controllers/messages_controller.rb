@@ -5,7 +5,6 @@ class MessagesController < ApplicationController
     respond_to do |format|
       if @message && @message.save
         @conversation = Conversation.find(@message.conversation_id)
-        binding.pry
         if @message.user_id == @conversation.user_id
           @conversation.update_attributes(new_message: @conversation.receiver)
         else
