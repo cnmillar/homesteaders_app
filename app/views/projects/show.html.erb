@@ -1,21 +1,28 @@
-<div class = 'row custom-row section'>
-  <div class = 'large-5 columns section'>
-    <%= render 'projects/name_description' %>
-    <%= render 'projects/details' %>
-    <div class = 'row'>
-      <div class = 'large-6 columns' >
+<div class='row custom-row section'>
+  <div class='large-5 columns section'>
+    <div class='project-details'>
+      <%= render 'projects/name_description' %>
+      <%= render 'projects/details' %>
+    </div>
+    <div class='row'>
+      <div class='large-6 columns' >
         <%= render 'projects/community_summary' %>
       </div>
-      <div class = 'large-6 columns' >
+      <div class='large-6 columns' >
         <%= render 'projects/social_toolbar' %>
       </div>
     </div>
+    <hr class="hand-drawn">
     <%= render 'projects/instructions' %>
+    <hr class="hand-drawn">
     <%= render 'projects/supplies' %>
+    <hr class="hand-drawn">
     <%= render 'projects/images' %>
+    <hr class="hand-drawn">
     <%= render 'projects/popular' %>
   </div>
-  <div class = 'large-7 columns section'>
+
+  <div class='large-7 columns section'>
     <%= render 'projects/video' %>
     <%= render 'projects/video_comments' %>
     <%= render 'projects/comments' %>
