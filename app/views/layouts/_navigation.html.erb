@@ -7,12 +7,15 @@
     </ul>
     <section class = 'top-bar-section'>
       <ul>
-      <!-- TODO DAVID change into image links -->
         <li><a href="/categories">Categories</a></li>
         <li><a href="#">Popular</a></li>
         <li><a href="/projects/2">Pjct #2</a></li>
-        <% if current_user && num_new_messages > 0 %>
-          <li><a href=<%= "/users/#{current_user.id}/inbox" %> >Inbox(<%= num_new_messages %>)</a></li>
+        <% if current_user %>
+          <% if  num_new_messages > 0  %>
+            <li><a href=<%= "/users/#{current_user.id}/inbox" %> >Inbox(<%= num_new_messages %>)</a></li>
+          <% else %>
+            <li><a href=<%= "/users/#{current_user.id}/inbox" %> >Inbox</a></li>
+          <% end %>
         <% end %>
       </ul>
     </section>
