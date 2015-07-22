@@ -534,6 +534,19 @@ hr {
   bottom:0;
   right:0;
 }
+
+.social-share-button-email {
+  background: url("/social-icons/email.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:40px;
+  height:40px;
+  bottom:0;
+  right:0;
+  float: left;
+}
+
 /////////////////////////////////////
 // gallery css
 
