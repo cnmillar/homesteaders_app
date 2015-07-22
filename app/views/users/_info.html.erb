@@ -1,4 +1,6 @@
-<div class = "profile-user-info section">
+<div class="profile-user-info section">
 	<h2><%= @user.full_name %></h2>
-  <%= image_tag(@user.avatar) %>
+  <div class="user-image">
+    <%= image_tag(@user.avatar) %>
+  </div>
 </div>
