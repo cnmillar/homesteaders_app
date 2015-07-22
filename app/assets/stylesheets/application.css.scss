@@ -214,13 +214,13 @@ p {
 .category {
   width: 400px;
   display: inline-block;
-  background-color: white;
   margin: 1em;
-  border-radius: 1rem;
-  padding: 1rem;
+  padding: 2rem;
   vertical-align: top;
-  background-color: white;
-  border: 1px solid $primary-color;
+  background-image: image-url('drawn-box.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  /*border: 1px solid $primary-color;*/
 }
 
 .category h4 {
