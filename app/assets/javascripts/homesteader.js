@@ -30,13 +30,10 @@ $(function($){
 
   })
 
-////User-project
+////User-projects toggle jquery
 
  $(".favourited, .not-favourited").bind('ajax:complete', function() {
-  console.log("I just clicked", this);
-  // var favourite_state = $(this).attr("class");
   var favourited = ($(this).attr("class") === 'favourited' ? true : false)
-  console.log("favourite state", favourited);
   if (favourited) {
     $(this).find("img").remove();
     $(this).removeClass('favourited');
@@ -45,6 +42,21 @@ $(function($){
     $(this).find("img").remove();
     $(this).addClass('favourited');
     $(this).append("<img src='/svg/heart213_hover.png'>");
+
+  }
+   
+});
+
+  $(".completed, .not-completed").bind('ajax:complete', function() {
+  var completed = ($(this).attr("class") === 'completed' ? true : false)
+  if (completed) {
+    $(this).find("img").remove();
+    $(this).removeClass('completed');
+    $(this).append("<img src='/svg/delete38.svg'>");
+  } else {
+    $(this).find("img").remove();
+    $(this).addClass('completed');
+    $(this).append("<img src='/svg/checkmark4.png'>");
 
   }
    

@@ -10,9 +10,9 @@
            <%=link_to(image_tag("/svg/heart213.svg"), favourited_path(proj), method: "post", remote: true) %>
         <%end%>
         <% if proj.completed%>
-          <%=link_to(image_tag("/svg/checkmark4.svg"), completed_path(proj), method: "post", class: "completed") %>
+          <%=link_to(image_tag("/svg/checkmark4.svg"), completed_path(proj), method: "post", class: "completed", remote: true) %>
         <%else%>
-          <%=link_to(image_tag("/svg/delete38.svg"), completed_path(proj), method: "post") %>
+          <%=link_to(image_tag("/svg/delete38.svg"), completed_path(proj), method: "post", remote: true) %>
        <%end%>
      
       <% else %>
