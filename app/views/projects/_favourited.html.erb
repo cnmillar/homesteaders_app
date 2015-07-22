@@ -1,0 +1,13 @@
+<% if current_user %>
+    <% if @user_project && @user_project.favourited %>
+      <%= link_to('javascript:null', :id => "favourited-by-user") do %>
+        <div id="favourited-true"></div>
+      <% end %>
+    <% else %>
+      <%= link_to('javascript:null', :id => "favourited-by-user") do %>
+        <div id="favourited-false"></div>
+      <% end %>
+    <% end %>
+  <% else %>
+      <div id="favourited-true"></div>
+  <% end %>

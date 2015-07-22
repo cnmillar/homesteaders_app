@@ -1,18 +1,24 @@
 <% @user_projects.each do |proj| %>
     <li><h4><strong><%= proj.project.title %> </strong></h4>
       <% if !proj.project.images.empty? %>
-       <%= image_tag("#{proj.project.images.first.original_url}", width: '300px') %>
+        <%= image_tag("#{proj.project.images.first.original_url}", width: '300px') %>
       <% end %>
       <% if current_user == @user %>
-        <%=link_to(image_tag("/svg/heart213#{proj.favourited ? "_hover.png" : ".svg"}"), favourited_path(proj), method: "post") %>
-        <%=link_to(image_tag("/svg/#{proj.completed ? "checkmark4" : "delete38"}.svg"), completed_path(proj), method: "post") %>
+        <% if proj.favourited%>
+            <%=link_to(image_tag("/svg/heart213_hover.png"), favourited_path(proj), method: "post", class: "favourited", remote: true) %>
+        <%else%>
+           <%=link_to(image_tag("/svg/heart213.svg"), favourited_path(proj), method: "post", remote: true) %>
+        <%end%>
+        <% if proj.completed%>
+          <%=link_to(image_tag("/svg/checkmark4.svg"), completed_path(proj), method: "post", class: "completed", remote: true) %>
+        <%else%>
+          <%=link_to(image_tag("/svg/delete38.svg"), completed_path(proj), method: "post", remote: true) %>
+       <%end%>
+     
       <% else %>
         <%= image_tag("/svg/heart213red.svg") %>
         <%= image_tag("/svg/checkmark4.svg") %>
       <% end %>
+
     </li>
 <% end %>
-
-
-
-

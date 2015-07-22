@@ -30,6 +30,39 @@ $(function($){
 
   })
 
+////User-projects toggle jquery
+
+ $(".favourited, .not-favourited").bind('ajax:complete', function() {
+  var favourited = ($(this).attr("class") === 'favourited' ? true : false)
+  if (favourited) {
+    $(this).find("img").remove();
+    $(this).removeClass('favourited');
+    $(this).append("<img src='/svg/heart213.svg'>");
+  } else {
+    $(this).find("img").remove();
+    $(this).addClass('favourited');
+    $(this).append("<img src='/svg/heart213_hover.png'>");
+
+  }
+   
+});
+
+  $(".completed, .not-completed").bind('ajax:complete', function() {
+  var completed = ($(this).attr("class") === 'completed' ? true : false)
+  if (completed) {
+    $(this).find("img").remove();
+    $(this).removeClass('completed');
+    $(this).append("<img src='/svg/delete38.svg'>");
+  } else {
+    $(this).find("img").remove();
+    $(this).addClass('completed');
+    $(this).append("<img src='/svg/checkmark4.png'>");
+
+  }
+   
+});
+
+
 /////////////
 // Gallery JS
 
