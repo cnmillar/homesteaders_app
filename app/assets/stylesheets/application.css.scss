@@ -23,6 +23,8 @@ $secondary-color: #F2AA0E;
 $tertiary-color: #EDBA3E;
 $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
+$radius: 3px;
+$module-background-color: #DDD;
 
 body {
   font-family: $font-stack-copy;
@@ -149,6 +151,12 @@ nav {
   background-image: image-url('drawn-box.png');
   background-size: 100% 100%;
   padding: 2.5rem;
+}
+
+.project-module {
+  padding: 1rem;
+  border-radius: $radius;
+  background-color: $module-background-color;
 }
 
 
