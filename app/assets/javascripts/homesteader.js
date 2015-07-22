@@ -160,7 +160,6 @@ $(function($){
   $('.carousel').slick({
     autoplay: true,
     infinite: true,
-    arrows: true,
     speed: 700,
     fade: true,
     cssEase: 'linear'
@@ -518,7 +517,7 @@ $(function()
       } 
       
       newAvatar = $('<div />').addClass('video-comment-avatar').html("'<img src = ' + APP.userName />").css({'left': timelineX, 'top' : 0 });
-      $('#video-timeline').append(newAvatar);
+      $('#video-timeline').append(newAvatar).fadeIn('fast');
     }
 
     return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+

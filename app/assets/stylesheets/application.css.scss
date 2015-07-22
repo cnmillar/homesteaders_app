@@ -61,10 +61,6 @@ nav {
   color: $primary-color;
 }
 
-p {
-  margin-left: 1em;
-}
-
 .top-bar {
   height: 80px;
 }
@@ -207,14 +203,14 @@ p {
 }
 
 .carousel {
-  max-height: 400px;
+  max-height: 300px;
   width: 1500px;
 }
 
 .carousel-project {
   position: absolute;
   right: 60px;
-  top: 300px;
+  top: 240px;
   background-color: white;
   opacity: .8;
   padding: 1em;
@@ -232,7 +228,7 @@ p {
   margin-left: 0;
   padding: .5em;
   background: black;
-  opacity: .7;
+  opacity: .8;
 }
 
 .carousel-blurb p {
@@ -244,9 +240,12 @@ p {
 
 
 .carousel img {
-  position: relative;
+
 }
 
+.category img {
+  transform:rotate(-3deg);
+}
 
 .category {
   width: 400px;
@@ -255,9 +254,17 @@ p {
   padding: 2rem;
   vertical-align: top;
   background-image: image-url('drawn-box.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  transform: rotate(-3deg);
   /*border: 1px solid $primary-color;*/
+}
+
+.category:nth-child(2) {
+  transform: rotate(3deg);
+}
+
+.category:nth-child(3) {
+  transform: rotate(-5deg);;
 }
 
 .category h4 {
@@ -272,11 +279,20 @@ p {
 }
 
 .categories {
+  display: inline-block;
   margin: 20px 50px;
   padding: 1em;
   font-size: 2em;
-  width: 1200px;
-  z-index: 1200;
+  width: 100%;
+  background-color: white;
+  background-image: image-url('drawn-box.png');
+  background-size: 100% 100%;
+
+}
+
+.popular-header {
+  opacity: 1;
+  z-index: 10000;
 }
 
 .project-image-thumb {

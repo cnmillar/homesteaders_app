@@ -1,13 +1,13 @@
 <div>
-    <% @category.projects.each do |project| %>
-      <div class='row project-result'>
-        <div class='large-2 columns project-result-image'>
-          <%= link_to image_tag(project.images.first.original_url, class: "project-image-thumb"), project_path(project.id) %>
-        </div>
-        <div class='large-10 columns project-result-details'>
-          <h4><%= link_to project.title, project_path(project.id) %></h4>
-          <p><%= project.description %></p>
-        </div>
+  <% @category.projects.each do |project| %>
+    <div class='row project-result'>
+      <div class='large-2 columns project-result-image'>
+        <%= link_to image_tag(project.images.first.original_url, class: "project-image-thumb"), project_path(project.id) %>
       </div>
-    <% end %>
+      <div class='large-10 columns project-result-details'>
+        <h4><%= link_to project.title, project_path(project.id) %></h4>
+        <p><%= project.description %></p>
+      </div>
+    </div>
+  <% end %>
 </div>
