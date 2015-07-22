@@ -562,14 +562,34 @@ $(function()
   $(".add-comment-ing").on("click", function(){
     $("#add-comment-ing"+$(this).data("ing-id")).slideToggle('slow', function(){
     })
+    // make plus sign minus on toggle
+    if ($("img", this).attr("src") == "/svg/minus27.svg"){
+      $("img", this).attr("src", "/svg/plus35.svg")
+    } else {
+      $("img", this).attr("src", "/svg/minus27.svg")
+    }
   })
+
   $(".add-comment-equip").on("click", function(){
     $("#add-comment-equip"+$(this).data("equip-id")).slideToggle('slow', function(){
     })
+    // make plus sign minus on toggle
+    if ($("img", this).attr("src") == "/svg/minus27.svg"){
+      $("img", this).attr("src", "/svg/plus35.svg")
+    } else {
+      $("img", this).attr("src", "/svg/minus27.svg")
+    }
   })
+
   $(".add-comment-step").on("click", function(){
     $("#add-comment-step"+$(this).data("step-id")).slideToggle('slow', function(){
     })
+    // make plus sign minus on toggle
+    if ($("img", this).attr("src") == "/svg/minus27.svg"){
+      $("img", this).attr("src", "/svg/plus35.svg")
+    } else {
+      $("img", this).attr("src", "/svg/minus27.svg")
+    }
   })
 
   $(".add-comment-general").on("click", function(){
@@ -589,10 +609,24 @@ $(function()
       $('.commentable-type-checkbox-project').addClass('commentable-type-checkbox-video');
       $('#video-time-text').replaceWith('<p>Attach this comment to: ' + displayTime + '.</p>')
     }
+
+    // make plus sign minus on toggle
+    if ($(".add-comment-general img").attr("src") == "/svg/minus27.svg"){
+      $(".add-comment-general img").attr("src", "/svg/plus35.svg")
+    } else {
+      $(".add-comment-general img").attr("src", "/svg/minus27.svg")
+    }
+
   })
 
   $(".add-image").on("click", function(){
     $("#add-image").slideToggle('slow', function(){})
+    // make plus sign minus on toggle
+    if ($(".add-image img").attr("src") == "/svg/minus27.svg"){
+      $(".add-image img").attr("src", "/svg/plus35.svg")
+    } else {
+      $(".add-image img").attr("src", "/svg/minus27.svg")
+    }
   })
 
 
