@@ -1,13 +1,17 @@
 <div class='section'>
-  <h1>Search results</h1>
+  <% if params[:title] %>
+    <h1>Search results</h1>
+      <p>Projects matching your search: <%= @projects.length %></p>
+  <% else %>
+    <h1>Popular Projects</h1>
+  <% end %>
   <%if @projects.empty?%>
     <div class="empty">
       <p>Sorry, we don't yet have any matching projects. Email us your idea and maybe we'll add it!</p>
     </div>
   <%else%>
     <% @projects.each do |project|%>
-      <p>Projects matching your search: <%= @projects.length %></p>
-      <div class='row project-result'>
+     <div class='row project-result'>
         <div class='large-2 columns project-result-image'>
           <%= link_to image_tag(project.images.first.original_url, class: "project-image-thumb"), project_path(project.id) %>
         </div>
