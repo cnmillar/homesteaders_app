@@ -717,7 +717,7 @@ hr {
     height: 300px;
   }
 
-.project-heart, .project-checked { 
+.project-heart, .project-checked, .project-comments { 
   display:inline;
 }
 
@@ -725,7 +725,7 @@ hr {
   margin-left: 50px;
 }
 
-.project-heart img {
+.project-heart, .project-comments img {
   height: 40px;
   width: 40px;
 }
@@ -735,6 +735,11 @@ hr {
   width: 35px;
 }
 
-.row {
-  padding-bottom: 30px;
+.project-image img {
+  max-height: 200px;
+}
+
+.project-title h1 {
+  color: black;
+  margin-left: 50px;
 }
