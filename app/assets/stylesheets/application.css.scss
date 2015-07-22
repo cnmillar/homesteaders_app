@@ -35,6 +35,14 @@ h1, h2, h3, h4 {
   margin-left: 0
 }
 
+.hand-drawn {
+  display:block;
+  border:none;
+  height:10px;
+  background-image: image-url("hr-drawn.png");
+  background-repeat: no-repeat;
+}
+
 .section {
 /*  border: 1px $primary-color dotted; */
   padding: 1em;
@@ -136,6 +144,11 @@ nav {
   width: 250px;
   margin: 25px 20px 0 0;
 } 
+
+.project-details {
+  background-image: image-url('drawn-box.png');
+  background-size: 100% 100%;
+}
 
 
 #video-timeline {
