@@ -1,7 +1,7 @@
 <div class="profile-user-info section">
 	<h2><%= @user.full_name %></h2>
   <% if current_user.id != params[:id].to_i %>
-	  <a href="#new-conversation" rel="conversationModal">Message this person</a>
+	  <a href="#new-conversation" rel="conversationModal">Message</a>
 	<% end %>
 
   <div class="user-image">

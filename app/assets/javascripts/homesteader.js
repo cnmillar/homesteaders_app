@@ -1,16 +1,6 @@
 
 $(function($){
 
-  // pagination hover gold
-
-  // $("#last").mouseover(function () {
-  //     debugger;
-  //     $(this).attr("src","first46gold.svg");
-  //   },
-  //   function () {
-  //     $(this).attr("src","first46.svg");
-  //   });
-
   // tooltip
 
   $("#favourited-by-user").tooltip();
@@ -24,10 +14,24 @@ $(function($){
 
   $('a[rel*=conversationModal]').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
 
+
   $("#new_conversation").on("ajax:success", function(e, data, status, xhr){
     $("#modal-container-conv").prepend("<h3 id='message-sent'>Message sent!</h3>");
     setTimeout(function() {
       $("#new-conversation").css("display","none");
+      $("#lean_overlay").css("display","none");
+      $("#conversation_subject").val("");
+      $("#conversation_message_body").val("");
+      $("#message-sent").remove();    
+    }, 2000);
+
+  })
+
+  $("#new_conversation_comment").on("ajax:success", function(e, data, status, xhr){
+    $("#send-message-to").remove();
+    $("#modal-container-conv-comment").prepend("<h3 id='message-sent'>Message sent!</h3>");
+    setTimeout(function() {
+      $("#new-conversation-comment").css("display","none");
       $("#lean_overlay").css("display","none");
       $("#conversation_subject").val("");
       $("#conversation_message_body").val("");

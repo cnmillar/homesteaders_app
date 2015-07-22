@@ -6,7 +6,23 @@
     </div>				
     <div class = "individual-comment-content">
   		<p><%= comment.content %></p>
-      <p><%= link_to comment.user.full_name, user_path(comment.user.id) %> | <span class="timestamp small"><%= comment.created_at.to_datetime %> | (<%= comment.commentable_type %> comment)</span></p>
+      <p><%= link_to comment.user.full_name, user_path(comment.user.id) %>
+        <% if current_user.id != comment.user.id %>
+           | <a href="#new-conversation-comment" rel="conversationCommentModal<%= comment.id %>" style="color: #b2230a">Message</a>
+        <% end %>
+       | <span class="timestamp small"><%= comment.created_at.to_datetime %> | (<%= comment.commentable_type %> comment)</span>
+     </p>
     </div>
 	</div>
+  <%= render :partial => "new_conversation_modal", collection: @all_comments, locals: {comment: comment} %>
+
+  <script>
+    $(function($){
+      $('<%= "a[rel*=conversationCommentModal#{comment.id}]" %>').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
+    })
+  </script>
+
 <% end %>
+
+
+
