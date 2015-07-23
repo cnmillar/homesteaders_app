@@ -697,49 +697,55 @@ comments_on_video =
 		commentable_id: 1,
 		video_time: 100,
 		user_id: 2,
-		project_id: 1
+		project_id: 9
 	},
 	{
 		content: "This is video comment 4!",
 		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 400,
-		user_id: 3
+		user_id: 3,
+		project_id: 2
 	},	
 	{
 		content: "This is video comment 5!",
 		commentable_type: "Video",
 		commentable_id: 1,
 		video_time: 200,
-		user_id: 4
+		user_id: 4,
+		project_id: 2
 	},	
 	{
 		content: "This is video comment 6!",
 		commentable_type: "Video",
 		commentable_id: 8,
 		video_time: 300,
-		user_id: 2
+		user_id: 2,
+		project_id: 3
 	},	
 	{
 		content: "This is video comment 7!",
 		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 400,
-		user_id: 3
+		user_id: 3,
+		project_id: 3
 	},	
 	{
 		content: "This is video comment 8!",
 		commentable_type: "Video",
 		commentable_id: 6,
 		video_time: 500,
-		user_id: 1
+		user_id: 1,
+		project_id: 6
 	},	
 	{
 		content: "This is video comment 9!",
 		commentable_type: "Video",
 		commentable_id: 3,
 		video_time: 600,
-		user_id: 2
+		user_id: 2,
+		project_id: 7
 	}	
 ]
 

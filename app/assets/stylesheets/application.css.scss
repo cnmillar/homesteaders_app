@@ -21,7 +21,7 @@
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
 $tertiary-color: #EDBA3E;
-$dark-gray-color: #462F2F;
+$dark-gray-color: #333;
 $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
 $radius: 3px;
@@ -135,8 +135,14 @@ a:hover {
   border: 1px solid $secondary-color;
 }
 
-.inbox-icon {
+#inbox-icon {
   margin-top: 8px;
+}
+
+#inbox-count {
+  top: 6px;
+  position: relative;
+  left: 6px;
 }
 
 .user-panel button {
@@ -144,7 +150,7 @@ a:hover {
 }
 
 .user-panel p {
-  margin: -5px 0 0 5px;
+  margin: -7px 0 0 5px;
   line-height: 2;
   color : white;
   display: inline-block;
@@ -806,6 +812,7 @@ hr {
 
 .project-heart, .project-checked, .project-comments { 
   display:inline;
+  margin: 5px;
 }
 
 .user-image {
@@ -912,7 +919,18 @@ hr {
   font-style: bold;
 }
 .project-image img {
-  max-height: 200px;
+  max-height: 300px;
+  width: 400px;
+  display: inline-block;
+  margin: 1em;
+  padding: 2rem;
+  vertical-align: top;
+  background-image: url(/assets/drawn-box.png);
+  background-size: 100% 100%;
+}
+
+.project-image h3 {
+  margin-left: 32px;
 }
 
 .project-title h1 {
@@ -929,3 +947,36 @@ hr {
   border: 1px solid $secondary-color;
   outline: 0;
 }
+
+.project-icons {
+  margin-left: 200px;
+}
+
+.user-project-comments li {
+  margin-left: 50px;
+  margin-right: 20px;
+}
+
+.user-project-comments h3 {
+  margin-left: 60px;
+}
+
+.user-project-comments {
+  margin-bottom: 30px;
+}
+
+.comment-count {
+  position: absolute;
+  top: 399px;
+  right: 110px;
+  height: 20px;
+  width: 20px;
+  border-radius: 8px;
+  font-size: 18px;
+  text-align: center;
+}
+
+.profile-user-info a {
+  margin-left: 35px;
+}
+
