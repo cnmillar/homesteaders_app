@@ -1207,7 +1207,7 @@ users = [
 	{
 		admin: true,
 		email: "jane@gmail.com",
-		avatar: "/uploads/user/avatar/BethLIjpg",
+		avatar: "/uploads/user/avatar/BethLI.jpg",
 		full_name: "Jane Wilson",
 		facebook_id: 1015642129684983
 	},
