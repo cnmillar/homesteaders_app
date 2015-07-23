@@ -527,6 +527,7 @@ $(function()
 
   function createComment(data){
     // Add avatar to timeline if video comment
+    console.log(data)
     if (data.commentable_type == "Video") {
     
       // This first part duplicates stuff below so could be made DRYer    
