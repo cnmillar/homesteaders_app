@@ -236,8 +236,8 @@ $(function($){
     if (timelineX < 0) {
       timelineX = 0
     }
-    var newAvatar = $('<div />').addClass('video-comment-avatar').html('<img src = "https://placekitten.com/g/32/32" />').css({'left': timelineX, 'top' : 0 });
-    $('#video-timeline').append(newAvatar);    
+    // var newAvatar = $('<div />').addClass('video-comment-avatar').html('<img src = "https://placekitten.com/g/32/32" />').css({'left': timelineX, 'top' : 0 });
+    // $('#video-timeline').append(newAvatar);    
   });
 
 // Hover state for comment markers
@@ -252,7 +252,7 @@ $(function($){
     avatarFlyout = $('<div />', {
       id: 'activeComment',
       class: 'video-comment-flybelow',
-      text: comment_user + " said: " + comment_content + " at " + comment_timestamp
+      text: comment_user + " said: " + comment_content
     });
     setTimeout(function(){
       hoveredAvatar.append(avatarFlyout).fadeIn(1000);
@@ -581,18 +581,32 @@ $(function()
       if (timelineX < 0) {
       timelineX = 0
       } 
-      
-      newAvatar = $('<div />').addClass('video-comment-avatar').html("'<img src = ' + APP.userName />").css({'left': timelineX, 'top' : 0 });
-      $('#video-timeline').append(newAvatar).fadeIn('fast');
-    }
 
-    return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
-        '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+ " " + 
-        APP.userName +  " " +       
-        data.content + " " + 
-        data.created_at +  
-        '<small>('+ data.commentable_type +')</small> ' + 
-        '<hr>' + 
+//'<div class="video-comment">Placing new avatar</div>'
+
+
+      //Place new avatar - hack fix for demo - should be made into jQuery
+      timelineComment = "<div class='video-comment'><img class='video-comment-avatar' src = '" + APP.userAvatar + "' style='left:" + timelineX + "px;'></div><div id='comment_id_" + data.id + "' class='timeline-comment'>" + data.content + "</div>"
+
+      $('#video-timeline').prepend(timelineComment).fadeIn();           
+  }
+    // Add new comment to top
+    return '<div class="individual-comment element ' + data.commentable_type + " " + data.commentable_id + '">'+
+        '<hr>' +
+        '<div>' +
+          '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+
+        '</div>' +
+          '<div class="individual-comment-content">' +
+          '<p>' + data.content + '</p>' +
+          '<p>' + 
+            '<a href="/users/' + 
+            data.user_id + 
+            '">' + 
+            APP.userName + 
+            '</a> | <span class="timestamp"><i><small>' + 
+            data.commentable_type + 
+            ' comment from just now.</span></p>' + 
+        '</div>' +
       '</div>'
   }
 

@@ -208,11 +208,15 @@ a:hover {
   position: relative;
 }
 
+.timeline-comment {
+  display: none;
+}
+
 .video-comment-avatar {
   width: 32px;
   height: 32px;
   border: 1px solid #888;
-  background-color: blue;
+  background-color: $module-border;
   display: inline-block;
   position: absolute;
   top: 0;
@@ -246,7 +250,7 @@ a:hover {
 }
 
 .commentable-type-checkbox-project {
-  display: none;
+  display: hidden;
 }
 
 #video-checkbox {
