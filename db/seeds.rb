@@ -289,7 +289,7 @@ ingredients = [
 		{
 			name: "Nigari Flakes",
 			ing_type: "ingredient",
-			shopify_id: 4461196737,
+			shopify_id: 4818616897,
 			unit_size: 10,
 			unit_measure: "grams",
 			shopify_unit: 1,

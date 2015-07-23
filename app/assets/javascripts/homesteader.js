@@ -567,6 +567,8 @@ $(function()
       $("#no-comments").css("display","inline");
     }
     $("#add-comment-general").slideToggle('slow', function(){});
+    debugger;
+    $("img", ".add-comment-general").attr("src", "/svg/plus35.svg")
 
   }); 
 
