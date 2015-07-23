@@ -266,7 +266,7 @@ ingredients = [
 			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
-			unit_measure: "L",
+			unit_measure: "litres",
 			availability: false	
 		}
 	],
@@ -448,7 +448,7 @@ ingredients = [
 			ing_type: "ingredient",
 			shopify_id: nil,
 			unit_size: 2,
-			unit_measure: "L",
+			unit_measure: "litres",
 			availability: false	
 		},
 		{
@@ -476,7 +476,315 @@ ingredients = [
 			shopify_unit: 1,
 			availability: true	
 		}
-	]
+	],
+	[
+		{
+			name: "Mason jar",
+			ing_type: "equipment",
+			shopify_id: 4821497729,
+			unit_size: 1,
+			unit_measure: "qt",
+			shopify_unit: 1,
+			availability: true	
+		},
+			{
+			name: "Sprout screen -stainless",
+			ing_type: "equipment",
+			shopify_id: 4818909121,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true	
+		},
+			{
+			name: "Sprouting seeds",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "",
+			availability: false
+		},
+],
+[
+		{
+			name: "Hard red spring wheat seeds",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 400,
+			unit_measure: "g",
+			availability: false	
+		},
+			{
+			name: "Nursey flat",
+			ing_type: "equipment",
+			shopify_id: 4821503361,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true	
+		},
+			{
+			name: "Potting mix",
+			ing_type: "ingredient",
+			shopify_id: 4821538817,
+			unit_size: 2,
+			unit_measure: "litres",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Juicer",
+			ing_type: "equipment",
+			shopify_id: 4829689345,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Knife or scissors",
+			ing_type: "equipment",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "",
+			availability: false
+		},
+			{
+			name: "Newspaper",
+			ing_type: "equipment",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "sheet",
+			availability: false
+		},
+
+],
+[
+		{
+			name: "GRG nut milk bag",
+			ing_type: "equipment",
+			shopify_id: 4828414209,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Raw nuts",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "cup",
+			availability: false	
+		},
+			{
+			name: "Blender, food processor",
+			ing_type: "equipment",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "",
+			availability: false
+		},
+			{
+			name: "Water",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 2,
+			unit_measure: "cups",
+			availability: false
+		},
+],
+[
+		{
+			name: "Instant-read thermometer",
+			ing_type: "equipment",
+			shopify_id: 4829468417,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true		
+		},
+			{
+			name: "Thermometer clip",
+			ing_type: "equipment",
+			shopify_id: 4828512641,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true	
+		},
+			{
+			name: "CFH muslin",
+			ing_type: "equipment",
+			shopify_id: 4829576001,
+			unit_size: 1,
+			unit_measure: "sq y",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Colander",
+			ing_type: "equipment",
+			shopify_id: 4826109249,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Stainless steel pot",
+			ing_type: "equipment",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "",
+			availability: false
+		},
+			{
+			name: "Rennet tablet",
+			ing_type: "ingredient",
+			shopify_id: 4829668353,
+			unit_size: 0.125,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Lemon juice",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 0.333,
+			unit_measure: "cup",
+			availability: false
+		},
+			{
+			name: "Milk",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 2,
+			unit_measure: "litres",
+			availability: false
+		},
+			{
+			name: "Heat-resistant gloves",
+			ing_type: "equipment",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "pair",
+			availability: false
+		},
+],
+[
+			{
+			name: "35mm sausage casings",
+			ing_type: "ingredient",
+			shopify_id: 4825961793,
+			unit_size: 0.2,
+			unit_measure: "lb",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Weston manual grinder/stuffer",
+			ing_type: "equipment",
+			shopify_id: 4828406145,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Kitchen scale",
+			ing_type: "equipment",
+			shopify_id: 4828306113,
+			unit_size: 1,
+			unit_measure: "",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Pork shoulder",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 5,
+			unit_measure: "lbs",
+			availability: false
+		},
+			{
+			name: "Ice-cold liquid",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "cup",
+			availability: false
+		},
+			{
+			name: "Salt",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 3,
+			unit_measure: "tbsp",
+			availability: false
+		},
+],
+[
+			{
+			name: "Prague powder #1",
+			ing_type: "ingredient",
+			shopify_id: 4823695681,
+			unit_size: 4,
+			unit_measure: "g",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Hickory chips",
+			ing_type: "ingredient",
+			shopify_id: 4826123777,
+			unit_size: 2,
+			unit_measure: "lbs",
+			shopify_unit: 1,
+			availability: true
+		},
+			{
+			name: "Thermometer",
+			ing_type: "equipment",
+			shopify_id: 4829468417,
+			unit_size: 1,
+			unit_measure: "",
+			availability: false
+		},
+			{
+			name: "Pork belly",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 5,
+			unit_measure: "lbs",
+			availability: false
+		},
+			{
+			name: "Sugar",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 16,
+			unit_measure: "g",
+			availability: false
+		},
+			{
+			name: "Salt",
+			ing_type: "ingredient",
+			shopify_id: nil,
+			unit_size: 32,
+			unit_measure: "g",
+			availability: false
+		},
+			{
+			name: "Freezer bag or tupperware",
+			ing_type: "equipment",
+			shopify_id: nil,
+			unit_size: 1,
+			unit_measure: "",
+			availability: false
+		}
 ]
 
 steps = [
