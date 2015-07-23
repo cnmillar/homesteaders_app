@@ -550,36 +550,25 @@ $(function()
       console.log(timelineX, data.content, APP.userName, APP.userAvatar)
       timelineComment = "<div class='video-comment'><img class='video-comment-avatar' src = '" + APP.userAvatar + "' style='left:" + timelineX + "px;'></div><div id='comment_id_" + data.id + "' class='timeline-comment'>" + data.content + "</div>"
 
-
-    //   id="comment_id_<%=comment.id%>" class="timeline-comment">
-    //   <%= comment.content %>
-    // </div>"
-
-    // <%= image_tag(comment.user.avatar,
-    //   class: 'video-comment-avatar', 
-    //   :style => "left: #{comment.video_time}px") %>
-    // </div> 
-    // <div id="comment_id_<%=comment.id%>" class="timeline-comment">
-    //   <%= comment.content %>
-    // </div>
-
-      $('#video-timeline').prepend(timelineComment);
-      // newAvatar = $('<div />').addClass('video-comment-avatar').html("'<img src = ' + APP.userAvatar />").
-      //   );
-      // newComment = $('div />').addClass('timeline-comment').html("<p>content</p>"); 
-      
-      // $('#video-timeline').append(newAvatar).append(newComment)        
-          
-
+      $('#video-timeline').prepend(timelineComment);           
   }
 
-    return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
-        '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+ " " + 
-        APP.userName +  " " +       
-        data.content + " " + 
-        data.created_at +  
-        '<small>('+ data.commentable_type +')</small> ' + 
-        '<hr>' + 
+    return '<div class="individual-comment element ' + data.commentable_type + " " + data.commentable_id + '">'+
+        '<hr>' +
+        '<div>' +
+          '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+
+        '</div>' +
+          '<div class="individual-comment-content">' +
+          '<p>' + data.content + '</p>' +
+          '<p>' + 
+            '<a href="/users/' + 
+            data.user_id + 
+            '">' + 
+            APP.userName + 
+            '</a> | <span class="timestamp"><i><small>' + 
+            data.commentable_type + 
+            ' comment from just now.</span></p>' + 
+        '</div>' +
       '</div>'
   }
 
