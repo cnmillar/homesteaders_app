@@ -1,4 +1,18 @@
-	<p>Difficulty: <%= @project.difficulty %><br />
-	   Time to complete: <%= @project.duration %> <%= @project.duration_unit %><br />
-	   Makes: <%= @project.batch_size %>  <%= @project.batch_unit %><br />
-	   Rating: <%= rating_for @project, "overall", disable_after_rate: true, :half_show => true %></p>
+
+<% if @project.difficulty == 1 %>
+	<p>Difficulty: Easy</p>
+	<!-- <p>Difficulty: <%#= image_tag("/svg/easy.png", :id => "difficulty-icons") %></p> -->
+<% elsif @project.difficulty == 2 %>
+	<p>Difficulty: Medium</p>
+	<!-- <p>Difficulty: <%#= image_tag("/svg/medium.png") %></p> -->
+<% elsif @project.difficulty == 3 %>
+	<p>Difficulty: Difficult</p>
+	<!-- <p>Difficulty: <%#= image_tag("/svg/difficult.png") %></p> -->
+<% elsif @project.difficulty == 4 %>
+	<p>Difficulty: Hard</p>
+	<!-- <p>Difficulty: <%#= image_tag("/svg/expert.png") %></p> -->
+<% end %>
+
+<p>Time to complete: <%= @project.duration %> <%= @project.duration_unit %></p>
+<p>Makes: <%= @project.batch_size %>  <%= @project.batch_unit %></p>
+<p>Rating: <%= rating_for @project, "overall", disable_after_rate: true, :half_show => true %></p>
