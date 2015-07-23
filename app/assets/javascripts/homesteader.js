@@ -546,9 +546,14 @@ $(function()
 //'<div class="video-comment">Placing new avatar</div>'
 
 
-      //Place new avatar
+      //Place new avatar - hack fix for demo - should be made into jQuery
       console.log(timelineX, data.content, APP.userName, APP.userAvatar)
-      timelineComment = "<div class='video-comment'><img class='video-comment-avatar' src = '" + APP.userAvatar + "' style='left:" + timelineX + "px;'></div>"
+      timelineComment = "<div class='video-comment'><img class='video-comment-avatar' src = '" + APP.userAvatar + "' style='left:" + timelineX + "px;'></div><div id='comment_id_" + data.id + "' class='timeline-comment'>" + data.content + "</div>"
+
+
+    //   id="comment_id_<%=comment.id%>" class="timeline-comment">
+    //   <%= comment.content %>
+    // </div>"
 
     // <%= image_tag(comment.user.avatar,
     //   class: 'video-comment-avatar', 
