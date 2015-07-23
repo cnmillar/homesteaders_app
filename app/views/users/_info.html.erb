@@ -1,6 +1,6 @@
 <div class="profile-user-info">
 	<div class="user-info">
-	  <%= image_tag(@user.avatar) %>
+	  <%= image_tag(@user.avatar, class: "profile-user-image") %>
   </div>
 	<div class="user-info">
 	  <% if current_user.id != params[:id].to_i %>	

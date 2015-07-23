@@ -1052,19 +1052,29 @@ hr {
 }
 
 .profile-user-info a {
-  margin-left: 62px;
+  margin-left: 12px;
+}
+
+.profile-user-info a:hover {
+  outline: 1px solid $secondary-color;
 }
 
 .profile-user-info {
   margin: 3em 1em 0 1em;
   background-color: white;
   border-radius: 3px;
-  width: 600px;
+  width: 700px;
+}
+
+.profile-user-image {
+  width: 120px;
+  height: 120px;
+  border: 1px solid $module-border;
+  box-shadow: 3px 3px 3px $module-border;
 }
 
 .profile-user-info img {
-  border: 1px solid $module-border;
-  box-shadow: 3px 3px 3px $module-border;
+
 }
 
 .user-image img {
