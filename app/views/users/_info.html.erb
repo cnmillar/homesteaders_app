@@ -1,19 +1,14 @@
-<div class="profile-user-info section row">
-	<div class="large-2 columns">
-	  <div class="user-image">
-	    <%= image_tag(@user.avatar) %>
-    </div>
+<div class="profile-user-info">
+	<div class="user-info">
+	  <%= image_tag(@user.avatar) %>
+  </div>
+	<div class="user-info">
+	  <% if current_user.id != params[:id].to_i %>	
+			<h2 id="profile-name"><%= @user.full_name %>  <%= image_tag("/svg/mail3.svg", width:'35px') %></h2>
+		<% else %>
+			<h2><%= @user.full_name %></h2>
+		<% end %>
 	</div>
-
-	<div class="large-3 columns">
-  <% if current_user.id != params[:id].to_i %>	
-		<h2 id="profile-name"><%= @user.full_name %>  <%= image_tag("/svg/mail3.svg", width:'35px') %></h2>
-	<% else %>
-		<h2><%= @user.full_name %></h2>
-	<% end %>
-	</div>
-
-	<div class="large-7 columns no-collapse"></div>
 </div>
 
 <%= render "new_conversation_modal" %>
