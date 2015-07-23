@@ -34,10 +34,11 @@
         <div class="project-checked"><%= image_tag("/svg/checkmark4.svg") %></div>
       <% end %>
        <div class="project-comments"><%= image_tag("/svg/chat34.svg") %></div>
+        <div class="comment-count"><%= @user.comments.where(project_id: proj.id).count %></div>
        </div>
 
        <div class="user-project-comments">
-        <div class="comment-count"><%= @user.comments.where(project_id: proj.id).count %></div>
+       
        <% if !@user.comments.where(project_id: proj.id).empty? %>
          <h3>Comments:</h3>
           <% @user.comments.where(project_id: proj.id).each do |comment| %>
