@@ -1171,49 +1171,49 @@ users = [
 	{
 		admin: true,
 		email: "davidgood@test.ca",
-		avatar: "/uploads/user/avatar/3/45265_10151595761691660_667105653_n.jpg",
+		avatar: "/uploads/user/avatar/DavidLI.jpg",
 		full_name: "David Good",
 		facebook_id: 10153480204621660
 	},
 		{
 		admin: true,
 		email: "beth.hammett@gmail.com",
-		avatar: "/uploads/user/avatar/1/10256184_10154078837500693_4522517122463806943_n.jpg",
+		avatar: "/uploads/user/avatar/BethLI.jpg",
 		full_name: "Beth Hammett",
 		facebook_id: 10155764870935693
 	},
 		{
 		admin: true,
 		email: "cnmillar@gmail.com",
-		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
+		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
 		full_name: "Caitlin Millar",
 		facebook_id: 10101421296841741
 	},
 	{
 		admin: true,
 		email: "jane@gmail.com",
-		avatar: "/uploads/user/avatar/1/10256184_10154078837500693_4522517122463806943_n.jpg",
+		avatar: "/uploads/user/avatar/BethLIjpg",
 		full_name: "Jane Wilson",
 		facebook_id: 1015642129684983
 	},
 	{
 		admin: true,
 		email: "susan@test.ca",
-		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
+		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
 		full_name: "Susan Smith",
 		facebook_id: 10102349586934950
 	},
 	{
 		admin: true,
 		email: "john@test.ca",
-		avatar: "/uploads/user/avatar/3/45265_10151595761691660_667105653_n.jpg",
+		avatar: "/uploads/user/avatar/avatar/DavidLI.jpg",
 		full_name: "John Doe",
 		facebook_id: 10123992340329457
 	},
 	{
 		admin: false,
 		email: "amy@test.ca",
-		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
+		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
 		full_name: "Amy Wright",
 		facebook_id: 104059348549345345
 	}
