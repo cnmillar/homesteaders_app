@@ -7,7 +7,7 @@
 
 	<div class="large-3 columns">
   <% if current_user.id != params[:id].to_i %>	
-		<h2 id="profile-name"><%= @user.full_name %>  <%= image_tag("/svg/mail3.svg", width:'35px') %></h2>
+		<h2 id="profile-name"><%= @user.full_name %>  <a href="#new-conversation" rel="conversationModal"><%= image_tag("/svg/mail3.svg", width:'35px') %></a></h2>
 	<% else %>
 		<h2><%= @user.full_name %></h2>
 	<% end %>
