@@ -564,11 +564,10 @@ $(function()
 
 //'<div class="video-comment">Placing new avatar</div>'
 
-
       //Place new avatar - hack fix for demo - should be made into jQuery
       timelineComment = "<div class='video-comment'><img class='video-comment-avatar' src = '" + APP.userAvatar + "' style='left:" + timelineX + "px;'></div><div id='comment_id_" + data.id + "' class='timeline-comment'>" + data.content + "</div>"
 
-      $('#video-timeline').prepend(timelineComment).fadeIn();           
+      $('#video-timeline').prepend(timelineComment);           
   }
     // Add new comment to top
     return '<div class="individual-comment element ' + data.commentable_type + " " + data.commentable_id + '">'+
