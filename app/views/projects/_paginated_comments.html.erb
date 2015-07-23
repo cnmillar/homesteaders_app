@@ -10,7 +10,7 @@
         <% if current_user.id != comment.user.id %>
            | <a href="#new-conversation-comment<%= comment.id %>" rel="conversation<%= comment.id %>CommentModal" style="color: #b2230a">Message</a>
         <% end %>
-       | <span class="timestamp small"><%= comment.created_at.to_datetime %> | (<%= comment.commentable_type %> comment)</span>
+       | <span class="timestamp"><i><small><%= comment.commentable_type %> comment from <%= comment.created_at.to_datetime.strftime("%m/%d/%Y") %></small></i></span>
      </p>
     </div>
 	</div>

@@ -1,27 +1,28 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Homesteader's Notebook</title>
-  <%= stylesheet_link_tag    "application", media: "all" %>
-  <%= javascript_include_tag "application" %>
-  <link href='http://fonts.googleapis.com/css?family=Arvo|Architects+Daughter' rel='stylesheet' type='text/css'>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
-  <%= csrf_meta_tags %>
-  <% if current_user %>
-  <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.full_name %>"}</script>
-  <% end %>
-</head>
+  <head>
+    <title>Homesteader's Notebook</title>
+    <%= stylesheet_link_tag    "application", media: "all" %>
+    <%= javascript_include_tag "application" %>
+    <link href='http://fonts.googleapis.com/css?family=Arvo|Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
+    <%= csrf_meta_tags %>
+    <% if current_user %>
+    <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.full_name %>"}</script>
+    <% end %>
+  </head>
 
-<body>
+  <body>
 
-  <%= render 'layouts/navigation' %>
+    <%= render 'layouts/navigation' %>
 
-  <% if flash[:notice] %>
-    <div class="notice"><%= flash[:notice] %></div>
-  <% end %>
+    <% if flash[:notice] %>
+      <div class="notice"><%= flash[:notice] %></div>
+    <% end %>
 
-  <%= yield %>
-
-</body>
-<footer>This is the footer</footer>
+    <%= yield %>
+  <script src="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
+  <footer>This is the footer</footer>
+  </body>
+</html
