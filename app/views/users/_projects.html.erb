@@ -1,20 +1,20 @@
 <% projects = 1 %>
 <% @user_projects.each do |proj| %>
+
   <% if projects % 3 == 0 %>
     <div class="row">
   <% end %>
   <div class="large-4 columns">
-
-    <h3><strong><%= proj.project.title %> </strong></h3>
-      <% if !proj.project.images.empty? %>
-        <div class="project-image">
-          <%= image_tag("#{proj.project.images.first.original_url}", width: '300px') %>
-        </div>
-      <% end %>
+    <div class="project-image">
+       <h3><%= proj.title %></h3>
+        <% if !proj.images.empty? %>
+           <%= image_tag("#{proj.images.first.original_url}", width: '300px') %>
+        <% end %>
+    </div>
+    <div class="project-icons">
       <% if current_user == @user %>
-        <div class="project-icons">
-        <div class="project-heart">
-          <% if proj.favourited%>
+         <div class="project-heart">
+          <% if proj.user_projects.where(project_id: proj.id).first.favourited%>
               <%=link_to(image_tag("/svg/heart213_hover.png"), favourited_path(proj), method: "post", class: "favourited", remote: true) %>
           <%else%>
              <%=link_to(image_tag("/svg/heart213.svg"), favourited_path(proj), method: "post", remote: true) %>
@@ -22,7 +22,7 @@
         </div>
 
         <div class="project-checked">
-          <% if proj.completed%>
+          <% if proj.user_projects.where(project_id: proj.id).first.completed %>
             <%=link_to(image_tag("/svg/checkmark4.svg"), completed_path(proj), method: "post", class: "completed", remote: true) %>
           <%else%>
             <%=link_to(image_tag("/svg/delete38.svg"), completed_path(proj), method: "post", remote: true) %>
@@ -34,13 +34,17 @@
         <div class="project-checked"><%= image_tag("/svg/checkmark4.svg") %></div>
       <% end %>
        <div class="project-comments"><%= image_tag("/svg/chat34.svg") %></div>
+       </div>
 
-       <h3>Comments:</h3>
-       <% proj.user.comments.each do |comment| %>
-        <li><%= comment.content %>
-        <%= comment.project ? comment.project.title : "" %> </li>
-        <% end %>
-      </div>
+       <div class="user-project-comments">
+        <div class="comment-count"><%= @user.comments.where(project_id: proj.id).count %></div>
+       <% if !@user.comments.where(project_id: proj.id).empty? %>
+         <h3>Comments:</h3>
+          <% @user.comments.where(project_id: proj.id).each do |comment| %>
+          <li><%= comment.content %></li>
+          <% end %>
+         <% end %>
+        </div>
     </div>
 
      

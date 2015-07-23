@@ -7,7 +7,8 @@ class UsersController < ApplicationController
 
 	def show
     @user =  User.find(params[:id])
-    @user_projects =  UserProject.where(user_id: @user.id)
+    #@user_projects =  UserProject.where(user_id: @user.id)
+    @user_projects = @user.unique_projects
     @images=[]
     @comments = @user.comments
 

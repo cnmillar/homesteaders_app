@@ -6,8 +6,13 @@ class User < ActiveRecord::Base
 	has_many :images
 	has_many :projects, through: :user_projects
 	has_many :user_projects
+
+  # Use for read-only activities only ;)
+  has_many :unique_projects, -> { distinct }, through: :user_projects, source: :project, class_name: 'Project'
+
 	has_many :messages
 	has_many :conversations
+
 
 	ratyrate_rater
 
