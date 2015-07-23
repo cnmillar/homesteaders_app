@@ -8,9 +8,9 @@
   		<p><%= comment.content %></p>
       <p><%= link_to comment.user.full_name, user_path(comment.user.id) %>
         <% if current_user.id != comment.user.id %>
-           | <a href="#new-conversation-comment" rel="conversationCommentModal<%= comment.id %>" style="color: #b2230a">Message</a>
+           | <a href="#new-conversation-comment" rel="conversationCommentModal<%= comment.id %>" style="color: #b2230a">Send Message</a>
         <% end %>
-       | <span class="timestamp small"><%= comment.created_at.to_datetime %> | (<%= comment.commentable_type %> comment)</span>
+       | <span class="timestamp"><i><small><%= comment.commentable_type %> comment from <%= comment.created_at.to_datetime.strftime("%m/%d/%Y") %></small></i></span>
      </p>
     </div>
 	</div>
