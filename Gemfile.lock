@@ -192,6 +192,3 @@ DEPENDENCIES
   sqlite3
   uglifier (>= 1.3.0)
   youtube_it (~> 2.4.0)
-
-BUNDLED WITH
-   1.10.2

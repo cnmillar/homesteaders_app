@@ -1,57 +1,86 @@
-<% projects = 1 %>
 <% @user_projects.each do |proj| %>
 
-  <% if projects % 3 == 0 %>
-    <div class="row">
-  <% end %>
-  <div class="large-4 columns">
-    <div class="project-image">
-       <h3><%= proj.title %></h3>
-        <% if !proj.images.empty? %>
-           <%= image_tag("#{proj.images.first.original_url}", width: '300px') %>
-        <% end %>
-    </div>
-    <div class="project-icons">
-      <% if current_user == @user %>
-         <div class="project-heart">
-          <% if proj.user_projects.where(project_id: proj.id).first.favourited%>
-              <%=link_to(image_tag("/svg/heart213_hover.png"), favourited_path(proj), method: "post", class: "favourited", remote: true) %>
-          <%else%>
-             <%=link_to(image_tag("/svg/heart213.svg"), favourited_path(proj), method: "post", remote: true) %>
-          <%end%>
-        </div>
-
-        <div class="project-checked">
-          <% if proj.user_projects.where(project_id: proj.id).first.completed %>
-            <%=link_to(image_tag("/svg/checkmark4.svg"), completed_path(proj), method: "post", class: "completed", remote: true) %>
-          <%else%>
-            <%=link_to(image_tag("/svg/delete38.svg"), completed_path(proj), method: "post", remote: true) %>
-         <%end%>
-       </div>
-     
-      <% else %>
-        <div class="project-heart"><%= image_tag("/svg/heart213red.svg") %></div>
-        <div class="project-checked"><%= image_tag("/svg/checkmark4.svg") %></div>
-      <% end %>
-       <div class="project-comments"><%= image_tag("/svg/chat34.svg") %></div>
-        <div class="comment-count"><%= @user.comments.where(project_id: proj.id).count %></div>
-       </div>
-
-       <div class="user-project-comments">
-       
-       <% if !@user.comments.where(project_id: proj.id).empty? %>
-         <h3>Comments:</h3>
-          <% @user.comments.where(project_id: proj.id).each do |comment| %>
-          <li><%= comment.content %></li>
-          <% end %>
-         <% end %>
-        </div>
-    </div>
-
-     
-     <% if projects % 3 == 0 %>
-      </div>
+  <div class="category">
+    <h3><%= proj.title %></h3>
+    <% if !proj.images.empty? %>
+       <%= image_tag("#{proj.images.first.original_url}", width: '300px') %>
     <% end %>
-    <% projects += 1 %>
+
+    <% if current_user == @user %>
+      <div class="row">
+
+        <div class="large-4 columns">
+          <!-- total number of times this project was favourited -->
+          <% if proj.user_projects.where(user_id: current_user.id).first && proj.user_projects.where(user_id: current_user.id).first.favourited %>
+            <%= link_to('javascript:null', :id => "favourited-by-user", :title => "Unfavourite this project.") do %>
+              <div id="favourited-true"></div>
+            <% end %>
+          <% else %>
+            <%= link_to('javascript:null', :id => "favourited-by-user", :title => "Favourite this project.") do %>
+              <div id="favourited-false"></div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="large-4 columns">
+          <!-- total number of times this project was favourited -->
+          <% if proj.user_projects.where(user_id: current_user.id).first && proj.user_projects.where(user_id: current_user.id).first.completed %>            
+            <%= link_to('javascript:null', :id => "completed-by-user", :title => "Mark this project as completed.") do %>
+              <div id="completed-true"></div>
+            <% end %>
+          <% else %>
+            <%= link_to('javascript:null', :id => "completed-by-user", :title => "Mark this project as completed") do %>
+              <div id="completed-false"></div>
+            <% end %>
+          <% end %>
+        </div>
+
+        <div class="large-4 columns no-collapse">
+          <%= image_tag("/svg/chat34.svg", width: "32px") %>
+          <%= current_user.comments.where(project_id: proj.id).length %>
+        </div>
+
+      </div>
+
+      <% current_user.comments.where(project_id: proj.id).each do |comment|%>
+        <p><%= comment.content %></p>
+      <% end %>
+
+    <% else %>
+
+      <div class="row">
+
+        <div class="large-4 columns">
+          <!-- total number of times this project was favourited -->
+          <% if proj.user_projects.where(user_id: @user.id).first && proj.user_projects.where(user_id: @user.id).first.favourited %>
+            <div id="favourited-true-pro"></div>
+          <% else %>
+            <div id="favourited-false-pro"></div>
+          <% end %>
+        </div>
+
+        <div class="large-4 columns">
+          <!-- total number of times this project was favourited -->
+          <% if proj.user_projects.where(user_id: @user.id).first && proj.user_projects.where(user_id: @user.id).first.completed %>            
+            <div id="completed-true-pro"></div>
+          <% else %>
+            <div id="completed-false-pro"></div>
+          <% end %>
+        </div>
+
+        <div class="large-4 columns no-collapse">
+          <%= image_tag("/svg/chat34.svg", width: "32px") %>
+          <%= @user.comments.where(project_id: proj.id).length %>
+        </div>
+
+      </div>
+
+      <% @user.comments.where(project_id: proj.id).each do |comment|%>
+        <p><%= comment.content %></p>
+      <% end %>
+
+    <% end %>
+
+  </div>
+
 <% end %>
-</div>
