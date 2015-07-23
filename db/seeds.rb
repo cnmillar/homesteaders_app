@@ -147,7 +147,7 @@ projects = [
 		batch_unit: "pound",
 		duration: 5,
 		duration_unit: "hours",
-		kit_id: 3514926913	
+		kit_id: 4828420609
 	},
 	{
 		title: "Make Mozzarella Cheese", 
@@ -170,7 +170,7 @@ projects = [
 		batch_unit: "quart",
 		duration: 30,
 		duration_unit: "minutes",
-		kit_id: 3514925441	
+		kit_id: 4830371905
 	},
 	{
 		title: "Make Nut Milk", 
@@ -215,7 +215,7 @@ projects = [
 		batch_unit: "kg",
 		duration: 1,
 		duration_unit: "hour",
-		kit_id: 2135948673	
+		kit_id: 4828474561
 	}
 ]
 
@@ -227,7 +227,7 @@ ingredients = [
 		{
 			name: "Instant-read thermometer",
 			ing_type: "equipment",
-			shopify_id: 2136960769,
+			shopify_id: 4829468417,
 			unit_size: 1,
 			# unit_measure: "",
 			shopify_unit: 1,
@@ -236,7 +236,7 @@ ingredients = [
 		{
 			name: "Thermometer clip",
 			ing_type: "equipment",
-			shopify_id: 2135581953,
+			shopify_id: 4828512641,
 			unit_size: 1,
 			shopify_unit: 1,
 			# unit_measure: ""
@@ -245,7 +245,7 @@ ingredients = [
 		{
 			name: "CFH Muslin",
 			ing_type: "equipment",
-			shopify_id: 2137582657,
+			shopify_id: 4829576001,
 			unit_size: 1,
 			unit_measure: "sq yd",
 			shopify_unit: 1,
@@ -254,7 +254,7 @@ ingredients = [
 		{
 			name: "Colander",
 			ing_type: "equipment",
-			shopify_id: 3824391809,
+			shopify_id: 4826109249,
 			unit_size: 1,
 			shopify_unit: 1,
 			# unit_measure: ""
@@ -298,7 +298,7 @@ ingredients = [
 		{
 			name: "8x10 Hemp Bag",
 			ing_type: "equipment",
-			shopify_id: 2136870465,
+			shopify_id: 4822088001,
 			unit_size: 1,
 			shopify_unit: 1,
 			unit_measure: "",
@@ -307,7 +307,7 @@ ingredients = [
 		{
 			name: "Reblochon Cheese Mold",
 			ing_type: "equipment",
-			shopify_id: 2134881985,
+			shopify_id: 4830355009,
 			unit_size: 1,
 			shopify_unit: 1,
 			unit_measure: "",
@@ -316,7 +316,7 @@ ingredients = [
 		{
 			name: "Reblochon Follower",
 			ing_type: "equipment",
-			shopify_id: 2134896641,
+			shopify_id: 4830354049,
 			unit_size: 1,
 			shopify_unit: 1,
 			unit_measure: "",
@@ -325,7 +325,7 @@ ingredients = [
 		{
 			name: "Kitchen Scale",
 			ing_type: "equipment",
-			shopify_id: 2137938945,
+			shopify_id: 4828306113,
 			unit_size: 1,
 			shopify_unit: 1,
 			unit_measure: "",
@@ -360,7 +360,7 @@ ingredients = [
 		{
 			name: "Yogourmet",
 			ing_type: "ingredient",
-			shopify_id: 2135044289,
+			shopify_id: 4823699393,
 			unit_size: 5,
 			unit_measure: "g",
 			shopify_unit: 1,
@@ -369,7 +369,7 @@ ingredients = [
 		{
 			name: "Instant-read thermometer",
 			ing_type: "equipment",
-			shopify_id: 2136960769,
+			shopify_id: 4829468417,
 			unit_size: 1,
 			unit_measure: "",
 			shopify_unit: 1,
@@ -378,7 +378,7 @@ ingredients = [
 		{
 			name: "Thermometer clip",
 			ing_type: "equipment",
-			shopify_id: 2135581953,
+			shopify_id: 4828512641,
 			unit_size: 1,
 			unit_measure: "",
 			shopify_unit: 1,
@@ -387,7 +387,7 @@ ingredients = [
 		{
 			name: "2L Yogotherm incubator",
 			ing_type: "equipment",
-			shopify_id: 3780636545,
+			shopify_id: 4826136769,
 			unit_size: 1,
 			unit_measure: "",
 			shopify_unit: 1,
@@ -398,7 +398,7 @@ ingredients = [
 		{
 			name: "Mesophilic starter",
 			ing_type: "ingredient",
-			shopify_id: 2137702657,
+			shopify_id: 4825959937,
 			unit_size: 0.125,
 			unit_measure: "tsp",
 			shopify_unit: 1,
@@ -407,7 +407,7 @@ ingredients = [
 		{
 			name: "Rennet tablet",
 			ing_type: "ingredient",
-			shopify_id: 3523484097,
+			shopify_id: 4829668353,
 			unit_size: 0.125,
 			unit_measure: "",
 			shopify_unit: 1,
@@ -416,7 +416,7 @@ ingredients = [
 		{
 			name: "Calcium Chloride",
 			ing_type: "ingredient",
-			shopify_id: 2136450625,
+			shopify_id: 4818615233,
 			unit_size: 0.125,
 			unit_measure: "tsp",
 			shopify_unit: 1,
@@ -425,7 +425,7 @@ ingredients = [
 		{
 			name: "CHM Muslin",
 			ing_type: "ingredient",
-			shopify_id: 2137582657,
+			shopify_id: 4829576001,
 			unit_size: 0.25,
 			unit_measure: "sq yd",
 			shopify_unit: 1,
@@ -434,7 +434,7 @@ ingredients = [
 		{
 			name: "Colander",
 			ing_type: "ingredient",
-			shopify_id: 3824391809,
+			shopify_id: 4826109249,
 			unit_size: 1,
 			unit_measure: "",
 			shopify_unit: 1,
@@ -443,7 +443,7 @@ ingredients = [
 		{
 			name: "Instant-read thermometer",
 			ing_type: "equipment",
-			shopify_id: 2136960769,
+			shopify_id: 4829468417,
 			unit_size: 1,
 			unit_measure: "",
 			shopify_unit: 1,
@@ -452,7 +452,7 @@ ingredients = [
 		{
 			name: "Thermometer clip",
 			ing_type: "equipment",
-			shopify_id: 2135581953,
+			shopify_id: 4828512641,
 			unit_size: 1,
 			unit_measure: "",
 			shopify_unit: 1,
@@ -485,7 +485,7 @@ ingredients = [
 		{
 			name: "Curd skimmer",
 			ing_type: "ingredient",
-			shopify_id: 2134508417,
+			shopify_id: 4828277185,
 			unit_size: 1,
 			unit_measure: "",
 			shopify_unit: 1,
