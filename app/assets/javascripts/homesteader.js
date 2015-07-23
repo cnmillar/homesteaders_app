@@ -1,6 +1,9 @@
 
 $(function($){
 
+  //zebra striping for inbox
+  $(".alternating-color:even").css("background-color","#D6D5C9"); 
+
   // tooltip
 
   $("#favourited-by-user").tooltip();
@@ -14,10 +17,24 @@ $(function($){
 
   $('a[rel*=conversationModal]').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
 
+
   $("#new_conversation").on("ajax:success", function(e, data, status, xhr){
     $("#modal-container-conv").prepend("<h3 id='message-sent'>Message sent!</h3>");
     setTimeout(function() {
       $("#new-conversation").css("display","none");
+      $("#lean_overlay").css("display","none");
+      $("#conversation_subject").val("");
+      $("#conversation_message_body").val("");
+      $("#message-sent").remove();    
+    }, 2000);
+
+  })
+
+  $("#new_conversation_comment").on("ajax:success", function(e, data, status, xhr){
+    $("#send-message-to").remove();
+    $("#modal-container-conv-comment").prepend("<h3 id='message-sent'>Message sent!</h3>");
+    setTimeout(function() {
+      $("#new-conversation-comment").css("display","none");
       $("#lean_overlay").css("display","none");
       $("#conversation_subject").val("");
       $("#conversation_message_body").val("");
@@ -112,7 +129,8 @@ $(function($){
       autoPlay: {
         // autoplay options go gere
         enabled: true,
-        pauseOnHover: true
+        pauseOnHover: true,
+        transitionSpeed: 1000
       }
   }); 
 
@@ -160,7 +178,6 @@ $(function($){
   $('.carousel').slick({
     autoplay: true,
     infinite: true,
-    arrows: true,
     speed: 700,
     fade: true,
     cssEase: 'linear'
@@ -218,6 +235,13 @@ $(function($){
       }
       window.open(cart);
     });
+
+    $("#buy-kit").on("click", function(){
+      var cart = "http://homesteaders-emporium.myshopify.com/cart/";
+      var kit_id = $("#kit-id").data("kit-id");
+      cart = cart + kit_id + ":1"
+      window.open(cart);
+    })
 
     $("#select-all").on("click", function(e){
       if(this.checked){
@@ -400,13 +424,13 @@ $(function()
         case 'block': // n and c
             return '<a href="javascript:null;">' + this.value + '</a>';
         case 'next': // >
-            return '        <a href="javascript:null;"><img src="/svg/fast40.svg" width="35px"></a>';
+            return '        <a href="javascript:null;"><img src="/svg/fast40.svg"' + ' onmouseover="this.src=' + "'/svg/fast40gold.svg'" + '" onmouseout="this.src=' + "'/svg/fast40.svg'" + '" width="35px"></a>';
         case 'prev': // <
-            return '    <a href="javascript:null;"><img src="/svg/rewind42.svg" width="35px"></a>';
+            return '    <a href="javascript:null;"><img src="/svg/rewind42.svg"' + ' onmouseover="this.src=' + "'/svg/rewind42gold.svg'" + '" onmouseout="this.src=' + "'/svg/rewind42.svg'" + '" width="35px"></a>';
         case 'first': // [
-            return '    <a href="javascript:null;"><img src="/svg/first46.svg" width="40px"></a>';
+            return '    <a href="javascript:null;"><img src="/svg/first46.svg"' + ' onmouseover="this.src=' + "'/svg/first46gold.svg'" + '" onmouseout="this.src=' + "'/svg/first46.svg'" + '" width="35px"></a>';
         case 'last': // ]
-            return '    <a href="javascript:null;"><img src="/svg/last17.svg" width="40px"> (' + this.pages + ')</a>';
+            return '    <a href="javascript:null;"><img src="/svg/last17.svg"' + ' onmouseover="this.src=' + "'/svg/last17gold.svg'" + '" onmouseout="this.src=' + "'/svg/last17.svg'" + '" width="35px"></a> (' + this.pages + ')';
         }
       }
     });
@@ -518,7 +542,7 @@ $(function()
       } 
       
       newAvatar = $('<div />').addClass('video-comment-avatar').html("'<img src = ' + APP.userName />").css({'left': timelineX, 'top' : 0 });
-      $('#video-timeline').append(newAvatar);
+      $('#video-timeline').append(newAvatar).fadeIn('fast');
     }
 
     return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
@@ -552,19 +576,39 @@ $(function()
   $(".add-comment-ing").on("click", function(){
     $("#add-comment-ing"+$(this).data("ing-id")).slideToggle('slow', function(){
     })
+    // make plus sign minus on toggle
+    if ($("img", this).attr("src") == "/svg/minus27.svg"){
+      $("img", this).attr("src", "/svg/plus35.svg")
+    } else {
+      $("img", this).attr("src", "/svg/minus27.svg")
+    }
   })
+
   $(".add-comment-equip").on("click", function(){
     $("#add-comment-equip"+$(this).data("equip-id")).slideToggle('slow', function(){
     })
+    // make plus sign minus on toggle
+    if ($("img", this).attr("src") == "/svg/minus27.svg"){
+      $("img", this).attr("src", "/svg/plus35.svg")
+    } else {
+      $("img", this).attr("src", "/svg/minus27.svg")
+    }
   })
+
   $(".add-comment-step").on("click", function(){
     $("#add-comment-step"+$(this).data("step-id")).slideToggle('slow', function(){
     })
+    // make plus sign minus on toggle
+    if ($("img", this).attr("src") == "/svg/minus27.svg"){
+      $("img", this).attr("src", "/svg/plus35.svg")
+    } else {
+      $("img", this).attr("src", "/svg/minus27.svg")
+    }
   })
 
   $(".add-comment-general").on("click", function(){
-    var currentTime = player.getCurrentTime()
     $("#add-comment-general").slideToggle('slow', function(){})
+    var currentTime = player.getCurrentTime()
     $('#video-time-field').replaceWith('<input id="comment_video_time" type="hidden" name="comment[video_time]" value=' + currentTime + '" />');
     var hours = parseInt( currentTime / 3600 ) % 24;
     var minutes = parseInt( currentTime / 60 ) % 60;
@@ -577,12 +621,26 @@ $(function()
         displayTime = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds)
       }
       $('.commentable-type-checkbox-project').addClass('commentable-type-checkbox-video');
-      $('#video-time-text').replaceWith('<p>Attach this comment to: ' + displayTime + '.</p>')
+      $('#video-time-text').replaceWith('<p class="video-comment-actions">Attach this comment to: ' + displayTime + '.</p>')
     }
+
+    // make plus sign minus on toggle
+    if ($(".add-comment-general img").attr("src") == "/svg/minus27.svg"){
+      $(".add-comment-general img").attr("src", "/svg/plus35.svg")
+    } else {
+      $(".add-comment-general img").attr("src", "/svg/minus27.svg")
+    }
+
   })
 
   $(".add-image").on("click", function(){
     $("#add-image").slideToggle('slow', function(){})
+    // make plus sign minus on toggle
+    if ($(".add-image img").attr("src") == "/svg/minus27.svg"){
+      $(".add-image img").attr("src", "/svg/plus35.svg")
+    } else {
+      $(".add-image img").attr("src", "/svg/minus27.svg")
+    }
   })
 
 

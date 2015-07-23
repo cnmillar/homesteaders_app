@@ -21,8 +21,12 @@
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
 $tertiary-color: #EDBA3E;
+$dark-gray-color: #462F2F;
 $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
+$radius: 3px;
+$module-background-color: #DDD;
+$box-link-hover: #D1920B;
 
 body {
   font-family: $font-stack-copy;
@@ -33,6 +37,14 @@ h1, h2, h3, h4 {
   font-family: $font-stack-head;
   margin: .4em;  
   margin-left: 0
+}
+
+.hand-drawn {
+  display:block;
+  border:none;
+  height:10px;
+  background-image: image-url("hr-drawn.png");
+  background-repeat: no-repeat;
 }
 
 .section {
@@ -61,12 +73,9 @@ nav {
   color: $primary-color;
 }
 
-p {
-  margin-left: 1em;
-}
-
 .top-bar {
   height: 80px;
+  background-color: $dark-gray-color;
 }
 
 .top-bar .name {
@@ -81,8 +90,8 @@ p {
   float: left;
   padding-top: 20px;
   font-size: 1em;
+  background-color: $dark-gray-color;
 }
-
 
 .top-bar .name {
   margin-top: 5px;
@@ -103,25 +112,31 @@ p {
   margin: 8px;
   height: 62px;
   padding: 5px;
-
-  a {
-    color: white;
-  }
 }
 
-.user-panel logged-in {
+/*.user-panel logged-in {
   background-color: #222;
   border: 1px solid #555;
   border-radius: .5rem;
-}
+}*/
 
 .user-panel img {
   height : 100%;
-  max-height: 47px;
+  max-height: 52px;
   vertical-align: top;
-  margin: 2px;
-  border: 1px solid #444;
+  margin: 0;
+}
 
+a:hover {
+  border-color: $box-link-hover;
+}
+
+.avatar {
+  border: 1px solid $secondary-color;
+}
+
+.inbox-icon {
+  margin-top: 8px;
 }
 
 .user-panel button {
@@ -129,17 +144,42 @@ p {
 }
 
 .user-panel p {
-  margin: 1px 0 0 8px;
-  line-height: 1.5;
-  color : $secondary-color;
+  margin: -5px 0 0 5px;
+  line-height: 2;
+  color : white;
   display: inline-block;
 
 }
+.user-panel a {
+  margin: 0px 5px;
+}
+
+/*img #inbox-image {
+  border: none;
+  margin-top: 10px;
+}*/
 
 .search-box {
   width: 250px;
   margin: 25px 20px 0 0;
 } 
+
+.project-details {
+  background-image: image-url('drawn-box.png');
+  background-size: 100% 100%;
+  padding: 2.5rem;
+}
+
+.project-module {
+  padding: 1rem;
+  border-radius: $radius;
+  background-color: $module-background-color;
+}
+
+.row.supply {
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
 
 
 #video-timeline {
@@ -193,8 +233,26 @@ p {
   display: none;
 }
 
+#video-checkbox {
+  margin: 2rem;
+}
+
+.video-comment-actions {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.video-time-text {
+  display: inline-block;
+}
+
+.video-comment-text {
+  display: inline-block;
+}
+
 .commentable-type-checkbox-video {
-  display: block;
+  display: inline-block;
+  outline: 3px $secondary-color;
 }
 
 #player {
@@ -207,22 +265,24 @@ p {
 }
 
 .carousel {
-  max-height: 400px;
+  max-height: 300px;
   width: 1500px;
 }
 
 .carousel-project {
   position: absolute;
   right: 60px;
-  top: 300px;
-  background-color: white;
+  top: 240px;
+  background-color: $secondary-color;
   opacity: .8;
   padding: 1em;
   font-size: 1.5em;
-  text-align: left
+  text-align: left;
+  color: white;
 }
-.carousel-project p {
-  opacity: 1;
+
+.carousel-project:hover {
+  background-color: $box-link-hover;
 }
 
 .carousel-blurb {
@@ -231,8 +291,8 @@ p {
   left: 0;
   margin-left: 0;
   padding: .5em;
-  background: black;
-  opacity: .7;
+  background: $dark-gray-color;
+  opacity: .9;
 }
 
 .carousel-blurb p {
@@ -244,9 +304,12 @@ p {
 
 
 .carousel img {
-  position: relative;
+
 }
 
+.category img {
+  transform:rotate(-3deg);
+}
 
 .category {
   width: 400px;
@@ -255,9 +318,17 @@ p {
   padding: 2rem;
   vertical-align: top;
   background-image: image-url('drawn-box.png');
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
+  transform: rotate(-3deg);
   /*border: 1px solid $primary-color;*/
+}
+
+.category:nth-child(even) {
+  transform: rotate(3deg);
+}
+
+.category:nth-child(3) {
+  transform: rotate(-5deg);;
 }
 
 .category h4 {
@@ -272,11 +343,20 @@ p {
 }
 
 .categories {
+  display: inline-block;
   margin: 20px 50px;
   padding: 1em;
   font-size: 2em;
-  width: 1200px;
-  z-index: 1200;
+  width: 100%;
+  background-color: white;
+  background-image: image-url('drawn-box.png');
+  background-size: 100% 100%;
+
+}
+
+.popular-header {
+  opacity: 1;
+  z-index: 10000;
 }
 
 .project-image-thumb {
@@ -336,6 +416,16 @@ p {
 .title-area {
   width : 435px;
 }
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  font-family: $font-stack-copy;
+  font-size: 1em;
+  background-color: $dark-gray-color;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background-color: $secondary-color;
+  background: $secondary-color; }
 
 .email_container {
   position: fixed;
@@ -496,6 +586,19 @@ hr {
   bottom:0;
   right:0;
 }
+
+.social-share-button-email {
+  background: url("/social-icons/email.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:40px;
+  height:40px;
+  bottom:0;
+  right:0;
+  float: left;
+}
+
 /////////////////////////////////////
 // gallery css
 
@@ -673,8 +776,8 @@ hr {
     top: 50%; } }
   
   .messages {
-    padding: 50px;
-    margin:20px;
+    // padding: 50px;
+    // margin:20px;
     width: 100%;
   }
 //modal styling
@@ -701,7 +804,7 @@ hr {
     height: 300px;
   }
 
-.project-heart, .project-checked { 
+.project-heart, .project-checked, .project-comments { 
   display:inline;
 }
 
@@ -709,7 +812,7 @@ hr {
   margin-left: 50px;
 }
 
-.project-heart img {
+.project-heart, .project-comments img {
   height: 40px;
   width: 40px;
 }
@@ -720,5 +823,109 @@ hr {
 }
 
 .row {
-  padding-bottom: 30px;
+  padding-bottom: 10px;
+}
+
+#new-conversation-comment {
+  width: 300px;
+  height: 400px;
+  background-color: white;
+  padding: 25px;
+}
+
+#current-user-name {
+  position: relative;
+  top: 6px;
+}
+
+.center-inbox-text {
+  line-height: 4
+}
+.center-inbox-img {
+  top: 5px;
+}
+.large-inbox-margin {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+.alternating-color {
+  padding-top:15px;
+  padding-bottom:0px;
+}
+
+/* Draw border */
+
+.drawbox {
+  position:relative;
+  float:left;
+  width:200px;
+  height:100px;
+  background-color:#fff;
+  padding:25px;
+  
+  /*
+ -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  -o-transform: rotate(2deg);*/
+}
+
+.draw:after {
+  border: 0.1em solid transparent;
+  border-image: url('http://emptyeasel.com/wp-content/uploads/2012/11/creatingtexture2-carrielewis.jpg') 0 27 27 27 round stretch;
+  
+  /*border-radius: 0.25em 0.10em 0.5em 0.25em;*/
+  transform: rotate(-1deg);
+  content: '';
+  top:0px;
+  left:0px;
+  position:absolute;
+  width:100%;
+  height:100%;
+  
+}
+.draw:before {
+  border-top: 0.1em solid transparent;
+  border-image: url('http://emptyeasel.com/wp-content/uploads/2012/11/creatingtexture2-carrielewis.jpg') 27 0 0 0 stretch round;
+  /*border-radius: 1.5em;*/
+  content: '';
+  height: 3em;
+  left: 0;
+  top: 0;
+  transform: rotate(-1deg);
+  width:100%;
+  position:absolute;
+}
+
+.align-right {
+  text-align: right;
+  position: relative;
+}
+
+#inbox-title {
+  font-size: 40px;
+  font-style: bold;
+}
+
+#message-title {
+  font-size: 20px;
+  font-style: bold;
+}
+.project-image img {
+  max-height: 200px;
+}
+
+.project-title h1 {
+  color: black;
+  margin-left: 50px;
+}
+
+#buy-kit {
+  background-color: rgb(178, 35, 10);
+}
+
+#buy-kit:focus {
+  box-shadow: 0 0 5px $secondary-color;
+  border: 1px solid $secondary-color;
+  outline: 0;
 }

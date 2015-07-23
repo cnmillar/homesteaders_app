@@ -1,9 +1,4 @@
-<div class = 'section'>
-
-	<p>Difficulty: <%= @project.difficulty %></p>
-	<p>Time to complete: <%= @project.duration %> <%= @project.duration_unit %></p>
-	<p>Makes: <%= @project.batch_size %>  <%= @project.batch_unit %></p>
-
-	<p>Rating: <%= rating_for @project, "overall", disable_after_rate: true, :half_show => true %></p>
-
-</div>
+	<p>Difficulty: <%= @project.difficulty %><br />
+	   Time to complete: <%= @project.duration %> <%= @project.duration_unit %><br />
+	   Makes: <%= @project.batch_size %>  <%= @project.batch_unit %><br />
+	   Rating: <%= rating_for @project, "overall", disable_after_rate: true, :half_show => true %></p>

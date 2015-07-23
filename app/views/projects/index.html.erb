@@ -1,14 +1,26 @@
-<div class=empty>
-<%if @projects.empty?%>
-  <br>
-  <h4>There are no related projects at this time</h4>
-</div>
-<%else%>
-  <% @projects.each do |project|%>
-  	<h4><%= link_to project.title, project_path(project.id) %></h4>
-  	<h5><%= project.description %></h5>
-  	</br>
-  <%end%>
-<% end %> 
-   
+<div class='section'>
+  <% if params[:title] %>
+    <h1>Search results</h1>
+      <p>Projects matching your search: <%= @projects.length %></p>
+  <% else %>
+    <h1>Popular Projects</h1>
+  <% end %>
+  <%if @projects.empty?%>
+    <div class="empty">
+      <p>Sorry, we don't yet have any matching projects. Email us your idea and maybe we'll add it!</p>
+    </div>
+  <%else%>
+    <% @projects.each do |project|%>
+     <div class='row project-result'>
+        <div class='large-2 columns project-result-image'>
+          <%= link_to image_tag(project.images.first.original_url, class: "project-image-thumb"), project_path(project.id) %>
+        </div>
+        <div class='large-10 columns project-result-details'>
+          <h4><%= link_to project.title, project_path(project.id) %></h4>
+          <p><%= project.description %></p>
+        </div>
+      </div>
+    <%end%>
+  <% end %> 
+</div>   
   
