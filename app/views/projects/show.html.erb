@@ -1,4 +1,4 @@
-<div class='row'>
+<div class='row click-modal-out'> 
   <div class='large-5 columns'>
     <div class='project-details'>
       <%= render 'projects/name_description' %>
@@ -15,7 +15,6 @@
     <%= render 'projects/instructions' %>
     <%= render 'projects/supplies' %>
     <%= render 'projects/images' %>
-    <%= render 'projects/popular' %>
   </div>
 
   <div class='large-7 columns'>
@@ -23,4 +22,9 @@
     <%= render 'projects/video_comments' %>
     <%= render 'projects/comments' %>
   </div>
+</div>
+
+<!-- modal -->
+<div id="overlay">
+  <%= render "new_conversation_modal" %>
 </div>

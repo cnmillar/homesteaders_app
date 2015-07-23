@@ -289,7 +289,7 @@ ingredients = [
 		{
 			name: "Nigari Flakes",
 			ing_type: "ingredient",
-			shopify_id: 4461196737,
+			shopify_id: 4818616897,
 			unit_size: 10,
 			unit_measure: "grams",
 			shopify_unit: 1,
@@ -1186,49 +1186,49 @@ users = [
 	{
 		admin: true,
 		email: "davidgood@test.ca",
-		avatar: "/uploads/user/avatar/3/45265_10151595761691660_667105653_n.jpg",
+		avatar: "/uploads/user/avatar/DavidLI.jpg",
 		full_name: "David Good",
 		facebook_id: 10153480204621660
 	},
 		{
 		admin: true,
 		email: "beth.hammett@gmail.com",
-		avatar: "/uploads/user/avatar/1/10256184_10154078837500693_4522517122463806943_n.jpg",
+		avatar: "/uploads/user/avatar/BethLI.jpg",
 		full_name: "Beth Hammett",
 		facebook_id: 10155764870935693
 	},
 		{
 		admin: true,
 		email: "cnmillar@gmail.com",
-		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
+		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
 		full_name: "Caitlin Millar",
 		facebook_id: 10101421296841741
 	},
 	{
 		admin: true,
 		email: "jane@gmail.com",
-		avatar: "/uploads/user/avatar/1/10256184_10154078837500693_4522517122463806943_n.jpg",
+		avatar: "/uploads/user/avatar/BethLI.jpg",
 		full_name: "Jane Wilson",
 		facebook_id: 1015642129684983
 	},
 	{
 		admin: true,
 		email: "susan@test.ca",
-		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
+		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
 		full_name: "Susan Smith",
 		facebook_id: 10102349586934950
 	},
 	{
 		admin: true,
 		email: "john@test.ca",
-		avatar: "/uploads/user/avatar/3/45265_10151595761691660_667105653_n.jpg",
+		avatar: "/uploads/user/avatar/DavidLI.jpg",
 		full_name: "John Doe",
 		facebook_id: 10123992340329457
 	},
 	{
 		admin: false,
 		email: "amy@test.ca",
-		avatar: "/uploads/user/avatar/2/18577_670003919821_1212615_n.jpg",
+		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
 		full_name: "Amy Wright",
 		facebook_id: 104059348549345345
 	}
@@ -1251,10 +1251,24 @@ images = [
 	},
 	{
 		user_id: 1,
+		project_id: 1,
+		original: '/app/assets/images/project_gallery/ricotta-1.jpg',
+		# resized_image:
+		# description: 
+	},
+	{
+		user_id: 1,
+		project_id: 3,
+		original: '/app/assets/images/project_gallery/yogurt-berries.jpeg',
+		# resized_image:
+		description:"Yogurt is great!"
+	},
+	{
+		user_id: 1,
 		project_id: 3,
 		original: '/app/assets/images/project_gallery/yogurt-1.jpg',
 		# resized_image:
-		description:"Yogurt is great!"
+		# description:
 	},
 	{
 		user_id: 1,
@@ -1262,6 +1276,12 @@ images = [
 		original: '/app/assets/images/project_gallery/block-tofu.jpg',
 		# resized_image:
 		description: "Mmmmm, tofy!"
+	},
+	{	user_id: 1,
+		project_id: 2,
+		original: '/app/assets/images/project_gallery/tofu-1.jpg',
+		# resized_image:
+		# description: 
 	},
 	{
 		user_id: 1,
@@ -1275,14 +1295,21 @@ images = [
 		project_id: 2,
 		original: '/app/assets/images/project_gallery/tofu-3.jpg',
 		# resized_image:
+		# description: 
+	},
+	{
+		user_id: 1,
+		project_id: 4,
+		original: '/app/assets/images/project_gallery/farmers-cheese-herbed.jpeg',
+		# resized_image:
 		description: "Mmmmm, cheese!"
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 4,
 		original: '/app/assets/images/project_gallery/farmer-cheese-1.jpg',
 		# resized_image:
-		description: "Mmmmm, cheese!"
+		# description: 
 	},
 	{
 		user_id: 1,
@@ -1308,18 +1335,25 @@ images = [
 	{
 		user_id: 1,
 		project_id: 5,
+		original: '/app/assets/images/project_gallery/mozzarella-cheese.jpeg', 
+		# resized_image:
+		description: "Mmmmm, cheese!"
+	},
+	{
+		user_id: 1,
+		project_id: 5,
 		original: '/app/assets/images/project_gallery/mozzarella-1.jpg', 
 		# resized_image:
 		description: "Mmmmm, cheese!"
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 5,
 		original: '/app/assets/images/project_gallery/mozzarella-2.jpg', 
 		# resized_image:
 		description: "Mmmmm, cheese!"
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 5,
 		original: '/app/assets/images/project_gallery/mozzarella-3.jpg', 
@@ -1343,9 +1377,16 @@ images = [
 	{
 		user_id: 1,
 		project_id: 6,
-		original: '/app/assets/images/project_gallery/sprouts-1.jpg', 
+		original: '/app/assets/images/project_gallery/sprouts.jpeg', 
 		# resized_image:
 		description: "Mmmmm, sprouts!"
+	},
+	{
+		user_id: 1,
+		project_id: 6,
+		original: '/app/assets/images/project_gallery/sprouts-1.jpg'
+		# resized_image:
+		# description:
 	},
 	{
 		user_id: 1,
@@ -1364,7 +1405,14 @@ images = [
 	{
 		user_id: 1,
 		project_id: 7,
-		original: '/app/assets/images/project_gallery/almond-milk.jpg'
+		original: '/app/assets/images/project_gallery/nut-milk.jpeg'
+		# resized_image:
+		# description:
+	},
+	{
+		user_id: 1,
+		project_id: 8,
+		original: '/app/assets/images/project_gallery/wheatgrass-pots.jpeg'
 		# resized_image:
 		# description:
 	},
@@ -1420,28 +1468,42 @@ images = [
 	{
 		user_id: 1,
 		project_id: 9,
+		original: '/app/assets/images/project_gallery/sausages.jpeg'
+		# resized_image:
+		# description:
+	},
+	{
+		user_id: 1,
+		project_id: 9,
 		original: '/app/assets/images/project_gallery/sausage-1.jpg'
 		# resized_image:
 		# description:
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 9,
 		original: '/app/assets/images/project_gallery/sausage-2.jpg'
 		# resized_image:
 		# description:
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 9,
 		original: '/app/assets/images/project_gallery/sausage-3.jpg'
 		# resized_image:
 		# description:
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 9,
 		original: '/app/assets/images/project_gallery/sausage-4.jpg'
+		# resized_image:
+		# description:
+	},
+	{
+		user_id: 1,
+		project_id: 10,
+		original: '/app/assets/images/project_gallery/bacon-slab.jpeg'
 		# resized_image:
 		# description:
 	},
@@ -1452,34 +1514,34 @@ images = [
 		# resized_image:
 		# description:
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 10,
 		original: '/app/assets/images/project_gallery/bacon-2.jpg'
 		# resized_image:
 		# description:
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 10,
 		original: '/app/assets/images/project_gallery/bacon-3.jpg'
 		# resized_image:
 		# description:
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 10,
 		original: '/app/assets/images/project_gallery/bacon-4.jpg'
 		# resized_image:
 		# description:
 	},
-		{
+	{
 		user_id: 1,
 		project_id: 10,
 		original: '/app/assets/images/project_gallery/bacon-5.jpg'
 		# resized_image:
 		# description:
-	}
+	},
 ]
 
 images.each do |img|

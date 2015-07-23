@@ -8,21 +8,15 @@
   		<p><%= comment.content %></p>
       <p><%= link_to comment.user.full_name, user_path(comment.user.id) %>
         <% if current_user.id != comment.user.id %>
-           | <a href="#new-conversation-comment<%= comment.id %>" rel="conversation<%= comment.id %>CommentModal" style="color: #b2230a">Message</a>
+           | <a class="new-conversation-comment" style="color: #b2230a" data-receiver-id=<%= comment.user_id %> data-user-id=<%= current_user.id %> data-receiver-name = <%= comment.user.full_name %>>Message</a>
         <% end %>
        | <span class="timestamp"><i><small><%= comment.commentable_type %> comment from <%= comment.created_at.to_datetime.strftime("%m/%d/%Y") %></small></i></span>
      </p>
     </div>
 	</div>
-  <%= render :partial => "new_conversation_modal", collection: @all_comments, locals: {comment: comment} %>
-
-  <script>
-    $(function($){
-      $('<%= "a[rel*=conversation#{comment.id}CommentModal]" %>').leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
-    })
-  </script>
-
 <% end %>
+
+
 
 
 

@@ -1,6 +1,27 @@
 
 $(function($){
 
+  $(".new-conversation-comment").on("click", function(){
+    var user = $(this).data('user-id');
+    var receiver = $(this).data('receiver-id');
+    var receiverName = $(this).data('receiver-name');
+    var modal = $("#modal");
+
+    modal.find("h3").text("Send message to "+receiverName);
+    modal.find("#receiver-id").val(receiver);
+    // modal.find('span.user').text(username);
+    // modal.find('#receiver-id').val(receiver);
+
+    $("#overlay").add(modal).css('display', 'block');
+
+  })
+
+  $("#close-button").on('click', function() {
+    $("#overlay").add("#modal").css('display', 'none'); 
+  });
+
+  $("a[rel*=conversationCommentModal]").leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
+
   //zebra striping for inbox
   $(".alternating-color:even").css("background-color","#D6D5C9"); 
 
@@ -31,14 +52,14 @@ $(function($){
   })
 
   $("#new_conversation_comment").on("ajax:success", function(e, data, status, xhr){
-    $("#send-message-to").remove();
-    $("#modal-container-conv-comment").prepend("<h3 id='message-sent'>Message sent!</h3>");
+    $(".send-message-to").remove();
+    $(".modal-container-conv-comment").prepend("<h3 id='message-sent'>Message sent!</h3>");
+    $("#conversation_subject").val("");
+    $("#conversation_message_body").val("");
     setTimeout(function() {
-      $("#new-conversation-comment").css("display","none");
-      $("#lean_overlay").css("display","none");
-      $("#conversation_subject").val("");
-      $("#conversation_message_body").val("");
-      $("#message-sent").remove();    
+      $("#overlay").css("display", "none");
+      $("#message-sent").remove();   
+      $("#modal").prepend("<h3 class='send-message-to'></h3>") 
     }, 2000);
 
   })
@@ -567,6 +588,7 @@ $(function()
       $("#no-comments").css("display","inline");
     }
     $("#add-comment-general").slideToggle('slow', function(){});
+    $("img", ".add-comment-general").attr("src", "/svg/plus35.svg")
 
   }); 
 
