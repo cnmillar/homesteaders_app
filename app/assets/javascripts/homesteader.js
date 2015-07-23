@@ -226,7 +226,7 @@ $(function($){
   $(function(){
     $("#submit-to-cart").on("click", function(){
       var items = $(".shopify_cart");
-      var cart = "http://homesteaders-emporium.myshopify.com/cart/";
+      var cart = "http://www.homesteadersemporium.com/cart/";
 
       for (var i=0; i < items.length; i++ ) {
         if ($(items[i]).is(":checked")) {
@@ -235,6 +235,13 @@ $(function($){
       }
       window.open(cart);
     });
+
+    $("#buy-kit").on("click", function(){
+      var cart = "http://www.homesteadersemporium.com/cart/";
+      var kit_id = $("#kit-id").data("kit-id");
+      cart = cart + kit_id + ":1"
+      window.open(cart);
+    })
 
     $("#select-all").on("click", function(e){
       if(this.checked){

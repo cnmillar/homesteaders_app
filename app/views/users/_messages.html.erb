@@ -37,7 +37,6 @@
 <script>
 	$(function($){
 
-		$('<%= "a[rel*=reply#{conv.id}Modal]" %>').leanModal({ top : 200, overlay : 0.4});
 
 		function createReply(data){
 	    return '<div class="row"><div class="large-2 columns">'+ 
@@ -48,6 +47,9 @@
 	    '<p>' + data.created_at + '</p>' + 
 	    '</div></div>'
 	  }
+
+		$('<%= "a[rel*=reply#{conv.id}Modal]" %>').leanModal({ top : 200, overlay : 0.4});	  	
+
 
 	  $('<%= "#new_message_#{conv.id}" %>').on("ajax:success", function(e, data, status, xhr){
 	    $(".reply").css("display","none");

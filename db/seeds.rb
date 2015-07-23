@@ -6,67 +6,82 @@
 [
 	{
 		name: "Beekeeping", 
-		description: "Projects for working with honeybees and local pollinators like mason bees and bumblebees!"	
+		description: "Projects for working with honeybees and local pollinators like mason bees and bumblebees!",
+		image: "/category_images/beekeeping.jpg"
 	},
 	{
 		name: "Dairy & Curd", 
-		description: "Projects for making cheese, yogurt, butter, ice cream, and other dairy or non-dairy curds!"
+		description: "Projects for making cheese, yogurt, butter, ice cream, and other dairy or non-dairy curds!", image: "/category_images/dairy_and_curd.jpg"
 	},
 	{
 		name: "Coffee & Tea", 
-		description: "Projects using green coffee, roasting supplies, grinders, and steepers."
+		description: "Projects using green coffee, roasting supplies, grinders, and steepers.",
+		image: "/category_images/coffee_and_tea.jpg"
 	},
 	{
 		name: "Composting", 
-		description: "Projects for composting and building composters for small spaces."
+		description: "Projects for composting and building composters for small spaces.",
+		image: "/category_images/composting.jpg"
 	}, 
 	{
 		name: "Fermentation", 
-		description: "Composting and composters for small spaces."
+		description: "Composting and composters for small spaces.",
+		image: "/category_images/fermentation.jpg"
 	},
 	{
 		name: "Fibrecrafts", 
-		description: "Projects using yarn, wool, and plant fibres."
+		description: "Projects using yarn, wool, and plant fibres.",
+		image: "/category_images/fibrecraft.jpg"
 	},
 	{
 		name: "Fungiculture", 
-		description: "Projects for growing mushrooms!"
+		description: "Projects for growing mushrooms!",
+		image: "/category_images/fungiculture.jpg"
 	},
 	{
 		name: "Garden & Permaculture", 
-		description: "Organic gardening and permaculture projects."
+		description: "Organic gardening and permaculture projects.",
+		image: "/category_images/garden_and_perm.jpg"
 	},
 	{
 		name: "Grains & Baking", 
-		description: "Projects for baking with whole grains, using flour mills, proofing baskets, baking pans, sourdough cultures, and more!"
+		description: "Projects for baking with whole grains, using flour mills, proofing baskets, baking pans, sourdough cultures, and more!",
+		image: "/category_images/grains_and_baking.jpg"
 	},
 	{
 		name: "Lifestyle", 
-		description: "Projects for a low-impact, sustainable lifestyle."
+		description: "Projects for a low-impact, sustainable lifestyle.",
+		image: "/category_images/lifestyle.jpg"
 	},
 	{
 		name: "Micro-livestock", 
-		description: "Projects related to backyard chickens and other small critters!"
+		description: "Projects related to backyard chickens and other small critters!",
+		image: "/category_images/microlivestock.jpg"
 	},
 	{
 		name: "Preserving", 
-		description: "Putting up food, in jars and otherwise!"
+		description: "Putting up food, in jars and otherwise!",
+		image: "/category_images/preserving.jpg"
 	},	
 	{
 		name: "Soap & Candle", 
-		description: "Projects for making soaps, lotions, salves, tinctures, candles, cosmetics, and other similar household products."
+		description: "Projects for making soaps, lotions, salves, tinctures, candles, cosmetics, and other similar household products.",
+		image: "/category_images/soap_and_candle.jpg"
 	},
 	{
 		name: "Superfoods", 
-		description: "Projects for making sprouts, microgreens, wheatgrass juice, nut milk, and other high energy, high nutrient foods!"
+		description: "Projects for making sprouts, microgreens, wheatgrass juice, nut milk, and other high energy, high nutrient foods!",
+		image: "/category_images/superfoods.jpg"
 	},
 	{
 		name: "Water Conservation", 
-		description: "Projects for collecting and conserving water!"
+		description: "Projects for collecting and conserving water!",
+		image: "/category_images/water_conservation.jpg"
 	},
 	{
 		name: "Whole Animal", 
-		description: "Projects for making use of the entire animal, from sausage making to curing prime cuts to rendering fat and bone!"
+		description: "Projects for making use of the entire animal, from sausage making to curing prime cuts to rendering fat and bone!",
+		image: "/category_images/whole_animal.jpg"
 	}
 	# ,
 	# {
