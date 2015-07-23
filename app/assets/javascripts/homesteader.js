@@ -195,8 +195,8 @@ $(function($){
     if (timelineX < 0) {
       timelineX = 0
     }
-    var newAvatar = $('<div />').addClass('video-comment-avatar').html('<img src = "https://placekitten.com/g/32/32" />').css({'left': timelineX, 'top' : 0 });
-    $('#video-timeline').append(newAvatar);    
+    // var newAvatar = $('<div />').addClass('video-comment-avatar').html('<img src = "https://placekitten.com/g/32/32" />').css({'left': timelineX, 'top' : 0 });
+    // $('#video-timeline').append(newAvatar);    
   });
 
 // Hover state for comment markers
@@ -211,7 +211,7 @@ $(function($){
     avatarFlyout = $('<div />', {
       id: 'activeComment',
       class: 'video-comment-flybelow',
-      text: comment_user + " said: " + comment_content + " at " + comment_timestamp
+      text: comment_user + " said: " + comment_content
     });
     setTimeout(function(){
       hoveredAvatar.append(avatarFlyout).fadeIn(1000);
@@ -390,6 +390,7 @@ window.fbAsyncInit = function() {
     player = new YT.Player('player', {
       height: '480',
       width: '720',
+      autoplay: 'true',
       // origin: 'https://localhost:3000',
       videoId: videoId,
       events: {
@@ -527,7 +528,7 @@ $(function()
 
   function createComment(data){
     // Add avatar to timeline if video comment
-    console.log(data)
+    console.log()
     if (data.commentable_type == "Video") {
     
       // This first part duplicates stuff below so could be made DRYer    
@@ -541,10 +542,31 @@ $(function()
       if (timelineX < 0) {
       timelineX = 0
       } 
+
+//'<div class="video-comment">Placing new avatar</div>'
+
+
+      //Place new avatar
+      console.log(timelineX, data.content, APP.userName, APP.userAvatar)
+      timelineComment = "<div class='video-comment'><img class='video-comment-avatar' src = '" + APP.userAvatar + "' style='left:" + timelineX + "px;'></div>"
+
+    // <%= image_tag(comment.user.avatar,
+    //   class: 'video-comment-avatar', 
+    //   :style => "left: #{comment.video_time}px") %>
+    // </div> 
+    // <div id="comment_id_<%=comment.id%>" class="timeline-comment">
+    //   <%= comment.content %>
+    // </div>
+
+      $('#video-timeline').prepend(timelineComment);
+      // newAvatar = $('<div />').addClass('video-comment-avatar').html("'<img src = ' + APP.userAvatar />").
+      //   );
+      // newComment = $('div />').addClass('timeline-comment').html("<p>content</p>"); 
       
-      newAvatar = $('<div />').addClass('video-comment-avatar').html("'<img src = ' + APP.userName />").css({'left': timelineX, 'top' : 0 });
-      $('#video-timeline').append(newAvatar).fadeIn('fast');
-    }
+      // $('#video-timeline').append(newAvatar).append(newComment)        
+          
+
+  }
 
     return '<div class="element ' + data.commentable_type + " " + data.commentable_id + '">'+
         '<a href="/users/' + data.user_id + '"><img alt="Picture" src="' + APP.userAvatar + '" width="10%"></a>'+ " " + 
