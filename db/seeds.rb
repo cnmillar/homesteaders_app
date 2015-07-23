@@ -800,6 +800,7 @@ ingredients = [
 			unit_measure: "",
 			availability: false
 		}
+	]
 ]
 
 steps = [
