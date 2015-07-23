@@ -10,9 +10,15 @@
 	  <%= f.hidden_field :receiver, :id => "receiver-id" %>
 	  <%= f.hidden_field :read, :value => false %>
 	  <%= f.hidden_field :user_id, :value => current_user.id %>
-	  <%= f.submit "Send", id: "reply-button", class: "button" %>
+	  <div class="row">
+	  <div class="large-6 columns">
+		  <%= f.submit "Send", id: "reply-button", class: "button" %>
+	  </div>
 	<% end %>	
-	<button id="close-button">Close</button>
+	<div class="large-6 columns">
+		<button id="close-button" class="button">Close</button>
+	</div>
+</div>
 </div>
 
 

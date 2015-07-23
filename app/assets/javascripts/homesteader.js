@@ -58,7 +58,8 @@ $(function($){
     $("#conversation_message_body").val("");
     setTimeout(function() {
       $("#overlay").css("display", "none");
-      $("#message-sent").remove();    
+      $("#message-sent").remove();   
+      $("#modal").prepend("<h3 class='send-message-to'></h3>") 
     }, 2000);
 
   })
