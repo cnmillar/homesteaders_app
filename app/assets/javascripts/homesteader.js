@@ -1,6 +1,8 @@
 
 $(function($){
 
+  $("a[rel*=conversationCommentModal]").leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
+
   //zebra striping for inbox
   $(".alternating-color:even").css("background-color","#D6D5C9"); 
 
@@ -22,7 +24,7 @@ $(function($){
     $("#modal-container-conv").prepend("<h3 id='message-sent'>Message sent!</h3>");
     setTimeout(function() {
       $("#new-conversation").css("display","none");
-      $("#lean_overlay").css("display","none");
+      // $("#lean_overlay").css("display","none");
       $("#conversation_subject").val("");
       $("#conversation_message_body").val("");
       $("#message-sent").remove();    
@@ -31,11 +33,11 @@ $(function($){
   })
 
   $("#new_conversation_comment").on("ajax:success", function(e, data, status, xhr){
-    $("#send-message-to").remove();
-    $("#modal-container-conv-comment").prepend("<h3 id='message-sent'>Message sent!</h3>");
+    $(".send-message-to").remove();
+    $(".modal-container-conv-comment").prepend("<h3 id='message-sent'>Message sent!</h3>");
     setTimeout(function() {
       $("#new-conversation-comment").css("display","none");
-      $("#lean_overlay").css("display","none");
+      // $("#lean_overlay").css("display","none");
       $("#conversation_subject").val("");
       $("#conversation_message_body").val("");
       $("#message-sent").remove();    
@@ -567,7 +569,6 @@ $(function()
       $("#no-comments").css("display","inline");
     }
     $("#add-comment-general").slideToggle('slow', function(){});
-    debugger;
     $("img", ".add-comment-general").attr("src", "/svg/plus35.svg")
 
   }); 

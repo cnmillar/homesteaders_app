@@ -1,6 +1,6 @@
-<div id="new-conversation-comment<%= comment.id %>" style="display: none;" class="new-conversation-comment">
-	<div id="modal-container-conv-comment">
-		<h3 id="send-message-to">Send a message to <%= comment.user.full_name %></h3>
+<div id="new-conversation<%= comment.id %>" style="display: none;" class="new-conversation-comment">
+	<div class="modal-container-conv-comment">
+		<h3 class="send-message-to">Send a message to <%= comment.user.full_name %></h3>
 		<%= form_for Conversation.new, :html => { :id => "new_conversation_comment"}, remote: true do |f| %>
 		  <%= f.text_field :subject, placeholder: "Subject" %>
 
