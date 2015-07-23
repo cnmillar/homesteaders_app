@@ -975,7 +975,16 @@ hr {
 }
 
 #buy-kit {
-  background-color: rgb(178, 35, 10);
+  background-color: #0e922d;
+  font-family: $font-stack-copy;
+  margin-left: 8px;
+  height: 55px;
+  color:black;
+}
+
+#buy-kit:hover {
+  background-color: #0c6d21;
+  color: white;
 }
 
 #buy-kit:focus {
