@@ -53,6 +53,13 @@ h1, h2, h3, h4 {
 .section {
 /*  border: 1px $primary-color dotted; */
   padding: 1em;
+  background-color: white;
+  border-radius: 3px;
+  margin-top: 1rem;
+}
+
+.page-wrapper {
+  margin: 2em;
 }
 
 a {
@@ -177,6 +184,7 @@ a:hover {
   background-image: image-url('drawn-box.png');
   background-size: 100% 100%;
   padding: 2.5rem;
+  margin-top: 2rem
 }
 
 .project-module {
@@ -189,7 +197,6 @@ a:hover {
   margin-bottom: 0px;
   padding-bottom: 2px;
 }
-
 
 #video-timeline {
   background-image: image-url("timeline.png");
@@ -264,9 +271,14 @@ a:hover {
   outline: 3px $secondary-color;
 }
 
+.video-player {
+  margin-top: 2rem;
+}
+
 #player {
   height: 350px;
-  background: #DDD
+  background: $module-border;
+  margin: 0 auto;
 }
 
 .carousel-wrapper {
