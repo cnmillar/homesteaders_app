@@ -1,22 +1,7 @@
-<div class = 'section'>
-	<div class="row">
-		<%= render 'projects/community_comments' %>
-		<%= render 'projects/favourited' %>
-	 	<%= render 'projects/completed' %>
-	</div>
-
-	<div class="row">
-		<div class="large-4 columns">
-			<p><%= @all_comments.length %> </p>
-		</div>
-		<div class="large-4 columns">
-			<p><span id="favourite-count"><%= @fav_count %></span> </p>
-		</div>
-		<div class="large-4 columns">
-			<p><span id="complete-count"><%= @comp_count %></span> </p>
-		</div>
-	</div>
-
+<div>
+	<%= render 'projects/community_comments' %>
+	<%= render 'projects/favourited' %>
+ 	<%= render 'projects/completed' %>
 </div>
 
 <script>

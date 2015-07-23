@@ -189,8 +189,13 @@ a:hover {
 
 .project-module {
   padding: 1rem;
-  border-radius: $radius;
-  background-color: $module-background-color;
+  height: 5rem;
+}
+
+.community-column {
+  display: inline-block;
+  text-align: center;
+  margin-right: .5rem;
 }
 
 .row.supply {
@@ -579,26 +584,14 @@ hr {
 }
 
 // social media button customization
-.social-share-button-facebook, .social-share-button-twitter, .social-share-button-google_plus, .social-share-button-google_bookmark, .social-share-button-tumbler, .social-share-button-pinterest {
+.social-share-button-pinterest, .social-share-button-facebook, .social-share-button-twitter, .social-share-button-google_plus, .social-share-button-google_bookmark, .social-share-button-tumbler {
   background: url("/social-icons/facebook.png");
   display: inline-block;
   background-repeat:no-repeat;
   background-size: 100% 100%;
   width:40px;
   height:40px;
-  bottom:0;
-  right:0;
-}
-
-.social-share-button-twitter {
-  background: url("/social-icons/twitter.png");
-  display: inline-block;
-  background-repeat:no-repeat;
-  background-size: 100% 100%;
-  width:40px;
-  height:40px;
-  bottom:0;
-  right:0;
+  float:right;
 }
 
 .social-share-button-google_plus {
@@ -608,8 +601,7 @@ hr {
   background-size: 100% 100%;
   width:40px;
   height:40px;
-  bottom:0;
-  right:0;
+  float:right;
 }
 
 .social-share-button-tumblr {
@@ -619,8 +611,7 @@ hr {
   background-size: 100% 100%;
   width:40px;
   height:40px;
-  bottom:0;
-  right:0;
+  float:right;
 }
 
 .social-share-button-pinterest {
@@ -630,8 +621,7 @@ hr {
   background-size: 100% 100%;
   width:40px;
   height:40px;
-  bottom:0;
-  right:0;
+  float:right;
 }
 
 .social-share-button-email {
@@ -641,10 +631,19 @@ hr {
   background-size: 100% 100%;
   width:40px;
   height:40px;
-  bottom:0;
-  right:0;
-  float: left;
+  float:right;
 }
+
+.social-share-button-twitter {
+  background: url("/social-icons/twitter.png");
+  display: inline-block;
+  background-repeat:no-repeat;
+  background-size: 100% 100%;
+  width:40px;
+  height:40px;
+  float:right;
+}
+
 
 /////////////////////////////////////
 // gallery css
