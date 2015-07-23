@@ -1,18 +1,20 @@
+<script src="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
 <div class="row">
   <div class="large-12 columns carousel-wrapper" >
     <%= render 'pages/showcased' %>
   </div>
 </div>
-<h4 class='popular-head'>Popular projects</h4>
 <div class="row data-equalizer">
   <div class="large-12 columns text-center popular-holder">
-     <%= render 'pages/popular' %>
+    <div class="popular-categories-wrapper">
+      <h3 class="popular-categories">Popular Categories</h3>
+    </div>
+    <%= render 'pages/popular' %>
   </div>
-     <%= render 'users/email' %>
 </div>
 <div class="row">
-  <div class = 'categories'>
-    <h4>All Categories:</h4>
+  <div class='categories'>
+    <h3>All Categories:</h3>
     <% @categories.in_groups(3, false) do |group| %>
       <div class="large-4 columns">
         <ul>
