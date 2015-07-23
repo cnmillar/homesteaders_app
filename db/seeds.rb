@@ -1221,7 +1221,7 @@ users = [
 	{
 		admin: true,
 		email: "john@test.ca",
-		avatar: "/uploads/user/avatar/avatar/DavidLI.jpg",
+		avatar: "/uploads/user/avatar/DavidLI.jpg",
 		full_name: "John Doe",
 		facebook_id: 10123992340329457
 	},
