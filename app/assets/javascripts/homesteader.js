@@ -390,7 +390,6 @@ window.fbAsyncInit = function() {
     player = new YT.Player('player', {
       height: '480',
       width: '720',
-      autoplay: 'true',
       // origin: 'https://localhost:3000',
       videoId: videoId,
       events: {
@@ -528,7 +527,6 @@ $(function()
 
   function createComment(data){
     // Add avatar to timeline if video comment
-    console.log()
     if (data.commentable_type == "Video") {
     
       // This first part duplicates stuff below so could be made DRYer    
@@ -547,12 +545,11 @@ $(function()
 
 
       //Place new avatar - hack fix for demo - should be made into jQuery
-      console.log(timelineX, data.content, APP.userName, APP.userAvatar)
       timelineComment = "<div class='video-comment'><img class='video-comment-avatar' src = '" + APP.userAvatar + "' style='left:" + timelineX + "px;'></div><div id='comment_id_" + data.id + "' class='timeline-comment'>" + data.content + "</div>"
 
-      $('#video-timeline').prepend(timelineComment);           
+      $('#video-timeline').prepend(timelineComment).fadeIn();           
   }
-
+    // Add new comment to top
     return '<div class="individual-comment element ' + data.commentable_type + " " + data.commentable_id + '">'+
         '<hr>' +
         '<div>' +
