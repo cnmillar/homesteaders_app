@@ -1,4 +1,8 @@
 <input type="checkbox" id="select-all"><span class='select-all-text'>Select all available items</span></input> 
 <div class='clearfix'></div>
 <button id="submit-to-cart" class="radius">Add to cart</button>
+<% if @project.kit_id %>
+	<input type="hidden" data-kit-id = <%= @project.kit_id %> id="kit-id">
+	<button class="radius button" id="buy-kit">Purchase as kit</button>
+<% end %>
 <p><small>Powered by <a href="http://www.homesteadersemporium.ca" target="_blank">Homesteader's Emporium</a></small></p>

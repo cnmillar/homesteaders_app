@@ -236,6 +236,13 @@ $(function($){
       window.open(cart);
     });
 
+    $("#buy-kit").on("click", function(){
+      var cart = "http://homesteaders-emporium.myshopify.com/cart/";
+      var kit_id = $("#kit-id").data("kit-id");
+      cart = cart + kit_id + ":1"
+      window.open(cart);
+    })
+
     $("#select-all").on("click", function(e){
       if(this.checked){
         $('.shopify_cart').each(function(){

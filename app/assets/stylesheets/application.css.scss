@@ -919,3 +919,13 @@ hr {
   color: black;
   margin-left: 50px;
 }
+
+#buy-kit {
+  background-color: rgb(178, 35, 10);
+}
+
+#buy-kit:focus {
+  box-shadow: 0 0 5px $secondary-color;
+  border: 1px solid $secondary-color;
+  outline: 0;
+}
