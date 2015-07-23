@@ -9,13 +9,13 @@
           </div>
 
           <div class="large-9 column">
-            <p style="display:inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></p>
+            <p style="display:inline;"><%= equip.unit_size.to_i %> <%= equip.unit_measure %>  <%= equip.name %></p>
           </div>
 
         <% else %>
           <div class="large-1 no-collapse column">   </div>
           <div class="large-9 column">
-            <p style="display: inline;"><%= equip.unit_size %> <%= equip.unit_measure %>  <%= equip.name %></p>
+            <p style="display: inline;"><%= equip.unit_size.to_i %> <%= equip.unit_measure %>  <%= equip.name %></p>
           </div>
         <% end %>
 
