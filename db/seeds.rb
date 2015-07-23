@@ -1000,76 +1000,76 @@ end
 comments_on_video = 
 [
 	{
-		content: "This is video comment 1!",
+		content: "I use raw milk. I skim the cream off and use it for desserts. The remaining skimmed milk is perfect for farmer's cheese or homemade yogurt.",
 		commentable_type: "Video",
-		commentable_id: 1,
+		commentable_id: 4,
 		video_time: 50,
-		user_id: 1,
-		project_id: 1
+		user_id: 4,
+		project_id: 4
 	},
 	{
-		content: "This is video comment 2!",
+		content: "Add fresh herbs!",
 		commentable_type: "Video",
-		commentable_id: 3,
-		video_time: 50,
+		commentable_id: 4,
+		video_time: 550,
 		user_id: 2,
-		project_id: 1
+		project_id: 4
 	},
 	{
-		content: "This is video comment 3!",
+		content: "Yes. Don't forget to stir!!",
+		commentable_type: "Video",
+		commentable_id: 4,
+		video_time: 200,
+		user_id: 2,
+		project_id: 4
+	},
+	{
+		content: "It really only takes about 30 mins to make",
 		commentable_type: "Video",
 		commentable_id: 1,
+		video_time: 180,
+		user_id: 7,
+		project_id: 1
+	},	
+	{
+		content: "I end up eating this while it is still warm!",
+		commentable_type: "Video",
+		commentable_id: 1,
+		video_time: 400,
+		user_id: 4,
+		project_id: 1
+	},	
+	{
+		content: "I didn't know that you just blended up soybeans to make tofu. crazy.",
+		commentable_type: "Video",
+		commentable_id: 2,
 		video_time: 100,
 		user_id: 2,
-		project_id: 9
-	},
-	{
-		content: "This is video comment 4!",
-		commentable_type: "Video",
-		commentable_id: 1,
-		video_time: 400,
-		user_id: 3,
 		project_id: 2
 	},	
 	{
-		content: "This is video comment 5!",
+		content: "Make sure you drain out all the liquid",
 		commentable_type: "Video",
-		commentable_id: 1,
-		video_time: 200,
-		user_id: 4,
-		project_id: 2
-	},	
-	{
-		content: "This is video comment 6!",
-		commentable_type: "Video",
-		commentable_id: 8,
+		commentable_id: 2,
 		video_time: 300,
-		user_id: 2,
-		project_id: 3
-	},	
-	{
-		content: "This is video comment 7!",
-		commentable_type: "Video",
-		commentable_id: 3,
-		video_time: 400,
 		user_id: 3,
-		project_id: 3
+		project_id: 2
 	},	
 	{
-		content: "This is video comment 8!",
+		content: "I didn't have a mold so I just used an old plastic tofu container. Just make sure to put some slits in the bottom.",
 		commentable_type: "Video",
-		commentable_id: 6,
-		video_time: 500,
+		commentable_id: 2,
+		video_time: 450,
 		user_id: 1,
 		project_id: 6
 	},	
 	{
-		content: "This is video comment 9!",
+		content: "Do not disturb! It doesn't set properly of you move it.",
 		commentable_type: "Video",
 		commentable_id: 3,
-		video_time: 600,
-		user_id: 2,
-		project_id: 7
+		video_time: 500,
+		user_id: 6,
+		project_id: 3
 	}	
 ]
 
@@ -1083,26 +1083,25 @@ end
 comments_on_project = 
 [
 	{
-		content: "This is a project comment!",
+		content: "I can't believe how easy it was to make this!",
 		commentable_type: "Project",
-		commentable_id: 1,
-		user_id: 1,
-		project_id: 1
+		commentable_id: 4,
+		user_id: 6,
+		project_id: 4
 	},
 	{
-		content: "This is a project comment!",
+		content: "I bought the kit. Making cheese tomorrow.",
 		commentable_type: "Project",
-		commentable_id: 3,
-		video_time: 50,
-		user_id: 1,
-		project_id: 1
+		commentable_id: 4,
+		user_id: 3,
+		project_id: 4
 	},
 	{
-		content: "This is a project comment!",
+		content: "I have a recipe for a Farmers Cheese Chocolate Cake if anyone is interested. Easy to make and not too sweet.",
 		commentable_type: "Project",
-		commentable_id: 8,
-		user_id: 1,
-		project_id: 1
+		commentable_id: 4,
+		user_id: 4,
+		project_id: 4
 	}
 ]
 
@@ -1117,26 +1116,26 @@ end
 comments_on_ingredient = 
 [
 	{
-		content: "This is an ingredient comment!",
+		content: "Or you can use a nut milk bag",
 		commentable_type: "Ingredient",
-		commentable_id: 2,
+		commentable_id: 9,
 		user_id: 1,
+		project_id: 2
+	},
+	{
+		content: "I used 1/3 cup lemon juice instead and it worked great!",
+		commentable_type: "Ingredient",
+		commentable_id: 6,
+		user_id: 2,
 		project_id: 1
 	},
 	{
-		content: "This is an ingredient comment!",
+		content: "I used apple cider vinegar. It does change the taste a bit though.",
 		commentable_type: "Ingredient",
-		commentable_id: 3,
-		user_id: 1,
+		commentable_id: 6,
+		user_id: 5,
 		project_id: 1
 	},
-	{
-		content: "This is an ingredient comment!",
-		commentable_type: "Ingredient",
-		commentable_id: 20,
-		user_id: 1,
-		project_id: 1
-	}
 ]
 
 comments_on_ingredient.each do |com|
@@ -1149,25 +1148,25 @@ end
 comments_on_step = 
 [
 	{
-		content: "This is a step comment!",
+		content: "If you use a jelly bag instead of a cheesecloth you won't have a problem with the curds getting stuck on the threads",
 		commentable_type: "Step",
-		commentable_id: 5,
+		commentable_id: 3,
+		user_id: 3,
+		project_id: 1
+	},
+	{
+		content: "Make sure you don't set your burner too high, you don't want the milk to get too hot.",
+		commentable_type: "Step",
+		commentable_id: 2,
 		user_id: 1,
 		project_id: 1
 	},
 	{
-		content: "This is a step comment!",
+		content: "Is there something I can use instead of rennet? Can I make this vegetarian-friendly?.",
 		commentable_type: "Step",
-		commentable_id: 10,
-		user_id: 1,
-		project_id: 1
-	},
-	{
-		content: "This is a step comment!",
-		commentable_type: "Step",
-		commentable_id: 15,
-		user_id: 1,
-		project_id: 1
+		commentable_id: 16,
+		user_id: 7,
+		project_id: 4
 	}
 ]
 
@@ -1206,30 +1205,30 @@ users = [
 	},
 	{
 		admin: true,
-		email: "jane@gmail.com",
-		avatar: "/uploads/user/avatar/BethLI.jpg",
-		full_name: "Jane Wilson",
+		email: "francine@gmail.com",
+		avatar: "/uploads/user/avatar/Francine.jpg",
+		full_name: "Francine Schwartz",
 		facebook_id: 1015642129684983
 	},
 	{
 		admin: true,
-		email: "susan@test.ca",
-		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
-		full_name: "Susan Smith",
+		email: "ona@hotmail.ca",
+		avatar: "/uploads/user/avatar/Ona.jpg",
+		full_name: "Ona Praderas",
 		facebook_id: 10102349586934950
 	},
 	{
 		admin: true,
-		email: "john@test.ca",
-		avatar: "/uploads/user/avatar/DavidLI.jpg",
-		full_name: "John Doe",
+		email: "trevor@gmail.com",
+		avatar: "/uploads/user/avatar/Trevor.jpg",
+		full_name: "Trevor McKee",
 		facebook_id: 10123992340329457
 	},
 	{
 		admin: false,
-		email: "amy@test.ca",
-		avatar: "/uploads/user/avatar/CaitlinLI.jpg",
-		full_name: "Amy Wright",
+		email: "paul@hotmail.com",
+		avatar: "/uploads/user/avatar/Paul.jpg",
+		full_name: "Paul Bateman",
 		facebook_id: 104059348549345345
 	}
 ]
