@@ -93,6 +93,26 @@ $(function($){
 
   })
 
+//// toggle jquery
+  $(".favourited-by-user").on("click", function(){
+    var id = $(this).data("id");
+    if ($("#favourited-false"+id).length > 0){
+      $("#favourited-false"+id).css("background", "url('/svg/heart213_hover.png')").css("background-size", "32px, 32px").attr("id","favourited-true"+id);
+    } else{
+      $("#favourited-true"+id).css("background", "url('/svg/heart213.png')").css("background-size", "32px, 32px").attr("id","favourited-false"+id);
+    }
+  })
+
+  $(".completed-by-user").on("click", function(){
+    var id = $(this).data("id");
+    if ($("#completed-false"+id).length > 0){
+      $("#completed-false"+id).css("background", "url('/svg/heart213_hover.png')").css("background-size", "32px, 32px").attr("id","completed-true");
+    } else{
+      $("#completed-true"+id).css("background", "url('/svg/heart213.png')").css("background-size", "32px, 32px").attr("id","completed-false");
+    }
+  })
+
+
 ////User-projects toggle jquery
 
  $(".favourited, .not-favourited").bind('ajax:complete', function() {

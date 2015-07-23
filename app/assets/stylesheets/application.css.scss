@@ -743,7 +743,7 @@ hr {
 
 // toggle styling profile page
 
-  #favourited-true-pro {
+  .favourited-true-pro {
     background: url('/svg/heart213_hover.png');
     background-repeat: no-repeat;
     background-size: 32px, 32px;
@@ -751,7 +751,7 @@ hr {
     height: 32px;
   }
 
-  #favourited-false-pro {
+  .favourited-false-pro {
     background: url('/svg/heart213.svg');
     background-repeat: no-repeat;
     background-size: 32px, 32px;
@@ -760,7 +760,7 @@ hr {
   }
 
 
-  #completed-true-pro {
+  .completed-true-pro {
     background: url('/svg/checkmark_hover.png');
     background-repeat: no-repeat;
     background-size: 32px, 32px;
@@ -768,7 +768,7 @@ hr {
     height: 32px;
   }
 
-  #completed-false-pro {
+  .completed-false-pro {
     background: url('/svg/checkmark4.png');
     background-repeat: no-repeat;
     background-size: 32px, 32px;
@@ -1081,4 +1081,11 @@ hr {
   background-color: #b2230a;
 }
 
+.profile-title {
+  margin-top: 20px;
+}
+
+.profile-icons {
+  margin-top: 10px;
+}
 

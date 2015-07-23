@@ -1,23 +1,23 @@
 <% @user_projects.each do |proj| %>
 
   <div class="category">
-    <h3><%= proj.title %></h3>
+    <h3 class="profile-title"><%= proj.title %></h3>
     <% if !proj.images.empty? %>
        <%= image_tag("#{proj.images.first.original_url}", width: '300px') %>
     <% end %>
 
     <% if current_user == @user %>
-      <div class="row">
+      <div class="row profile-icons">
 
         <div class="large-4 columns">
           <!-- total number of times this project was favourited -->
           <% if proj.user_projects.where(user_id: current_user.id).first && proj.user_projects.where(user_id: current_user.id).first.favourited %>
-            <%= link_to('javascript:null', :id => "favourited-by-user", :title => "Unfavourite this project.") do %>
-              <div id="favourited-true"></div>
+            <%= link_to('javascript:null', :class => "favourited-by-user", :title => "Unfavourite this project.", "data-id" => proj.id) do %>
+              <div class="favourited-true-pro" id="favourited-true<%= proj.id %>"></div>
             <% end %>
           <% else %>
-            <%= link_to('javascript:null', :id => "favourited-by-user", :title => "Favourite this project.") do %>
-              <div id="favourited-false"></div>
+            <%= link_to('javascript:null', :class => "favourited-by-user", :title => "Favourite this project.", "data-id" => proj.id) do %>
+              <div class="favourited-false-pro" id="favourited-false<%= proj.id %>"></div>
             <% end %>
           <% end %>
         </div>
@@ -26,11 +26,11 @@
           <!-- total number of times this project was favourited -->
           <% if proj.user_projects.where(user_id: current_user.id).first && proj.user_projects.where(user_id: current_user.id).first.completed %>            
             <%= link_to('javascript:null', :id => "completed-by-user", :title => "Mark this project as completed.") do %>
-              <div id="completed-true"></div>
+              <div class="completed-true-pro" id="completed-true<%= proj.id %>"></div>
             <% end %>
           <% else %>
             <%= link_to('javascript:null', :id => "completed-by-user", :title => "Mark this project as completed") do %>
-              <div id="completed-false"></div>
+              <div class="completed-true-pro" id="completed-false<%= proj.id %>"></div>
             <% end %>
           <% end %>
         </div>
@@ -41,10 +41,15 @@
         </div>
 
       </div>
-
-      <% current_user.comments.where(project_id: proj.id).each do |comment|%>
-        <p><%= comment.content %></p>
+      <% if current_user.comments.where(project_id: proj.id).length > 0 %>
+        <h4>Your comments:</h4>
       <% end %>
+      <ul>
+        <% current_user.comments.where(project_id: proj.id).each do |comment|%>
+          <li><%= comment.content %> (<%= comment.created_at.to_datetime.strftime("%m/%d/%Y") %>)</li>
+        <% end %>
+      </ul>
+
 
     <% else %>
 
@@ -74,13 +79,42 @@
         </div>
 
       </div>
-
-      <% @user.comments.where(project_id: proj.id).each do |comment|%>
-        <p><%= comment.content %></p>
+      <% if @user.comments.where(project_id: proj.id).length > 0 %>
+        <h4>Comments:</h4>
       <% end %>
+       <ul>
+        <% @user.comments.where(project_id: proj.id).each do |comment|%>
+          <li><%= comment.content %> (<%= comment.created_at.to_datetime.strftime("%m/%d/%Y") %>)</li>
+        <% end %>
+      </ul>
 
     <% end %>
 
   </div>
+
+  <script>
+  // $(function($){
+
+  //   var selectorTrue = "#favourited-true"+'<%= proj.id %>'
+  //   var selectorFalse = "#favourited-false"+'<%= proj.id %>'
+
+  //   $(selector).on("click", function(){
+  //     <% if proj.user_projects.where(user_id: current_user.id).first && !proj.user_projects.where(user_id: current_user.id).first.favourited %>
+  //       <%= proj.user_projects.where(user_id: current_user.id).first.update_attributes(:favourited => true) %>
+  //     <% elsif proj.user_projects.where(user_id: current_user.id).first && proj.user_projects.where(user_id: current_user.id).first.favourited %>
+  //       <%= proj.user_projects.where(user_id: current_user.id).first.update_attributes(:favourited => false) %>
+  //     <% end %>
+  //   });
+
+  //   $("#favourited-false<%= proj.id %>").on("click", function(){
+  //     <% if proj.user_projects.where(user_id: current_user.id).first && !proj.user_projects.where(user_id: current_user.id).first.favourited %>
+  //       <%= proj.user_projects.where(user_id: current_user.id).first.update_attributes(:favourited => true) %>
+  //     <% elsif proj.user_projects.where(user_id: current_user.id).first && proj.user_projects.where(user_id: current_user.id).first.favourited %>
+  //       <%= proj.user_projects.where(user_id: current_user.id).first.update_attributes(:favourited => false) %>
+  //     <% end %>
+  //   });
+  // });
+
+</script>
 
 <% end %>
