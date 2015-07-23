@@ -1,30 +1,35 @@
 <div class = 'carousel' data-slick> 
   <div>
     <%= image_tag("project_gallery/wheatgrass-5_carousel.jpg") %>
-
-    <p class='carousel-project'>
-      <%= link_to 'Grow your own wheatgrass &raquo;'.html_safe, project_path(8) %>
-    </p>
+    <%= link_to project_path(8) do %>
+      <div class="carousel-project">
+        Grow your own wheatgrass &raquo;
+      </div>
+    <% end %>
     <div class='carousel-blurb'>
       <p>Start your own <br />urban homesteading project</p>
     </div>
   </div>>
   <div>
     <%= image_tag("project_gallery/sprouts-3_carousel.jpg") %>
-    <p class='carousel-project'>
-      <%= link_to 'Home-farm some sprouts &raquo;'.html_safe, project_path(6) %>
-    </p>
+    <%= link_to project_path(6) do %>
+      <div class="carousel-project">
+        Home-farm some sprouts &raquo;
+      </div>
+    <% end %>    
     <div class='carousel-blurb'>
       <p>Get advice from experts</p>
     </div>
   </div>
   <div>
     <%= image_tag("project_gallery/mozzarella-5_carousel.jpg") %>
-    <p class='carousel-project'>
-      <%= link_to 'Enjoy home-made mozzarella &raquo;'.html_safe, project_path(5) %>
-    </p>
+    <%= link_to project_path(5) do %>
+      <div class="carousel-project">
+        Enjoy home-made mozzarella &raquo;
+      </div>
+    <% end %>
     <div class='carousel-blurb'>
-      <p>Get advice from experts</p>
+      <p>Learn what it will take to finish the job</p>
     </div>
   </div>
 </div>

@@ -26,6 +26,7 @@ $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
 $radius: 3px;
 $module-background-color: #DDD;
+$box-link-hover: #D1920B;
 
 body {
   font-family: $font-stack-copy;
@@ -126,6 +127,10 @@ nav {
   margin: 0;
 }
 
+a:hover {
+  border-color: $box-link-hover;
+}
+
 .user-panel img:first-child {
   border: 1px solid $secondary-color;
 }
@@ -135,7 +140,7 @@ nav {
 }
 
 .user-panel p {
-  margin: 3px 0 0 10px;
+  margin: 3px 0 0 5px;
   line-height: 1.5;
   color : white;
   display: inline-block;
@@ -144,8 +149,6 @@ nav {
 .user-panel a {
   margin: 0px 5px;
 }
-
-
 
 .search-box {
   width: 250px;
@@ -261,14 +264,16 @@ nav {
   position: absolute;
   right: 60px;
   top: 240px;
-  background-color: white;
+  background-color: $secondary-color;
   opacity: .8;
   padding: 1em;
   font-size: 1.5em;
-  text-align: left
+  text-align: left;
+  color: white;
 }
-.carousel-project p {
-  opacity: 1;
+
+.carousel-project:hover {
+  background-color: $box-link-hover;
 }
 
 .carousel-blurb {
@@ -277,8 +282,8 @@ nav {
   left: 0;
   margin-left: 0;
   padding: .5em;
-  background: black;
-  opacity: .8;
+  background: $dark-gray-color;
+  opacity: .9;
 }
 
 .carousel-blurb p {
