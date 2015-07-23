@@ -600,8 +600,8 @@ $(function()
   })
 
   $(".add-comment-general").on("click", function(){
-    var currentTime = player.getCurrentTime()
     $("#add-comment-general").slideToggle('slow', function(){})
+    var currentTime = player.getCurrentTime()
     $('#video-time-field').replaceWith('<input id="comment_video_time" type="hidden" name="comment[video_time]" value=' + currentTime + '" />');
     var hours = parseInt( currentTime / 3600 ) % 24;
     var minutes = parseInt( currentTime / 60 ) % 60;
@@ -614,7 +614,7 @@ $(function()
         displayTime = (minutes < 10 ? "0" + minutes : minutes) + ":" + (seconds  < 10 ? "0" + seconds : seconds)
       }
       $('.commentable-type-checkbox-project').addClass('commentable-type-checkbox-video');
-      $('#video-time-text').replaceWith('<p>Attach this comment to: ' + displayTime + '.</p>')
+      $('#video-time-text').replaceWith('<p class="video-comment-actions">Attach this comment to: ' + displayTime + '.</p>')
     }
 
     // make plus sign minus on toggle

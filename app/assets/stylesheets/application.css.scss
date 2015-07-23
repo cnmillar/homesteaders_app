@@ -159,6 +159,11 @@ nav {
   background-color: $module-background-color;
 }
 
+.row.supply {
+  margin-bottom: 0px;
+  padding-bottom: 2px;
+}
+
 
 #video-timeline {
   background-image: image-url("timeline.png");
@@ -211,8 +216,26 @@ nav {
   display: none;
 }
 
+#video-checkbox {
+  margin: 2rem;
+}
+
+.video-comment-actions {
+  margin-right: 1rem;
+  display: inline-block;
+}
+
+.video-time-text {
+  display: inline-block;
+}
+
+.video-comment-text {
+  display: inline-block;
+}
+
 .commentable-type-checkbox-video {
-  display: block;
+  display: inline-block;
+  outline: 3px $secondary-color;
 }
 
 #player {
@@ -752,7 +775,7 @@ hr {
     height: 300px;
   }
 
-.project-heart, .project-checked { 
+.project-heart, .project-checked, .project-comments { 
   display:inline;
 }
 
@@ -760,7 +783,7 @@ hr {
   margin-left: 50px;
 }
 
-.project-heart img {
+.project-heart, .project-comments img {
   height: 40px;
   width: 40px;
 }
@@ -858,4 +881,12 @@ hr {
 #message-title {
   font-size: 20px;
   font-style: bold;
+}
+.project-image img {
+  max-height: 200px;
+}
+
+.project-title h1 {
+  color: black;
+  margin-left: 50px;
 }

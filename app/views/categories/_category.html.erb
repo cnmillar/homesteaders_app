@@ -1,8 +1,7 @@
 <% @categories.each do |category|%>
   <div class="category">
-    <img src = "http://placekitten.com/g/300/150" />
+    <%= link_to image_tag("timeline.png"), category_path(category) %>
     <h4><%= link_to category.name, category_path(category) %></h4>
     <p><%= category.description %></p>
   </div>
 <% end %> 
- 

@@ -7,10 +7,13 @@
 		  <%= f.hidden_field :commentable_id %>
 		  <%= f.hidden_field :user_id %>
 		  <%= f.hidden_field :project_id, :value => @project.id %>
-		  <div id="video-time-field"></div>
-		  <%= f.check_box :commentable_type, {class: "commentable-type-checkbox-project"}, "Video", "Project"  %>
-			<div id="video-time-text"></div>	  
-		  <%= f.submit "Comment", class: "button comment-button radius"%>
+		 	<div>
+			  <%= f.submit "Comment", class: "button comment-button video-comment-actions radius"%>
+			  <%= f.check_box :commentable_type, {checked: true, class: "commentable-type-checkbox-project video-comment-actions"}, "Video", "Project"  %>
+			  <div id="video-time-text"></div>
+		  </div>
+		  
+<!-- 		  <div id="video-time-field"></div>	 -->
 		<% end %>
 	<% else %>
 		<p>You must be logged in to make a comment.</p>

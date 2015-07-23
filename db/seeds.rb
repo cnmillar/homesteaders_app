@@ -915,7 +915,7 @@ images = [
 	{
 		user_id: 1,
 		project_id: 1,
-		original: '/app/assets/images/project_gallery/ricotta-1.jpg',
+		original: '/app/assets/images/project_gallery/ricotta-cheese.jpg',
 		# resized_image:
 		description: "Mmmmm, cheese!"
 	},
@@ -929,7 +929,7 @@ images = [
 	{
 		user_id: 1,
 		project_id: 2,
-		original: '/app/assets/images/project_gallery/tofu-1.jpg',
+		original: '/app/assets/images/project_gallery/block-tofu.jpg',
 		# resized_image:
 		description: "Mmmmm, tofy!"
 	},
@@ -1028,6 +1028,13 @@ images = [
 		user_id: 1,
 		project_id: 6,
 		original: '/app/assets/images/project_gallery/sprouts-3.jpg'
+		# resized_image:
+		# description:
+	},
+	{
+		user_id: 1,
+		project_id: 7,
+		original: '/app/assets/images/project_gallery/almond-milk.jpg'
 		# resized_image:
 		# description:
 	},
