@@ -7,9 +7,15 @@
     </ul>
     <section class = 'top-bar-section'>
       <ul>
-        <li><a href="/categories">Categories</a></li>
-        <li><a href="#">Popular</a></li>
-        <li><a href="/projects/2">Pjct #2</a></li>
+        <li>
+          <%= link_to "Categories", categories_path() %>
+        </li>
+        <li>
+          <%= link_to "Projects", "/" %>
+        </li>
+        <li>
+          <%= link_to "About", "/" %>
+        </li>
       </ul>
     </section>
     <%= render 'pages/login' %>

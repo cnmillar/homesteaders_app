@@ -21,10 +21,12 @@
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
 $tertiary-color: #EDBA3E;
+$dark-gray-color: #462F2F;
 $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
 $radius: 3px;
 $module-background-color: #DDD;
+$box-link-hover: #D1920B;
 
 body {
   font-family: $font-stack-copy;
@@ -73,6 +75,7 @@ nav {
 
 .top-bar {
   height: 80px;
+  background-color: $dark-gray-color;
 }
 
 .top-bar .name {
@@ -87,8 +90,8 @@ nav {
   float: left;
   padding-top: 20px;
   font-size: 1em;
+  background-color: $dark-gray-color;
 }
-
 
 .top-bar .name {
   margin-top: 5px;
@@ -109,25 +112,31 @@ nav {
   margin: 8px;
   height: 62px;
   padding: 5px;
-
-  a {
-    color: white;
-  }
 }
 
-.user-panel logged-in {
+/*.user-panel logged-in {
   background-color: #222;
   border: 1px solid #555;
   border-radius: .5rem;
-}
+}*/
 
 .user-panel img {
   height : 100%;
-  max-height: 47px;
+  max-height: 52px;
   vertical-align: top;
-  margin: 2px;
-  border: 1px solid #444;
+  margin: 0;
+}
 
+a:hover {
+  border-color: $box-link-hover;
+}
+
+.avatar {
+  border: 1px solid $secondary-color;
+}
+
+.inbox-icon {
+  margin-top: 8px;
 }
 
 .user-panel button {
@@ -135,12 +144,20 @@ nav {
 }
 
 .user-panel p {
-  margin: 1px 0 0 8px;
-  line-height: 1.5;
-  color : $secondary-color;
+  margin: -5px 0 0 5px;
+  line-height: 2;
+  color : white;
   display: inline-block;
 
 }
+.user-panel a {
+  margin: 0px 5px;
+}
+
+/*img #inbox-image {
+  border: none;
+  margin-top: 10px;
+}*/
 
 .search-box {
   width: 250px;
@@ -256,14 +273,16 @@ nav {
   position: absolute;
   right: 60px;
   top: 240px;
-  background-color: white;
+  background-color: $secondary-color;
   opacity: .8;
   padding: 1em;
   font-size: 1.5em;
-  text-align: left
+  text-align: left;
+  color: white;
 }
-.carousel-project p {
-  opacity: 1;
+
+.carousel-project:hover {
+  background-color: $box-link-hover;
 }
 
 .carousel-blurb {
@@ -272,8 +291,8 @@ nav {
   left: 0;
   margin-left: 0;
   padding: .5em;
-  background: black;
-  opacity: .8;
+  background: $dark-gray-color;
+  opacity: .9;
 }
 
 .carousel-blurb p {
@@ -304,7 +323,7 @@ nav {
   /*border: 1px solid $primary-color;*/
 }
 
-.category:nth-child(2) {
+.category:nth-child(even) {
   transform: rotate(3deg);
 }
 
@@ -397,6 +416,16 @@ nav {
 .title-area {
   width : 435px;
 }
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  font-family: $font-stack-copy;
+  font-size: 1em;
+  background-color: $dark-gray-color;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background-color: $secondary-color;
+  background: $secondary-color; }
 
 .email_container {
   position: fixed;
