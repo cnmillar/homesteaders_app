@@ -1,28 +1,28 @@
-<div class="section">
-	<div class = "row">
+<div class="section large-inbox-margin ">
+	<div class = "row" style="padding:25px; padding-left:0px;">
 		<div class="large-1 columns">
-			<h1>Inbox</h1>
+			<%= image_tag("/svg/mail3.svg", width: "60px") %>
 		</div>
-		<div class="large-9 column no-collapse">
+		<div class="large-1 column">
+			<h1 id="inbox-title" style="display:inline;">Inbox</h1>
+		</div>
+		<div class="large-8 column no-collapse">
 
 		</div>
 		<div class="large-2 columns no-collapse">
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="large-2 column no-collapse">
+<!-- 	<div class="row">
+		<div class="large-3 column no-collapse">
 		</div>
-		<div class="large-2 column">
-			<h3>Name</h3>
-		</div>
-		<div class="large-5 column">
+		<div class="large-6 column">
 			<h3>Subject</h3>
 		</div>
 		<div class="large-3 column">
 			<h3>Date</h3>
 		</div>
-	</div>
+	</div> -->
 
 	<% @conversations.each do |conv| %>
 		<%= render partial: "conversation", locals: {conv: conv} %>

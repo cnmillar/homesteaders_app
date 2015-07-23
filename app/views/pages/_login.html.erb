@@ -2,19 +2,19 @@
   <div class='right user-panel logged-in'>
     <%= image_tag(current_user.avatar) %>
     <p>
-      <%= link_to current_user.full_name, user_path(current_user.id) %>
+      <span>
+      <%= link_to current_user.full_name, user_path(current_user.id), :id => "current-user-name" %>
       <% if  num_new_messages > 0  %>
         <%= link_to "/users/#{current_user.id}/inbox" do %>
-          <span>
             <%= image_tag("/svg/mail3white.svg", :width => "25px") %>
             <p><%= num_new_messages %></p>
-          </span>
         <% end %>
       <% else %>
         <%= link_to "/users/#{current_user.id}/inbox" do %>
           <%= image_tag("/svg/mail3white.svg", :width => "25px") %>
         <% end %>      
       <% end %>
+      </span>
       <br />
 
       <%= link_to 'My Projects', user_path(current_user.id) %> |
