@@ -202,6 +202,7 @@ $(function($){
 
 ////////////
 
+// Fixed comments
   var s = $("#comments");
   var pos = s.position();                    
   $(window).scroll(function() {
