@@ -21,7 +21,7 @@
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
 $tertiary-color: #EDBA3E;
-$dark-gray-color: #462F2F;
+$dark-gray-color: #333;
 $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
 $radius: 3px;
@@ -135,8 +135,14 @@ a:hover {
   border: 1px solid $secondary-color;
 }
 
-.inbox-icon {
+#inbox-icon {
   margin-top: 8px;
+}
+
+#inbox-count {
+  top: 6px;
+  position: relative;
+  left: 6px;
 }
 
 .user-panel button {
@@ -144,7 +150,7 @@ a:hover {
 }
 
 .user-panel p {
-  margin: -5px 0 0 5px;
+  margin: -7px 0 0 5px;
   line-height: 2;
   color : white;
   display: inline-block;
