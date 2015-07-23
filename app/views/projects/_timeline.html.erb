@@ -5,7 +5,7 @@
       class: 'video-comment-avatar', 
       :style => "left: #{comment.video_time}px") %>
     </div> 
-    <div id="comment_id_<%=comment.id%>" style="display: none;">
+    <div id="comment_id_<%=comment.id%>" class="timeline-comment">
       <%= comment.content %>
     </div>
   <% end %>
