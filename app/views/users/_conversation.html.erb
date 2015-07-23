@@ -1,28 +1,24 @@
 <div id='<%= "read-conversation#{conv.id}" %>' class="row alternating-color" data-conv-id=<%= conv.id %>>
-	<div class="row">
-		<div class="large-2 columns no-collapse"></div>
-		<div class="large-8 columns">
-			<% if current_user.id == conv.receiver %>
-				<div class="large-2 columns center-inbox-text">
-					<%= link_to(image_tag(conv.user.avatar, width: '30%'), "/users/#{conv.user_id}") %>
-					<%= link_to(conv.user.full_name, "/users/#{conv.user_id}") %>
-				</div>
-			<% else %>
-				<div class="large-2 columns center-inbox-text">
-					<%= link_to(image_tag(User.find(conv.receiver).avatar, width: '30%'), "/users/#{conv.receiver}") %>
-					<%= link_to(User.find(conv.receiver).full_name, "/users/#{conv.receiver}" )%>
-				</div>
-			<% end %>
-		<div class="large-5 columns">
-			<p><%= link_to(conv.subject, "javascript:null", :class => "center-inbox-text", :id => "read-conversation-#{conv.id}") %></p>
-		</div>
-		<div class="large-3 columns">
-			<p class="center-inbox-text"><%= conv.messages.last.created_at %></p>
-		</div>
-		</div>
-		<div "large-2 columns no-collapse"></div>
-	</div>
 
+		<% if current_user.id == conv.receiver %>
+			<div class="large-3 columns">
+				<%= link_to(image_tag(conv.user.avatar, width: '30%'), "/users/#{conv.user_id}", class: "center-inbox-text") %> <p style="display:inline">&nbsp;&nbsp;</p>
+				<%= link_to(conv.user.full_name, "/users/#{conv.user_id}", class: "center-inbox-text") %>
+			</div>
+
+		<% else %>
+			<div class="large-3 columns center-inbox-text">
+				<%= link_to(image_tag(User.find(conv.receiver).avatar, width: '30%'), "/users/#{conv.receiver}", class: "center-inbox-img") %> <p style="display:inline;">&nbsp;&nbsp;</p>
+				<%= link_to(User.find(conv.receiver).full_name, "/users/#{conv.receiver}", class: "center-inbox-text")%>
+			</div>
+		<% end %>
+
+	<div class="large-6 columns">
+		<p><%= link_to(conv.subject, "javascript:null", :class => "center-inbox-text", :id => "read-conversation-#{conv.id}") %></p>
+	</div>
+	<div class="large-3 columns">
+		<p class="center-inbox-text"><%= conv.messages.last.created_at %></p>
+	</div>
 </div>
 
 <script>

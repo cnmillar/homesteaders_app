@@ -1,7 +1,7 @@
-<div class="section">
+<div class="section large-inbox-margin ">
 	<div class = "row">
 		<div class="large-1 columns">
-			<h1>Inbox</h1>
+			<h1 id="inbox-title">Inbox</h1>
 		</div>
 		<div class="large-9 column no-collapse">
 
@@ -10,18 +10,16 @@
 		</div>
 	</div>
 
-	<div class="row">
-		<div class="large-2 column no-collapse">
+<!-- 	<div class="row">
+		<div class="large-3 column no-collapse">
 		</div>
-		<div class="large-2 column no-collapse">
-		</div>
-		<div class="large-5 column">
+		<div class="large-6 column">
 			<h3>Subject</h3>
 		</div>
 		<div class="large-3 column">
 			<h3>Date</h3>
 		</div>
-	</div>
+	</div> -->
 
 	<% @conversations.each do |conv| %>
 		<%= render partial: "conversation", locals: {conv: conv} %>
