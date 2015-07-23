@@ -1,45 +1,75 @@
-<div class="row">
-	
-	<div class="large-6 columns">
-		<%= image_tag("images/") %>		
-	</div>
-
-	<div class="large-6 column">
-		
-	</div>
-
-</div>
-
-<div class='row custom-row section'>
-	<div class='large-4 columns section'>
-		<h3>Mission</h3>
-		<h5>We offer accessible, quality supplies for self-sufficiency, especially those that would otherwise be difficult or inconvenient to source. We offer a continuum of learning options, creating consistently awesome introductory content while tapping into a network of specialists to help people take their skills to higher levels. We forge alliances with grassroots organizations that promote self-sufficiency and sustainability through education.</h5>
-		<h3>Vision</h3>
-		<h5>Our vision is to bring self-sufficiency into the mainstream. We envision a world in which the way things are made is alive in the public's consciousness. We see a greater connection between ourselves, our neighbours, and the products we consume, and from that connection a society of greater understanding, dialogue, and sustainability. We don't imagine that every family will have it's own small farm, but we do imagine that every person will have a friend that is a farmer, and every child will grow up with a basic understanding of where food comes from. Let's get there together!</h5>
-	</div>
-	<div class='large 7 columns section'>
-		<div id="map-canvas">
-		 <div id='map'>
-		 				<script>
-				  // initialize the map
-			$(function($){
-		   var map = L.map('map').setView([49.264676, -123.049826], 12);
-		   var marker = L.marker([49.264676, -123.049826]).addTo(map);
-
-
-		    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-		        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-		        maxZoom: 19,
-		    }).addTo(map);
-		  })
-			</script>
-		 	
-		 </div>
-
+<div class="section">
+  <div id='map'></div>
+	<div class="row">
+		<div class="large-6 columns">
+			<h3>Homesteader's Emporium's Mission</h3>
+			<h5>We offer accessible, quality supplies for self-sufficiency, especially those that would otherwise be difficult or inconvenient to source. We offer a continuum of learning options, creating consistently awesome introductory content while tapping into a network of specialists to help people take their skills to higher levels. We forge alliances with grassroots organizations that promote self-sufficiency and sustainability through education.</h5>
+			<h3>Vision</h3>
+			<h5>Our vision is to bring self-sufficiency into the mainstream. We envision a world in which the way things are made is alive in the public's consciousness. We see a greater connection between ourselves, our neighbours, and the products we consume, and from that connection a society of greater understanding, dialogue, and sustainability. We don't imagine that every family will have it's own small farm, but we do imagine that every person will have a friend that is a farmer, and every child will grow up with a basic understanding of where food comes from. Let's get there together!</h5>
+		</div>
+		<div class="panel large-6 columns">
+				<div class="large-6 columns">
+					<h1>Store hours:</h1>
+					<table>
+						<tbody>
+							<tr>
+								<td>M Tu Th F Sa:</td>
+								<td>11am-6pm</td>
+							</tr>
+							<tr>
+								<td>W:</td>
+								<td>11am-7pm</td>
+							</tr>
+							<tr>
+								<td>Su:</td>
+								<td>11am-5pm</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="large-6 columns">
+					<h1>Stay in touch:</h1>
+					<table>
+						<tbody>
+							<tr>
+								<td>Facebook:</td>
+								<td><a href="http://www.facebook.com/homesteadersemporium">homesteadersemporium</a></td>
+							</tr>
+							<tr>
+								<td>Twitter:</td>
+								<td><a href="https://twitter.com/homesteadersemp">@homesteaderemp</a></td>
+							</tr>
+							<tr>
+								<td>Instagram:</td>
+								<td><a href="https://instagram.com/homesteadersemporium">homesteadersemporium</a></td>
+							</tr>
+							<tr>
+								<td>Phone:</td>
+								<td>604-568-7675</td>
+							</tr>
+							<tr>
+								<td>Newsletter:</td>
+								<td><a href="http://homesteadersemporium.us4.list-manage1.com/subscribe?u=3d31ac47cf2929ccf5da89691&id=6728f38933" class="button" target="_blank">Subscribe</a></td>
+							</tr>
+						</tbody>
+					</table>		
+				</div>
 			</div>
-	</div>
-
-
+		</div>
+	</div>	 	
 </div>
 
 
+<script>
+		  // initialize the map
+	$(function($){
+   var map = L.map('map').setView([49.264676, -123.049826], 12);
+   var marker = L.marker([49.264676, -123.049826]).addTo(map);
+
+
+    L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+        maxZoom: 19,
+    }).addTo(map);
+  })
+</script>		
