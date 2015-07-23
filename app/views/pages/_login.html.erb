@@ -1,12 +1,12 @@
 <% if current_user %> 
   <div class='right user-panel logged-in'>
-    <%= image_tag(current_user.avatar) %>
+    <%= link_to image_tag(current_user.avatar), user_path(current_user.id), class: "avatar" %>
     <p>
       <%= link_to current_user.full_name, user_path(current_user.id) %>
       <% if  num_new_messages > 0  %>
         <%= link_to "/users/#{current_user.id}/inbox" do %>
           <span>
-            <%= image_tag("/svg/mail3white.svg", :width => "25px") %>
+            <%= image_tag("/svg/mail3white.svg", :width => "25px", class: "no-border") %>
             <p><%= num_new_messages %></p>
           </span>
         <% end %>
@@ -17,8 +17,8 @@
       <% end %>
       <br />
 
-      <%= link_to 'My Projects', user_path(current_user.id) %> |
-      <%= link_to "Log out", logout_path, method: "delete" %>
+      <%= link_to 'My Projects ', user_path(current_user.id) %> |
+      <%= link_to " Log out", logout_path, method: "delete" %>
     </p>
   </div>
 <% else %> 
