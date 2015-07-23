@@ -747,16 +747,18 @@ hr {
     background: url('/svg/heart213_hover.png');
     background-repeat: no-repeat;
     background-size: 32px, 32px;
-    width: 32px;
+    width: 31px;
     height: 32px;
+    margin-top: 10px;
   }
 
   .favourited-false-pro {
     background: url('/svg/heart213.svg');
     background-repeat: no-repeat;
     background-size: 32px, 32px;
-    width: 32px;
+    width: 31px;
     height: 32px;
+    margin-top: 10px;
   }
 
 
@@ -766,6 +768,7 @@ hr {
     background-size: 32px, 32px;
     width: 32px;
     height: 32px;
+    margin-top: 10px;
   }
 
   .completed-false-pro {
@@ -774,6 +777,8 @@ hr {
     background-size: 32px, 32px;
     width: 32px;
     height: 32px;
+    margin-top: 10px;
+
   }
 
 //tooltip
