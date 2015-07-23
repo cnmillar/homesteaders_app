@@ -1,17 +1,17 @@
 <% if current_user %> 
   <div class='right user-panel logged-in'>
-    <%= link_to image_tag(current_user.avatar), user_path(current_user.id), class: "avatar" %>
+    <%= link_to image_tag(current_user.avatar, class: "avatar"), user_path(current_user.id) %>
     <p>
       <span>
       <%= link_to current_user.full_name, user_path(current_user.id), :id => "current-user-name" %>
       <% if  num_new_messages > 0  %>
         <%= link_to "/users/#{current_user.id}/inbox" do %>
-            <%= image_tag("/svg/mail3white.svg", :width => "25px") %>
-            <p><%= num_new_messages %></p>
+            <%= image_tag("/svg/mail3white.svg", :width => "25px", class: "inbox-icon") %>
+            <%= num_new_messages %>
         <% end %>
       <% else %>
         <%= link_to "/users/#{current_user.id}/inbox" do %>
-          <%= image_tag("/svg/mail3white.svg", :width => "25px") %>
+          <%= image_tag("/svg/mail3white.svg", :width => "25px", class: "inbox-icon") %>
         <% end %>      
       <% end %>
       </span>

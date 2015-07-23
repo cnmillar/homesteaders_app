@@ -131,8 +131,12 @@ a:hover {
   border-color: $box-link-hover;
 }
 
-.user-panel img:first-child {
+.avatar {
   border: 1px solid $secondary-color;
+}
+
+.inbox-icon {
+  margin-top: 8px;
 }
 
 .user-panel button {
@@ -140,8 +144,8 @@ a:hover {
 }
 
 .user-panel p {
-  margin: 3px 0 0 5px;
-  line-height: 1.5;
+  margin: -5px 0 0 5px;
+  line-height: 2;
   color : white;
   display: inline-block;
 
@@ -149,6 +153,11 @@ a:hover {
 .user-panel a {
   margin: 0px 5px;
 }
+
+/*img #inbox-image {
+  border: none;
+  margin-top: 10px;
+}*/
 
 .search-box {
   width: 250px;
