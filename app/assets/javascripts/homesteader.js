@@ -1,6 +1,25 @@
 
 $(function($){
 
+  $(".new-conversation-comment").on("click", function(){
+    var user = $(this).data('user-id');
+    var receiver = $(this).data('receiver-id');
+    var receiverName = $(this).data('receiver-name');
+    var modal = $("#modal");
+
+    modal.find("h3").text("Send message to "+receiverName);
+    modal.find("#receiver-id").val(receiver);
+    // modal.find('span.user').text(username);
+    // modal.find('#receiver-id').val(receiver);
+
+    $("#overlay").add(modal).css('display', 'block');
+
+  })
+
+  $("#close-button").on('click', function() {
+    $("#overlay").add("#modal").css('display', 'none'); 
+  });
+
   $("a[rel*=conversationCommentModal]").leanModal({ top : 200, overlay : 0.4, closeButton: ".modal_close" });
 
   //zebra striping for inbox
@@ -24,7 +43,7 @@ $(function($){
     $("#modal-container-conv").prepend("<h3 id='message-sent'>Message sent!</h3>");
     setTimeout(function() {
       $("#new-conversation").css("display","none");
-      // $("#lean_overlay").css("display","none");
+      $("#lean_overlay").css("display","none");
       $("#conversation_subject").val("");
       $("#conversation_message_body").val("");
       $("#message-sent").remove();    
@@ -35,11 +54,10 @@ $(function($){
   $("#new_conversation_comment").on("ajax:success", function(e, data, status, xhr){
     $(".send-message-to").remove();
     $(".modal-container-conv-comment").prepend("<h3 id='message-sent'>Message sent!</h3>");
+    $("#conversation_subject").val("");
+    $("#conversation_message_body").val("");
     setTimeout(function() {
-      $("#new-conversation-comment").css("display","none");
-      // $("#lean_overlay").css("display","none");
-      $("#conversation_subject").val("");
-      $("#conversation_message_body").val("");
+      $("#overlay").css("display", "none");
       $("#message-sent").remove();    
     }, 2000);
 
