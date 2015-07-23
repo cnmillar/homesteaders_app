@@ -512,7 +512,7 @@ body {
     position:fixed;
     top:90px;
     bottom:30px;
-    width: 54.5% ;
+    width: 54.5%;
     overflow-y:scroll;
     overflow-x:hidden;
 }
@@ -743,46 +743,6 @@ hr {
   width: 100%;
   height:300px;
 }
-
-// toggle styling profile page
-
-  .favourited-true-pro {
-    background: url('/svg/heart213_hover.png');
-    background-repeat: no-repeat;
-    background-size: 32px, 32px;
-    width: 31px;
-    height: 32px;
-    margin-top: 10px;
-  }
-
-  .favourited-false-pro {
-    background: url('/svg/heart213.svg');
-    background-repeat: no-repeat;
-    background-size: 32px, 32px;
-    width: 31px;
-    height: 32px;
-    margin-top: 10px;
-  }
-
-
-  .completed-true-pro {
-    background: url('/svg/checkmark_hover.png');
-    background-repeat: no-repeat;
-    background-size: 32px, 32px;
-    width: 32px;
-    height: 32px;
-    margin-top: 10px;
-  }
-
-  .completed-false-pro {
-    background: url('/svg/checkmark4.png');
-    background-repeat: no-repeat;
-    background-size: 32px, 32px;
-    width: 32px;
-    height: 32px;
-    margin-top: 10px;
-
-  }
 
 //tooltip
 
@@ -1015,7 +975,7 @@ hr {
 }
 
 #buy-kit {
-  background-color: #0e922d;
+  background-color: #108929;
   font-family: $font-stack-copy;
   margin-left: 8px;
   height: 55px;
@@ -1098,11 +1058,4 @@ hr {
   background-color: #b2230a;
 }
 
-.profile-title {
-  margin-top: 20px;
-}
-
-.profile-icons {
-  margin-top: 10px;
-}
 
