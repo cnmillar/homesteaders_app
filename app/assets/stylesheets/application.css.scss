@@ -26,10 +26,13 @@ $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
 $radius: 3px;
 $module-background-color: #DDD;
+$body-background: #D6D5C9;
+$module-border: #B9BAA3;
 $box-link-hover: #D1920B;
 
 body {
   font-family: $font-stack-copy;
+  background-color: $body-background;
 }
 
 h1, h2, h3, h4 {
@@ -268,10 +271,11 @@ a:hover {
 
 .carousel-wrapper {
   padding: 0;
+  height: 350px;
 }
 
 .carousel {
-  max-height: 300px;
+  max-height: 350px;
   width: 1500px;
 }
 
@@ -317,6 +321,23 @@ a:hover {
   transform:rotate(-3deg);
 }
 
+.popular-categories-wrapper {
+  padding: .5em;
+  background: black;
+  opacity: .8;
+  margin: 0 0 0 -16px;
+  text-align: left;
+  width: 360px;
+}
+
+.popular-categories {
+  text-align: left;
+  margin: 0 0 0 3em;
+  border: 1px white;
+  color: white;
+  display: inline-block;
+}
+
 .category {
   width: 400px;
   display: inline-block;
@@ -348,17 +369,21 @@ a:hover {
   text-align: left;
 }
 
-.categories {
-  display: inline-block;
-  margin: 20px 50px;
-  padding: 1em;
-  font-size: 2em;
-  width: 100%;
-  background-color: white;
-  background-image: image-url('drawn-box.png');
-  background-size: 100% 100%;
-
+.slick-slider {
+  color: transparent;
 }
+
+.categories {
+  display: block;
+  margin: 0 220px 0 220px;
+  padding: .5em 1em 1em 1em;
+  font-size: 2em;
+  background-color: white;
+  height: 260px;
+  border: 1px solid $module-border;
+  border-radius: 5px;  
+}
+
 
 .popular-header {
   opacity: 1;

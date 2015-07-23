@@ -8,12 +8,13 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.css"/>
   <link rel="stylesheet" href="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick-theme.css"/>
   <%= csrf_meta_tags %>
+  <% if current_user %>
+  <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.full_name %>"}</script>
+  <% end %>
 </head>
 
 <body>
-<% if current_user %>
-  <script>APP = {userAvatar: "<%= current_user.avatar %>", userName: "<%= current_user.full_name %>"}</script>
-<% end %>
+
   <%= render 'layouts/navigation' %>
 
   <% if flash[:notice] %>
@@ -21,7 +22,6 @@
   <% end %>
 
   <%= yield %>
-  
-<script src="//cdn.jsdelivr.net/jquery.slick/1.5.6/slick.min.js"></script>
+
 </body>
 <footer>This is the footer</footer>
