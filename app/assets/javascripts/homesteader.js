@@ -1,6 +1,9 @@
 
 $(function($){
 
+  //zebra striping for inbox
+  $(".alternating-color:even").css("background-color","#D6D5C9"); 
+
   // tooltip
 
   $("#favourited-by-user").tooltip();
