@@ -21,6 +21,7 @@
 $primary-color: #B2230A;
 $secondary-color: #F2AA0E;
 $tertiary-color: #EDBA3E;
+$dark-gray-color: #462F2F;
 $font-stack-head: 'Architects Daughter', cursive;
 $font-stack-copy: 'Arvo', serif;
 $radius: 3px;
@@ -73,6 +74,7 @@ nav {
 
 .top-bar {
   height: 80px;
+  background-color: $dark-gray-color;
 }
 
 .top-bar .name {
@@ -87,8 +89,8 @@ nav {
   float: left;
   padding-top: 20px;
   font-size: 1em;
+  background-color: $dark-gray-color;
 }
-
 
 .top-bar .name {
   margin-top: 5px;
@@ -397,6 +399,16 @@ nav {
 .title-area {
   width : 435px;
 }
+
+.top-bar-section li:not(.has-form) a:not(.button) {
+  font-family: $font-stack-copy;
+  font-size: 1em;
+  background-color: $dark-gray-color;
+}
+
+.top-bar-section li:not(.has-form) a:not(.button):hover {
+  background-color: $secondary-color;
+  background: $secondary-color; }
 
 .email_container {
   position: fixed;
